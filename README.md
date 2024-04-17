@@ -34,3 +34,9 @@ Run following script in kibana (http://localhost:5601)
 
 ### test_main.py
 *Test other functions
+
+### graph_data.py
+*Stores different hash map structure graph, which represent to the connection of each human or AI in social network
+
+### llm_generate_text.py
+* return AI generated text from openai API
