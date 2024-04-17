@@ -2,6 +2,7 @@
 RLHF
 Reinforcement learning with human feedback
 
+## Setup
 ### In elasticsearch stores 2 index, called "sent_text_test01" and "received_text_test01"
 
 ## 1. Download Database
@@ -24,7 +25,7 @@ Run following script in kibana (http://localhost:5601)
 ### Python version
 `python 3.8`
 
-# Details of each python file:
+## Details of each python file:
 
 ### router.py
 *Start ElasticSearch egine
