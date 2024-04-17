@@ -14,11 +14,11 @@ Reinforcement learning with human feedback
 Run following script in kibana (http://localhost:5601)
 
 ## 3. Start the Elasticsearch egine
-*Start elasticsearch:
+* Start elasticsearch:
 - `cd /Elasticsearch/elasticsearch-7.7.0/bin`
 - `./elasticsearch`
 
-*Start Kibana (UI)
+* Start Kibana (UI)
 - `cd /Elasticsearch/kibana-7.7.0-darwin-x86_64/bin`
 - `./kibana`
 
@@ -28,16 +28,16 @@ Run following script in kibana (http://localhost:5601)
 ## Details of each python file:
 
 ### router.py
-*Start ElasticSearch egine
+* Start ElasticSearch egine
 
 ### main.py
-*The entrance of the project
+* The entrance of the project
 
 ### test_main.py
-*Test other functions
+* Test other functions
 
 ### graph_data.py
-*Stores different hash map structure graph, which represent to the connection of each human or AI in social network
+* Stores different hash map structure graph, which represent to the connection of each human or AI in social network
 
 ### llm_generate_text.py
 * return AI generated text from openai API
