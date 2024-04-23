@@ -44,4 +44,11 @@ Run following script in kibana (http://localhost:5601)
 ### llm_generate_text.py
 * return AI generated text from openai API
 
-tet
+### config_manager.py
+* This class will handle reading and setting configurations such as API keys from a config file
+
+### es_manager.py
+* This class will manage connections and operations related to Elasticsearch.
+
+### test_main.py
+This class will use instances of the above classes to perform operations. It acts as the central orchestrator for the application.

@@ -1,3 +1,5 @@
 .history
 .__pycache__
 config.ini
+__pycache__
+llm_generate_text.cpython-38.pyc
