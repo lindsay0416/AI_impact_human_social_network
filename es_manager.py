@@ -6,3 +6,6 @@ class ESManager:
 
     def is_connected(self):
         return self.es.ping()
+
+    def index(self, index_name, document_body):
+        return self.es.index(index=index_name, document=document_body)

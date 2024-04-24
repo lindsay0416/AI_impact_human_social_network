@@ -2,6 +2,7 @@ import openai
 from config_manager import ConfigManager
 from es_manager import ESManager
 from llm_generate_text import GenerateText
+from elastic_search import ElasticSeachStore
 
 class Application:
     def __init__(self):
@@ -24,12 +25,25 @@ class Application:
         generated_text, prompt = GenerateText.get_generated_text(openai, prompt)
         print("Prompt:", prompt)
         print("Generated Text:", generated_text)
-        
+
+    def test_add_record_to_elasticsearch(self):
+        node = "N39"
+        connected_node = "N1"
+        text = "Test add record to elasticsearch."
+        weight = 1
+        is_received = False
+        es_client = self.es_manager.es  # Access the Elasticsearch client directly
+        response = ElasticSeachStore.add_record_to_elasticsearch(node, connected_node, text, weight, is_received, es_client)
+        print("response from elastic search:", response)
+
 
 def main():
     app = Application()
     app.check_es_connection()
-    app.test_generate_text()
+
+    # app.test_generate_text()
+
+    app.test_add_record_to_elasticsearch()
 
 if __name__ == '__main__':
     main()

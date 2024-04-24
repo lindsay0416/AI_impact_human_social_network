@@ -51,4 +51,7 @@ Run following script in kibana (http://localhost:5601)
 * This class will manage connections and operations related to Elasticsearch.
 
 ### test_main.py
-This class will use instances of the above classes to perform operations. It acts as the central orchestrator for the application.
+* This class will use instances of the above classes to perform operations. It acts as the central orchestrator for the application.
+
+### elastic_search.py
+* Code interaction with elastic search.
