@@ -1,7 +1,7 @@
 # user agent model
 import random
 
-INFLUENCE_PROB = 0.5
+INFLUENCE_PROB = 0.1
 
 class Agent:
     """
