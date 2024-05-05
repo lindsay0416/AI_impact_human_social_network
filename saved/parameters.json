@@ -1,0 +1,9 @@
+{
+    "seed_set_size": 1,
+    "round": 1,
+    "timestep": 10,
+    "influence_prob": 0.1,
+    "node_size": 20,
+    "connect_prob": 0.1,
+    "is_directed": true
+}
