@@ -3,6 +3,7 @@ from config_manager import ConfigManager
 from es_manager import ESManager
 from llm_generate_text import GenerateText
 from elastic_search import ElasticSeachStore
+from sentence_embedding import Text2Vector
 
 class Application:
     def __init__(self):
@@ -36,14 +37,33 @@ class Application:
         response = ElasticSeachStore.add_record_to_elasticsearch(node, connected_node, text, weight, is_received, es_client)
         print("response from elastic search:", response)
 
+    def test_embedding_text(self):
+        diffusion_message = "Sky is blue."
+        embedding = Text2Vector.get_embedding(diffusion_message)
+        print(embedding)
+    
+    def test_received_text_cosine_similarity(self):
+        diffusion_message = "Sky is blue."
+        index_name = "received_text_test01"
+        es_client = self.es_manager.es
+        results = Text2Vector.received_text_cosine_similarity(index_name, diffusion_message, es_client)
+        print(results)
+        texts = Text2Vector.get_messages_from_list(results) # print the list of texts
+        print(texts)
+
+
+
 
 def main():
     app = Application()
     app.check_es_connection()
-
     # app.test_generate_text()
 
-    app.test_add_record_to_elasticsearch()
+    # app.test_add_record_to_elasticsearch()
+    
+    # app.test_embedding_text()
+
+    app.test_received_text_cosine_similarity()
 
 if __name__ == '__main__':
     main()
