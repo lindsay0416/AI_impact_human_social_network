@@ -26,15 +26,17 @@ def start_diffusion(params):
     connect_prob = params.get("connect_prob")
     is_directed = params.get("is_directed")
     seed_set_size = params.get("seed_set_size")
+    round = params.get("round")
 
-    for step in range(0, timestep):
-        if step == 0:
-            # Initialize environment at timestep 0
-            environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
-            # environment.select_seeds(seed_set_size)
-            environment.select_fix_seeds([1])
-            save_graph(environment.graph)
+    # Initialize environment at timestep 0
+    environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
+    # environment.select_seeds(seed_set_size)
+    environment.select_fix_seeds([1])
+    if round == 0:
+        save_graph(environment.graph)
+    calculate_coverage(environment, 0)
 
+    for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             if user_agent.status == 1:

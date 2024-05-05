@@ -1,6 +1,6 @@
 {
     "seed_set_size": 1,
-    "round": 1,
+    "round": 2,
     "timestep": 10,
     "influence_prob": 0.1,
     "node_size": 20,
