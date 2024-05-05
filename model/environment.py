@@ -9,6 +9,7 @@ import random
 logger = logging.getLogger("environment")
 logging.basicConfig(level="INFO")
 
+
 class Environment:
     #  init a graph, graph can be None - so that a random graph would be created; or a Networkx graph.
     def __init__(self, graph=None, **kwargs):
@@ -25,7 +26,7 @@ class Environment:
         # init environment with random graph or a real-world social network
         if graph is None:
             logger.info("No graph data exists, creating a new graph...")
-            if os.path.exists("../saved/pickle"):
+            if os.path.exists("../saved/G.pickle"):
                 self.graph = load_graph()
             else:
                 self.graph = generate_random_network(self.node_size, self.connect_prob, self.is_directed)
