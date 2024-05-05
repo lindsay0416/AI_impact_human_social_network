@@ -24,6 +24,87 @@ Run following script in kibana (http://localhost:5601)
 - `cd /Elasticsearch/kibana-7.7.0-darwin-x86_64/bin`
 - `./kibana`
 
+Run following script in kibana (http://localhost:5601)
+
+```JSON
+PUT /sent_text_test01
+
+{
+  "mapping": {
+    "_doc": {
+      "properties": {
+        "node": {
+          "type": "text"
+        },
+        "sent_text": {
+          "type": "text"
+        },
+        "sent_text_vector": {
+          "type": "dense_vector",
+          "dims": 384
+        },
+        "to": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### 2.2. user_received_messages
+Run following script in kibana (http://localhost:5601)
+
+```JSON
+PUT received_text_test01
+
+{
+  "mapping": {
+    "_doc": {
+      "properties": {
+        "from": {
+          "type": "text"
+        },
+        "last_id": {
+          "type": "long"
+        },
+        "node": {
+          "type": "text"
+        },
+        "received_text": {
+          "type": "text"
+        },
+        "received_text_vector": {
+          "type": "dense_vector",
+          "dims": 384
+        },
+        "received_text_weight": {
+          "type": "float"
+        },
+        "sent_text": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "sent_text_vector": {
+          "type": "float"
+        }
+      }
+    }
+  }
+}
+```
+
 ### Python version
 `python 3.8`
 
