@@ -136,3 +136,6 @@ PUT received_text_test01
 
 ### elastic_search.py
 * Code interaction with elastic search.
+
+### sentence_embedding.py
+* Calculte the top 10 similar messages from "received_text_test01" and "sent_text_test01" index.
