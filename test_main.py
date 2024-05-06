@@ -51,6 +51,15 @@ class Application:
         texts = Text2Vector.get_messages_from_list(results) # print the list of texts
         print(texts)
 
+    def test_sent_text_cosine_similarity(self):
+        diffusion_message = "Sky is blue."
+        index_name = "sent_text_test01"
+        es_client = self.es_manager.es
+        results = Text2Vector.sent_text_cosine_similarity(index_name, diffusion_message, es_client)
+        print(results)
+        texts = Text2Vector.get_messages_from_list(results) # print the list of texts
+        print(texts)
+
 
 
 
@@ -63,7 +72,8 @@ def main():
     
     # app.test_embedding_text()
 
-    app.test_received_text_cosine_similarity()
+    # app.test_received_text_cosine_similarity()
+    app.test_sent_text_cosine_similarity()
 
 if __name__ == '__main__':
     main()

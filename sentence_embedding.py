@@ -17,7 +17,7 @@ class Text2Vector:
         # Convert diffusion_message to a vector
         query_vector = Text2Vector.get_embedding(diffusion_message)
 
-            # Define the Elasticsearch query
+        # Define the Elasticsearch query
         script_query = {
             "script_score": {
                 "query": {"match_all": {}},
@@ -41,12 +41,42 @@ class Text2Vector:
         except Exception as e:
             print("Error during search:", e)
             return []
-    
+        
+
+    def sent_text_cosine_similarity(index_name, diffusion_message, es):
+        # Embed the diffusion message into a vector using a pre-trained model
+        query_vector = Text2Vector.get_embedding(diffusion_message)
+
+        # Elasticsearch script to compute cosine similarity
+        script_query = {
+            "script_score": {
+                "query": {"match_all": {}},
+                "script": {
+                    "source": """
+                    if (!doc['sent_text_vector'].empty) {
+                        return cosineSimilarity(params.query_vector, 'sent_text_vector') + 1.0;
+                    } else {
+                        return 0.0;  // Default score if vector is missing
+                    }
+                    """,
+                    "params": {"query_vector": query_vector}  # Query vector already in list format
+                }
+            }
+        }
+
+        # Execute the search query
+        try:
+            response = es.search(index=index_name, body={"query": script_query, "size": 10})
+            return [(hit['_source']['sent_text'], hit['_score']) for hit in response['hits']['hits']]
+        except Exception as e:
+            print("Error during search:", e)
+            return []
+
+
     def get_messages_from_list(results):
-        # Extracting text from each tuple
+            # Extracting text from each tuple
         texts = [text for text, score in results]
         return texts
-
     
     # # Received text vector
     # @staticmethod
