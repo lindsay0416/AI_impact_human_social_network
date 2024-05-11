@@ -6,6 +6,8 @@ from model.agent import Agent
 import os
 import random
 
+import tool.dataset_tool as tool
+
 logger = logging.getLogger("environment")
 logging.basicConfig(level="INFO")
 
@@ -26,13 +28,12 @@ class Environment:
 
         # init environment with random graph or a real-world social network
         if graph is None:
-            logger.info("No graph data exists, creating a new graph...")
             if os.path.exists("../saved/G.pickle"):
-                self.graph = load_graph()
+                self.graph = tool.load_graph()
             else:
+                logger.info("No graph data exists, creating a new graph...")
                 self.graph = generate_random_network(self.node_size, self.connect_prob, self.is_directed)
         else:
-            # TODO
             self.graph = graph
             logger.info("Load a social network from dataset...")
 
@@ -105,20 +106,6 @@ class Environment:
 
 def generate_random_network(n, p, is_directed):
     graph = nx.erdos_renyi_graph(n, p, directed=is_directed)
-    save_graph(graph)
+    tool.save_graph(graph)
     return graph
 
-
-# save a graph to file
-def save_graph(graph):
-    with open("../saved/G.pickle", "wb") as f:
-        pickle.dump(graph, f)
-    logger.info("Saved to ../saved/G.pickle")
-
-
-# load a saved graph from file
-def load_graph():
-    with open("../saved/G.pickle", "rb") as f:
-        G = pickle.load(f)
-    logger.info("Load graph from ../saved/G.pickle")
-    return G

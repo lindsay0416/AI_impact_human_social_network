@@ -6,7 +6,8 @@ import logging
 import json
 
 from model.agent import Agent
-from model.environment import Environment, save_graph, load_graph
+from model.environment import Environment
+from tool.dataset_tool import save_graph, load_graph, graph_show_info
 
 logger = logging.getLogger("influence_diffusion")
 logging.basicConfig(level="INFO")
@@ -24,21 +25,27 @@ def start_diffusion(params):
     node_size = params.get("node_size")
     connect_prob = params.get("connect_prob")
     is_directed = params.get("is_directed")
+    is_external_dataset = params.get("is_external_dataset")
 
     round = params.get("round")
 
     # Initialize environment at timestep 0
-    environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
+    if not is_external_dataset:
+        environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
+    else:
+        G = load_graph()
+        graph_show_info(G)
+        environment = Environment(graph=G, is_directed=is_directed)
 
     # set seedSet
-    seed_set_size = params.get("seed_size")
+    seed_set_size = params.get("seed_set_size")
     if seed_set_size is not None:
         environment.select_seeds(seed_set_size)
     elif params.get("seed_set") is not None:
         seed_set = json.loads(params.get("seed_set"))
         environment.select_fix_seeds(seed_set)
     else:
-        environment.select_fix_seeds([1])
+        environment.select_fix_seeds([min(environment.graph.nodes)])
 
     if round == 0:
         save_graph(environment.graph)
@@ -84,7 +91,7 @@ def set_simulation_parameters():
     # save parameters to a json file
     with open("../saved/parameters.json", "w") as json_file:
         json.dump(parameters, json_file, indent=4)
-        logger.info("parameters saved to ../saved/parameters.json")
+        logger.info("parameters saved to saved/parameters.json")
     return parameters
 
 
@@ -94,7 +101,6 @@ if __name__ == '__main__':
         set_simulation_parameters()
 
     # load parameters
-    with open("../saved/parameters.json", "r") as param_json:
+    with open("../saved/parameters2.json", "r") as param_json:
         parameters = json.load(param_json)
-
     simulation(parameters)
