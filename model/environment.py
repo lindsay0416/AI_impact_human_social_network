@@ -6,6 +6,8 @@ from model.agent import Agent
 import os
 import random
 
+import tool.dataset_tool as tool
+
 logger = logging.getLogger("environment")
 logging.basicConfig(level="INFO")
 
@@ -14,6 +16,7 @@ class Environment:
     #  init a graph, graph can be None - so that a random graph would be created; or a Networkx graph.
     def __init__(self, graph=None, **kwargs):
         self.graph = graph
+        self.seedSet = []
         for key, value in kwargs.items():
             setattr(self, key, value)
             if key == "node_size":
@@ -25,13 +28,12 @@ class Environment:
 
         # init environment with random graph or a real-world social network
         if graph is None:
-            logger.info("No graph data exists, creating a new graph...")
             if os.path.exists("../saved/G.pickle"):
-                self.graph = load_graph()
+                self.graph = tool.load_graph()
             else:
+                logger.info("No graph data exists, creating a new graph...")
                 self.graph = generate_random_network(self.node_size, self.connect_prob, self.is_directed)
         else:
-            # TODO
             self.graph = graph
             logger.info("Load a social network from dataset...")
 
@@ -48,10 +50,13 @@ class Environment:
             node_data = Agent(node_id, self.graph)
 
             # assign in-neighbor and out-neighbor lists:
-            # both are a list of integers, denotes userID of the adjacent users.
-            node_data.in_neighbors = list(self.graph.predecessors(node_id))
-            node_data.out_neighbors = list(self.graph.successors(node_id))
-
+            #
+            if self.is_directed == "true":
+                node_data.in_neighbors = list(self.graph.predecessors(node_id))
+                node_data.out_neighbors = list(self.graph.successors(node_id))
+            else:
+                node_data.in_neighbors = list(self.graph.neighbors(node_id))
+                node_data.out_neighbors = list(self.graph.neighbors(node_id))
             # assign user data to node
             self.graph.nodes[node_id]['data'] = node_data
 
@@ -74,6 +79,7 @@ class Environment:
                     seedSet[selected] = self.graph.nodes[selected]["data"]
             except ValueError as e:
                 logger.error(f"An error occurred {e}, failed to assign user {selected} as seed")
+        self.seedSet = seedSet
         logger.info(f"Seed set: {list(seedSet.keys())}")
 
 
@@ -81,9 +87,11 @@ class Environment:
             Seed selection: selected seed based on userID with a given int list
     """
     def select_fix_seeds(self, seedSet):
+        self.seedSet = seedSet
         for seed in seedSet:
             self.graph.nodes[seed]["data"].status = 1
         logger.info(f"Seed set: {seedSet}")
+
 
 """
     Create a random network with networkx using Erdos-Renyi model
@@ -98,20 +106,6 @@ class Environment:
 
 def generate_random_network(n, p, is_directed):
     graph = nx.erdos_renyi_graph(n, p, directed=is_directed)
-    save_graph(graph)
+    tool.save_graph(graph)
     return graph
 
-
-# save a graph to file
-def save_graph(graph):
-    with open("../saved/G.pickle", "wb") as f:
-        pickle.dump(graph, f)
-    logger.info("Saved to ../saved/G.pickle")
-
-
-# load a saved graph from file
-def load_graph():
-    with open("../saved/G.pickle", "rb") as f:
-        G = pickle.load(f)
-    logger.info("Load graph from ../saved/G.pickle")
-    return G

@@ -3,5 +3,7 @@
     "timestep": 10,
     "influence_prob": 0.1,
     "is_directed": false,
-    "is_external_dataset": true
+    "node_size": 20,
+    "connect_prob": 0.1,
+    "seed_set_size": 1
 }
