@@ -1,9 +1,10 @@
 {
-    "seed_set_size": 1,
     "round": 5,
     "timestep": 10,
+    "seed_set_size": 1,
     "influence_prob": 0.1,
     "node_size": 20,
     "connect_prob": 0.1,
-    "is_directed": true
+    "is_directed": false,
+    "seed_set": "[1, 5]"
 }
