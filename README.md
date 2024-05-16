@@ -139,3 +139,8 @@ PUT received_text_test01
 
 ### sentence_embedding.py
 * Calculte the top 10 similar messages from "received_text_test01" and "sent_text_test01" index.
+
+# How to run llama locally
+* Download App: https://ollama.com/
+* pip install ollama
+* python llama_local_api.py
