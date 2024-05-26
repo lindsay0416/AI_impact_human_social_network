@@ -101,6 +101,6 @@ if __name__ == '__main__':
         set_simulation_parameters()
 
     # load parameters
-    with open("../saved/parameters2.json", "r") as param_json:
+    with open("../saved/parameters.json", "r") as param_json:
         parameters = json.load(param_json)
     simulation(parameters)
