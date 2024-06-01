@@ -143,4 +143,5 @@ PUT received_text_test01
 # How to run llama locally
 * Download App: https://ollama.com/
 * pip install ollama
+* Pull model: `ollama run llama3:8b`, `ollama run llama3`
 * python llama_local_api.py
