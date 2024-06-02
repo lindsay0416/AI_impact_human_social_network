@@ -139,3 +139,43 @@ PUT received_text_test01
 
 ### sentence_embedding.py
 * Calculte the top 10 similar messages from "received_text_test01" and "sent_text_test01" index.
+
+# How to run llama locally
+* Download App: https://ollama.com/
+* pip install ollama
+* Pull model: `ollama run llama3:8b`, `ollama run llama3`
+* python llama_local_api.py
+
+
+# Questions:
+* Repository: Public dataset or generate the dataset use LLM?
+* User profile: Generate the user profile use LLM?
+
+# TODO list:
+* Add timestamp to elastic search database.
+
+```JSON
+PUT /sent_text_test01/_mapping
+{
+  "properties": {
+    "timestamp": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss||epoch_millis"
+    }
+  }
+}
+
+```
+
+```JSON
+PUT /received_text_test01/_mapping
+{
+  "properties": {
+    "timestamp": {
+      "type": "date",
+      "format": "yyyy-MM-dd HH:mm:ss||epoch_millis"
+    }
+  }
+}
+
+```
