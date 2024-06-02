@@ -3,7 +3,7 @@ import pickle
 import logging
 import argparse
 
-logger = logging.getLogger("tool")
+logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
 
 def init_parser():
@@ -16,33 +16,33 @@ def init_parser():
 
 def convert_tool(dataset_file):
     G = nx.Graph()
-    with open(f"../input/{dataset_file}") as file:
+    with open(f"input/{dataset_file}") as file:
         for line in file:
             # Split the line into two nodes
             node1, node2 = map(int, line.split())
             # Add an edge between the two nodes in the graph
             G.add_edge(node1, node2)
-    save_graph(G)
+    save_graph(G, "graph.G")
     return G
 
 # save a graph to file
-def save_graph(graph):
-    with open("../saved/G.pickle", "wb") as f:
+def save_graph(graph, name):
+    with open(f"saved/{name}", "wb") as f:
         pickle.dump(graph, f)
-    logger.info("Saved to saved/G.pickle")
+    logger.info(f"Saved to saved/{name}")
 
 
 # load a saved graph from file
-def load_graph():
-    with open("../saved/G.pickle", "rb") as f:
+def load_graph(name):
+    with open(f"saved/{name}", "rb") as f:
         G = pickle.load(f)
-    logger.info("Load graph from saved/G.pickle")
+    logger.info(f"Load graph from saved/{name}")
     return G
 
 
 def graph_show_info(G):
-    logger.info(f"No. of edges:, {len(list(G.edges()))}")
-    logger.info(f"No. of nodes:, {len(list(G.nodes()))}")
+    logger.info(f"No. of edges: {len(list(G.edges()))}")
+    logger.info(f"No. of nodes: {len(list(G.nodes()))}")
 
 
 if __name__ == '__main__':
@@ -52,5 +52,5 @@ if __name__ == '__main__':
     print("---------------------------------------")
 
     convert_tool(args.dataset)
-    G = load_graph()
+    G = load_graph("graph.G")
     graph_show_info(G)
