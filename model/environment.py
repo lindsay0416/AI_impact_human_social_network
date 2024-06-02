@@ -106,6 +106,6 @@ class Environment:
 
 def generate_random_network(n, p, is_directed):
     graph = nx.erdos_renyi_graph(n, p, directed=is_directed)
-    tool.save_graph(graph)
+    tool.save_graph(graph, "graph.G")
     return graph
 
