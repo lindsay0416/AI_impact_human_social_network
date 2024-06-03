@@ -40,28 +40,34 @@ def set_simulation_params():
 
 
 def simulation(params):
-    # extract parameters:
-    no_of_rounds = params.get("round")
-    for r in range(no_of_rounds):
-        logger.info(f"Round {r}")
-        start_diffusion(params)
-
-
-def start_diffusion(params):
-    timestep = params.get("timestep")
+    # init graph
     node_size = params.get("node_size")
     connect_prob = params.get("connect_prob")
     is_directed = params.get("is_directed")
     is_external_dataset = params.get("is_external_dataset")
-
-    round = params.get("round")
-    # Initialize environment at timestep 0
     if not is_external_dataset:
         environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
     else:
         G = dt.load_graph("graph.G")
         dt.graph_show_info(G)
         environment = Environment(graph=G, is_directed=is_directed)
+
+    # start diffusion
+    no_of_rounds = params.get("round")
+    for r in range(no_of_rounds):
+        logger.info(f"Round {r}")
+        start_diffusion(params, r, environment)
+        reset_status(environment)
+
+def reset_status(environment):
+    for user in environment.graph.nodes():
+        user_agent = environment.graph.nodes()[user]["data"]
+        user_agent.update_status(0)
+
+def start_diffusion(params, round, environment):
+    timestep = params.get("timestep")
+
+    round = params.get("round")
 
     # set seedSet
     seed_set_size = params.get("seed_set_size")
