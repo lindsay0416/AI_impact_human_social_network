@@ -59,10 +59,16 @@ def simulation(params):
         start_diffusion(params, r, environment)
         reset_status(environment)
 
+"""
+    Reset status at the end of a round. This includes: clean up user agents' repositories, set up status to inactive (0).
+"""
 def reset_status(environment):
     for user in environment.graph.nodes():
         user_agent = environment.graph.nodes()[user]["data"]
         user_agent.update_status(0)
+        user_agent.posts = []
+        user_agent.repository = []
+
 
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
@@ -81,13 +87,13 @@ def start_diffusion(params, round, environment):
 
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
-    calculate_coverage(environment, 0)
 
+    calculate_coverage(environment, 0)
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             if user_agent.status == 1:
-                user_agent.start_influence()
+                user_agent.start_influence(step)
 
         calculate_coverage(environment, step)
 
