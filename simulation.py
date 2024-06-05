@@ -8,6 +8,8 @@ from model.agent import Agent
 from model.environment import Environment
 import tool.dataset_tool as dt
 
+import time
+
 # init logger
 logger = logging.getLogger("simulation")
 logging.basicConfig(level="INFO")
@@ -72,8 +74,8 @@ def reset_status(environment):
 
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
-
     round = params.get("round")
+    results = []
 
     # set seedSet
     seed_set_size = params.get("seed_set_size")
@@ -88,22 +90,33 @@ def start_diffusion(params, round, environment):
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
 
-    calculate_coverage(environment, 0)
+    global_analysis(environment, 0)
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             if user_agent.status == 1:
                 user_agent.start_influence(step)
+        data = global_analysis(environment, step)
+        results.append(data)
+        time.sleep(1)
+    
+    # TODO - save result
+    with open('saved/results.json', 'w') as f:
+        json.dump(results, f)
 
-        calculate_coverage(environment, step)
+def global_analysis(environment, timestep):
+    coverage = calculate_coverage(environment, timestep)
+    # TODO: save global analysis result into elastic search. Here, as a test, we save it into JSON file. Currently only provide coverage analysis data
+    data = {'step': timestep, 'coverage': coverage}
 
+    return data
 
 def calculate_coverage(environment, timestep):
     influence_coverage = 0
     for node in environment.graph.nodes():
         if environment.graph.nodes[node]["data"].status == 1:
             influence_coverage += 1
-    logger.info(f"Current timestep {timestep} -> No. of active users: {influence_coverage}")
+    return f"Current timestep {timestep} -> No. of active users: {influence_coverage}"
 
 
 if __name__ == '__main__':

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>News Propagation Simulation</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            var socket = io();
-
-            socket.on('log', function(data) {
-                console.log(data.msg);
-            });
-
-            socket.on('news', function(data) {
-                console.log('News received:', data.msg);
-                // Decide whether to share this news
-                if (Math.random() < 0.5) {  // 50% chance to share
-                    console.log('Sharing news...');
-                    socket.emit('share_news', {msg: data.msg});
-                } else {
-                    console.log('Not sharing news this time.');
-                }
-            });
-
-            // Initially share some news
-            socket.emit('share_news', {msg: 'Breaking News! Something big happened.'});
-        });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
 </head>
 <body>
-    <h1>News Propagation Simulation</h1>
-    <p>Check your console for the propagation log.</p>
+    <h1>Simulation Results</h1>
+    <div id="results"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resultsContainer = document.getElementById('results');
+
+            fetch('/results')
+                .then(response => response.json())
+                .then(data => {
+                    let delay = 0;  // Initial delay
+                    const interval = 2000;  // 2000 milliseconds between steps
+
+                    data.forEach(item => {
+                        setTimeout(() => {
+                            const p = document.createElement('p');
+                            p.textContent = `Current timestep ${item.step} -> No. of active users: ${item.coverage}`;
+                            resultsContainer.appendChild(p);
+                        }, delay);
+                        delay += interval;  // Increase delay incrementally
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
 </body>
 </html>
