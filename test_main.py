@@ -68,12 +68,12 @@ def main():
     app.check_es_connection()
     # app.test_generate_text()
 
-    # app.test_add_record_to_elasticsearch()
+    app.test_add_record_to_elasticsearch()
     
     # app.test_embedding_text()
 
     # app.test_received_text_cosine_similarity()
-    app.test_sent_text_cosine_similarity()
+    # app.test_sent_text_cosine_similarity()
 
 if __name__ == '__main__':
     main()
