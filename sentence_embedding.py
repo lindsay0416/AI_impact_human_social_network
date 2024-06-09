@@ -12,139 +12,70 @@ class Text2Vector:
         embedding = model.encode(text).tolist()
         return embedding
     
-    # Compare with the diffusion message, retrieve the top 10 similar messages in the "received_text_test01"
-    def received_text_cosine_similarity(index_name, diffusion_message, es):
-        # Convert diffusion_message to a vector
-        query_vector = Text2Vector.get_embedding(diffusion_message)
-
+    @staticmethod
+    def build_script_query(query_vector, vector_field, node):
         # Define the Elasticsearch query
-        script_query = {
+       return {
             "script_score": {
-                "query": {"match_all": {}},
-                "script": {
-                    "source": """
-                    if (!doc['received_text_vector'].empty) {
-                        return cosineSimilarity(params.query_vector, 'received_text_vector') + 1.0;
-                    } else {
-                        return 0.0; // Default score if vector is missing
+                "query": {
+                    "bool": {
+                        "must": [
+                            {"match": {"node": node}}
+                        ]
                     }
+                },
+                "script": {
+                    "source": f"""
+                        if (!doc['{vector_field}'].empty) {{
+                            return cosineSimilarity(params.query_vector, '{vector_field}') + 1.0;
+                        }} else {{
+                            return 0.0; // Default score if vector is missing
+                        }}
                     """,
-                    "params": {"query_vector": query_vector}  # Correctly use the list without converting
+                    "params": {"query_vector": query_vector}
                 }
             }
         }
-
+    
+    @staticmethod
+    def query_elasticsearch(index_name, script_query, es):
         # Perform the search
         try:
             response = es.search(index=index_name, body={"query": script_query, "size": 10})
-            return [(hit['_source']['received_text'], hit['_score']) for hit in response['hits']['hits']]
+            return [(hit['_source'], hit['_score']) for hit in response['hits']['hits']]
         except Exception as e:
             print("Error during search:", e)
             return []
         
+    @staticmethod
+    def received_text_cosine_similarity(index_name, diffusion_message, node, es):
+        # Convert diffusion_message to a vector
+        query_vector = Text2Vector.get_embedding(diffusion_message)
 
-    def sent_text_cosine_similarity(index_name, diffusion_message, es):
+        # Build the script query
+        script_query = Text2Vector.build_script_query(query_vector, 'received_text_vector', node)
+
+        # Perform the search
+        results = Text2Vector.query_elasticsearch(index_name, script_query, es)
+        return [(hit.get('received_text'), hit.get('timestamp'), score) for hit, score in results]
+
+    @staticmethod
+    def sent_text_cosine_similarity(index_name, diffusion_message, node, es):
         # Embed the diffusion message into a vector using a pre-trained model
         query_vector = Text2Vector.get_embedding(diffusion_message)
 
-        # Elasticsearch script to compute cosine similarity
-        script_query = {
-            "script_score": {
-                "query": {"match_all": {}},
-                "script": {
-                    "source": """
-                    if (!doc['sent_text_vector'].empty) {
-                        return cosineSimilarity(params.query_vector, 'sent_text_vector') + 1.0;
-                    } else {
-                        return 0.0;  // Default score if vector is missing
-                    }
-                    """,
-                    "params": {"query_vector": query_vector}  # Query vector already in list format
-                }
-            }
-        }
+        # Build the script query
+        script_query = Text2Vector.build_script_query(query_vector, 'sent_text_vector', node)
 
         # Execute the search query
-        try:
-            response = es.search(index=index_name, body={"query": script_query, "size": 10})
-            return [(hit['_source']['sent_text'], hit['_score']) for hit in response['hits']['hits']]
-        except Exception as e:
-            print("Error during search:", e)
-            return []
+        results = Text2Vector.query_elasticsearch(index_name, script_query, es)
+        return [(hit.get('sent_text'), hit.get('timestamp'), score) for hit, score in results]
 
-
+    @staticmethod
     def get_messages_from_list(results):
-            # Extracting text from each tuple
-        texts = [text for text, score in results]
+        # Extracting text and timestamp from each tuple
+        texts = [{'message': text, 'timestamp': timestamp, 'score':score} for text, timestamp, score in results]
         return texts
-    
-    # # Received text vector
-    # @staticmethod
-    # def received_text_cosine_similarity(index_name, query_vector, es):
-    #     script_query = {
-    #     "script_score": {
-    #         "query": {"match_all": {}},
-    #         "script": {
-    #             "source": """
-    #             if (!doc['received_text_vector'].empty) {
-    #                 return cosineSimilarity(params.query_vector, 'received_text_vector') + 1.0;
-    #             } else {
-    #                 return 0.0; // Default score if vector is missing
-    #             }
-    #             """,
-    #             "params": {"query_vector": query_vector}
-    #             }
-    #         }
-    #     }
-    #     try:
-    #         response = es.search(index=index_name, body={"query": script_query, "size": 10})
-    #         return response
-    #     except RequestError as e:
-    #         print("RequestError occurred:", e.info)
-    #         raise
-    
-    # # Sent text vector
-    # @staticmethod
-    # def sent_text_cosine_similarity(index_name, query_vector, es):   
-    #     script_query = {
-    #     "script_score": {
-    #         "query": {"match_all": {}},
-    #         "script": {
-    #             "source": "cosineSimilarity(params.query_vector, 'sent_text_vector') + 1.0",
-    #             "params": {"query_vector": query_vector}
-    #             }
-    #         }
-    #     }
-    #     try:
-    #         response = es.search(index=index_name, body={"query": script_query, "size": 1})
-    #         return response
-    #     except RequestError as e:
-    #         print("RequestError occurred:", e.info)
-    #         raise
-
-    # # return the similarity score
-    # @staticmethod
-    # def get_similarity_score(SimilarityResp):
-    #     scores = []
-    #     for hit in SimilarityResp['hits']['hits']:
-    #         score = hit['_score'] - 1.0  # Subtracting 1.0 because we added 1.0 in the script
-    #         scores.append(score)
-    #     return scores
-        
-    # # Test, return the detail of an index.
-    # @staticmethod
-    # def test_script(index_name, es):
-    #     script_query = {
-    #     "script_score": {
-    #         "query": {"match_all": {}},
-    #         "script": {
-    #             "source": "1"  # Just returns a constant score
-    #         }
-    #     }
-    # }
-    #     response = es.search(index=index_name, body={"query": script_query, "size": 10})
-    #     return response
-
             
 
 

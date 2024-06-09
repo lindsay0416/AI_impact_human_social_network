@@ -17,7 +17,7 @@ class LlamaApi:
         complete_message = ""
         for chunk in stream:
             message_content = chunk['message']['content']
-            # print(message_content, end='', flush=True)
+            print(message_content, end='', flush=True)
             complete_message += message_content
 
         # Get the timestamp after the whole message is generated

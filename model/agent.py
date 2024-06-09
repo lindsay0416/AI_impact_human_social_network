@@ -2,6 +2,7 @@
 import random
 
 INFLUENCE_PROB = 0.1
+#TODO: replce 0.1 with the socre calculated from scores_utilities.py 
 
 class Agent:
     """

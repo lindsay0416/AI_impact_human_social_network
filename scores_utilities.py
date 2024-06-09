@@ -3,9 +3,9 @@
 # correlation_sore = a*similarity + b*timestamp + c*frequency，abc are coefficients.
 # timestamp can take into account the time difference:
 # The time difference between the (received/sent) messages to be scored and the timestamp of the simulation message.
-from datetime import datetime
 import time
 from llama_local_api import LlamaApi
+from sentence_embedding import Text2Vector
 
 # every time the LLM generated an influence message, it will output an diffusion_timestamp.
 # The
@@ -13,12 +13,80 @@ from llama_local_api import LlamaApi
 class ScoresUtilities:
     # timestamp = the time that the influence message has been generated.
     # only sent message need to create the time decay
-    @staticmethod
-    def time_decay():
-        # influence message timestamp
-        result = LlamaApi.generate_messages_with_timestamps(prompt)
-        print(result[0]['timestamp'])
-        print(result[0]['message'])
-
+    # dm: diffusion message
+    # repo: repository message (sent message)
+    def time_decay(dmTimestamp, repoTimestamp):
+        # Ensure both timestamps are not None and are integers
+        if dmTimestamp is None or repoTimestamp is None:
+            raise ValueError("Timestamps must not be None")
+        
+        # Calculate time decay
+        time_decay = int(dmTimestamp) - int(repoTimestamp)
+        return time_decay
     
+    @staticmethod
+    def calculate_received_text_scores(es, diffusion_message, prompt, node):
+        # Get the generated text and its timestamp
+        generated_result = LlamaApi.generate_messages_with_timestamps(prompt)
+        dmTimestamp = generated_result[0]['timestamp']
 
+        # Get the received text similarity results and their timestamps
+        received_results = Text2Vector.received_text_cosine_similarity('received_text_test01', diffusion_message, node, es)
+
+        time_decay_data = []
+
+        # Calculate time decay for received texts
+        if received_results:
+            for result in received_results:
+                repoTimestamp = result[1]
+                if repoTimestamp is not None:
+                    time_decay_value = ScoresUtilities.time_decay(dmTimestamp, repoTimestamp)
+                    time_decay_data.append({
+                        'message': result[0],
+                        'time_decay': time_decay_value,
+                        'similarity_score': result[2]
+                    })
+        else:
+            print("No received results found to calculate time decay.")
+
+        return time_decay_data
+
+    @staticmethod
+    def calculate_sent_text_scores(es, diffusion_message, prompt, node):
+        # Get the generated text and its timestamp
+        generated_result = LlamaApi.generate_messages_with_timestamps(prompt)
+        dmTimestamp = generated_result[0]['timestamp']
+
+        # Get the sent text similarity results and their timestamps
+        sent_results = Text2Vector.sent_text_cosine_similarity('sent_text_test01', diffusion_message, node, es)
+
+        time_decay_data = []
+
+        # Calculate time decay for sent texts
+        if sent_results:
+            for result in sent_results:
+                repoTimestamp = result[1]
+                if repoTimestamp is not None:
+                    time_decay_value = ScoresUtilities.time_decay(dmTimestamp, repoTimestamp)
+                    time_decay_data.append({
+                        'message': result[0],
+                        'time_decay': time_decay_value,
+                        'similarity_score': result[2]
+                    })
+        else:
+            print("No sent results found to calculate time decay.")
+
+        return time_decay_data
+
+    @staticmethod
+    def calculate_time_decay_and_similarity(es, diffusion_message, prompt, node):
+        # Calculate scores for received texts
+        received_scores = ScoresUtilities.calculate_received_text_scores(es, diffusion_message, prompt, node)
+
+        # Calculate scores for sent texts
+        sent_scores = ScoresUtilities.calculate_sent_text_scores(es, diffusion_message, prompt, node)
+
+        return {
+            'received_scores': received_scores,
+            'sent_scores': sent_scores
+        }
