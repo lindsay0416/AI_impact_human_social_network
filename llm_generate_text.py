@@ -1,3 +1,4 @@
+# This function is using API from gpt, need to pay
 class GenerateText:
      # Function to post data to the /generate_text API and receive the generated text
     @staticmethod

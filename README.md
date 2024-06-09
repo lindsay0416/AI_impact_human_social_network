@@ -152,7 +152,8 @@ PUT received_text_test01
 * User profile: Generate the user profile use LLM?
 
 # TODO list:
-* Add timestamp to elastic search database.
+* Add timestamp to elastic search database. (done)
+* 
 
 ```JSON
 PUT /sent_text_test01/_mapping

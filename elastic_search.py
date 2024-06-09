@@ -1,6 +1,5 @@
-from llm_generate_text import GenerateText
+# from llm_generate_text import GenerateText
 from sentence_embedding import Text2Vector
-from datetime import datetime
 import time
 
 class ElasticSeachStore():
@@ -22,7 +21,7 @@ class ElasticSeachStore():
 
     @staticmethod
     def add_record_to_elasticsearch(node, connected_node, text, weight, is_received, es):
-        current_timestamp = time.time_ns()
+        # current_timestamp = time.time_ns()
         document_body = {
             "node": connected_node if is_received else node,
             "from": node if is_received else None,
@@ -30,7 +29,7 @@ class ElasticSeachStore():
             "received_text": text if is_received else None,
             "sent_text": text if not is_received else None,
             "received_text_weight": str(weight) if is_received else None,
-            "timestamp": current_timestamp,
+            "timestamp": time.time_ns(),
         }
         document_body = {k: v for k, v in document_body.items() if v is not None}
         index_name = "received_text_test01" if is_received else "sent_text_test01"

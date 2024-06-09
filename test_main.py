@@ -4,6 +4,7 @@ from es_manager import ESManager
 from llm_generate_text import GenerateText
 from elastic_search import ElasticSeachStore
 from sentence_embedding import Text2Vector
+from llama_local_api import LlamaApi
 
 class Application:
     def __init__(self):
@@ -59,7 +60,11 @@ class Application:
         print(results)
         texts = Text2Vector.get_messages_from_list(results) # print the list of texts
         print(texts)
-
+    def test_get_generated_text(self):
+        prompt = "How are you!"
+        result = LlamaApi.generate_messages_with_timestamps(prompt)
+        print(result[0]['timestamp'])
+        print(result[0]['message'])
 
 
 
@@ -68,12 +73,13 @@ def main():
     app.check_es_connection()
     # app.test_generate_text()
 
-    app.test_add_record_to_elasticsearch()
+    # app.test_add_record_to_elasticsearch()
     
     # app.test_embedding_text()
 
     # app.test_received_text_cosine_similarity()
     # app.test_sent_text_cosine_similarity()
+    app.test_get_generated_text()
 
 if __name__ == '__main__':
     main()
