@@ -85,6 +85,7 @@ class ScoresUtilities:
 
         return time_decay_data
 
+    # keep top10 most similar messages.
     @staticmethod
     def calculate_time_decay_and_similarity(es, diffusion_message, prompt, node):
         # Calculate scores for received texts
@@ -103,10 +104,28 @@ class ScoresUtilities:
         }
 
     @staticmethod
-    def read_probability_data(data):
+    def read_correlation_data(data):
         # Extract probabilities from received and sent scores
         probabilities = {
             'received_probabilities': [entry['probability'] for entry in data['received_scores']],
             'sent_probabilities': [entry['probability'] for entry in data['sent_scores']]
         }
-        return probabilities
+
+        # Calculate average similarity scores
+        if data['sent_scores']:
+            etrieved_sent_message_similarity = sum(entry['similarity_score'] for entry in data['sent_scores']) / len(data['sent_scores'])
+        else:
+            etrieved_sent_message_similarity = 0
+
+        if data['received_scores']:
+            etrieved_received_message_similarity = sum(entry['similarity_score'] for entry in data['received_scores']) / len(data['received_scores'])
+        else:
+            etrieved_received_message_similarity = 0
+
+        return {
+            'probabilities': probabilities,
+            'etrieved_sent_message_similarity': etrieved_sent_message_similarity,
+            'etrieved_received_message_similarity': etrieved_received_message_similarity
+        }
+    
+    #TODO: Compare the Profile similarity.

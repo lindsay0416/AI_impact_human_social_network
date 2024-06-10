@@ -83,7 +83,7 @@ class Application:
         probabilities = ScoresUtilities.read_probability_data(time_decay_data)
         print(probabilities)
 
-    def test_read_probability_data(self):
+    def test_read_correlation_data(self):
         diffusion_message = "Test record in elasticsearch."
         prompt = "How are you!"
         node = "N1"
@@ -92,12 +92,14 @@ class Application:
         # Calculate the time decay and similarity data
         time_decay_data = ScoresUtilities.calculate_time_decay_and_similarity(es_client, diffusion_message, prompt, node)
 
-        # Read the probability data
-        probabilities = ScoresUtilities.read_probability_data(time_decay_data)
+        # Read the correlation data
+        correlation_data = ScoresUtilities.read_correlation_data(time_decay_data)
 
-        # Print the probabilities
-        print("Received Probabilities: ", probabilities['received_probabilities'])
-        print("Sent Probabilities: ", probabilities['sent_probabilities'])
+        # Print the correlation data
+        print("Probabilities: ", correlation_data['probabilities'])
+        print("Etrieved Sent Message Similarity: ", correlation_data['etrieved_sent_message_similarity'])
+        print("Etrieved Received Message Similarity: ", correlation_data['etrieved_received_message_similarity'])
+
 
 
 
@@ -116,8 +118,8 @@ def main():
     # app.test_received_text_cosine_similarity()
     # app.test_sent_text_cosine_similarity()
     # app.generate_response_messages_with_timestamps()
-    app.test_calculate_time_decay_and_similarity()
-    # app.test_read_probability_data()
+    # app.test_calculate_time_decay_and_similarity()
+    app.test_read_correlation_data()
 
 if __name__ == '__main__':
     main()
