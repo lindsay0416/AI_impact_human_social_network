@@ -1,6 +1,9 @@
 # This function is about the message retrieve:
 # we consider those 3 parameters share the same weight. a=b=c=1/3
 # correlation_sore = a*similarity + b*timestamp + c*frequency，abc are coefficients.
+# 1.correlation_sore = a*similarity + b*time_decay (ab are coefficients) --> used for retrieve top10 most similarity messages in each user-agent's repository
+# 2. trieved message similarity = AVG(top10(similarity))
+# 3. NFLUENCE_PROB = \alpha（etrieved message similarity） + (1-\alpha)（user profile (beliefs) similarity）; \alpha=0.5
 # timestamp can take into account the time difference:
 # The time difference between the (received/sent) messages to be scored and the timestamp of the simulation message.
 import time
@@ -8,7 +11,6 @@ from llama_local_api import LlamaApi
 from sentence_embedding import Text2Vector
 
 # every time the LLM generated an influence message, it will output an diffusion_timestamp.
-# The
 
 class ScoresUtilities:
     # timestamp = the time that the influence message has been generated.
@@ -91,9 +93,13 @@ class ScoresUtilities:
         # Calculate scores for sent texts
         sent_scores = ScoresUtilities.calculate_sent_text_scores(es, diffusion_message, prompt, node)
 
+        # Sort by probability and keep only top 10 records
+        top_received_scores = sorted(received_scores, key=lambda x: x['probability'], reverse=True)[:10]
+        top_sent_scores = sorted(sent_scores, key=lambda x: x['probability'], reverse=True)[:10]
+
         return {
-            'received_scores': received_scores,
-            'sent_scores': sent_scores
+            'received_scores': top_received_scores,
+            'sent_scores': top_sent_scores
         }
 
     @staticmethod

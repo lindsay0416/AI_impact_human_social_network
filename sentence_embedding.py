@@ -3,15 +3,13 @@ from sentence_transformers import SentenceTransformer
 # from elasticsearch import RequestError
 
 class Text2Vector:
-    
-    @staticmethod
     def get_embedding(text):
         # Initialize the Sentence Transformer model
         model = SentenceTransformer('all-MiniLM-L6-v2')
         # Generate the embedding for the text
         embedding = model.encode(text).tolist()
         return embedding
-    
+
     @staticmethod
     def build_script_query(query_vector, vector_field, node):
         # Define the Elasticsearch query
@@ -36,7 +34,7 @@ class Text2Vector:
                 }
             }
         }
-    
+
     @staticmethod
     def query_elasticsearch(index_name, script_query, es, scroll='2m', size=1000):
         # Perform the initial search with scroll enabled
