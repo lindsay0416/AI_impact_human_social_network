@@ -1,6 +1,7 @@
 # entry of simulation
 import os
 import networkx as nx
+from networkx.readwrite import json_graph
 import logging
 import json
 
@@ -56,10 +57,18 @@ def simulation(params):
 
     # start diffusion
     no_of_rounds = params.get("round")
+
+    results = {}
+
     for r in range(no_of_rounds):
         logger.info(f"Round {r}")
-        start_diffusion(params, r, environment)
+        results[str(r)] = start_diffusion(params, r, environment)
         reset_status(environment)
+
+        
+    # TODO - save result
+    with open('saved/results.json', 'w') as f:
+        json.dump(results, f, indent=4)
 
 """
     Reset status at the end of a round. This includes: clean up user agents' repositories, set up status to inactive (0).
@@ -75,7 +84,7 @@ def reset_status(environment):
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
     round = params.get("round")
-    results = []
+    results = {}
 
     # set seedSet
     seed_set_size = params.get("seed_set_size")
@@ -90,24 +99,21 @@ def start_diffusion(params, round, environment):
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
 
-    global_analysis(environment, 0)
+    results[str(0)] = global_analysis(environment, 0)
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             if user_agent.status == 1:
                 user_agent.start_influence(step)
         data = global_analysis(environment, step)
-        results.append(data)
-        time.sleep(1)
-    
-    # TODO - save result
-    with open('saved/results.json', 'w') as f:
-        json.dump(results, f)
+        results[str(step)] = data
+    return results
 
 def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
     # TODO: save global analysis result into elastic search. Here, as a test, we save it into JSON file. Currently only provide coverage analysis data
-    data = {'step': timestep, 'coverage': coverage}
+    data = {"data":{"coverage": coverage}}
+    # graph_data = {'step': timestep, 'data': json_graph.node_link_data(environment.graph)}
 
     return data
 

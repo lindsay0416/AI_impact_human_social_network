@@ -24,6 +24,17 @@ class Agent:
         self.in_neighbors = []
         self.out_neighbors = []
         self.posts = []
+    
+    def to_dict(self):
+        return{
+            'id': self.userID,
+            'status': self.status,
+            'profile': self.profile,
+            'repository': self.repository,
+            'posts': self.posts,
+            'in_neighbors': self.in_neighbors,
+            'out_neighbors': self.out_neighbors
+        }
 
     def update_status(self, status):
         self.status = status
