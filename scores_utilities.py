@@ -99,9 +99,15 @@ class ScoresUtilities:
         top_received_scores = sorted(received_scores, key=lambda x: x['probability'], reverse=True)[:10]
         top_sent_scores = sorted(sent_scores, key=lambda x: x['probability'], reverse=True)[:10]
 
+        # Extract the messages for the top 10 records
+        top_received_messages = [score['message'] for score in top_received_scores]
+        top_sent_messages = [score['message'] for score in top_sent_scores]
+
         return {
             'received_scores': top_received_scores,
-            'sent_scores': top_sent_scores
+            'sent_scores': top_sent_scores,
+            'received_messages': top_received_messages, # used for generate the prompts
+            'sent_messages': top_sent_messages # used for generate the prompts
         }
 
     @staticmethod
