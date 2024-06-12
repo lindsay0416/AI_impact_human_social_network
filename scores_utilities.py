@@ -44,7 +44,7 @@ class ScoresUtilities:
                 repoTimestamp = result[1]
                 if repoTimestamp is not None:
                     time_decay_value = ScoresUtilities.time_decay(dmTimestamp, repoTimestamp)
-                    probability = 1/3 * int(time_decay_value) + 1/3 * int(result[2])
+                    probability = 1/2 * int(time_decay_value) + 1/2 * int(result[2])
                     time_decay_data.append({
                         'message': result[0],
                         'time_decay': time_decay_value,
@@ -68,12 +68,13 @@ class ScoresUtilities:
         time_decay_data = []
 
         # Calculate time decay for sent texts
+        # 1/2*time_decay_value + 1/2*similarity = the probability of this message in the reposity be retrieved 
         if sent_results:
             for result in sent_results:
                 repoTimestamp = result[1]
                 if repoTimestamp is not None:
                     time_decay_value = ScoresUtilities.time_decay(dmTimestamp, repoTimestamp)
-                    probability = 1/3 * int(time_decay_value) + 1/3 * int(result[2])
+                    probability = 1/2 * int(time_decay_value) + 1/2 * int(result[2]) 
                     time_decay_data.append({
                         'message': result[0],
                         'time_decay': time_decay_value,
@@ -113,19 +114,19 @@ class ScoresUtilities:
 
         # Calculate average similarity scores
         if data['sent_scores']:
-            etrieved_sent_message_similarity = sum(entry['similarity_score'] for entry in data['sent_scores']) / len(data['sent_scores'])
+            retrieved_sent_message_similarity = sum(entry['similarity_score'] for entry in data['sent_scores']) / len(data['sent_scores'])
         else:
-            etrieved_sent_message_similarity = 0
+            retrieved_sent_message_similarity = 0
 
         if data['received_scores']:
-            etrieved_received_message_similarity = sum(entry['similarity_score'] for entry in data['received_scores']) / len(data['received_scores'])
+            retrieved_received_message_similarity = sum(entry['similarity_score'] for entry in data['received_scores']) / len(data['received_scores'])
         else:
-            etrieved_received_message_similarity = 0
+            retrieved_received_message_similarity = 0
 
         return {
             'probabilities': probabilities,
-            'etrieved_sent_message_similarity': etrieved_sent_message_similarity,
-            'etrieved_received_message_similarity': etrieved_received_message_similarity
+            'retrieved_sent_message_similarity': retrieved_sent_message_similarity,
+            'retrieved_received_message_similarity': retrieved_received_message_similarity
         }
     
     #TODO: Compare the Profile similarity.
