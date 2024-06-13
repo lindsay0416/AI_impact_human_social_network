@@ -1,36 +1,20 @@
-import io
-import matplotlib.pyplot as plt
-import networkx as nx
-from flask import Flask, Response
-import pickle
+from flask import Flask, jsonify, send_from_directory
+import json
 
 app = Flask(__name__)
 
-@app.route('/graph')
-def plot_graph():
-    # Load the graph from a pickle file
-    with open('../saved/G.pickle', 'rb') as f:
-        G = pickle.load(f)
-
-    # Draw the graph
-    fig, ax = plt.subplots(figsize=(6, 4))
-    nx.draw(G, ax=ax, with_labels=True)
-
-    # Save the plot to a BytesIO buffer
-    img_buffer = io.BytesIO()
-    plt.savefig(img_buffer, format='png')
-    plt.close(fig)
-    img_buffer.seek(0)
-
-    # Serve the image
-    return Response(img_buffer, mimetype='image/png')
+@app.route('/results')
+def get_results():
+    try:
+        with open('saved/results.json', 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except FileNotFoundError:
+        return jsonify([]), 404
 
 @app.route('/')
-def home():
-    return '''
-        <h1>NetworkX Graph from Pickle</h1>
-        <img src="/graph" alt="Graph"/>
-    '''
+def index():
+    return send_from_directory('templates', 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

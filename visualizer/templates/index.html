@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
+</head>
+<body>
+    <h1>Simulation Results</h1>
+    <div id="results"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resultsContainer = document.getElementById('results');
+
+            fetch('/results')
+                .then(response => response.json())
+                .then(data => {
+                    let delay = 0;  // Initial delay
+                    const interval = 200;  // 2000 milliseconds between steps
+
+                    // Loop through each round
+                    data.simulation.forEach(round => {
+                        const p = document.createElement('p');
+                        // Assuming 'data' in your JSON is an array with one element per step
+                        p.textContent = `Current Round ${round.round}:`
+                        resultsContainer.appendChild(p);
+                        // Loop through each result in the round
+                        round.result.forEach(step => {
+                            setTimeout(() => {
+                                // Create a paragraph for each step result
+                                const p = document.createElement('p');
+                                // Assuming 'data' in your JSON is an array with one element per step
+                                p.textContent = step.data.map(item => item.coverage).join(", ");
+                                resultsContainer.appendChild(p);
+                            }, delay);
+                            delay += interval;  // Increase delay incrementally
+                        });
+                    });
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>
