@@ -16,15 +16,25 @@
                 .then(response => response.json())
                 .then(data => {
                     let delay = 0;  // Initial delay
-                    const interval = 2000;  // 2000 milliseconds between steps
+                    const interval = 200;  // 2000 milliseconds between steps
 
-                    data.forEach(item => {
-                        setTimeout(() => {
-                            const p = document.createElement('p');
-                            p.textContent = `Current timestep ${item.step} -> No. of active users: ${item.coverage}`;
-                            resultsContainer.appendChild(p);
-                        }, delay);
-                        delay += interval;  // Increase delay incrementally
+                    // Loop through each round
+                    data.simulation.forEach(round => {
+                        const p = document.createElement('p');
+                        // Assuming 'data' in your JSON is an array with one element per step
+                        p.textContent = `Current Round ${round.round}:`
+                        resultsContainer.appendChild(p);
+                        // Loop through each result in the round
+                        round.result.forEach(step => {
+                            setTimeout(() => {
+                                // Create a paragraph for each step result
+                                const p = document.createElement('p');
+                                // Assuming 'data' in your JSON is an array with one element per step
+                                p.textContent = step.data.map(item => item.coverage).join(", ");
+                                resultsContainer.appendChild(p);
+                            }, delay);
+                            delay += interval;  // Increase delay incrementally
+                        });
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));
