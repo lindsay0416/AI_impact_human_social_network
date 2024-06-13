@@ -9,6 +9,7 @@ from model.agent import Agent
 from model.environment import Environment
 import tool.dataset_tool as dt
 
+from datetime import datetime
 import time
 
 # init logger
@@ -58,17 +59,17 @@ def simulation(params):
     # start diffusion
     no_of_rounds = params.get("round")
 
-    results = {}
-
+    rounds = []
     for r in range(no_of_rounds):
+        round = {}
         logger.info(f"Round {r}")
-        results[str(r)] = start_diffusion(params, r, environment)
+        result = start_diffusion(params, r, environment)
         reset_status(environment)
-
-        
-    # TODO - save result
-    with open('saved/results.json', 'w') as f:
-        json.dump(results, f, indent=4)
+        round["round"] = r
+        round["result"] = result
+        rounds.append(round)
+    
+    return rounds  
 
 """
     Reset status at the end of a round. This includes: clean up user agents' repositories, set up status to inactive (0).
@@ -84,7 +85,7 @@ def reset_status(environment):
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
     round = params.get("round")
-    results = {}
+    steps = []
 
     # set seedSet
     seed_set_size = params.get("seed_set_size")
@@ -98,21 +99,28 @@ def start_diffusion(params, round, environment):
 
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
+        data = global_analysis(environment, 0)
+        step_result = {}
+        step_result["step"] = 0
+        step_result["data"] = data
+        steps.append(step_result)
 
-    results[str(0)] = global_analysis(environment, 0)
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             if user_agent.status == 1:
                 user_agent.start_influence(step)
-        data = global_analysis(environment, step)
-        results[str(step)] = data
-    return results
+        step_result = {}
+        step_result["step"] = step
+        step_result["data"] = global_analysis(environment, step)
+        steps.append(step_result)
+    return steps
+
 
 def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
     # TODO: save global analysis result into elastic search. Here, as a test, we save it into JSON file. Currently only provide coverage analysis data
-    data = {"data":{"coverage": coverage}}
+    data = [{"coverage": coverage}]
     # graph_data = {'step': timestep, 'data': json_graph.node_link_data(environment.graph)}
 
     return data
@@ -126,6 +134,8 @@ def calculate_coverage(environment, timestep):
 
 
 if __name__ == '__main__':
+    start_time = datetime.now().strftime('%Y%m%d%H%M%S')
+
     if not os.path.exists("input/parameters.json"):
         parameters = set_simulation_params()
     else:
@@ -134,4 +144,17 @@ if __name__ == '__main__':
             parameters = json.load(param_json)
 
     # start simulation
-    simulation(parameters)
+    data = simulation(parameters)
+
+    end_time = datetime.now().strftime('%Y%m%d%H%M%S')
+
+    # ====== save simulation result to JSON file ====== 
+    results = {}
+    # add simulation metadata
+    results["id"] = start_time
+    results["start"] = start_time
+    results["end"] = end_time
+    results["simulation"] = data
+    
+    with open('saved/results.json', 'w') as f:
+        json.dump(results, f, indent=4)
