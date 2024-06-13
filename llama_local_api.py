@@ -5,6 +5,8 @@ import ollama
 class LlamaApi:
     @staticmethod
     def generate_messages_with_timestamps(prompt):
+
+
         # Initialize a list to store the messages and their timestamps
         messages_with_timestamps = []
 

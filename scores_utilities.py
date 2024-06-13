@@ -9,6 +9,8 @@
 import time
 from llama_local_api import LlamaApi
 from sentence_embedding import Text2Vector
+import numpy as np
+import json
 
 # every time the LLM generated an influence message, it will output an diffusion_timestamp.
 
@@ -89,6 +91,7 @@ class ScoresUtilities:
     # keep top10 most similar messages.
     @staticmethod
     def calculate_time_decay_and_similarity(es, diffusion_message, prompt, node):
+        # TODO: not all the users, just the neigbours. 
         # Calculate scores for received texts
         received_scores = ScoresUtilities.calculate_received_text_scores(es, diffusion_message, prompt, node)
 
@@ -135,4 +138,43 @@ class ScoresUtilities:
             'retrieved_received_message_similarity': retrieved_received_message_similarity
         }
     
-    #TODO: Compare the Profile similarity.
+    # Compare the Profile similarity.
+    # node represents to the users that sending the messages from.
+    # TODO: not all the users, just the neigbours. 
+        # node find the user profile, 
+        # embedding the user profile,  use get_embedding function
+        # calculate the user profile similarity,
+        # assume the neigbour is N2 and N3, later will be a list of nodes. 
+    def profile_similarity(node, user_profile_path='user_profile/user_profile.json'):
+        # Load user profiles from JSON file
+        with open(user_profile_path, 'r') as file:
+            user_profiles = json.load(file)
+
+        # Get the user profile
+        user_profile = user_profiles.get(node)
+        if not user_profile:
+            raise ValueError(f"Profile for node {node} not found.")
+
+        # Create a combined profile string for embedding
+        profile_string = f"{user_profile['age']} {user_profile['gender']} {user_profile['description']}"
+        
+        # Embed the user profile
+        user_embedding = Text2Vector.get_embedding(profile_string)
+
+        # Assuming neighbors are N2 and N3 for now
+        neighbors = ["N2", "N3"]
+        neighbor_embeddings = []
+        for neighbor in neighbors:
+            neighbor_profile = user_profiles.get(neighbor)
+            if neighbor_profile:
+                neighbor_profile_string = f"{neighbor_profile['age']} {neighbor_profile['gender']} {neighbor_profile['description']}"
+                neighbor_embeddings.append(Text2Vector.get_embedding(neighbor_profile_string))
+
+        # Calculate similarity scores
+        similarities = [np.dot(user_embedding, neighbor_embedding) / (np.linalg.norm(user_embedding) * np.linalg.norm(neighbor_embedding)) for neighbor_embedding in neighbor_embeddings]
+
+        return {
+            'user_profile': user_profile,
+            'similarities': dict(zip(neighbors, similarities))
+        }
+    #TODO: After change the code to only calculate the correlation_sore for only neigbours, use 3. to get the NFLUENCE_PROB

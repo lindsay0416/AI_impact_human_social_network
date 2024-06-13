@@ -6,6 +6,8 @@ from elastic_search import ElasticSeachStore
 from sentence_embedding import Text2Vector
 from llama_local_api import LlamaApi
 from scores_utilities import ScoresUtilities
+import json
+import numpy as np
 
 class Application:
     def __init__(self):
@@ -65,7 +67,34 @@ class Application:
         print("sent_text_cosine_similarity: ", texts)
 
     def generate_response_messages_with_timestamps(self):
-        prompt = "How are you!"
+        # Example JSON data
+        user_data = {
+            "N1": {
+                "name": "Emily",
+                "age": 32,
+                "gender": "female",
+                "description": "a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries."
+            },
+            "N2": {
+                "name": "James",
+                "age": 25,
+                "gender": "male",
+                "description": "a tech-savvy enthusiast who spends most of his time exploring the latest gadgets and software. He enjoys coding and is always up-to-date with the latest technological advancements."
+            },
+            "N3": {
+                "name": "Olivia",
+                "age": 42,
+                "gender": "female",
+                "description": "a dedicated yoga instructor who believes in the power of mindfulness and physical well-being. She enjoys teaching others and creating a peaceful environment for her students."
+            }
+        }
+
+        # Convert the dictionary to a JSON string
+        json_data = json.dumps(user_data, indent=2)
+
+        # Prepare the prompt
+        prompt = f"Here is some user data in JSON format:\n\n{json_data}\n\nPlease summarize the information provided."
+        # prompt = "How are you!"
         result = LlamaApi.generate_messages_with_timestamps(prompt)
         print(result[0]['timestamp'])
         print(result[0]['message'])
@@ -108,6 +137,10 @@ class Application:
         print("Received Messages:", time_decay_data['received_messages'])
         print("Sent Messages:", time_decay_data['sent_messages'])
 
+    def test_profile_similarity(self):
+        Node = "N1"
+        response = ScoresUtilities.profile_similarity(Node)
+        print(response)
 
 def main():
     app = Application()
@@ -122,7 +155,8 @@ def main():
     # app.test_sent_text_cosine_similarity()
     # app.generate_response_messages_with_timestamps()
     # app.test_calculate_time_decay_and_similarity()
-    app.test_read_correlation_data()
+    # app.test_read_correlation_data()
+    app.test_profile_similarity()
 
 if __name__ == '__main__':
     main()
