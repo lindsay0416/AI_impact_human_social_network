@@ -89,7 +89,7 @@ def set_simulation_parameters():
     }
 
     # save parameters to a json file
-    with open("../saved/parameters.json", "w") as json_file:
+    with open("../input/parameters.json", "w") as json_file:
         json.dump(parameters, json_file, indent=4)
         logger.info("parameters saved to saved/parameters.json")
     return parameters
@@ -97,10 +97,10 @@ def set_simulation_parameters():
 
 if __name__ == '__main__':
     # set simulation parameters
-    if not os.path.exists("../saved/parameters.json"):
+    if not os.path.exists("../input/parameters.json"):
         set_simulation_parameters()
 
     # load parameters
-    with open("../saved/parameters2.json", "r") as param_json:
+    with open("../input/parameters.json", "r") as param_json:
         parameters = json.load(param_json)
     simulation(parameters)

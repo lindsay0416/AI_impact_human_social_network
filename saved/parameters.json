@@ -1,7 +1,0 @@
-{
-    "round": 5,
-    "timestep": 10,
-    "influence_prob": 0.1,
-    "is_directed": false,
-    "is_external_dataset": true
-}
