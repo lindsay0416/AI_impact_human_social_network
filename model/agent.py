@@ -4,6 +4,7 @@ import logging
 from model.message import Message
 
 INFLUENCE_PROB = 0.1
+#TODO: replce 0.1 with the socre calculated from scores_utilities.py 
 
 # init logger
 logger = logging.getLogger("agent")

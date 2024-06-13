@@ -11,19 +11,17 @@ Reinforcement learning with human feedback
 ### 1.2 Kibana 7.7 
 - Kibana: https://www.elastic.co/downloads/past-releases/kibana-7-7-0
 
-## 2. Setup the index mapping in elasticsearch
-### 2.1. user_sent_messages
-Run following script in kibana (http://localhost:5601)
-
-## 3. Start the Elasticsearch egine
-* Start elasticsearch:
+## 2. Start the Elasticsearch egine
+* Start elasticsearch in terminal:
 - `cd /Elasticsearch/elasticsearch-7.7.0/bin`
 - `./elasticsearch`
 
-* Start Kibana (UI)
+* Start Kibana (UI) in terminal:
 - `cd /Elasticsearch/kibana-7.7.0-darwin-x86_64/bin`
 - `./kibana`
 
+## 3. Setup the index mapping in elasticsearch
+### 3.1. user_sent_messages
 Run following script in kibana (http://localhost:5601)
 
 ```JSON
@@ -58,7 +56,7 @@ PUT /sent_text_test01
 }
 ```
 
-### 2.2. user_received_messages
+### 3.2. user_received_messages
 Run following script in kibana (http://localhost:5601)
 
 ```JSON
@@ -152,7 +150,8 @@ PUT received_text_test01
 * User profile: Generate the user profile use LLM?
 
 # TODO list:
-* Add timestamp to elastic search database.
+* Add timestamp to elastic search database. (done)
+* 
 
 ```JSON
 PUT /sent_text_test01/_mapping
@@ -179,3 +178,95 @@ PUT /received_text_test01/_mapping
 }
 
 ```
+
+## 09 June 2024: index mapping in elasticsearch
+
+### sent_text_test01
+
+```JSON
+{
+  "mapping": {
+    "_doc": {
+      "properties": {
+        "from": {
+          "type": "text"
+        },
+        "node": {
+          "type": "text"
+        },
+        "sent_text": {
+          "type": "text"
+        },
+        "sent_text_vector": {
+          "type": "dense_vector",
+          "dims": 384
+        },
+        "timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||epoch_millis"
+        },
+        "to": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+```
+### received_text_test01
+
+```JSON
+{
+  "mapping": {
+    "_doc": {
+      "properties": {
+        "from": {
+          "type": "text"
+        },
+        "last_id": {
+          "type": "long"
+        },
+        "node": {
+          "type": "text"
+        },
+        "received_text": {
+          "type": "text"
+        },
+        "received_text_vector": {
+          "type": "dense_vector",
+          "dims": 384
+        },
+        "received_text_weight": {
+          "type": "float"
+        },
+        "sent_text": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "sent_text_vector": {
+          "type": "float"
+        },
+        "timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||epoch_millis"
+        }
+      }
+    }
+  }
+}
+```
+
+###
+TODO: check the `calculate_time_decay_and_similarity` function, the inital difussion message is noe generated from the LLM, so the inital message donot need to start from LLM to get the timestamp, just use date time now.
