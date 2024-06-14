@@ -2,6 +2,7 @@ import networkx as nx
 import pickle
 import logging
 import argparse
+import json
 
 logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
@@ -44,6 +45,17 @@ def graph_show_info(G):
     logger.info(f"No. of edges: {len(list(G.edges()))}")
     logger.info(f"No. of nodes: {len(list(G.nodes()))}")
 
+def graph_to_json(G):
+    nodes = []
+    for node in G.nodes():
+        n = {"uid": G.nodes()[node]["uid"], "profile": G.nodes()[node]["profile"]}
+        nodes.append(n)
+    
+    data = {"nodes": nodes, "edges": list(G.edges())}
+    with open('saved/graph.json', 'w') as f:
+        json.dump(data, f, indent=4)
+    logger.info(f"Graph information saves to saved/graph.json")
+        
 
 if __name__ == '__main__':
     args = init_parser()

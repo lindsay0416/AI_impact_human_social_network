@@ -56,6 +56,9 @@ def simulation(params):
         dt.graph_show_info(G)
         environment = Environment(graph=G, is_directed=is_directed)
 
+    # TODO: save grpah information, i.e., (1) network structure, and (2) user profile info to a JSON file
+    dt.graph_to_json(environment.graph)
+
     # start diffusion
     no_of_rounds = params.get("round")
 
@@ -143,6 +146,11 @@ def calculate_coverage(environment, timestep):
 
 
 if __name__ == '__main__':
+    # init input and saved folders
+    if not os.path.exists("input"):
+        os.makedirs("input", exist_ok=True)
+    if not os.path.exists("saved"):
+        os.makedirs("saved", exist_ok=True)
     start_time = datetime.now().strftime('%Y%m%d%H%M%S')
 
     if not os.path.exists("input/parameters.json"):
