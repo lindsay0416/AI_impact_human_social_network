@@ -5,6 +5,7 @@ import logging
 from model.agent import Agent
 import os
 import random
+import json
 
 import tool.dataset_tool as tool
 
@@ -28,7 +29,7 @@ class Environment:
 
         # init environment with random graph or a real-world social network
         if graph is None:
-            if os.path.exists("../saved/G.pickle"):
+            if os.path.exists("../saved/graph.G"):
                 self.graph = tool.load_graph()
             else:
                 logger.info("No graph data exists, creating a new graph...")
@@ -44,6 +45,11 @@ class Environment:
     """
 
     def init_graph_data(self):
+        # load users profile from file
+        if os.path.exists('input/user_profile.json'):
+            with open('input/user_profile.json', 'r') as file:
+                profiles = json.load(file)
+
         # assign user attributes to nodes, saved as an Agent object
         for node_id in self.graph.nodes:
             # init agent object
@@ -59,6 +65,13 @@ class Environment:
                 node_data.out_neighbors = list(self.graph.neighbors(node_id))
             # assign user data to node
             self.graph.nodes[node_id]['data'] = node_data
+
+            # assign user id to node
+            self.graph.nodes[node_id]["uid"] = "N"+str(node_id + 1)
+            
+            # assign user profile to node, from user_profile
+            self.graph.nodes[node_id]["profile"] = profiles.get("N"+str(node_id + 1))
+            
 
         logger.info("Initialize environment data")
 

@@ -108,6 +108,7 @@ def start_diffusion(params, round, environment):
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
+            print(environment.graph.nodes()[user]["profile"])
             if user_agent.status == 1:
                 user_agent.start_influence(step)
         step_result = {}
