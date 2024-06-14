@@ -1,0 +1,278 @@
+{
+    "nodes": [
+        {
+            "uid": "N1",
+            "profile": {
+                "name": "Emily",
+                "age": 32,
+                "gender": "female",
+                "description": "a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries."
+            }
+        },
+        {
+            "uid": "N2",
+            "profile": {
+                "name": "James",
+                "age": 25,
+                "gender": "male",
+                "description": "a tech-savvy enthusiast who spends most of his time exploring the latest gadgets and software. He enjoys coding and is always up-to-date with the latest technological advancements."
+            }
+        },
+        {
+            "uid": "N3",
+            "profile": {
+                "name": "Olivia",
+                "age": 42,
+                "gender": "female",
+                "description": "a dedicated yoga instructor who believes in the power of mindfulness and physical well-being. She enjoys teaching others and creating a peaceful environment for her students."
+            }
+        },
+        {
+            "uid": "N4",
+            "profile": {
+                "name": "Michael",
+                "age": 68,
+                "gender": "male",
+                "description": "a retired teacher who loves sharing his knowledge and experience. He enjoys volunteering at local schools and participating in educational initiatives to support the younger generation."
+            }
+        },
+        {
+            "uid": "N5",
+            "profile": {
+                "name": "Sophia",
+                "age": 19,
+                "gender": "female",
+                "description": "an adventurous traveler who loves exploring new cultures and cuisines. She documents her journeys through photography and blogging, inspiring others to embark on their own adventures."
+            }
+        },
+        {
+            "uid": "N6",
+            "profile": {
+                "name": "Ethan",
+                "age": 36,
+                "gender": "male",
+                "description": "a food enthusiast who loves experimenting with different flavors and cooking techniques. He enjoys hosting dinner parties and sharing his culinary creations with family and friends."
+            }
+        },
+        {
+            "uid": "N7",
+            "profile": {
+                "name": "Ava",
+                "age": 51,
+                "gender": "female",
+                "description": "an avid gardener with a green thumb. She spends most of her time tending to her beautiful garden and enjoys sharing her gardening tips and tricks with others."
+            }
+        },
+        {
+            "uid": "N8",
+            "profile": {
+                "name": "Noah",
+                "age": 23,
+                "gender": "male",
+                "description": "a passionate musician who plays multiple instruments. He enjoys composing his own music and performing at local venues, always striving to create unique and captivating melodies."
+            }
+        },
+        {
+            "uid": "N9",
+            "profile": {
+                "name": "Isabella",
+                "age": 29,
+                "gender": "female",
+                "description": "a dedicated animal lover who volunteers at local animal shelters. She believes in the importance of animal rights and works towards creating a better world for all creatures."
+            }
+        },
+        {
+            "uid": "N10",
+            "profile": {
+                "name": "Liam",
+                "age": 34,
+                "gender": "male",
+                "description": "a fitness enthusiast who enjoys pushing his physical limits. He participates in marathons and triathlons, inspiring others to adopt an active and healthy lifestyle."
+            }
+        },
+        {
+            "uid": "N11",
+            "profile": {
+                "name": "Mia",
+                "age": 47,
+                "gender": "female",
+                "description": "a successful entrepreneur who runs her own fashion boutique. She has an impeccable sense of style and loves helping others discover their unique fashion sense."
+            }
+        },
+        {
+            "uid": "N12",
+            "profile": {
+                "name": "Lucas",
+                "age": 27,
+                "gender": "male",
+                "description": "a passionate environmentalist who works towards preserving and protecting the planet. He organizes clean-up drives and educates others about sustainable living practices."
+            }
+        },
+        {
+            "uid": "N13",
+            "profile": {
+                "name": "Harper",
+                "age": 39,
+                "gender": "female",
+                "description": "a bookworm who is deeply passionate about literature. She runs a book club and enjoys discussing and analyzing different literary works with fellow book lovers."
+            }
+        },
+        {
+            "uid": "N14",
+            "profile": {
+                "name": "Benjamin",
+                "age": 48,
+                "gender": "male",
+                "description": "a history enthusiast. He enjoys reading historical books and visiting museums to learn about different eras and civilizations."
+            }
+        },
+        {
+            "uid": "N15",
+            "profile": {
+                "name": "Charlotte",
+                "age": 31,
+                "gender": "female",
+                "description": "a talented photographer who captures breathtaking moments through her lens. She specializes in portrait photography and loves capturing the essence of individuals."
+            }
+        },
+        {
+            "uid": "N16",
+            "profile": {
+                "name": "Alexander",
+                "age": 57,
+                "gender": "male",
+                "description": "a seasoned traveler who has explored numerous countries. He loves immersing himself in different cultures and documenting his experiences through travel writing."
+            }
+        },
+        {
+            "uid": "N17",
+            "profile": {
+                "name": "Amelia",
+                "age": 21,
+                "gender": "female",
+                "description": "an aspiring actress who is passionate about performing arts. She enjoys taking acting classes and dreams of starring in her own theatre production someday."
+            }
+        },
+        {
+            "uid": "N18",
+            "profile": {
+                "name": "Daniel",
+                "age": 45,
+                "gender": "male",
+                "description": "a dedicated philanthropist who actively works towards making a positive impact in society. He supports various charitable organizations and volunteers his time for social causes."
+            }
+        },
+        {
+            "uid": "N19",
+            "profile": {
+                "name": "Sofia",
+                "age": 53,
+                "gender": "female",
+                "description": "a skilled chef who believes in the power of good food. She owns a popular restaurant and loves experimenting with unique flavors to create memorable dining experiences."
+            }
+        },
+        {
+            "uid": "N20",
+            "profile": {
+                "name": "Henry",
+                "age": 37,
+                "gender": "male",
+                "description": "a nature lover who spends his weekends exploring the great outdoors. He enjoys hiking, camping, and photographing the beauty of untouched landscapes."
+            }
+        }
+    ],
+    "edges": [
+        [
+            0,
+            11
+        ],
+        [
+            0,
+            18
+        ],
+        [
+            1,
+            5
+        ],
+        [
+            1,
+            7
+        ],
+        [
+            1,
+            9
+        ],
+        [
+            2,
+            10
+        ],
+        [
+            2,
+            15
+        ],
+        [
+            3,
+            10
+        ],
+        [
+            3,
+            16
+        ],
+        [
+            3,
+            17
+        ],
+        [
+            3,
+            19
+        ],
+        [
+            4,
+            19
+        ],
+        [
+            5,
+            19
+        ],
+        [
+            6,
+            11
+        ],
+        [
+            6,
+            18
+        ],
+        [
+            7,
+            17
+        ],
+        [
+            8,
+            14
+        ],
+        [
+            9,
+            12
+        ],
+        [
+            9,
+            16
+        ],
+        [
+            11,
+            19
+        ],
+        [
+            13,
+            17
+        ],
+        [
+            14,
+            15
+        ],
+        [
+            15,
+            18
+        ]
+    ]
+}
