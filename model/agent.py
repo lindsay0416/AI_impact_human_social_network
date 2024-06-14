@@ -33,6 +33,7 @@ class Agent:
     def to_dict(self):
         return{
             'id': self.userID,
+            'uid': self.uid,
             'status': self.status,
             'profile': self.profile,
             'repository': [str(m) for m in self.repository],
@@ -46,6 +47,7 @@ class Agent:
 
     def start_influence(self, step):
         # TODO: use LLM module to create message content
+        # TODO: save message to elastic search
         message = Message("this is a test message", self)
         message.set_timestep(timestep=step)
         self.posts.append(message)

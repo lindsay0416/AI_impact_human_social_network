@@ -109,7 +109,7 @@ def start_diffusion(params, round, environment):
         step_result["user_data"] = user_data
         steps.append(step_result)
 
-    for step in range(1, timestep):
+    for step in range(0, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
             # print(environment.graph.nodes()[user]["profile"])
@@ -174,4 +174,4 @@ if __name__ == '__main__':
     results["simulation"] = data
     
     with open('saved/results.json', 'w') as f:
-        json.dump(results, f, indent=4)
+        json.dump(results, f, indent=4, separators=(',', ':'))

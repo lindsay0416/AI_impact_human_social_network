@@ -48,7 +48,7 @@ def graph_show_info(G):
 def graph_to_json(G):
     nodes = []
     for node in G.nodes():
-        n = {"uid": G.nodes()[node]["uid"], "profile": G.nodes()[node]["profile"]}
+        n = {"id": node,"uid": G.nodes()[node]["uid"], "profile": G.nodes()[node]["profile"]}
         nodes.append(n)
     
     data = {"nodes": nodes, "edges": list(G.edges())}
