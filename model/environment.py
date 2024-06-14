@@ -71,6 +71,9 @@ class Environment:
             
             # assign user profile to node, from user_profile
             self.graph.nodes[node_id]["profile"] = profiles.get("N"+str(node_id + 1))
+
+            # assign user profile to agent object
+            node_data.set_user_profile(uid="N"+str(node_id + 1), profile=profiles.get("N"+str(node_id + 1)))
             
 
         logger.info("Initialize environment data")

@@ -26,6 +26,10 @@ class Agent:
         self.out_neighbors = []
         self.posts = []
     
+    def set_user_profile(self, uid, profile):
+        self.uid = uid
+        self.profile = profile
+    
     def to_dict(self):
         return{
             'id': self.userID,
