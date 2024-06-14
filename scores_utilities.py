@@ -145,7 +145,7 @@ class ScoresUtilities:
         # embedding the user profile,  use get_embedding function
         # calculate the user profile similarity,
         # assume the neigbour is N2 and N3, later will be a list of nodes. 
-    def profile_similarity(node, user_profile_path='user_profile/user_profile.json'):
+    def profile_similarity(node, user_profile_path='input/user_profile.json'):
         # Load user profiles from JSON file
         with open(user_profile_path, 'r') as file:
             user_profiles = json.load(file)
