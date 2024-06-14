@@ -99,24 +99,26 @@ def start_diffusion(params, round, environment):
 
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
-        data = global_analysis(environment, 0)
+        data, user_data = global_analysis(environment, 0)
         step_result = {}
         step_result["step"] = 0
         step_result["data"] = data
+        step_result["user_data"] = user_data
         steps.append(step_result)
 
     for step in range(1, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"]
-            print(environment.graph.nodes()[user]["profile"])
+            # print(environment.graph.nodes()[user]["profile"])
             if user_agent.status == 1:
                 user_agent.start_influence(step)
         step_result = {}
         step_result["step"] = step
-        step_result["data"] = global_analysis(environment, step)
+        data, user_data = global_analysis(environment, step)
+        step_result["data"] = data
+        step_result["user_data"] = user_data
         steps.append(step_result)
     return steps
-
 
 def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
@@ -124,7 +126,13 @@ def global_analysis(environment, timestep):
     data = [{"coverage": coverage}]
     # graph_data = {'step': timestep, 'data': json_graph.node_link_data(environment.graph)}
 
-    return data
+    graph = environment.graph
+    user_data = []
+    for user in graph.nodes():
+        ud = environment.graph.nodes()[user]["data"].to_dict()
+        user_data.append(ud)
+
+    return data, user_data
 
 def calculate_coverage(environment, timestep):
     influence_coverage = 0

@@ -31,8 +31,8 @@ class Agent:
             'id': self.userID,
             'status': self.status,
             'profile': self.profile,
-            'repository': self.repository,
-            'posts': self.posts,
+            'repository': [str(m) for m in self.repository],
+            'posts': [str(p) for p in self.posts],
             'in_neighbors': self.in_neighbors,
             'out_neighbors': self.out_neighbors
         }
