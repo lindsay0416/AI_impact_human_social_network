@@ -111,7 +111,7 @@ def start_diffusion(params, round, environment):
 
     for step in range(0, timestep):
         for user in environment.graph.nodes():
-            user_agent = environment.graph.nodes()[user]["data"]
+            user_agent = environment.graph.nodes()[user]["data"] # 这里有 in_neigbour 和 out_neigbour 的信息
             # print(environment.graph.nodes()[user]["profile"])
             if user_agent.status == 1:
                 user_agent.start_influence(step)
