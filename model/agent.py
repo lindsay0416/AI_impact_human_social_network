@@ -51,7 +51,7 @@ class Agent:
         message = Message("this is a test message", self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
-        logger.info(str(message))
+        # logger.info(str(message))
 
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]

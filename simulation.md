@@ -6,6 +6,7 @@ Parameters serves as the inputs of the simulation, in JSON format. In `input/par
     - `timestep`: integer, the number of steps within a round.
     - `is_derected`: either `true` or `false`. This suggests whether the social network is a directed graph or not.
     - `is_external_dataset`: either `ture` or `false`. If the value is `true`, suggests to use external datasets after conversion. `false` uses the synthetic random network.
+    - `broadcasting_prob`: a float value in the range between [0,1]. This is the broadcasting probability of each user agent to get the inital broadcasting message, and therefore functions as a seed user.
 - **Optional parameters**:
     You can define ***social network*** in **one of these ways** with the optional parameters:
   1. Use synthetic network: a random network based on Erdos-Renyi model is built with self-defined values, powered by Networkx. Some parameters need to be assigned to construct this synthetic network:
