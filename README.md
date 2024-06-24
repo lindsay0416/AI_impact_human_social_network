@@ -5,6 +5,9 @@ Reinforcement learning with human feedback
 ## Setup
 ### In elasticsearch stores 2 index, called "sent_text_test01" and "received_text_test01"
 
+## Simulation documentation
+- [Link](simulation.md)
+
 ## 1. Download Database
 ### 1.1 ElasticSearch 7.7  
 - Elasticsearch: https://www.elastic.co/downloads/past-releases/elasticsearch-7-7-0
