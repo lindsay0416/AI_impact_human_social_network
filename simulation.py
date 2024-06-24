@@ -65,12 +65,15 @@ def simulation(params):
     rounds = []
     for r in range(no_of_rounds):
         round = {}
-        logger.info(f"Round {r}")
         result = start_diffusion(params, r, environment)
+        
         reset_status(environment)
         round["round"] = r
         round["result"] = result
         rounds.append(round)
+
+        # logger info
+        logger.info(f" ======= Round {r} with Seed Set: {environment.seedSet} Finished ======= ")
     
     return rounds  
 
@@ -80,7 +83,8 @@ def simulation(params):
 def reset_status(environment):
     for user in environment.graph.nodes():
         user_agent = environment.graph.nodes()[user]["data"]
-        user_agent.update_status(0)
+        if user not in environment.seedSet:
+            user_agent.update_status(0)
         user_agent.posts = []
         user_agent.repository = []
 
@@ -88,17 +92,19 @@ def reset_status(environment):
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
     round = params.get("round")
+    broadcasting_prob = params.get("broadcasting_prob")
     steps = []
 
     # set seedSet
-    seed_set_size = params.get("seed_set_size")
-    if seed_set_size is not None:
-        environment.select_seeds(seed_set_size)
-    elif params.get("seed_set") is not None:
-        seed_set = json.loads(params.get("seed_set"))
-        environment.select_fix_seeds(seed_set)
-    else:
-        environment.select_fix_seeds([min(environment.graph.nodes)])
+    if len(environment.seedSet) == 0:
+        seed_set_size = params.get("seed_set_size")
+        if seed_set_size is not None:
+            environment.select_seeds(seed_set_size)
+        elif params.get("seed_set") is not None:
+            seed_set = json.loads(params.get("seed_set"))
+            environment.select_fix_seeds(seed_set)
+        else:
+            environment.start_infection(broadcasting_prob)
 
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
@@ -112,7 +118,12 @@ def start_diffusion(params, round, environment):
     for step in range(0, timestep):
         for user in environment.graph.nodes():
             user_agent = environment.graph.nodes()[user]["data"] # 这里有 in_neigbour 和 out_neigbour 的信息
-            # print(environment.graph.nodes()[user]["profile"])
+
+            # TODO - to get user in_neighbor info:
+            # print(user_agent.in_neighbors)
+            # TODO - to get user out_neighbor info:
+            # print(user_agent.out_neighbors)
+
             if user_agent.status == 1:
                 user_agent.start_influence(step)
         step_result = {}
@@ -127,7 +138,6 @@ def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
     # TODO: save global analysis result into elastic search. Here, as a test, we save it into JSON file. Currently only provide coverage analysis data
     data = [{"coverage": coverage}]
-    # graph_data = {'step': timestep, 'data': json_graph.node_link_data(environment.graph)}
 
     graph = environment.graph
     user_data = []
@@ -142,6 +152,7 @@ def calculate_coverage(environment, timestep):
     for node in environment.graph.nodes():
         if environment.graph.nodes[node]["data"].status == 1:
             influence_coverage += 1
+    logger.info(f"Current timestep {timestep} -> No. of active users: {influence_coverage}")
     return f"Current timestep {timestep} -> No. of active users: {influence_coverage}"
 
 

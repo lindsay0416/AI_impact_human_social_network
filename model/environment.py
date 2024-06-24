@@ -95,10 +95,23 @@ class Environment:
                     seedSet[selected] = self.graph.nodes[selected]["data"]
             except ValueError as e:
                 logger.error(f"An error occurred {e}, failed to assign user {selected} as seed")
+        self.seedSet = list(seedSet.keys())
+
+    """
+        Default seed selection method:
+        Each user agent in the network has a chance to get the initial broadcasting message, such as read a news,
+        watch an advertisement, or attend a social event.
+        This chance is denoted as broadcasting probability (broadcasting_prob), which is a compulsory parameter defined in 'input/parameters.json' file.
+    """
+    def start_infection(self, broadcasting_prob):
+        seedSet = []
+        for user in self.graph.nodes():
+            rand = random.random()
+            user_agent = self.graph.nodes()[user]["data"]
+            if rand < broadcasting_prob and user_agent.status == 0:
+                user_agent.update_status(1)
+                seedSet.append(user)
         self.seedSet = seedSet
-        logger.info(f"Seed set: {list(seedSet.keys())}")
-
-
     """
             Seed selection: selected seed based on userID with a given int list
     """
@@ -106,7 +119,6 @@ class Environment:
         self.seedSet = seedSet
         for seed in seedSet:
             self.graph.nodes[seed]["data"].status = 1
-        logger.info(f"Seed set: {seedSet}")
 
 
 """

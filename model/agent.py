@@ -64,7 +64,7 @@ class Agent:
         message = Message(initial_message, self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
-        logger.info(str(message))
+        # logger.info(str(message))
 
         for v in self.out_neighbors:
             print("vvvvvvvv", v)
