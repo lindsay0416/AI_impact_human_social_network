@@ -5,5 +5,5 @@
     "node_size": 20,
     "connect_prob": 0.1,
     "is_directed": false,
-    "seed_set": "[1]"
+    "broadcasting_prob": 0.1
 }
