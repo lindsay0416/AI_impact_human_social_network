@@ -95,7 +95,7 @@ class Application:
         # Prepare the prompt
         prompt = f"Here is some user data in JSON format:\n\n{json_data}\n\nPlease summarize the information provided."
         # prompt = "How are you!"
-        result = LlamaApi.generate_messages_with_timestamps(prompt)
+        result = LlamaApi.llama_generate_messages(prompt)
         print(result[0]['timestamp'])
         print(result[0]['message'])
 

@@ -32,7 +32,7 @@ class ScoresUtilities:
     @staticmethod
     def calculate_received_text_scores(es, diffusion_message, prompt, node):
         # Get the generated text and its timestamp
-        generated_result = LlamaApi.generate_messages_with_timestamps(prompt)
+        generated_result = LlamaApi.llama_generate_messages(prompt)
         dmTimestamp = generated_result[0]['timestamp']
 
         # Get the received text similarity results and their timestamps
@@ -61,7 +61,7 @@ class ScoresUtilities:
     @staticmethod
     def calculate_sent_text_scores(es, diffusion_message, prompt, node):
         # Get the generated text and its timestamp
-        generated_result = LlamaApi.generate_messages_with_timestamps(prompt)
+        generated_result = LlamaApi.llama_generate_messages(prompt)
         dmTimestamp = generated_result[0]['timestamp']
 
         # Get the sent text similarity results and their timestamps
