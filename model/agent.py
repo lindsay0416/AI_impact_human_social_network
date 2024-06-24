@@ -50,23 +50,6 @@ class Agent:
     def update_status(self, status):
         self.status = status
 
-    # def start_influence(self, step):
-    #     es_client = self.es_manager.es
-    #     # TODO: use LLM module to create message content
-    #     # TODO: save message to elastic search
-    #     initial_message = "this is a test message"
-    #     message = Message(initial_message, self)
-    #     message.set_timestep(timestep=step)
-    #     self.posts.append(message)
-    #     logger.info(str(message))
-
-    #     for v in self.out_neighbors:
-    #         v_agent = self.environment.nodes()[v]["data"]
-    #         is_influenced = v_agent.calculate_influence_prob()
-    #         if v_agent.status == 0 and is_influenced:
-    #             v_agent.update_status(1)
-    #             v_agent.repository.append(message)
-
     def calculate_influence_prob(self):
         # TODO: influence prob equation
         influence_prob = INFLUENCE_PROB
@@ -77,71 +60,61 @@ class Agent:
             return False
 
     def start_influence(self, step):
-        # es_client = self.es_manager.es
-        initial_message = "this is a test message"
+        initial_message = "This is a test post message"
         message = Message(initial_message, self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
         logger.info(str(message))
 
         for v in self.out_neighbors:
+            print("vvvvvvvv", v)
             v_agent = self.environment.nodes()[v]["data"]
+            print("v_agent: ", self.userID)
             is_influenced = v_agent.calculate_influence_prob()
+            print("is_influenced: ", is_influenced)
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
                 
                 # Generate message content using the LLM module
-                generated_messages = LlamaApi.generate_messages_with_timestamps(initial_message)
-                next_message = generated_messages[0]['message']
-                # No need to get timestamp from generated messages now
-
-                # Save the message to Elasticsearch
+                initial_message = LlamaApi.llama_generate_messages(initial_message)
+                print("generated_messages:", initial_message)
+ 
+                # Save the message to Elasticsearch using ElasticSeachStore
                 # Store the sent message
-                self.es_manager.index(
-                    index_name='sent_text_test01',
-                    document_body={
-                        'from': self,
-                        'node': v,
-                        'sent_text': initial_message,
-                        'sent_text_vector': ScoresUtilities.get_embedding(initial_message),
-                        'timestep': step  # Store timestep instead of timestamp
-                    }
-                )
+                for in_neighbor in self.in_neighbors:
+                    in_neigbour = 'N' + str(in_neighbor)
+                    print(in_neigbour)
+                    ElasticSeachStore.add_record_to_elasticsearch(
+                        node=self.uid,
+                        in_neigbour=in_neigbour,
+                        text=initial_message,
+                        weight=0.1,  # Set an appropriate weight value if needed
+                        is_received=False,
+                        es=self.es_manager.es,
+                        step=step
+                    )
 
-                # Store the received message
-                self.es_manager.index(
-                    index_name='received_text_test01',
-                    document_body={
-                        'from': self,
-                        'node': v,
-                        'received_text': initial_message,
-                        'received_text_vector': ScoresUtilities.get_embedding(initial_message),
-                        'timestep': step  # Store timestep instead of timestamp
-                    }
-                )
-
-                # Update for the next iteration
-                initial_message = next_message
-class Message:
-    def __init__(self, content, agent):
-        self.content = content
-        self.agent = agent
-        self.timestamp = None
-
-    def set_timestep(self, timestep):
-        self.timestamp = timestep
-
-    def __str__(self):
-        return f"Message(content={self.content}, timestamp={self.timestamp})"
-    
-
-# Example usage:
-# Assuming Text2Vector class and LlamaApi class are defined elsewhere
-# and have the methods used above.
-if __name__ == "__main__":
-    from elasticsearch import Elasticsearch
-    es_manager = ESManager(host_url='http://localhost:9200')  # Update with your Elasticsearch host URL
-    environment = {}  # Initialize this with the actual environment data
-    agent = Agent(es_manager, environment)
-    agent.start_influence(step=1)
+                ## Store the received message for each in-neighbor
+                for in_neighbor in self.in_neighbors:
+                    in_neigbour = 'N' + str(in_neighbor)
+                    print(in_neigbour)
+                    ElasticSeachStore.add_record_to_elasticsearch(
+                        node=self.uid,
+                        in_neigbour=in_neigbour,
+                        text=initial_message,
+                        weight=0.1,  # Set an appropriate weight value if needed
+                        is_received=True,
+                        es=self.es_manager.es,
+                        step=step
+                    )
+# 以下是 Elastic Search 存储的逻辑。
+# document_body = {
+#             "node": in_neigbour if is_received else node,
+#             "from": node if is_received else None,
+#             "to": in_neigbour if not is_received else None,
+#             "received_text": text if is_received else None,
+#             "sent_text": text if not is_received else None,
+#             "received_text_weight": str(weight) if is_received else None,
+#             "timestamp": step,
+#         }
