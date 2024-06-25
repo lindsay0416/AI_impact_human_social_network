@@ -60,7 +60,7 @@ class Agent:
             return False
 
     def start_influence(self, step):
-        initial_message = "This is a test post message"
+        initial_message = "This is a test post message" # This is a news.
         message = Message(initial_message, self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
@@ -79,12 +79,13 @@ class Agent:
                 # Generate message content using the LLM module
                 initial_message = LlamaApi.llama_generate_messages(initial_message)
                 print("generated_messages:", initial_message)
- 
+                
+                #TODO: 完善prompt（user profile + topic + 刚才收到的话）
                 # Save the message to Elasticsearch using ElasticSeachStore
                 # Store the sent message
-                for out_neigbour in self.out_neigbours:
+                for out_neigbour in self.out_neighbors:
                     out_neigbour = 'N' + str(out_neigbour)
-                    print(in_neigbour)
+                    print(out_neigbour)
                     ElasticSeachStore.add_record_to_elasticsearch(
                         node=self.uid,
                         neigbour=out_neigbour,
@@ -100,8 +101,8 @@ class Agent:
                     in_neigbour = 'N' + str(in_neighbor)
                     print(in_neigbour)
                     ElasticSeachStore.add_record_to_elasticsearch(
-                        node=self.uid,
-                        neigbour=in_neigbour,
+                        node = in_neigbour,
+                        neigbour= self.uid, 
                         text=initial_message,
                         weight=0.1,  # Set an appropriate weight value if needed
                         is_received=True,
