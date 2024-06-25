@@ -82,12 +82,12 @@ class Agent:
  
                 # Save the message to Elasticsearch using ElasticSeachStore
                 # Store the sent message
-                for in_neighbor in self.in_neighbors:
-                    in_neigbour = 'N' + str(in_neighbor)
+                for out_neigbour in self.out_neigbours:
+                    out_neigbour = 'N' + str(out_neigbour)
                     print(in_neigbour)
                     ElasticSeachStore.add_record_to_elasticsearch(
                         node=self.uid,
-                        in_neigbour=in_neigbour,
+                        neigbour=out_neigbour,
                         text=initial_message,
                         weight=0.1,  # Set an appropriate weight value if needed
                         is_received=False,
@@ -101,7 +101,7 @@ class Agent:
                     print(in_neigbour)
                     ElasticSeachStore.add_record_to_elasticsearch(
                         node=self.uid,
-                        in_neigbour=in_neigbour,
+                        neigbour=in_neigbour,
                         text=initial_message,
                         weight=0.1,  # Set an appropriate weight value if needed
                         is_received=True,
@@ -110,9 +110,9 @@ class Agent:
                     )
 # 以下是 Elastic Search 存储的逻辑。
 # document_body = {
-#             "node": in_neigbour if is_received else node,
+#             "node": neigbour if is_received else node,
 #             "from": node if is_received else None,
-#             "to": in_neigbour if not is_received else None,
+#             "to": neigbour if not is_received else None,
 #             "received_text": text if is_received else None,
 #             "sent_text": text if not is_received else None,
 #             "received_text_weight": str(weight) if is_received else None,

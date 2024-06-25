@@ -20,11 +20,11 @@ class ElasticSeachStore():
         return response  # Return raw response or process as needed
 
     @staticmethod
-    def add_record_to_elasticsearch(node, in_neigbour, text, weight, is_received, es, step):
+    def add_record_to_elasticsearch(node, neigbour, text, weight, is_received, es, step):
         document_body = {
-            "node": in_neigbour if is_received else node,
+            "node": neigbour if is_received else node,
             "from": node if is_received else None,
-            "to": in_neigbour if not is_received else None,
+            "to": neigbour if not is_received else None,
             "received_text": text if is_received else None,
             "sent_text": text if not is_received else None,
             "received_text_weight": str(weight) if is_received else None,
