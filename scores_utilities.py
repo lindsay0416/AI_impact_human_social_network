@@ -3,7 +3,7 @@
 # correlation_sore = a*similarity + b*timestamp + c*frequency，abc are coefficients.
 # 1.correlation_sore = a*similarity + b*time_decay (ab are coefficients) --> used for retrieve top10 most similarity messages in each user-agent's repository
 # 2. trieved message similarity = AVG(top10(similarity))
-# 3. NFLUENCE_PROB = \alpha（etrieved message similarity） + (1-\alpha)（user profile (beliefs) similarity）; \alpha=0.5
+# 3. INFLUENCE_PROB = \alpha（etrieved message similarity） + (1-\alpha)（user profile (beliefs) similarity）; \alpha=0.5
 # timestamp can take into account the time difference:
 # The time difference between the (received/sent) messages to be scored and the timestamp of the simulation message.
 import time
