@@ -30,21 +30,25 @@ class Agent:
         self.out_neighbors = []
         self.posts = []
         self.es_manager = ESManager('http://localhost:9200')
+        self.is_seed = False
     
     def set_user_profile(self, uid, profile):
         self.uid = uid
         self.profile = profile
-    
+
+    def set_as_seed(self, initial_message):
+        self.is_seed = True
+        message = Message(content=initial_message, sender=self)
+        message.set_timestep(0)
+        self.posts.append(message)
+
     def to_dict(self):
         return{
             'id': self.userID,
             'uid': self.uid,
             'status': self.status,
-            'profile': self.profile,
             'repository': [str(m) for m in self.repository],
-            'posts': [str(p) for p in self.posts],
-            'in_neighbors': self.in_neighbors,
-            'out_neighbors': self.out_neighbors
+            'posts': [str(p) for p in self.posts]
         }
 
     def update_status(self, status):
@@ -60,55 +64,52 @@ class Agent:
             return False
 
     def start_influence(self, step):
-        initial_message = "This is a test post message" # This is a news.
-        message = Message(initial_message, self)
+        message_content = f"{self.uid} post test at step {step}"
+        message = Message(message_content, self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
         # logger.info(str(message))
 
         for v in self.out_neighbors:
-            print("vvvvvvvv", v)
             v_agent = self.environment.nodes()[v]["data"]
-            print("v_agent: ", self.userID)
             is_influenced = v_agent.calculate_influence_prob()
-            print("is_influenced: ", is_influenced)
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
                 
-                # Generate message content using the LLM module
-                initial_message = LlamaApi.llama_generate_messages(initial_message)
-                print("generated_messages:", initial_message)
+                # # Generate message content using the LLM module
+                # initial_message = LlamaApi.llama_generate_messages(initial_message)
+                # print("generated_messages:", initial_message)
                 
-                #TODO: 完善prompt（user profile + topic + 刚才收到的话）
-                # Save the message to Elasticsearch using ElasticSeachStore
-                # Store the sent message
-                for out_neigbour in self.out_neighbors:
-                    out_neigbour = 'N' + str(out_neigbour)
-                    print(out_neigbour)
-                    ElasticSeachStore.add_record_to_elasticsearch(
-                        node=self.uid,
-                        neigbour=out_neigbour,
-                        text=initial_message,
-                        weight=0.1,  # Set an appropriate weight value if needed
-                        is_received=False,
-                        es=self.es_manager.es,
-                        step=step
-                    )
+                # #TODO: 完善prompt（user profile + topic + 刚才收到的话）
+                # # Save the message to Elasticsearch using ElasticSeachStore
+                # # Store the sent message
+                # for out_neigbour in self.out_neighbors:
+                #     out_neigbour = 'N' + str(out_neigbour)
+                #     print(out_neigbour)
+                #     ElasticSeachStore.add_record_to_elasticsearch(
+                #         node=self.uid,
+                #         neigbour=out_neigbour,
+                #         text=initial_message,
+                #         weight=0.1,  # Set an appropriate weight value if needed
+                #         is_received=False,
+                #         es=self.es_manager.es,
+                #         step=step
+                #     )
 
-                ## Store the received message for each in-neighbor
-                for in_neighbor in self.in_neighbors:
-                    in_neigbour = 'N' + str(in_neighbor)
-                    print(in_neigbour)
-                    ElasticSeachStore.add_record_to_elasticsearch(
-                        node = in_neigbour,
-                        neigbour= self.uid, 
-                        text=initial_message,
-                        weight=0.1,  # Set an appropriate weight value if needed
-                        is_received=True,
-                        es=self.es_manager.es,
-                        step=step
-                    )
+                # ## Store the received message for each in-neighbor
+                # for in_neighbor in self.in_neighbors:
+                #     in_neigbour = 'N' + str(in_neighbor)
+                #     print(in_neigbour)
+                #     ElasticSeachStore.add_record_to_elasticsearch(
+                #         node = in_neigbour,
+                #         neigbour= self.uid, 
+                #         text=initial_message,
+                #         weight=0.1,  # Set an appropriate weight value if needed
+                #         is_received=True,
+                #         es=self.es_manager.es,
+                #         step=step
+                    # )
 # 以下是 Elastic Search 存储的逻辑。
 # document_body = {
 #             "node": neigbour if is_received else node,

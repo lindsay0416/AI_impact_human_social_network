@@ -103,14 +103,16 @@ class Environment:
         watch an advertisement, or attend a social event.
         This chance is denoted as broadcasting probability (broadcasting_prob), which is a compulsory parameter defined in 'input/parameters.json' file.
     """
-    def start_infection(self, broadcasting_prob):
+    def start_infection(self, broadcasting_prob, initial_message):
         seedSet = []
         for user in self.graph.nodes():
             rand = random.random()
             user_agent = self.graph.nodes()[user]["data"]
             if rand < broadcasting_prob and user_agent.status == 0:
                 user_agent.update_status(1)
+                user_agent.set_as_seed(initial_message)
                 seedSet.append(user)
+
         self.seedSet = seedSet
     """
             Seed selection: selected seed based on userID with a given int list

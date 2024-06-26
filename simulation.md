@@ -32,13 +32,16 @@ Parameters serves as the inputs of the simulation, in JSON format. In `input/par
         | input # save input files, like external dataset (in TXT format), and parameter setting file (in JSON format).
             parameter.json
             facebook.txt
-        | saved # save output files, like graph file (in G format, loaded by pickle)
-            graph1.G
-        | model # models
+        | saved # save output files, like graph file (in G format, loaded by pickle), graph JSON file, which stores node and edge information.
+            graph.G
+            results.json
+            graph.json
+        | model # object model, includes user agent model, environment model, and message model.
             agent.py
             environment.py
+            message.py
         | tool # tools
-            dataset_tool.py
+            dataset_tool.py #
         | visualizer # for visualization files
             app.py
     ```

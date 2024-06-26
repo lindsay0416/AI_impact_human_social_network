@@ -5,5 +5,6 @@
     "node_size": 20,
     "connect_prob": 0.1,
     "is_directed": false,
-    "broadcasting_prob": 0.1
+    "broadcasting_prob": 0.1,
+    "initial_message": "This is a test message, as an initial message for seed users. This will be replaced by real world news abstract in the future."
 }
