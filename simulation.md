@@ -1,4 +1,25 @@
 # Simulation Document
+## File Structure
+    ```
+        | input # save input files, like external dataset (in TXT format), parameter setting file (in JSON format), and user profile file (in JSON format)
+            facebook.txt
+            parameter.json
+            user_profile.json
+        | saved # save output files, like graph file (in G format, loaded by pickle) and results (saved in JSON format)
+            graph.G
+            results.json
+        | model # models
+            agent.py
+            environment.py
+            message.py
+        | tool # tools
+            dataset_tool.py
+            config_manager.py # open AI API configration
+            elastic_search.py
+            es_manager.py
+        | visualizer # for visualization files
+            app.py
+    ```
 ## Initialization
 Parameters serves as the inputs of the simulation, in JSON format. In `input/parameters.json`，parameters are adjustable for simulation set-up. Below is a brief introduction to these parameters.
 - **Compulsory parameters**:
@@ -23,26 +44,9 @@ Parameters serves as the inputs of the simulation, in JSON format. In `input/par
       
       Run `python tools/dataset_tool.py -d dataset_file_name` so the input TXT file will be saved in `saved/graph.G` directly.
 
-    You can adjust ***seed set*** in **one of these ways** with the optional parameters:
-  1. `seed_set_size`: integer, define the seed size of influence diffusion. Note we currently only support random selection, so the seeds can be different but with a defined seed set size. `"seed_set_size": 1` suggests there is one seed selected at the beginning of the diffusion.
-  2. `seed_set`: string, define the seed set of influence diffusion. So the seed set is fixed as what it defined. Multiple seeds can be set in a list format. `"seed_set": "[1, 5]"` suggests the seed set is `[1, 5]`, so users 1 and 5 are selected as seed.
-  3. Alternatively, you do not need to assign seeds when initializing a simulation, so user 1 will be set as the seed by default.
-## File Structure
-    ```
-        | input # save input files, like external dataset (in TXT format), and parameter setting file (in JSON format).
-            parameter.json
-            facebook.txt
-        | saved # save output files, like graph file (in G format, loaded by pickle), graph JSON file, which stores node and edge information.
-            graph.G
-            results.json
-            graph.json
-        | model # object model, includes user agent model, environment model, and message model.
-            agent.py
-            environment.py
-            message.py
-        | tool # tools
-            dataset_tool.py #
-        | visualizer # for visualization files
-            app.py
-    ```
-## Visualization
+## Information Propagation
+When a piece of news is released to the public via platforms like newspapers or websites, every member (or agent) of a social network has an equal opportunity to access this news. Once an agent reads the news, they begin sharing it with their neighbors within the network.
+
+As the news spreads, the propagation is not just a simple relay of information. Instead of merely passing along the news as is, agents engage interactively. This means when an agent shares the news with a neighbor, they also express their thoughts, opinions, or reactions to the news. Meanwhile, once a neighbor is influenced by the spreading information, it is respond with its own opinions and reactions.
+
+The information propagation ends if there is no user agents can be influenced.
