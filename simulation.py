@@ -104,7 +104,8 @@ def start_diffusion(params, round, environment):
             seed_set = json.loads(params.get("seed_set"))
             environment.select_fix_seeds(seed_set)
         else:
-            environment.start_infection(broadcasting_prob)
+            initial_message_content = params.get("initial_message")
+            environment.start_infection(broadcasting_prob, initial_message_content)
 
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
