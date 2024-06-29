@@ -5,14 +5,15 @@
             facebook.txt
             parameter.json
             user_profile.json
-        | saved # save output files, like graph file (in G format, loaded by pickle) and results (saved in JSON format)
+        | saved # save output files, like graph files (one in G format, loaded by pickle; another is in JSON format, save nodes (such as id and profile data, and edges information)) and results (saved in JSON format)
             graph.G
             results.json
-        | model # models
+            graph.json
+        | model # object models. This includes Agent object, Environment object, and Message object.
             agent.py
             environment.py
             message.py
-        | tool # tools
+        | tool # tools for connect Elastic Search, openAI, and for dataset usage.
             dataset_tool.py
             config_manager.py # open AI API configration
             elastic_search.py

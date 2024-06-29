@@ -1,6 +1,13 @@
 # AI_impact_human_social_network
 RLHF
 Reinforcement learning with human feedback
+# Table of Contents
+- [Setup](#Setup)
+- [Simulation Documentation](#simulation-documentation)
+- [Download Database](#1-Download-Database)
+- [Start the Elasticsearch Engine](#2-start-the-elasticsearch-egine)
+- [Setup the index mapping in Elasticsearch](#3-setup-the-index-mapping-in-elasticsearch)
+- [File Structure](#details-of-each-python-file)
 
 ## Setup
 ### In elasticsearch stores 2 index, called "sent_text_test01" and "received_text_test01"
