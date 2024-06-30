@@ -41,9 +41,10 @@ class Agent:
         message = Message(content=initial_message, sender=self)
         message.set_timestep(0)
         self.posts.append(message)
+        self.repository.append(message)
 
     def to_dict(self):
-        return{
+        return {
             'id': self.userID,
             'uid': self.uid,
             'status': self.status,
@@ -55,7 +56,6 @@ class Agent:
         self.status = status
 
     def calculate_influence_prob(self):
-        # TODO: influence prob equation
         influence_prob = INFLUENCE_PROB
         rand = random.random()
         if rand < influence_prob:
@@ -64,6 +64,7 @@ class Agent:
             return False
 
     def start_influence(self, step):
+        # message_content = LlamaApi.llama_generate_messages(self.posts[-1].content)
         message_content = f"{self.uid} post test at step {step}"
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
@@ -76,11 +77,7 @@ class Agent:
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
-                
-                # # Generate message content using the LLM module
-                # initial_message = LlamaApi.llama_generate_messages(initial_message)
-                # print("generated_messages:", initial_message)
-                
+
                 # #TODO: 完善prompt（user profile + topic + 刚才收到的话）
                 # # Save the message to Elasticsearch using ElasticSeachStore
                 # # Store the sent message
