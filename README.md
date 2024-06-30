@@ -278,5 +278,6 @@ PUT /received_text_test01/_mapping
 }
 ```
 
-###
-TODO: check the `calculate_time_decay_and_similarity` function, the inital difussion message is noe generated from the LLM, so the inital message donot need to start from LLM to get the timestamp, just use date time now.
+
+### Leaning Material 
+- Clustering: https://scikit-learn.org/stable/modules/clustering.html#clustering
