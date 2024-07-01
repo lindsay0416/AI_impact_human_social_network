@@ -1,5 +1,5 @@
 {
-    "round": 2,
+    "round": 1,
     "timestep": 10,
     "influence_prob": 0.1,
     "node_size": 20,

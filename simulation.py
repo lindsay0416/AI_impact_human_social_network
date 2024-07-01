@@ -21,19 +21,21 @@ CONNECT_PROB = 0.1
 IS_DIRECTED = True
 TIMESTEP = 10
 ROUND = 1
-SEED_SET_SIZE = 1
-INFLUENCE_PROB = 0.1
+INFLUENCE_PROB = 0.1,
+BROADCASTING_PROB = 0.1,
+INITIAL_MESSAGE = "This is an example initial message."
 
 
 def set_simulation_params():
     parameters = {
-        "seed_set_size": SEED_SET_SIZE,
         "round": ROUND,
         "timestep": TIMESTEP,
         "influence_prob": INFLUENCE_PROB,  # for test, we set a uniform probability
         "node_size": NODE_SIZE,
         "connect_prob": CONNECT_PROB,
-        "is_directed": IS_DIRECTED
+        "is_directed": IS_DIRECTED,
+        "broadcasting_prob": 0.1,
+        "initial_message": INITIAL_MESSAGE
     }
 
     # save parameters to a json file
@@ -49,14 +51,14 @@ def simulation(params):
     connect_prob = params.get("connect_prob")
     is_directed = params.get("is_directed")
     is_external_dataset = params.get("is_external_dataset")
+    initial_message = params.get("initial_message")
     if not is_external_dataset:
-        environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed)
+        environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed, initial_message=initial_message)
     else:
         G = dt.load_graph("graph.G")
         dt.graph_show_info(G)
-        environment = Environment(graph=G, is_directed=is_directed)
+        environment = Environment(graph=G, is_directed=is_directed, initial_message=initial_message)
 
-    # TODO: save grpah information, i.e., (1) network structure, and (2) user profile info to a JSON file
     dt.graph_to_json(environment.graph)
 
     # start diffusion
@@ -106,38 +108,33 @@ def start_diffusion(params, round, environment):
         else:
             initial_message_content = params.get("initial_message")
             environment.start_infection(broadcasting_prob, initial_message_content)
-
+    # print([environment.graph.nodes()[user]["data"].posts[0].content for user in environment.seedSet])
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")
-        data, user_data = global_analysis(environment, 0)
-        step_result = {}
-        step_result["step"] = 0
-        step_result["data"] = data
-        step_result["user_data"] = user_data
-        steps.append(step_result)
 
     for step in range(0, timestep):
-        for user in environment.graph.nodes():
-            user_agent = environment.graph.nodes()[user]["data"] # 这里有 in_neigbour 和 out_neigbour 的信息
-
-            # TODO - to get user in_neighbor info:
-            # print(user_agent.in_neighbors)
-            # TODO - to get user out_neighbor info:
-            # print(user_agent.out_neighbors)
-
-            if user_agent.status == 1:
-                user_agent.start_influence(step)
-        step_result = {}
-        step_result["step"] = step
-        data, user_data = global_analysis(environment, step)
-        step_result["data"] = data
-        step_result["user_data"] = user_data
-        steps.append(step_result)
+        if step == 0:
+            data, user_data = global_analysis(environment, 0)
+            step_result = {}
+            step_result["step"] = 0
+            step_result["data"] = data
+            step_result["user_data"] = user_data
+            steps.append(step_result)
+        else:
+            for user in environment.graph.nodes():
+                user_agent = environment.graph.nodes()[user]["data"]
+                if user_agent.status == 1:
+                    user_agent.start_influence(step)
+            step_result = {}
+            step_result["step"] = step
+            data, user_data = global_analysis(environment, step)
+            step_result["data"] = data
+            step_result["user_data"] = user_data
+            steps.append(step_result)
     return steps
 
 def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
-    # TODO: save global analysis result into elastic search. Here, as a test, we save it into JSON file. Currently only provide coverage analysis data
     data = [{"coverage": coverage}]
 
     graph = environment.graph
