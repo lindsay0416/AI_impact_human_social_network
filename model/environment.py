@@ -26,6 +26,8 @@ class Environment:
                 self.connect_prob = value
             if key == "is_directed":
                 self.is_directed = value
+            if key == "initial_message":
+                self.initial_message = value
 
         # init environment with random graph or a real-world social network
         if graph is None:
@@ -53,7 +55,7 @@ class Environment:
         # assign user attributes to nodes, saved as an Agent object
         for node_id in self.graph.nodes:
             # init agent object
-            node_data = Agent(node_id, self.graph)
+            node_data = Agent(node_id, self.graph, self.initial_message)
 
             # assign in-neighbor and out-neighbor lists:
             #

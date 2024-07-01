@@ -20,7 +20,7 @@ class Agent:
             - status: active or inactive; represented by 1 (for active) and 0 (for inactive)
 
     """
-    def __init__(self, userID, environment):
+    def __init__(self, userID, environment, inital_message):
         self.userID = userID
         self.environment = environment
         self.status = 0
@@ -31,6 +31,7 @@ class Agent:
         self.posts = []
         self.es_manager = ESManager('http://localhost:9200')
         self.is_seed = False
+        self.topic = inital_message
     
     def set_user_profile(self, uid, profile):
         self.uid = uid
@@ -63,9 +64,26 @@ class Agent:
         else:
             return False
 
+    def message_generate_prompt(self, step):
+        user_profile = self.profile
+        last_received_msg = self.repository[-1].content
+        last_post_msg = self.posts[-1].content if self.posts else ""
+        topic = self.topic
+        prompt =  f"Based on user profile '{user_profile}', " + \
+                  f"and its last received influence message '{last_received_msg}', " + \
+                  f"and its posting habit '{last_post_msg}', " + \
+                  f"what do you think the user would response to '{topic}'?"
+
+        return prompt
+
     def start_influence(self, step):
-        # message_content = LlamaApi.llama_generate_messages(self.posts[-1].content)
-        message_content = f"{self.uid} post test at step {step}"
+        # generate user response
+        prompt = self.message_generate_prompt(step)
+        # print(prompt)
+
+        # message_content = LlamaApi.llama_generate_messages(prompt)
+        message_content = f"{self.uid} post test at step {step}" # for test only
+        
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
         self.posts.append(message)
