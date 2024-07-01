@@ -77,26 +77,49 @@ class Agent:
         return prompt
 
     def start_influence(self, step):
-        # generate user response
+        # create user response generation prompt
         prompt = self.message_generate_prompt(step)
         # print(prompt)
-
+        
+        # create message content through LLM with prompt
         # message_content = LlamaApi.llama_generate_messages(prompt)
         message_content = f"{self.uid} post test at step {step}" # for test only
         
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
+
         self.posts.append(message)
         # logger.info(str(message))
-
+        
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]
             is_influenced = v_agent.calculate_influence_prob()
+
+            # Store the sent message to Elasticsearch
+            ElasticSeachStore.add_record_to_elasticsearch(
+                node=self.uid,
+                neigbour=v_agent.uid,
+                text=message.content,
+                weight=0.1,  # Set an appropriate weight value if needed
+                is_received=False,
+                es=self.es_manager.es,
+                step=step
+            )
+
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
+                # Store the received massage
+                ElasticSeachStore.add_record_to_elasticsearch(
+                    node = v_agent.uid,
+                    neigbour= self.uid, 
+                    text=message.content,
+                    weight=0.1,  # Set an appropriate weight value if needed
+                    is_received=True,
+                    es=self.es_manager.es,
+                    step=step
+                )
 
-                # #TODO: 完善prompt（user profile + topic + 刚才收到的话）
                 # # Save the message to Elasticsearch using ElasticSeachStore
                 # # Store the sent message
                 # for out_neigbour in self.out_neighbors:
