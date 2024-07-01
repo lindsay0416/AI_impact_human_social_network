@@ -20,7 +20,7 @@ class Agent:
             - status: active or inactive; represented by 1 (for active) and 0 (for inactive)
 
     """
-    def __init__(self, userID, environment):
+    def __init__(self, userID, environment, inital_message):
         self.userID = userID
         self.environment = environment
         self.status = 0
@@ -31,6 +31,7 @@ class Agent:
         self.posts = []
         self.es_manager = ESManager('http://localhost:9200')
         self.is_seed = False
+        self.topic = inital_message
     
     def set_user_profile(self, uid, profile):
         self.uid = uid
@@ -41,9 +42,10 @@ class Agent:
         message = Message(content=initial_message, sender=self)
         message.set_timestep(0)
         self.posts.append(message)
+        self.repository.append(message)
 
     def to_dict(self):
-        return{
+        return {
             'id': self.userID,
             'uid': self.uid,
             'status': self.status,
@@ -55,7 +57,6 @@ class Agent:
         self.status = status
 
     def calculate_influence_prob(self):
-        # TODO: influence prob equation
         influence_prob = INFLUENCE_PROB
         rand = random.random()
         if rand < influence_prob:
@@ -63,25 +64,62 @@ class Agent:
         else:
             return False
 
+    def message_generate_prompt(self, step):
+        user_profile = self.profile
+        last_received_msg = self.repository[-1].content
+        last_post_msg = self.posts[-1].content if self.posts else ""
+        topic = self.topic
+        prompt =  f"Based on user profile '{user_profile}', " + \
+                  f"and its last received influence message '{last_received_msg}', " + \
+                  f"and its posting habit '{last_post_msg}', " + \
+                  f"what do you think the user would response to '{topic}'?"
+
+        return prompt
+
     def start_influence(self, step):
-        message_content = f"{self.uid} post test at step {step}"
+        # create user response generation prompt
+        prompt = self.message_generate_prompt(step)
+        # print(prompt)
+        
+        # create message content through LLM with prompt
+        # message_content = LlamaApi.llama_generate_messages(prompt)
+        message_content = f"{self.uid} post test at step {step}" # for test only
+        
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
+
         self.posts.append(message)
         # logger.info(str(message))
-
+        
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]
             is_influenced = v_agent.calculate_influence_prob()
+
+            # Store the sent message to Elasticsearch
+            ElasticSeachStore.add_record_to_elasticsearch(
+                node=self.uid,
+                neigbour=v_agent.uid,
+                text=message.content,
+                weight=0.1,  # Set an appropriate weight value if needed
+                is_received=False,
+                es=self.es_manager.es,
+                step=step
+            )
+
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
-                
-                # # Generate message content using the LLM module
-                # initial_message = LlamaApi.llama_generate_messages(initial_message)
-                # print("generated_messages:", initial_message)
-                
-                # #TODO: 完善prompt（user profile + topic + 刚才收到的话）
+                # Store the received massage
+                ElasticSeachStore.add_record_to_elasticsearch(
+                    node = v_agent.uid,
+                    neigbour= self.uid, 
+                    text=message.content,
+                    weight=0.1,  # Set an appropriate weight value if needed
+                    is_received=True,
+                    es=self.es_manager.es,
+                    step=step
+                )
+
                 # # Save the message to Elasticsearch using ElasticSeachStore
                 # # Store the sent message
                 # for out_neigbour in self.out_neighbors:
