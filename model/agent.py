@@ -3,7 +3,7 @@ import random
 import logging
 from llama_local_api import LlamaApi
 from tool.es_manager import ESManager
-from scores_utilities import ScoresUtilities
+# from scores_utilities import ScoresUtilities
 from model.message import Message
 from tool.elastic_search import ElasticSeachStore
 
@@ -79,11 +79,11 @@ class Agent:
     def start_influence(self, step):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
-        # print(prompt)
+        print(prompt)
         
         # create message content through LLM with prompt
-        # message_content = LlamaApi.llama_generate_messages(prompt)
-        message_content = f"{self.uid} post test at step {step}" # for test only
+        message_content = LlamaApi.llama_generate_messages(prompt)
+        # message_content = f"{self.uid} post test at step {step}" # for test only
         
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
