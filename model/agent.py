@@ -67,12 +67,14 @@ class Agent:
     def message_generate_prompt(self, step):
         user_profile = self.profile
         last_received_msg = self.repository[-1].content
-        last_post_msg = self.posts[-1].content if self.posts else ""
+        # last_post_msg = self.posts[-1].content if self.posts else ""
         topic = self.topic
         prompt =  f"Based on user profile '{user_profile}', " + \
                   f"and its last received influence message '{last_received_msg}', " + \
-                  f"and its posting habit '{last_post_msg}', " + \
                   f"what do you think the user would response to '{topic}'?"
+        # + 1. Support? 2. opinion?
+        # - f"and its posting habit '{last_post_msg}', " + \
+        
 
         return prompt
 
