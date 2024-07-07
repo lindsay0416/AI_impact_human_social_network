@@ -66,25 +66,41 @@ class Agent:
 
     def message_generate_prompt(self, step):
         user_profile = self.profile
+        print("user profile: ", user_profile)
         last_received_msg = self.repository[-1].content
+        print("Last received message: ", last_received_msg)
         # last_post_msg = self.posts[-1].content if self.posts else ""
         topic = self.topic
+        print("Last received message: ", topic)
+        # prompt = user profile + influence message + topic + 
+        # Prompt engineering: 1. Prompt with Context (topic), 2. 
         prompt =  f"Based on user profile '{user_profile}', " + \
-                  f"and its last received influence message '{last_received_msg}', " + \
-                  f"what do you think the user would response to '{topic}'?"
-        # + 1. Support? 2. opinion?
-        # - f"and its posting habit '{last_post_msg}', " + \
-        
+                  f"given the user's last received influence message '{last_received_msg}', " + \
+                  f"given the topic '{topic}', please perform the following tasks and provide the responses in JSON format:" + \
+                  f"""
+                    1. Generate the user's response in the format: 'Response: [User's response]'
+                    2. Analyze the user's opinion on the topic and generate the response in the format: 'opinion: [Support/Oppose/Neutral]'
+                    3. Extract the keywords that support the user's opinion and generate the response in the format: 'keywords: [List of keywords]'
 
+                    Return the responses in the following JSON format:
+
+                    {{
+                        "response": "[User's response]",
+                        "opinion": "[Support/Oppose/Neutral]",
+                        "keywords": "[List of keywords]"
+                    }}
+                    """
+        
         return prompt
 
     def start_influence(self, step):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
-        print(prompt)
+        print("prompt: ", prompt)
         
         # create message content through LLM with prompt
         message_content = LlamaApi.llama_generate_messages(prompt)
+        print("Response message from Llama: ", message_content)
         # message_content = f"{self.uid} post test at step {step}" # for test only
         
         message = Message(message_content, self)

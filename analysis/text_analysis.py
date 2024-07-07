@@ -11,3 +11,34 @@
 # 3. profile each cluster
 
 # https://huggingface.co/siebert/sentiment-roberta-large-english
+
+import pandas as pd
+
+# Load the CSV file into a DataFrame
+df = pd.read_csv('./dataset/nyt-articles-2020.csv')
+
+# Filter the rows where the 'uniqueID' column contains the string "1db9abc2756a"
+filtered_df = df[df['uniqueID'].str.contains("1db9abc2756a", na=False)]
+
+# Display the filtered rows
+print(filtered_df)
+
+def main():
+    # Load the CSV file into a DataFrame
+    df = pd.read_csv('./dataset/nyt-articles-2020.csv')
+
+    # Filter the rows where the 'uniqueID' column contains the string "1db9abc2756a"
+    filtered_df = df[df['uniqueID'].str.contains("1db9abc2756a", na=False)]
+
+    # Print the whole content in the 'headline' column of the filtered rows
+    for headline in filtered_df['headline']:
+        print(headline)
+
+    # Save the filtered rows to a new CSV file
+    filtered_df.to_csv('filtered_nyt_articles.csv', index=False)
+
+
+
+
+if __name__ == '__main__':
+    main()
