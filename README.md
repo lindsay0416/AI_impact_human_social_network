@@ -148,6 +148,10 @@ PUT received_text_test01
 ### sentence_embedding.py
 * Calculte the top 10 similar messages from "received_text_test01" and "sent_text_test01" index.
 
+### ./input/input_intital_message.py
+* Input the initial topic used for simulation in the .txt file under folder ./input
+* By running this function to replace the `initial_message` parameter in `parameters.json`.
+
 # How to run llama locally
 * Download App: https://ollama.com/
 * pip install ollama

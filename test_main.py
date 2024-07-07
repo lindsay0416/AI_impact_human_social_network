@@ -26,7 +26,21 @@ class Application:
             print("Could not connect to Elasticsearch")
 
     def test_generate_text(self):
-        prompt = "Hello"
+        prompt = f"""
+            Given the topic '{topic}', please perform the following tasks and provide the responses in JSON format:
+
+            1. Generate the user's response in the format: 'Response: [User's response]'
+            2. Analyze the user's opinion on the topic and generate the response in the format: 'opinion: [Support/Oppose/Neutral]'
+            3. Extract the sentences that support the user's opinion and generate the response in the format: 'sentences: [List of sentences]'
+
+            Return the responses in the following JSON format:
+
+            {{
+            "response": "[User's response]",
+            "opinion": "[Support/Oppose/Neutral]",
+            "sentences": "[List of sentences]"
+            }}
+    """
         generated_text, prompt = GenerateText.get_generated_text(openai, prompt)
         print("Prompt:", prompt)
         print("Generated Text:", generated_text)

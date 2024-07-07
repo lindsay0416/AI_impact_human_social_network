@@ -40,6 +40,6 @@ class ElasticSeachStore():
             response = ElasticSeachStore.add_sent_record(index_name, document_body, es)
 
         # Print or log the response as needed
-        print(f"{'Received' if is_received else 'Sent'}: {document_body}")
-        print("Response from Elasticsearch:", response)
+        # print(f"{'Received' if is_received else 'Sent'}: {document_body}")
+        # print("Response from Elasticsearch:", response)
         return response  # Return raw response or process as needed

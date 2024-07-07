@@ -4,7 +4,6 @@ import networkx as nx
 from networkx.readwrite import json_graph
 import logging
 import json
-
 from model.agent import Agent
 from model.environment import Environment
 import tool.dataset_tool as dt
