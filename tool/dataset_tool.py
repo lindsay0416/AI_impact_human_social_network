@@ -23,6 +23,9 @@ def convert_tool(dataset_file):
             node1, node2 = map(int, line.split())
             # Add an edge between the two nodes in the graph
             G.add_edge(node1, node2)
+
+    node_mapping = {node: new_id for new_id, node in enumerate(G.nodes())}
+    G = nx.relabel_nodes(G, node_mapping)
     save_graph(G, "graph.G")
     return G
 

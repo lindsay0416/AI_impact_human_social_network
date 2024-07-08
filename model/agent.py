@@ -49,8 +49,8 @@ class Agent:
             'id': self.userID,
             'uid': self.uid,
             'status': self.status,
-            'repository': [str(m) for m in self.repository],
-            'posts': [str(p) for p in self.posts]
+            'repository': [m.content for m in self.repository],
+            'posts': [p.content for p in self.posts]
         }
 
     def update_status(self, status):
