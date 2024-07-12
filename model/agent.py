@@ -1,4 +1,6 @@
 # user agent model
+import json
+import time
 import random
 import logging
 from llama_local_api import LlamaApi
@@ -6,6 +8,9 @@ from tool.es_manager import ESManager
 # from scores_utilities import ScoresUtilities
 from model.message import Message
 from tool.elastic_search import ElasticSeachStore
+import openai
+from tool.config_manager import ConfigManager
+from llm_generate_text import GenerateText
 
 INFLUENCE_PROB = 0.1
 #TODO: replce 0.1 with the socre calculated from scores_utilities.py 
@@ -20,6 +25,7 @@ class Agent:
             - status: active or inactive; represented by 1 (for active) and 0 (for inactive)
 
     """
+    
     def __init__(self, userID, environment, inital_message):
         self.userID = userID
         self.environment = environment
@@ -32,7 +38,13 @@ class Agent:
         self.es_manager = ESManager('http://localhost:9200')
         self.is_seed = False
         self.topic = inital_message
-    
+        self.config_manager = ConfigManager('config.ini')
+        self.setup_openai()
+
+    def setup_openai(self):
+        api_key = self.config_manager.get_api_key()
+        openai.api_key = api_key
+        
     def set_user_profile(self, uid, profile):
         self.uid = uid
         self.profile = profile
@@ -74,15 +86,16 @@ class Agent:
         # print("topic: ", topic)
         # prompt = user profile + influence message + topic + 
         # Prompt engineering: 1. Prompt with Context (topic), 2. 
-        prompt = f"Based on user profile '{user_profile}', " + \
+        prompt = f"We are building an influence discussion simulation tool, you are a responsible AI, and your task is based on each user's profile, adapt the user's post habit and generate one comment on the topic you received. The format and content should follow the following 3 instructions. Please note, do not generate duplicate sentences from different users. One profile represents one user, and one possible comment only." + \
+            f"Based on user profile '{user_profile}', " + \
             f"given the user's last received influence message '{last_received_msg}', " + \
             f"given the topic '{topic}', please perform the following tasks and provide the responses in JSON format:" + \
             f"""
-                1. Generate the user's response in the format: 'Response: [User's response]'
-                2. Analyze the user's opinion on the topic and generate the response in the format: 'opinion: [Support/Oppose/Neutral]'
+                1. Generate one of the user's possible comment while the user reading this topic, in this format: 'Response: [User's response]', each response cannot be the same.
+                2. Do a semantic analysis based on the response generated from 1, output the results as this user's opinion in the format of: 'opinion: [Support/Oppose/Neutral]'
                 3. Summarize the user's response and generate the response in the format: 'phrases: [List of phrases]'
 
-                Please only return the responses in the following JSON format:
+                Please only return the responses in the following JSON format, one response only for each profile:
 
                     {{
                         "response": "[User's response]",
@@ -98,8 +111,13 @@ class Agent:
         prompt = self.message_generate_prompt(step)
         
         # create message content through LLM with prompt
-        message_content = LlamaApi.llama_generate_messages(prompt)
-        print("Response message from Llama: ", message_content)
+        message_content, prompt = GenerateText.get_generated_text(openai, prompt)
+        print("Response message from gpt:", message_content)
+        time.sleep(5)
+
+        # message_content = LlamaApi.llama_generate_messages(prompt)
+        # print("Response message from Llama: ", message_content)
+
         # message_content = f"{self.uid} post test at step {step}" # for test only
         
         message = Message(message_content, self)
