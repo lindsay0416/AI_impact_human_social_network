@@ -36,9 +36,9 @@ class Application:
             Return the responses in the following JSON format:
 
             {{
-            "response": "[User's response]",
-            "opinion": "[Support/Oppose/Neutral]",
-            "sentences": "[List of sentences]"
+                "response": "[User's response]",
+                "opinion": "[Support/Oppose/Neutral]",
+                "sentences": "[List of sentences]"
             }}
     """
         generated_text, prompt = GenerateText.get_generated_text(openai, prompt)
