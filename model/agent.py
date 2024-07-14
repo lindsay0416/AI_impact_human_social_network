@@ -51,18 +51,28 @@ class Agent:
 
     def set_as_seed(self, initial_message):
         self.is_seed = True
-        message = Message(content=initial_message, sender=self)
-        message.set_timestep(0)
+        self.repository.append(initial_message)
+
+        step = 0
+        # create user response generation prompt
+        prompt = self.message_generate_prompt(step)
+
+        # create message content through LLM with prompt
+        message_content = LlamaApi.llama_generate_messages(prompt)
+        print("Response message from Llama: ", message_content)
+        # message_content = f"{self.uid} post test at step {step}" # for test only
+
+        message = Message(message_content, self)
+        message.set_timestep(timestep=step)
+
         self.posts.append(message)
-        self.repository.append(message)
 
     def to_dict(self):
         return {
             'id': self.userID,
             'uid': self.uid,
             'status': self.status,
-            'repository': [str(m) for m in self.repository],
-            'posts': [str(p) for p in self.posts]
+            'posts': [p.content for p in self.posts]
         }
 
     def update_status(self, status):
