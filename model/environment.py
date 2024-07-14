@@ -28,6 +28,10 @@ class Environment:
                 self.is_directed = value
             if key == "initial_message":
                 self.initial_message = value
+            if key == "generate_user_profile":
+                self.generate_user_profile = value
+            if key == "user_profile_prompt":
+                self.user_profile_prompt = value
 
         # init environment with random graph or a real-world social network
         if graph is None:
@@ -48,9 +52,11 @@ class Environment:
 
     def init_graph_data(self):
         # load users profile from file
-        if os.path.exists('input/user_profile.json'):
-            with open('input/user_profile.json', 'r') as file:
-                profiles = json.load(file)
+        if not os.path.exists('input/user_profile.json') or self.generate_user_profile:
+            tool.generate_user_profile(self.user_profile_prompt)
+        # load users profile from file
+        with open('input/user_profile.json', 'r') as file:
+            profiles = json.load(file)
 
         # assign user attributes to nodes, saved as an Agent object
         for node_id in self.graph.nodes:

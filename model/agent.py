@@ -51,7 +51,9 @@ class Agent:
 
     def set_as_seed(self, initial_message):
         self.is_seed = True
-        self.repository.append(initial_message)
+        received_msg = Message(initial_message, self)
+        received_msg.set_timestep(timestep=0)
+        self.repository.append(received_msg)
 
         step = 0
         # create user response generation prompt

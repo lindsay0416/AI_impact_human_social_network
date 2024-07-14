@@ -4,6 +4,10 @@ import logging
 import argparse
 import json
 
+import openai
+from tool.config_manager import ConfigManager
+from llm_generate_text import GenerateText
+
 logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
 
@@ -14,6 +18,17 @@ def init_parser():
 
     parser.print_help()
     return args
+
+
+def generate_user_profile(prompt):
+    print(prompt)
+    config_manager = ConfigManager('config.ini')
+    api_key = config_manager.get_api_key()
+    response, prompt = GenerateText.get_generated_text(openai, prompt)
+    with open("../input/user_profile.json", "w") as json_file:
+        json.dump(response, json_file, indent=4)
+        logger.info("Generated user profiles saved to input/user_profile.json")
+
 
 def convert_tool(dataset_file):
     G = nx.Graph()
@@ -58,11 +73,16 @@ def graph_to_json(G):
         
 
 if __name__ == '__main__':
-    args = init_parser()
-    print("---------------------------------------")
-    print(f"Dataset: {args.dataset}")
-    print("---------------------------------------")
-
-    convert_tool(args.dataset)
-    G = load_graph("graph.G")
-    graph_show_info(G)
+    # args = init_parser()
+    # print("---------------------------------------")
+    # print(f"Dataset: {args.dataset}")
+    # print("---------------------------------------")
+    #
+    # convert_tool(args.dataset)
+    # G = load_graph("graph.G")
+    # graph_show_info(G)
+    with open("../input/generate_user_profile_prompt.txt") as file:
+        prompt = ""
+        for l in file.readlines():
+            prompt += l
+    generate_user_profile(prompt)

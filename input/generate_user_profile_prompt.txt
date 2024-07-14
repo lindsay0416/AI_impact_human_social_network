@@ -1,0 +1,10 @@
+Generate user profiles for 1 users as a 50-word unique description.
+Ages of these users follow Gaussian distribution, gender is half and half.
+Listed your response by user id in JSON format.
+Based on this example:
+"N1": {
+     "name": "Emily",
+     "age": 32,
+     "gender": "female",
+     "description": "a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries."
+   }
