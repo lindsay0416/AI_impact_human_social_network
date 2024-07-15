@@ -48,15 +48,30 @@ def simulation(params):
     # init graph
     node_size = params.get("node_size")
     connect_prob = params.get("connect_prob")
-    is_directed = params.get("is_directed")
+    random_edge = params.get("random_edges")
     is_external_dataset = params.get("is_external_dataset")
     initial_message = params.get("initial_message")
+    generate_user_profile = params.get("generate_user_profile")
+
+
+    if generate_user_profile:
+        user_profile_prompt = params.get("user_profile_prompt")
+        prompt = f"There are {node_size} users in a social network. " + user_profile_prompt
+        dt.generate_user_profile(prompt)
+    
     if not is_external_dataset:
-        environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed, initial_message=initial_message)
+        environment = Environment(
+            node_size=node_size, 
+            connect_prob=connect_prob, 
+            random_edge=random_edge, 
+            initial_message=initial_message
+            )
     else:
         G = dt.load_graph("graph.G")
         dt.graph_show_info(G)
-        environment = Environment(graph=G, is_directed=is_directed, initial_message=initial_message)
+        environment = Environment(
+            graph=G, 
+            initial_message=initial_message)
 
     dt.graph_to_json(environment.graph)
 
