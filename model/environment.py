@@ -22,16 +22,14 @@ class Environment:
             setattr(self, key, value)
             if key == "node_size":
                 self.node_size = value
+            if key == "random_edge":
+                self.random_edge = value
             if key == "connect_prob":
                 self.connect_prob = value
             if key == "is_directed":
                 self.is_directed = value
             if key == "initial_message":
                 self.initial_message = value
-            if key == "generate_user_profile":
-                self.generate_user_profile = value
-            if key == "user_profile_prompt":
-                self.user_profile_prompt = value
 
         # init environment with random graph or a real-world social network
         if graph is None:
@@ -39,7 +37,8 @@ class Environment:
                 self.graph = tool.load_graph()
             else:
                 logger.info("No graph data exists, creating a new graph...")
-                self.graph = generate_random_network(self.node_size, self.connect_prob, self.is_directed)
+                # self.graph = generate_random_network(self.node_size, self.connect_prob, self.is_directed)
+                self.graph = generate_power_law_network(self.node_size, self.random_edge, self.connect_prob)
         else:
             self.graph = graph
             logger.info("Load a social network from dataset...")
@@ -51,9 +50,6 @@ class Environment:
     """
 
     def init_graph_data(self):
-        # load users profile from file
-        if not os.path.exists('input/user_profile.json') or self.generate_user_profile:
-            tool.generate_user_profile(self.user_profile_prompt)
         # load users profile from file
         with open('input/user_profile.json', 'r') as file:
             profiles = json.load(file)
@@ -142,8 +138,23 @@ class Environment:
 """
 
 
-def generate_random_network(n, p, is_directed):
+def generate_random_network(n, m, p, is_directed):
     graph = nx.erdos_renyi_graph(n, p, directed=is_directed)
     tool.save_graph(graph, "graph.G")
     return graph
 
+"""
+    Create a random network with networkx using Holme and Kim algorithm
+    https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.powerlaw_cluster_graph.html
+    Input: 
+        params: a dict of network parameters {n=n_value, m=m_value, p=p_value}, 
+        where n is the number of nodes, m is the number of random edges to add for each new node, and p is the probability of adding a triangle after adding a random edge.
+    Output:
+        graph: a generated random graph
+"""
+
+
+def generate_power_law_network(n, m, p):
+    graph = nx.powerlaw_cluster_graph(n, m, p)
+    tool.save_graph(graph, "graph.G")
+    return graph

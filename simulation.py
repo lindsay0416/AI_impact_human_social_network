@@ -48,15 +48,33 @@ def simulation(params):
     # init graph
     node_size = params.get("node_size")
     connect_prob = params.get("connect_prob")
+    random_edge = params.get("random_edges")
     is_directed = params.get("is_directed")
     is_external_dataset = params.get("is_external_dataset")
     initial_message = params.get("initial_message")
+    generate_user_profile = params.get("generate_user_profile")
+
+
+    if generate_user_profile:
+        user_profile_prompt = params.get("user_profile_prompt")
+        prompt = f"There are {node_size} users in a social network. " + user_profile_prompt
+        dt.generate_user_profile(prompt)
+    
     if not is_external_dataset:
-        environment = Environment(node_size=node_size, connect_prob=connect_prob, is_directed=is_directed, initial_message=initial_message)
+        environment = Environment(
+            node_size=node_size, 
+            is_directed=is_directed,
+            connect_prob=connect_prob, 
+            random_edge=random_edge, 
+            initial_message=initial_message
+            )
     else:
         G = dt.load_graph("graph.G")
         dt.graph_show_info(G)
-        environment = Environment(graph=G, is_directed=is_directed, initial_message=initial_message)
+        environment = Environment(
+            graph=G, 
+            is_directed=is_directed,
+            initial_message=initial_message)
 
     dt.graph_to_json(environment.graph)
 
@@ -97,16 +115,8 @@ def start_diffusion(params, round, environment):
     steps = []
 
     # set seedSet
-    if len(environment.seedSet) == 0:
-        seed_set_size = params.get("seed_set_size")
-        if seed_set_size is not None:
-            environment.select_seeds(seed_set_size)
-        elif params.get("seed_set") is not None:
-            seed_set = json.loads(params.get("seed_set"))
-            environment.select_fix_seeds(seed_set)
-        else:
-            initial_message_content = params.get("initial_message")
-            environment.start_infection(broadcasting_prob, initial_message_content)
+    initial_message_content = params.get("initial_message")
+    environment.start_infection(broadcasting_prob, initial_message_content)
     # print([environment.graph.nodes()[user]["data"].posts[0].content for user in environment.seedSet])
     if round == 0:
         dt.save_graph(environment.graph, "graph.G")

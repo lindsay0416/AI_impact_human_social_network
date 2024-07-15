@@ -1,4 +1,4 @@
-Generate user profiles for 1 users as a 50-word unique description.
+Generate user profile as a 50-word unique description.
 Ages of these users follow Gaussian distribution, gender is half and half.
 Listed your response by user id in JSON format.
 Based on this example:
