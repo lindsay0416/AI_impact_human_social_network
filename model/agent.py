@@ -12,9 +12,6 @@ import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
 
-INFLUENCE_PROB = 0.1
-#TODO: replce 0.1 with the socre calculated from scores_utilities.py 
-
 # init logger
 logger = logging.getLogger("agent")
 logging.basicConfig(level="INFO")
@@ -81,8 +78,7 @@ class Agent:
     def update_status(self, status):
         self.status = status
 
-    def calculate_influence_prob(self):
-        influence_prob = INFLUENCE_PROB
+    def calculate_influence_prob(self, influence_prob):
         rand = random.random()
         if rand < influence_prob:
             return True
@@ -119,7 +115,7 @@ class Agent:
        
         return prompt
 
-    def start_influence(self, step):
+    def start_influence(self, step, influence_prob):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
         
@@ -141,7 +137,7 @@ class Agent:
         
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]
-            is_influenced = v_agent.calculate_influence_prob()
+            is_influenced = v_agent.calculate_influence_prob(influence_prob)
 
             # Store the sent message to Elasticsearch
             ElasticSeachStore.add_record_to_elasticsearch(

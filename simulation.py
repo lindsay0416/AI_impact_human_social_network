@@ -112,6 +112,7 @@ def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
     round = params.get("round")
     broadcasting_prob = params.get("broadcasting_prob")
+    influence_prob = params.get("influence_prob")
     steps = []
 
     # set seedSet
@@ -133,7 +134,7 @@ def start_diffusion(params, round, environment):
             for user in environment.graph.nodes():
                 user_agent = environment.graph.nodes()[user]["data"]
                 if user_agent.status == 1:
-                    user_agent.start_influence(step)
+                    user_agent.start_influence(step, influence_prob)
             step_result = {}
             step_result["step"] = step
             data, user_data = global_analysis(environment, step)
