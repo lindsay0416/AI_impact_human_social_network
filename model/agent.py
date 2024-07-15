@@ -63,8 +63,9 @@ class Agent:
         prompt = self.message_generate_prompt(step)
 
         # create message content through LLM with prompt
-        message_content = LlamaApi.llama_generate_messages(prompt)
-        print("Response message from Llama: ", message_content)
+        message_content, prompt = GenerateText.get_generated_text(openai, prompt)
+        print("Response message from gpt:", message_content)
+        time.sleep(5)
         # message_content = f"{self.uid} post test at step {step}" # for test only
 
         message = Message(message_content, self)
@@ -83,8 +84,7 @@ class Agent:
     def update_status(self, status):
         self.status = status
 
-    def calculate_influence_prob(self):
-        influence_prob = INFLUENCE_PROB
+    def calculate_influence_prob(self, influence_prob):
         rand = random.random()
         if rand < influence_prob:
             return True
@@ -121,7 +121,7 @@ class Agent:
        
         return prompt
 
-    def start_influence(self, step):
+    def start_influence(self, step, influence_prob):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
         
@@ -143,7 +143,7 @@ class Agent:
         
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]
-            is_influenced = v_agent.calculate_influence_prob()
+            is_influenced = v_agent.calculate_influence_prob(influence_prob)
 
             # Store the sent message to Elasticsearch
             ElasticSeachStore.add_record_to_elasticsearch(
