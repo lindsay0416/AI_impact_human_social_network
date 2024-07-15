@@ -12,7 +12,7 @@ import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
 
-INFLUENCE_PROB = 0.1
+INFLUENCE_PROB = 0.3
 #TODO: replce 0.1 with the socre calculated from scores_utilities.py 
 
 # init logger
@@ -51,7 +51,12 @@ class Agent:
 
     def set_as_seed(self, initial_message):
         self.is_seed = True
-        self.repository.append(initial_message)
+        
+        # Wrap the initial message in a Message object
+        initial_message_obj = Message(initial_message, self)
+        initial_message_obj.set_timestep(timestep=0)
+        
+        self.repository.append(initial_message_obj)
 
         step = 0
         # create user response generation prompt
@@ -165,34 +170,6 @@ class Agent:
                     step=step
                 )
 
-                # # Save the message to Elasticsearch using ElasticSeachStore
-                # # Store the sent message
-                # for out_neigbour in self.out_neighbors:
-                #     out_neigbour = 'N' + str(out_neigbour)
-                #     print(out_neigbour)
-                #     ElasticSeachStore.add_record_to_elasticsearch(
-                #         node=self.uid,
-                #         neigbour=out_neigbour,
-                #         text=initial_message,
-                #         weight=0.1,  # Set an appropriate weight value if needed
-                #         is_received=False,
-                #         es=self.es_manager.es,
-                #         step=step
-                #     )
-
-                # ## Store the received message for each in-neighbor
-                # for in_neighbor in self.in_neighbors:
-                #     in_neigbour = 'N' + str(in_neighbor)
-                #     print(in_neigbour)
-                #     ElasticSeachStore.add_record_to_elasticsearch(
-                #         node = in_neigbour,
-                #         neigbour= self.uid, 
-                #         text=initial_message,
-                #         weight=0.1,  # Set an appropriate weight value if needed
-                #         is_received=True,
-                #         es=self.es_manager.es,
-                #         step=step
-                    # )
 # 以下是 Elastic Search 存储的逻辑。
 # document_body = {
 #             "node": neigbour if is_received else node,
