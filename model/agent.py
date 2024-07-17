@@ -12,7 +12,6 @@ import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
 
-INFLUENCE_PROB = 0.1
 #TODO: replce 0.1 with the socre calculated from scores_utilities.py 
 
 # init logger
@@ -35,7 +34,7 @@ class Agent:
         self.in_neighbors = []
         self.out_neighbors = []
         self.posts = []
-        self.es_manager = ESManager('http://localhost:9200')
+        # self.es_manager = ESManager('http://localhost:9200')
         self.is_seed = False
         self.topic = inital_message
         self.config_manager = ConfigManager('config.ini')
@@ -61,7 +60,7 @@ class Agent:
 
         # create message content through LLM with prompt
         message_content, prompt = GenerateText.get_generated_text(openai, prompt)
-        print("Response message from gpt:", message_content)
+        # print("Response message from gpt:", message_content)
         time.sleep(5)
         # message_content = f"{self.uid} post test at step {step}" # for test only
 
@@ -81,8 +80,7 @@ class Agent:
     def update_status(self, status):
         self.status = status
 
-    def calculate_influence_prob(self):
-        influence_prob = INFLUENCE_PROB
+    def calculate_influence_prob(self, influence_prob):
         rand = random.random()
         if rand < influence_prob:
             return True
@@ -91,7 +89,7 @@ class Agent:
 
     def message_generate_prompt(self, step):
         user_profile = self.profile
-        print("user profile: ", user_profile)
+        # print("user profile: ", user_profile)
         last_received_msg = self.repository[-1].content
         # print("Last received message: ", last_received_msg)
         # last_post_msg = self.posts[-1].content if self.posts else ""
@@ -119,7 +117,7 @@ class Agent:
        
         return prompt
 
-    def start_influence(self, step):
+    def start_influence(self, step, influence_prob):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
         
@@ -141,68 +139,8 @@ class Agent:
         
         for v in self.out_neighbors:
             v_agent = self.environment.nodes()[v]["data"]
-            is_influenced = v_agent.calculate_influence_prob()
-
-            # Store the sent message to Elasticsearch
-            ElasticSeachStore.add_record_to_elasticsearch(
-                node=self.uid,
-                neigbour=v_agent.uid,
-                text=message.content,
-                weight=0.1,  # Set an appropriate weight value if needed
-                is_received=False,
-                es=self.es_manager.es,
-                step=step
-            )
+            is_influenced = v_agent.calculate_influence_prob(influence_prob)
 
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
                 v_agent.repository.append(message)
-                # Store the received massage
-                ElasticSeachStore.add_record_to_elasticsearch(
-                    node = v_agent.uid,
-                    neigbour= self.uid, 
-                    text=message.content,
-                    weight=0.1,  # Set an appropriate weight value if needed
-                    is_received=True,
-                    es=self.es_manager.es,
-                    step=step
-                )
-
-                # # Save the message to Elasticsearch using ElasticSeachStore
-                # # Store the sent message
-                # for out_neigbour in self.out_neighbors:
-                #     out_neigbour = 'N' + str(out_neigbour)
-                #     print(out_neigbour)
-                #     ElasticSeachStore.add_record_to_elasticsearch(
-                #         node=self.uid,
-                #         neigbour=out_neigbour,
-                #         text=initial_message,
-                #         weight=0.1,  # Set an appropriate weight value if needed
-                #         is_received=False,
-                #         es=self.es_manager.es,
-                #         step=step
-                #     )
-
-                # ## Store the received message for each in-neighbor
-                # for in_neighbor in self.in_neighbors:
-                #     in_neigbour = 'N' + str(in_neighbor)
-                #     print(in_neigbour)
-                #     ElasticSeachStore.add_record_to_elasticsearch(
-                #         node = in_neigbour,
-                #         neigbour= self.uid, 
-                #         text=initial_message,
-                #         weight=0.1,  # Set an appropriate weight value if needed
-                #         is_received=True,
-                #         es=self.es_manager.es,
-                #         step=step
-                    # )
-# 以下是 Elastic Search 存储的逻辑。
-# document_body = {
-#             "node": neigbour if is_received else node,
-#             "from": node if is_received else None,
-#             "to": neigbour if not is_received else None,
-#             "received_text": text if is_received else None,
-#             "sent_text": text if not is_received else None,
-#             "received_text_weight": str(weight) if is_received else None,
-#             "timestamp": step,
-#         }
