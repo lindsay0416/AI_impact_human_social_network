@@ -9,7 +9,8 @@ class GenerateText:
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "system", "content": "You are a Large Language Model (LLM) designed to adapt to the user's unique way of speaking. \
+                     Your task is to simulate comments and responses based on the provided topic, ensuring they align with the user's profile."},
                     {"role": "user", "content": prompt}
                 ]
             )

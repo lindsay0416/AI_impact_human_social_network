@@ -101,10 +101,12 @@ class Agent:
         # print("topic: ", topic)
         # prompt = user profile + influence message + topic + 
         # Prompt engineering: 1. Prompt with Context (topic), 2. 
-        prompt = f"We are building an influence discussion simulation tool, you are a responsible AI, and your task is based on each user's profile, adapt the user's post habit and generate one comment on the topic you received. The format and content should follow the following 3 instructions. Please note, do not generate duplicate sentences from different users. One profile represents one user, and one possible comment only." + \
+        prompt = f"We are building an influence discussion simulation tool, you are a responsible AI, and your task is based on each user's profile, adapt the user's post habit and generate one comment on the topic you received. The format and content should follow the following 3 instructions. Please note, do not generate duplicate sentences from different users. One profile represents one user, and one possible comment only.\
+            You are a Large Language Model (LLM) designed to adapt to the user's unique way of speaking. \
+            Your task is to simulate comments and responses based on the provided topic, ensuring they align with the user's profile." + \
             f"Based on user profile '{user_profile}', " + \
             f"given the user's last received influence message '{last_received_msg}', " + \
-            f"given the topic '{topic}', please perform the following tasks and provide the responses in JSON format:" + \
+            f"given the topic '{topic}', please perform the following tasks and provide the responses in JSON format, When generating responses, provide some insight around the topic to spark interest in the recipient of your message:" + \
             f"""
                 1. Generate one of the user's possible comment while the user reading this topic, in this format: 'Response: [User's response]', each response cannot be the same.
                 2. Do a semantic analysis based on the response generated from 1, output the results as this user's opinion in the format of: 'opinion: [Support/Oppose/Neutral]'

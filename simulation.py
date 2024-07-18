@@ -106,6 +106,8 @@ def reset_status(environment):
             user_agent.update_status(0)
         user_agent.posts = []
         user_agent.repository = []
+        if user in environment.seedSet:
+            user_agent.set_as_seed(environment.initial_message)
 
 
 def start_diffusion(params, round, environment):
