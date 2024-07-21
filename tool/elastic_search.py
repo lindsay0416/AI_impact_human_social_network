@@ -1,5 +1,5 @@
 # from llm_generate_text import GenerateText
-from sentence_embedding import Text2Vector
+from tool.sentence_embedding import Text2Vector
 import time
 
 class ElasticSeachStore():

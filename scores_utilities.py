@@ -8,7 +8,7 @@
 # The time difference between the (received/sent) messages to be scored and the timestamp of the simulation message.
 import time
 from llama_local_api import LlamaApi
-from sentence_embedding import Text2Vector
+from tool.sentence_embedding import Text2Vector
 import numpy as np
 import json
 

@@ -147,34 +147,35 @@ class Agent:
         self.posts.append(message)
         # logger.info(str(message))
         
-        for v in self.out_neighbors:
-            v_agent = self.environment.nodes()[v]["data"]
-            is_influenced = v_agent.calculate_influence_prob(influence_prob)
+        # No elasticsearch on 4080p GPU environment.
+        # for v in self.out_neighbors:
+        #     v_agent = self.environment.nodes()[v]["data"]
+        #     is_influenced = v_agent.calculate_influence_prob(influence_prob)
 
-            # Store the sent message to Elasticsearch
-            ElasticSeachStore.add_record_to_elasticsearch(
-                node=self.uid,
-                neigbour=v_agent.uid,
-                text=message.content,
-                weight=0.1,  # Set an appropriate weight value if needed
-                is_received=False,
-                es=self.es_manager.es,
-                step=step
-            )
+        #     # Store the sent message to Elasticsearch
+        #     ElasticSeachStore.add_record_to_elasticsearch(
+        #         node=self.uid,
+        #         neigbour=v_agent.uid,
+        #         text=message.content,
+        #         weight=0.1,  # Set an appropriate weight value if needed
+        #         is_received=False,
+        #         es=self.es_manager.es,
+        #         step=step
+        #     )
 
-            if v_agent.status == 0 and is_influenced:
-                v_agent.update_status(1)
-                v_agent.repository.append(message)
-                # Store the received massage
-                ElasticSeachStore.add_record_to_elasticsearch(
-                    node = v_agent.uid,
-                    neigbour= self.uid, 
-                    text=message.content,
-                    weight=0.1,  # Set an appropriate weight value if needed
-                    is_received=True,
-                    es=self.es_manager.es,
-                    step=step
-                )
+        #     if v_agent.status == 0 and is_influenced:
+        #         v_agent.update_status(1)
+        #         v_agent.repository.append(message)
+        #         # Store the received massage
+        #         ElasticSeachStore.add_record_to_elasticsearch(
+        #             node = v_agent.uid,
+        #             neigbour= self.uid, 
+        #             text=message.content,
+        #             weight=0.1,  # Set an appropriate weight value if needed
+        #             is_received=True,
+        #             es=self.es_manager.es,
+        #             step=step
+        #         )
 
 # 以下是 Elastic Search 存储的逻辑。
 # document_body = {
