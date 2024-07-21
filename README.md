@@ -152,6 +152,15 @@ PUT received_text_test01
 * Input the initial topic used for simulation in the .txt file under folder ./input
 * By running this function to replace the `initial_message` parameter in `parameters.json`.
 
+### ./analysis/comments_analysis.py
+* Analyse the real world comments.
+
+### ./analysis/analysis_simulated_data.py
+* Analyse the simulated user-agents response.
+
+### ./analysis/extract_article_comments.py
+* Extract the real world comments from the dataset.
+
 # How to run llama locally
 * Download App: https://ollama.com/
 * pip install ollama

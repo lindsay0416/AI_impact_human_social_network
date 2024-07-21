@@ -127,13 +127,13 @@ class Agent:
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
         
-        # create message content through LLM with prompt
-        message_content, prompt = GenerateText.get_generated_text(openai, prompt)
-        print("Response message from gpt:", message_content)
-        time.sleep(5)
+        # # create message content through LLM with prompt
+        # message_content, prompt = GenerateText.get_generated_text(openai, prompt)
+        # print("Response message from gpt:", message_content)
+        # time.sleep(5)
 
-        # message_content = LlamaApi.llama_generate_messages(prompt)
-        # print("Response message from Llama: ", message_content)
+        message_content = LlamaApi.llama_generate_messages(prompt)
+        print("Response message from Llama: ", message_content)
 
         # message_content = f"{self.uid} post test at step {step}" # for test only
         

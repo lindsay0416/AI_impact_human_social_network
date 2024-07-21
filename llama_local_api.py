@@ -9,7 +9,7 @@ class LlamaApi:
         messages_with_timestamps = []
 
         stream = ollama.chat(
-            model='llama3',
+            model='llama3:13b',
             messages=[{'role': 'user', 'content': prompt}],
             stream=True,
         )
