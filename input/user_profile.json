@@ -1,122 +1,14 @@
 {
     "N1": {
-        "name": "Ethan",
-        "age": 27,
+        "name": "Oliver",
+        "age": 28,
         "gender": "male",
-        "description": "an adventurous traveler who enjoys exploring new cultures and cuisines. He documents his journeys through photography and shares tips on budget-friendly travel."
+        "description": "an adventurous traveler who constantly seeks new experiences. He documents his journeys through captivating photography and enjoys sharing travel tips with a global audience."
     },
     "N2": {
-        "name": "Olivia",
-        "age": 23,
-        "gender": "female",
-        "description": "a fitness enthusiast who motivates others through her workout videos and healthy recipes. She believes in living an active lifestyle and participating in marathons."
-    },
-    "N3": {
-        "name": "Gabriel",
-        "age": 31,
-        "gender": "male",
-        "description": "a tech wizard who is passionate about coding and developing innovative apps. He enjoys attending hackathons and networking with fellow developers."
-    },
-    "N4": {
         "name": "Sophia",
-        "age": 28,
-        "gender": "female",
-        "description": "a fashion blogger who showcases her trendy outfits and styling tips on social media. She frequently collaborates with brands for fashion campaigns."
-    },
-    "N5": {
-        "name": "Aiden",
-        "age": 25,
-        "gender": "male",
-        "description": "an environmentalist dedicated to sustainability and conservation efforts. He organizes beach clean-ups and educates others on eco-friendly practices."
-    },
-    "N6": {
-        "name": "Isabella",
-        "age": 26,
-        "gender": "female",
-        "description": "a bookworm who enjoys writing book reviews and recommending novels to fellow book lovers. She dreams of owning a cozy bookstore one day."
-    },
-    "N7": {
-        "name": "Alexander",
-        "age": 30,
-        "gender": "male",
-        "description": "a fitness trainer who helps clients achieve their health goals through personalized workout plans. He is dedicated to promoting physical and mental well-being."
-    },
-    "N8": {
-        "name": "Mia",
-        "age": 24,
-        "gender": "female",
-        "description": "an aspiring musician who writes her own songs and performs at local cafes. She is inspired by indie artists and dreams of recording an album."
-    },
-    "N9": {
-        "name": "Elijah",
-        "age": 29,
-        "gender": "male",
-        "description": "a foodie who explores culinary delights from around the world. He shares his cooking adventures through a food blog and hosts cooking classes."
-    },
-    "N10": {
-        "name": "Charlotte",
-        "age": 22,
-        "gender": "female",
-        "description": "an animal lover who volunteers at shelters and advocates for pet adoption. She enjoys outdoor activities with her adopted furry companions."
-    },
-    "N11": {
-        "name": "Hunter",
-        "age": 33,
-        "gender": "male",
-        "description": "an outdoor enthusiast who thrives in nature and documents his hiking expeditions through stunning photography. He advocates for wildlife conservation."
-    },
-    "N12": {
-        "name": "Ava",
-        "age": 21,
-        "gender": "female",
-        "description": "a budding artist who expresses creativity through watercolor paintings. She finds inspiration in everyday moments and dreams of holding her own exhibitions."
-    },
-    "N13": {
-        "name": "Liam",
-        "age": 34,
-        "gender": "male",
-        "description": "an entrepreneur who founded a successful tech startup. He mentors aspiring entrepreneurs and believes in the power of innovation and perseverance."
-    },
-    "N14": {
-        "name": "Amelia",
-        "age": 20,
-        "gender": "female",
-        "description": "a social activist who advocates for human rights and environmental justice. She organizes peaceful protests and fundraisers for various causes."
-    },
-    "N15": {
-        "name": "Noah",
         "age": 35,
-        "gender": "male",
-        "description": "an avid traveler who immerses himself in diverse cultures and documents his global adventures through travel writing. He promotes sustainable tourism."
-    },
-    "N16": {
-        "name": "Luna",
-        "age": 29,
         "gender": "female",
-        "description": "a yoga instructor who guides students in their practice of mindfulness and wellness. She hosts retreats in serene locations to promote inner peace."
-    },
-    "N17": {
-        "name": "Owen",
-        "age": 26,
-        "gender": "male",
-        "description": "a freelance photographer capturing candid moments and emotions through his lens. He specializes in portrait photography and artistic compositions."
-    },
-    "N18": {
-        "name": "Chloe",
-        "age": 27,
-        "gender": "female",
-        "description": "a fashion designer creating sustainable and ethical clothing lines. She promotes slow fashion and upcycling trends through her unique designs."
-    },
-    "N19": {
-        "name": "Logan",
-        "age": 32,
-        "gender": "male",
-        "description": "a sports enthusiast coaching a local youth basketball team. He instills discipline and teamwork values in young athletes while fostering their love for the game."
-    },
-    "N20": {
-        "name": "Harper",
-        "age": 28,
-        "gender": "female",
-        "description": "a travel writer who shares captivating stories of her global adventures. She seeks hidden gems off the beaten path and inspires others to explore the world."
+        "description": "a dedicated yoga instructor who promotes mindfulness and self-care. She conducts virtual classes and workshops, empowering individuals to connect with their inner selves through yoga and meditation."
     }
 }

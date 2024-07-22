@@ -4,77 +4,22 @@
             "id": 0,
             "uid": "N1",
             "profile": {
-                "name": "Ethan",
-                "age": 27,
+                "name": "Oliver",
+                "age": 28,
                 "gender": "male",
-                "description": "an adventurous traveler who enjoys exploring new cultures and cuisines. He documents his journeys through photography and shares tips on budget-friendly travel."
+                "description": "an adventurous traveler who constantly seeks new experiences. He documents his journeys through captivating photography and enjoys sharing travel tips with a global audience."
             }
         },
         {
             "id": 1,
             "uid": "N2",
             "profile": {
-                "name": "Olivia",
-                "age": 23,
-                "gender": "female",
-                "description": "a fitness enthusiast who motivates others through her workout videos and healthy recipes. She believes in living an active lifestyle and participating in marathons."
-            }
-        },
-        {
-            "id": 2,
-            "uid": "N3",
-            "profile": {
-                "name": "Gabriel",
-                "age": 31,
-                "gender": "male",
-                "description": "a tech wizard who is passionate about coding and developing innovative apps. He enjoys attending hackathons and networking with fellow developers."
-            }
-        },
-        {
-            "id": 3,
-            "uid": "N4",
-            "profile": {
                 "name": "Sophia",
-                "age": 28,
+                "age": 35,
                 "gender": "female",
-                "description": "a fashion blogger who showcases her trendy outfits and styling tips on social media. She frequently collaborates with brands for fashion campaigns."
-            }
-        },
-        {
-            "id": 4,
-            "uid": "N5",
-            "profile": {
-                "name": "Aiden",
-                "age": 25,
-                "gender": "male",
-                "description": "an environmentalist dedicated to sustainability and conservation efforts. He organizes beach clean-ups and educates others on eco-friendly practices."
+                "description": "a dedicated yoga instructor who promotes mindfulness and self-care. She conducts virtual classes and workshops, empowering individuals to connect with their inner selves through yoga and meditation."
             }
         }
     ],
-    "edges": [
-        [
-            0,
-            2
-        ],
-        [
-            0,
-            3
-        ],
-        [
-            0,
-            4
-        ],
-        [
-            1,
-            2
-        ],
-        [
-            2,
-            3
-        ],
-        [
-            3,
-            4
-        ]
-    ]
+    "edges": []
 }
