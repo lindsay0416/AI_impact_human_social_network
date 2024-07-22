@@ -118,6 +118,7 @@ def start_diffusion(params, round, environment):
     broadcasting_prob = params.get("broadcasting_prob")
     influence_prob = params.get("influence_prob")
     evolution_prob = params.get("evolution_prob")
+
     steps = []
     all_activated = []
 
@@ -146,7 +147,7 @@ def start_diffusion(params, round, environment):
             for au in all_activated:
                 active_agent = environment.graph.nodes()[au]["data"]
                 active_agent.evolve(step, evolution_prob)
-            
+
             step_result = {}
             step_result["step"] = step
             data, user_data = global_analysis(environment, step)
