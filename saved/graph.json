@@ -5,9 +5,9 @@
             "uid": "N1",
             "profile": {
                 "name": "Ethan",
-                "age": 28,
+                "age": 27,
                 "gender": "male",
-                "description": "a tech enthusiast who enjoys coding and building software applications in his spare time. He is always eager to learn about the latest developments in the tech world."
+                "description": "a tech-savvy individual who enjoys coding and developing software applications. He is always eager to learn new programming languages and loves discussing the latest trends in technology."
             }
         },
         {
@@ -15,39 +15,39 @@
             "uid": "N2",
             "profile": {
                 "name": "Sophia",
-                "age": 35,
+                "age": 23,
                 "gender": "female",
-                "description": "an adventurous traveler who loves exploring new cultures and cuisines. She documents her journeys through captivating storytelling and vibrant photography."
+                "description": "an adventurous spirit who thrives in exploring new places and trying different cuisines. She documents her travel experiences through vibrant photographs and insightful travel blogs."
             }
         },
         {
             "id": 2,
             "uid": "N3",
             "profile": {
-                "name": "Gabriel",
-                "age": 25,
+                "name": "Oliver",
+                "age": 35,
                 "gender": "male",
-                "description": "a fitness fanatic who is dedicated to weightlifting and calisthenics. He inspires others through his workout routines and healthy lifestyle choices."
+                "description": "a fitness enthusiast who is passionate about weightlifting and maintaining a healthy lifestyle. He enjoys sharing workout tips and nutritious recipes with his friends and followers."
             }
         },
         {
             "id": 3,
             "uid": "N4",
             "profile": {
-                "name": "Ava",
+                "name": "Harper",
                 "age": 31,
                 "gender": "female",
-                "description": "a bookworm and avid reader who can often be found lost in the pages of a novel. She enjoys discussing literature and sharing book recommendations with fellow enthusiasts."
+                "description": "a bookworm and aspiring writer who immerses herself in the world of fiction and poetry. She dreams of publishing her own novel one day and finds solace in the power of storytelling."
             }
         },
         {
             "id": 4,
             "uid": "N5",
             "profile": {
-                "name": "Oliver",
-                "age": 30,
+                "name": "Liam",
+                "age": 29,
                 "gender": "male",
-                "description": "a nature lover and environmental advocate who is passionate about sustainability. He volunteers for eco-friendly causes and promotes conservation efforts in his community."
+                "description": "an outdoor enthusiast who spends his weekends hiking in the mountains and camping under the stars. He values nature and conservation efforts, often participating in clean-up campaigns."
             }
         }
     ],
@@ -69,12 +69,12 @@
             2
         ],
         [
-            2,
-            3
+            1,
+            4
         ],
         [
-            3,
-            4
+            2,
+            3
         ]
     ]
 }

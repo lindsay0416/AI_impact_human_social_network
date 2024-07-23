@@ -7,6 +7,9 @@ import matplotlib.pyplot as plt
 import collections
 import numpy as np
 from llama_local_api import LlamaApi
+import openai
+from tool.config_manager import ConfigManager
+from llm_generate_text import GenerateText
 
 
 logger = logging.getLogger("ds_tool")
@@ -23,9 +26,23 @@ def init_parser():
 
 def generate_user_profile(prompt):
     print(prompt)
-    # Fetch response from Llama API
+    # config_manager = ConfigManager('config.ini')
+    # api_key = config_manager.get_api_key()
+    # openai.api_key = api_key
+    # response, prompt = GenerateText.get_generated_text(openai, prompt)
+    # print("Profile:", response)
+
+     # Fetch response from Llama API
     response = LlamaApi.llama_generate_messages(prompt)
-    print("Response received from API:", response)
+    print("Profile generated from llama:", response)
+
+    # Parse the JSON response
+    try:
+        response = json.loads(response)
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decoding failed: {e} - Response: {response}")
+        return  # Exit if parsing fails
+
     with open("input/user_profile.json", "w") as json_file:
         json.dump(response, json_file, indent=4)
         logger.info("Generated user profiles saved to input/user_profile.json")

@@ -1,1 +1,32 @@
-"Here are the user profiles in JSON format:\n\n```\n{\n  \"N1\": {\n    \"name\": \"Julia\",\n    \"age\": 27,\n    \"gender\": \"female\",\n    \"description\": \"a free-spirited adventurer who loves exploring new hiking trails and trying out different cuisines. She's always up for a spontaneous road trip.\"\n  },\n  \"N2\": {\n    \"name\": \"Ethan\",\n    \"age\": 41,\n    \"gender\": \"male\",\n    \"description\": \"a tech enthusiast who spends most of his free time coding new apps and attending developer meetups. He's currently working on a revolutionary AI project.\"\n  },\n  \"N3\": {\n    \"name\": \"Ava\",\n    \"age\": 22,\n    \"gender\": \"female\",\n    \"description\": \"a bookworm who loves getting lost in fantasy novels and writing her own stories. She's a huge fan of sci-fi movies and comic books.\"\n  },\n  \"N4\": {\n    \"name\": \"Liam\",\n    \"age\": 38,\n    \"gender\": \"male\",\n    \"description\": \"a fitness enthusiast who enjoys training for marathons and trying out new workout routines. He's also a part-time yoga instructor and loves teaching classes.\"\n  },\n  \"N5\": {\n    \"name\": \"Lily\",\n    \"age\": 29,\n    \"gender\": \"female\",\n    \"description\": \"a music lover who plays the guitar and writes her own songs. She's always attending local concerts and supporting up-and-coming artists.\"\n  }\n}\n```\n\nNote: The ages were generated using a Gaussian distribution with a mean of 33.5 and a standard deviation of 6.5, which is typical for a real-world population. The gender was randomly assigned to be half male and half female."
+{
+    "N1": {
+        "name": "Ethan",
+        "age": 27,
+        "gender": "male",
+        "description": "a tech-savvy individual who enjoys coding and developing software applications. He is always eager to learn new programming languages and loves discussing the latest trends in technology."
+    },
+    "N2": {
+        "name": "Sophia",
+        "age": 23,
+        "gender": "female",
+        "description": "an adventurous spirit who thrives in exploring new places and trying different cuisines. She documents her travel experiences through vibrant photographs and insightful travel blogs."
+    },
+    "N3": {
+        "name": "Oliver",
+        "age": 35,
+        "gender": "male",
+        "description": "a fitness enthusiast who is passionate about weightlifting and maintaining a healthy lifestyle. He enjoys sharing workout tips and nutritious recipes with his friends and followers."
+    },
+    "N4": {
+        "name": "Harper",
+        "age": 31,
+        "gender": "female",
+        "description": "a bookworm and aspiring writer who immerses herself in the world of fiction and poetry. She dreams of publishing her own novel one day and finds solace in the power of storytelling."
+    },
+    "N5": {
+        "name": "Liam",
+        "age": 29,
+        "gender": "male",
+        "description": "an outdoor enthusiast who spends his weekends hiking in the mountains and camping under the stars. He values nature and conservation efforts, often participating in clean-up campaigns."
+    }
+}

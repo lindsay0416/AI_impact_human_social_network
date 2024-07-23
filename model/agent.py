@@ -65,7 +65,7 @@ class Agent:
         response = LlamaApi.llama_generate_messages(prompt)
         print("Response received from API:", response)
 
-        message = Message(message_content, self)
+        message = Message(response, self)
         message.set_timestep(timestep=step)
 
         return message
@@ -137,13 +137,6 @@ class Agent:
                 neighbor_opinions.append(in_neighbor.posts[-1].content)
             else:
                 inactive_in.append(in_neighbor)
-        
-        # for out_neighbor in self.out_neighbors:
-        #     out_neighbor = self.environment.graph.nodes()[out_neighbor]["data"]
-        #     if out_neighbor.status == 1:
-        #         active_out.append(out_neighbor)
-        #     else:
-        #         inactive_out.append(out_neighbor)
         
         return neighbor_opinions
         
