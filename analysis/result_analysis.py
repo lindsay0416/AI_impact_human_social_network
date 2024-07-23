@@ -1,4 +1,5 @@
 import json
+import numpy as np
 
 def load_results_from_file():
     with open("saved/results.json", "r") as file:
@@ -8,7 +9,7 @@ def load_results_from_file():
         round = simulation.get("round")
         result = simulation.get("result")
         for r in result:
-            coverage = r.get("data")[0].get("coverage")
+            coverage = r.get("data").get("coverage")
             print(coverage)
         print(f" ======== Round {round} ======== ")
 
