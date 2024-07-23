@@ -49,6 +49,7 @@ class Agent:
         self.is_seed = True
         received_msg = Message(initial_message, self)
         received_msg.set_timestep(timestep=0)
+        self.repository = []
         self.repository.append(received_msg)
 
         step = 0
@@ -63,6 +64,15 @@ class Agent:
         message.set_timestep(timestep=step)
 
         self.posts.append(message)
+
+    def generate_response(self, step, prompt):
+        message_content = LlamaApi.llama_generate_messages(prompt)
+        print("Response message from Llama: ", message_content)
+
+        message = Message(message_content, self)
+        message.set_timestep(timestep=step)
+
+        return message
 
     def to_dict(self):
         return {
@@ -117,32 +127,18 @@ class Agent:
     def start_influence(self, step, influence_prob):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
-
-        message_content = LlamaApi.llama_generate_messages(prompt)
-        print("Response message from Llama: ", message_content)
-
-        # message_content = f"{self.uid} post test at step {step}" # for test only
-        
-        message = Message(message_content, self)
-        message.set_timestep(timestep=step)
-
+        message = self.generate_response(step, prompt)
         self.posts.append(message)
+        
+        # save to file to futher track
+        self.save_post_to_file(message)
+
         # logger.info(str(message))
         
+        influenced = []
         for v in self.out_neighbors:
-            v_agent = self.environment.nodes()[v]["data"]
+            v_agent = self.environment.graph.nodes()[v]["data"]
             is_influenced = v_agent.calculate_influence_prob(influence_prob)
-
-            # Store the sent message to Elasticsearch
-            ElasticSeachStore.add_record_to_elasticsearch(
-                node=self.uid,
-                neigbour=v_agent.uid,
-                text=message.content,
-                weight=0.1,  # Set an appropriate weight value if needed
-                is_received=False,
-                es=self.es_manager.es,
-                step=step
-            )
 
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)

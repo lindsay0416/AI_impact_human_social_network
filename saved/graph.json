@@ -4,100 +4,50 @@
             "id": 0,
             "uid": "N1",
             "profile": {
-                "name": "Alex",
+                "name": "Ethan",
                 "age": 28,
                 "gender": "male",
-                "description": "an adventurous traveler who enjoys exploring off-the-beaten-path destinations. He documents his journeys through stunning photography and writes captivating travel blogs."
+                "description": "a tech enthusiast who enjoys coding and building software applications in his spare time. He is always eager to learn about the latest developments in the tech world."
             }
         },
         {
             "id": 1,
             "uid": "N2",
             "profile": {
-                "name": "Ella",
-                "age": 23,
+                "name": "Sophia",
+                "age": 35,
                 "gender": "female",
-                "description": "a tech-savvy innovator with a passion for coding and developing new apps. She dreams of creating software that will revolutionize the way people interact with technology."
+                "description": "an adventurous traveler who loves exploring new cultures and cuisines. She documents her journeys through captivating storytelling and vibrant photography."
             }
         },
         {
             "id": 2,
             "uid": "N3",
             "profile": {
-                "name": "Oliver",
-                "age": 35,
+                "name": "Gabriel",
+                "age": 25,
                 "gender": "male",
-                "description": "a dedicated environmentalist who advocates for sustainable living practices. He volunteers at local conservation organizations and educates others on the importance of protecting the planet."
+                "description": "a fitness fanatic who is dedicated to weightlifting and calisthenics. He inspires others through his workout routines and healthy lifestyle choices."
             }
         },
         {
             "id": 3,
             "uid": "N4",
             "profile": {
-                "name": "Sophia",
-                "age": 29,
+                "name": "Ava",
+                "age": 31,
                 "gender": "female",
-                "description": "a fitness enthusiast who guides others on their wellness journey. She is a certified yoga instructor and motivates her students to achieve balance and strength in both body and mind."
+                "description": "a bookworm and avid reader who can often be found lost in the pages of a novel. She enjoys discussing literature and sharing book recommendations with fellow enthusiasts."
             }
         },
         {
             "id": 4,
             "uid": "N5",
             "profile": {
-                "name": "Milo",
-                "age": 31,
-                "gender": "male",
-                "description": "a culinary connoisseur with a flair for experimental cooking. He hosts food tasting events and shares his gastronomic creations on social media, inspiring others to try new flavors."
-            }
-        },
-        {
-            "id": 5,
-            "uid": "N6",
-            "profile": {
-                "name": "Aria",
-                "age": 26,
-                "gender": "female",
-                "description": "a bookworm and aspiring writer who immerses herself in the world of literature. She dreams of publishing her own novel one day and enjoys discussing plot twists with fellow book lovers."
-            }
-        },
-        {
-            "id": 6,
-            "uid": "N7",
-            "profile": {
-                "name": "Liam",
-                "age": 33,
-                "gender": "male",
-                "description": "a music aficionado who expresses himself through soulful compositions. He plays multiple instruments and performs at local cafes, captivating audiences with his melodious tunes."
-            }
-        },
-        {
-            "id": 7,
-            "uid": "N8",
-            "profile": {
-                "name": "Grace",
-                "age": 27,
-                "gender": "female",
-                "description": "a humanitarian with a heart for volunteering in underprivileged communities. She works with NGOs to provide aid and support to those in need, spreading kindness and hope wherever she goes."
-            }
-        },
-        {
-            "id": 8,
-            "uid": "N9",
-            "profile": {
-                "name": "Leo",
+                "name": "Oliver",
                 "age": 30,
                 "gender": "male",
-                "description": "a nature lover and wildlife photographer who captures the beauty of the great outdoors. He is on a mission to raise awareness about conservation efforts and protect endangered species."
-            }
-        },
-        {
-            "id": 9,
-            "uid": "N10",
-            "profile": {
-                "name": "Isabella",
-                "age": 25,
-                "gender": "female",
-                "description": "an aspiring fashion designer with a keen eye for style and trends. She creates unique clothing pieces that reflect her artistic vision and showcases her collections at fashion shows and exhibitions."
+                "description": "a nature lover and environmental advocate who is passionate about sustainability. He volunteers for eco-friendly causes and promotes conservation efforts in his community."
             }
         }
     ],
@@ -115,56 +65,16 @@
             4
         ],
         [
-            0,
-            5
-        ],
-        [
-            0,
-            8
-        ],
-        [
-            0,
-            9
-        ],
-        [
             1,
             2
-        ],
-        [
-            1,
-            6
-        ],
-        [
-            1,
-            7
         ],
         [
             2,
             3
         ],
         [
-            2,
-            5
-        ],
-        [
-            2,
-            6
-        ],
-        [
-            2,
-            7
-        ],
-        [
-            2,
-            9
-        ],
-        [
             3,
             4
-        ],
-        [
-            5,
-            8
         ]
     ]
 }
