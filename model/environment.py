@@ -18,6 +18,7 @@ class Environment:
     def __init__(self, graph=None, **kwargs):
         self.graph = graph
         self.seedSet = []
+        self.newly_activated = []
         for key, value in kwargs.items():
             setattr(self, key, value)
             if key == "node_size":
@@ -57,7 +58,7 @@ class Environment:
         # assign user attributes to nodes, saved as an Agent object
         for node_id in self.graph.nodes:
             # init agent object
-            node_data = Agent(node_id, self.graph, self.initial_message)
+            node_data = Agent(node_id, self, self.initial_message)
 
             # assign in-neighbor and out-neighbor lists:
             #
@@ -118,6 +119,7 @@ class Environment:
                 seedSet.append(user)
 
         self.seedSet = seedSet
+
     """
             Seed selection: selected seed based on userID with a given int list
     """
@@ -127,6 +129,10 @@ class Environment:
             self.graph.nodes[seed]["data"].status = 1
 
 
+    def set_newly_activated(self, nodes):
+        self.newly_activated = nodes
+
+        
 """
     Create a random network with networkx using Erdos-Renyi model
     Input: 

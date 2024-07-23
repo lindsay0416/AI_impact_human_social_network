@@ -8,6 +8,7 @@ import collections
 import numpy as np
 from llama_local_api import LlamaApi
 
+
 logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
 
@@ -21,20 +22,10 @@ def init_parser():
 
 
 def generate_user_profile(prompt):
-    print("Prompt used for generating profile:", prompt)
-
+    print(prompt)
     # Fetch response from Llama API
     response = LlamaApi.llama_generate_messages(prompt)
     print("Response received from API:", response)
-
-    # Parse the JSON response
-    try:
-        response = json.loads(response)
-    except json.JSONDecodeError as e:
-        logger.error(f"JSON decoding failed: {e} - Response: {response}")
-        return  # Exit if parsing fails
-
-    # Save the parsed JSON to a file
     with open("input/user_profile.json", "w") as json_file:
         json.dump(response, json_file, indent=4)
         logger.info("Generated user profiles saved to input/user_profile.json")

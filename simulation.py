@@ -9,6 +9,7 @@ from model.environment import Environment
 import tool.dataset_tool as dt
 
 from datetime import datetime
+from llama_local_api import LlamaApi
 import time
 
 # init logger
@@ -53,8 +54,8 @@ def simulation(params):
     is_external_dataset = params.get("is_external_dataset")
     initial_message = params.get("initial_message")
     generate_user_profile = params.get("generate_user_profile")
-
-
+    broadcasting_prob = params.get("broadcasting_prob")
+    
     if generate_user_profile:
         user_profile_prompt = params.get("user_profile_prompt")
         prompt = f"There are {node_size} users in a social network. " + user_profile_prompt
@@ -75,8 +76,12 @@ def simulation(params):
             graph=G, 
             is_directed=is_directed,
             initial_message=initial_message)
+        
+    initial_message_content = params.get("initial_message")
+    environment.start_infection(broadcasting_prob, initial_message_content)
 
     dt.graph_to_json(environment.graph)
+    dt.save_graph(environment.graph, "graph.G")
 
     # start diffusion
     no_of_rounds = params.get("round")
@@ -85,7 +90,6 @@ def simulation(params):
     for r in range(no_of_rounds):
         round = {}
         result = start_diffusion(params, r, environment)
-        
         reset_status(environment)
         round["round"] = r
         round["result"] = result
@@ -106,46 +110,59 @@ def reset_status(environment):
             user_agent.update_status(0)
         user_agent.posts = []
         user_agent.repository = []
-
+        if user in environment.seedSet:
+            user_agent.set_as_seed(environment.initial_message)
 
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
     round = params.get("round")
     broadcasting_prob = params.get("broadcasting_prob")
     influence_prob = params.get("influence_prob")
+    evolution_prob = params.get("evolution_prob")
+
     steps = []
+    all_activated = []
 
-    # set seedSet
-    initial_message_content = params.get("initial_message")
-    environment.start_infection(broadcasting_prob, initial_message_content)
     # print([environment.graph.nodes()[user]["data"].posts[0].content for user in environment.seedSet])
-    if round == 0:
-        dt.save_graph(environment.graph, "graph.G")
-
     for step in range(0, timestep):
+        #  diffusion process:
+        # at each timestep t, a set of active users start influence diffusion with an influence probability so that to influence their inactive neighbours
+        # once the neighbors are influenced, they are recognized as newly activated nodes, and start influence diffusion at the next time step
         if step == 0:
+            newly_activated = environment.seedSet
             data, user_data = global_analysis(environment, 0)
             step_result = {}
             step_result["step"] = 0
             step_result["data"] = data
             step_result["user_data"] = user_data
             steps.append(step_result)
+            all_activated += newly_activated
         else:
-            for user in environment.graph.nodes():
+            new_influenced = []
+            for user in newly_activated:
                 user_agent = environment.graph.nodes()[user]["data"]
-                if user_agent.status == 1:
-                    user_agent.start_influence(step, influence_prob)
+                influenced = user_agent.start_influence(step, influence_prob)
+                new_influenced += influenced
+            
+            # active user opinion evolution
+            for au in all_activated:
+                active_agent = environment.graph.nodes()[au]["data"]
+                active_agent.evolve(step, evolution_prob)
+
             step_result = {}
             step_result["step"] = step
             data, user_data = global_analysis(environment, step)
             step_result["data"] = data
             step_result["user_data"] = user_data
             steps.append(step_result)
+
+            newly_activated = new_influenced
+            all_activated += newly_activated
     return steps
 
 def global_analysis(environment, timestep):
     coverage = calculate_coverage(environment, timestep)
-    data = [{"coverage": coverage}]
+    data = {"coverage": coverage}
 
     graph = environment.graph
     user_data = []
@@ -161,8 +178,7 @@ def calculate_coverage(environment, timestep):
         if environment.graph.nodes[node]["data"].status == 1:
             influence_coverage += 1
     logger.info(f"Current timestep {timestep} -> No. of active users: {influence_coverage}")
-    return f"Current timestep {timestep} -> No. of active users: {influence_coverage}"
-
+    return influence_coverage
 
 if __name__ == '__main__':
     # init input and saved folders
@@ -178,6 +194,8 @@ if __name__ == '__main__':
         # load parameters
         with open("input/parameters.json", "r") as param_json:
             parameters = json.load(param_json)
+    with open("saved/results.txt", 'w') as file:
+        file.write('')
 
     # start simulation
     data = simulation(parameters)
