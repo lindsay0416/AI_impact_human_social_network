@@ -1,14 +1,62 @@
 {
     "N1": {
-        "name": "Oliver",
+        "name": "Alex",
         "age": 28,
         "gender": "male",
-        "description": "an adventurous traveler who constantly seeks new experiences. He documents his journeys through captivating photography and enjoys sharing travel tips with a global audience."
+        "description": "an adventurous traveler who enjoys exploring off-the-beaten-path destinations. He documents his journeys through stunning photography and writes captivating travel blogs."
     },
     "N2": {
-        "name": "Sophia",
-        "age": 35,
+        "name": "Ella",
+        "age": 23,
         "gender": "female",
-        "description": "a dedicated yoga instructor who promotes mindfulness and self-care. She conducts virtual classes and workshops, empowering individuals to connect with their inner selves through yoga and meditation."
+        "description": "a tech-savvy innovator with a passion for coding and developing new apps. She dreams of creating software that will revolutionize the way people interact with technology."
+    },
+    "N3": {
+        "name": "Oliver",
+        "age": 35,
+        "gender": "male",
+        "description": "a dedicated environmentalist who advocates for sustainable living practices. He volunteers at local conservation organizations and educates others on the importance of protecting the planet."
+    },
+    "N4": {
+        "name": "Sophia",
+        "age": 29,
+        "gender": "female",
+        "description": "a fitness enthusiast who guides others on their wellness journey. She is a certified yoga instructor and motivates her students to achieve balance and strength in both body and mind."
+    },
+    "N5": {
+        "name": "Milo",
+        "age": 31,
+        "gender": "male",
+        "description": "a culinary connoisseur with a flair for experimental cooking. He hosts food tasting events and shares his gastronomic creations on social media, inspiring others to try new flavors."
+    },
+    "N6": {
+        "name": "Aria",
+        "age": 26,
+        "gender": "female",
+        "description": "a bookworm and aspiring writer who immerses herself in the world of literature. She dreams of publishing her own novel one day and enjoys discussing plot twists with fellow book lovers."
+    },
+    "N7": {
+        "name": "Liam",
+        "age": 33,
+        "gender": "male",
+        "description": "a music aficionado who expresses himself through soulful compositions. He plays multiple instruments and performs at local cafes, captivating audiences with his melodious tunes."
+    },
+    "N8": {
+        "name": "Grace",
+        "age": 27,
+        "gender": "female",
+        "description": "a humanitarian with a heart for volunteering in underprivileged communities. She works with NGOs to provide aid and support to those in need, spreading kindness and hope wherever she goes."
+    },
+    "N9": {
+        "name": "Leo",
+        "age": 30,
+        "gender": "male",
+        "description": "a nature lover and wildlife photographer who captures the beauty of the great outdoors. He is on a mission to raise awareness about conservation efforts and protect endangered species."
+    },
+    "N10": {
+        "name": "Isabella",
+        "age": 25,
+        "gender": "female",
+        "description": "an aspiring fashion designer with a keen eye for style and trends. She creates unique clothing pieces that reflect her artistic vision and showcases her collections at fashion shows and exhibitions."
     }
 }

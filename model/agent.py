@@ -3,17 +3,13 @@ import json
 import time
 import random
 import logging
-
-# from llama_local_api import LlamaApi
-# from tool.es_manager import ESManager
+from llama_local_api import LlamaApi
+from tool.es_manager import ESManager
 # from scores_utilities import ScoresUtilities
 from model.message import Message
-# from tool.elastic_search import ElasticSeachStore
+from tool.elastic_search import ElasticSeachStore
 import openai
 from tool.config_manager import ConfigManager
-from llm_generate_text import GenerateText
-
-#TODO: replce 0.1 with the socre calculated from scores_utilities.py 
 
 # init logger
 logger = logging.getLogger("agent")
@@ -35,7 +31,7 @@ class Agent:
         self.in_neighbors = []
         self.out_neighbors = []
         self.posts = []
-        # self.es_manager = ESManager('http://localhost:9200')
+        self.es_manager = ESManager('http://localhost:9200')
         self.is_seed = False
         self.topic = inital_message
         self.config_manager = ConfigManager('config.ini')
@@ -53,27 +49,11 @@ class Agent:
         self.is_seed = True
         received_msg = Message(initial_message, self)
         received_msg.set_timestep(timestep=0)
-        self.repository = []
         self.repository.append(received_msg)
 
-        prompt = self.message_generate_prompt(step=0)
-        message = self.generate_response(0, prompt)
-        self.posts.append(message)
-
-    def generate_response(self, step, prompt):
-        # create message content through LLM with prompt
-        message_content, prompt = GenerateText.get_generated_text(openai, prompt)
-        # print("Response message from gpt:", message_content)
-        time.sleep(5)
-
-        # FOR TEST ONLY - mock message
-        # message_content = f"{self.uid}\t{self.userID}post at time step {step}"
-        # message_content = {
-        #     "response": message_content,
-        #     "opinion": random.choice(['Support', 'Neutral', 'Opposite']),
-        #     "phrases": "Test"
-        # }
-        # message_content = json.dumps(message_content)
+        step = 0
+        # create user response generation prompt
+        prompt = self.message_generate_prompt(step)
 
         # Llama
         message_content = LlamaApi.llama_generate_messages(prompt)
@@ -82,8 +62,8 @@ class Agent:
         message = Message(message_content, self)
         message.set_timestep(timestep=step)
 
-        return message
-    
+        self.posts.append(message)
+
     def to_dict(self):
         return {
             'id': self.userID,
@@ -91,12 +71,6 @@ class Agent:
             'status': self.status,
             'posts': [p.content for p in self.posts]
         }
-
-    def save_post_to_file(self, post):
-        file_path = "saved/results.txt"
-        saved = f"{self.uid}\t{post.timestep}\t{post.content}\n"
-        with open(file_path, 'a') as file:
-            file.write(saved)
 
     def update_status(self, status):
         self.status = status
@@ -107,66 +81,10 @@ class Agent:
             return True
         else:
             return False
-    
-    def is_evolve(self, evolution_prob):
-        rand = random.random()
-        if rand < evolution_prob:
-            return True
-        else:
-            return False
-        
-    def evolve(self, step, evolution_prob):
-        is_evolved = self.is_evolve(evolution_prob)
-        if is_evolved:
-            neighbor_response = self.get_neighbor_status()
-            update_response_prompt = f"Based on your in-neighbours responses {str(neighbor_response)}, " + \
-                                     f"and your previous response '{self.posts[-1].content}'" + \
-                                     f"update your response towards the topic '{self.topic}'" + \
-                                     f"""
-                                     Please only return the responses in the following JSON format, one response only for each profile:
-                                        {{
-                                            "response": "[User's response]",
-                                            "opinion": "[Support/Oppose/Neutral]",
-                                            "phrases": "[List of phrases]"
-                                        }}
-                                     """
-            # print(update_response_prompt)
-            message = self.generate_response(step, update_response_prompt)
-            self.posts.append(message)
-            # save to file to futher track
-            self.save_post_to_file(message)
-    
-    def get_neighbor_status(self):
-        active_in = []
-        inactive_in = []
-        # active_out = []
-        # inactive_out = []
-
-        # get responses
-        neighbor_opinions = []
-        # get all active in-neighbours
-        for in_neighbor in self.in_neighbors:
-            in_neighbor = self.environment.graph.nodes()[in_neighbor]["data"]
-            
-            if in_neighbor.status == 1 and len(in_neighbor.posts) > 0:
-                active_in.append(in_neighbor)
-                neighbor_opinions.append(in_neighbor.posts[-1].content)
-            else:
-                inactive_in.append(in_neighbor)
-        
-        # for out_neighbor in self.out_neighbors:
-        #     out_neighbor = self.environment.graph.nodes()[out_neighbor]["data"]
-        #     if out_neighbor.status == 1:
-        #         active_out.append(out_neighbor)
-        #     else:
-        #         inactive_out.append(out_neighbor)
-        
-        return neighbor_opinions
-        
 
     def message_generate_prompt(self, step):
         user_profile = self.profile
-        # print("user profile: ", user_profile)
+        print("user profile: ", user_profile)
         last_received_msg = self.repository[-1].content
         # print("Last received message: ", last_received_msg)
         # last_post_msg = self.posts[-1].content if self.posts else ""
@@ -199,18 +117,32 @@ class Agent:
     def start_influence(self, step, influence_prob):
         # create user response generation prompt
         prompt = self.message_generate_prompt(step)
-        message = self.generate_response(step, prompt)
-        self.posts.append(message)
-        
-        # save to file to futher track
-        self.save_post_to_file(message)
 
+        message_content = LlamaApi.llama_generate_messages(prompt)
+        print("Response message from Llama: ", message_content)
+
+        # message_content = f"{self.uid} post test at step {step}" # for test only
+        
+        message = Message(message_content, self)
+        message.set_timestep(timestep=step)
+
+        self.posts.append(message)
         # logger.info(str(message))
         
-        influenced = []
         for v in self.out_neighbors:
-            v_agent = self.environment.graph.nodes()[v]["data"]
+            v_agent = self.environment.nodes()[v]["data"]
             is_influenced = v_agent.calculate_influence_prob(influence_prob)
+
+            # Store the sent message to Elasticsearch
+            ElasticSeachStore.add_record_to_elasticsearch(
+                node=self.uid,
+                neigbour=v_agent.uid,
+                text=message.content,
+                weight=0.1,  # Set an appropriate weight value if needed
+                is_received=False,
+                es=self.es_manager.es,
+                step=step
+            )
 
             if v_agent.status == 0 and is_influenced:
                 v_agent.update_status(1)
