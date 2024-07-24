@@ -1,6 +1,6 @@
 {
     "round": 5,
-    "timestep": 5,
+    "timestep": 10,
     "influence_prob": 0.3,
     "is_directed": false,
     "is_external_dataset": false,
