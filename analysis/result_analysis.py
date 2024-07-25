@@ -2,6 +2,7 @@ import json
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
+import re
 
 FONT_SIZE = 14
 
@@ -16,14 +17,71 @@ def load_result_from_file():
         results = results.get("simulation")
     return results
 
+def json_formatter(text):
+    match = re.search(r'\{(?:[^{}]|)*\}', text)
+    if match:
+        json_part = match.group()
+        return json_part
+    else:
+        print("No JSON found")
+        return None
+    
 def opinion_counter():
     results = load_result_from_file()
+    params = load_schema()
+
+    round = params.get("round")
+    timestep = params.get("timestep")
+
+    tables = []
     for simulation in results:
         round = simulation.get("round")
         result = simulation.get("result")
         row = []
-        for r in result:
-            print(len(r.get("user_data")))
+        counter = {
+            "Support": 0,
+            "Neutral": 0,
+            "Oppose": 0
+        }
+        # init a timestep * opinon(3) table for each round
+        table = np.zeros((timestep, 3))
+        for r in range(0, len(result)):
+            user_data = result[r].get("user_data")
+            for ud in user_data:
+                if len(ud.get("posts")) > 0:
+                    post = ud.get("posts")[-1]
+                    try:
+                        post = json.loads(post)
+                    except Exception as e:
+                        post = json_formatter(post)
+                    if type(post) is str:
+                        post = json.loads(post)
+                    opinion = post.get("opinion")
+                    count = counter.get(opinion)
+                    counter[opinion] = count + 1
+            table[r] = list(counter.values())
+        tables.append(table)
+    results = np.array(tables)
+    mean_table = np.mean(results, axis=0)
+    print(mean_table)
+    return mean_table
+
+def plot_stacked_bar_chart(data):
+    timesteps = np.arange(data.shape[0])
+    plt.bar(timesteps, data[:, 0], label='Support')
+    plt.bar(timesteps, data[:, 1], bottom=data[:, 0], label='Neutral')
+    plt.bar(timesteps, data[:, 2], bottom=data[:, 0] + data[:, 1], label='Oppose')
+
+    # Adding labels and title
+    plt.xlabel('Timesteps')
+    plt.ylabel('Opinion')
+    plt.xticks(timesteps)
+
+    # Add a legend
+    plt.legend()
+
+    # Show the plot
+    plt.show()
 
 def calculate_coverage():
     params = load_schema()
@@ -82,6 +140,7 @@ def plot_bar_chart(series):
 
 
 if __name__ == "__main__":
-    column_means = calculate_coverage()
+    # column_means = calculate_coverage()
     # plot_line_chart(column_means)
-    opinion_counter()
+    data = opinion_counter()
+    plot_stacked_bar_chart(data)
