@@ -56,9 +56,9 @@ class Agent:
         self.repository = []
         self.repository.append(received_msg)
 
-        prompt = self.message_generate_prompt(step=0)
-        message = self.generate_response(0, prompt)
-        self.posts.append(message)
+        # prompt = self.message_generate_prompt(step=0)
+        # message = self.generate_response(0, prompt)
+        # self.posts.append(message)
 
     def generate_response(self, step, prompt):
         # Fetch response from Llama API
@@ -107,9 +107,12 @@ class Agent:
             neighbor_response = self.get_neighbor_status()
             update_response_prompt = f"Based on your in-neighbours responses {str(neighbor_response)}, " + \
                                      f"and your previous response '{self.posts[-1].content}'" + \
-                                     f"update your response towards the topic '{self.topic}'" + \
+                                     f"towards the topic '{self.topic}', please perform the following tasks and provide the responses in JSON format:" + \
                                      f"""
-                                     Please only return the responses in the following JSON format, one response only for each profile:
+                                        1. Generate one of the user's possible comment while the user reading this topic, in this format: 'Response: [User's response]', each response cannot be the same.
+                                        2. Do a semantic analysis based on the response generated from 1, output the results as this user's opinion in the format of: 'opinion: [Support/Oppose/Neutral]'
+                                        3. Summarize the user's response and generate the response in the format: 'phrases: [List of phrases]'
+                                        Please only return the responses in the following JSON format, one response only for each profile:
                                         {{
                                             "response": "[User's response]",
                                             "opinion": "[Support/Oppose/Neutral]",
