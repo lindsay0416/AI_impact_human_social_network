@@ -26,23 +26,17 @@ def init_parser():
 
 def generate_user_profile(prompt):
     print(prompt)
-    # config_manager = ConfigManager('config.ini')
-    # api_key = config_manager.get_api_key()
-    # openai.api_key = api_key
-    # response, prompt = GenerateText.get_generated_text(openai, prompt)
-    # print("Profile:", response)
-
-     # Fetch response from Llama API
-    response = LlamaApi.llama_generate_messages(prompt)
-    print("Profile generated from llama:", response)
-
-    # Parse the JSON response
+    config_manager = ConfigManager('config.ini')
+    api_key = config_manager.get_api_key()
+    openai.api_key = api_key
+    response, prompt = GenerateText.get_generated_text(openai, prompt)
     try:
         response = json.loads(response)
-    except json.JSONDecodeError as e:
-        logger.error(f"JSON decoding failed: {e} - Response: {response}")
-        return  # Exit if parsing fails
-
+    except Exception as e:
+        match = re.search(r'\{(?:[^{}]|)*\}', response)
+        if match:
+            json_part = match.group()
+            response = json_part
     with open("input/user_profile.json", "w") as json_file:
         json.dump(response, json_file, indent=4)
         logger.info("Generated user profiles saved to input/user_profile.json")
