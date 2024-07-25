@@ -76,9 +76,12 @@ def simulation(params):
             is_directed=is_directed,
             initial_message=initial_message)
         
+    logger.info("Simulation initialization finished, start broadcasting...")
+        
     initial_message_content = params.get("initial_message")
     environment.start_infection(broadcasting_prob, initial_message_content)
 
+    logger.info(f"Seed selection finished, Seed Set: {str(environment.seedSet)}")
     dt.graph_to_json(environment.graph)
     dt.save_graph(environment.graph, "graph.G")
 
@@ -114,8 +117,6 @@ def reset_status(environment):
 
 def start_diffusion(params, round, environment):
     timestep = params.get("timestep")
-    round = params.get("round")
-    broadcasting_prob = params.get("broadcasting_prob")
     influence_prob = params.get("influence_prob")
     evolution_prob = params.get("evolution_prob")
 
@@ -146,7 +147,8 @@ def start_diffusion(params, round, environment):
             # active user opinion evolution
             for au in all_activated:
                 active_agent = environment.graph.nodes()[au]["data"]
-                active_agent.evolve(step, evolution_prob)
+                if au not in newly_activated:
+                    active_agent.evolve(step, evolution_prob)
 
             step_result = {}
             step_result["step"] = step
