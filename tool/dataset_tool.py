@@ -10,6 +10,7 @@ import numpy as np
 import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
+from analysis.result_analysis import json_formatter
 
 logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
@@ -29,10 +30,14 @@ def generate_user_profile(prompt):
     api_key = config_manager.get_api_key()
     openai.api_key = api_key
     response, prompt = GenerateText.get_generated_text(openai, prompt)
-    response = json.loads(response)
-    with open("input/user_profile.json", "w") as json_file:
-        json.dump(response, json_file, indent=4)
-        logger.info("Generated user profiles saved to input/user_profile.json")
+    try:
+        response = json.loads(response)
+    except Exception as e:
+        response = json_formatter(response)
+    if response is not None:
+        with open("input/user_profile.json", "w") as json_file:
+            json.dump(response, json_file, indent=4)
+            logger.info("Generated user profiles saved to input/user_profile.json")
 
 
 def convert_tool(dataset_file):
@@ -84,7 +89,7 @@ def graph_to_json(G):
 def graph_to_figure(G):
     # Draw the network with customized nodes and edges
     plt.figure(figsize=(8, 8))  # Set the figure size
-    pos = nx.spring_layout(G, seed=42)  # For consistent layout
+    pos = nx.spring_layout(G)  # For consistent layout
 
     # Draw nodes and edges separately
     nx.draw_networkx_nodes(G, pos, node_size=700, node_color='lightblue')
@@ -114,12 +119,12 @@ def graph_degree_to_figure(G):
 
 
 if __name__ == '__main__':
-    args = init_parser()
-    print("---------------------------------------")
-    print(f"Dataset: {args.dataset}")
-    print("---------------------------------------")
+    # args = init_parser()
+    # print("---------------------------------------")
+    # print(f"Dataset: {args.dataset}")
+    # print("---------------------------------------")
     
-    convert_tool(args.dataset)
+    # convert_tool(args.dataset)
     G = load_graph("graph.G")
     graph_show_info(G)
     # graph_degree_to_figure(G)

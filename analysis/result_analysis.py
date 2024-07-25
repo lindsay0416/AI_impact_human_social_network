@@ -59,7 +59,6 @@ def opinion_counter():
                     opinion = post.get("opinion")
                     count = counter.get(opinion)
                     counter[opinion] = count + 1
-            print(counter)
             table[r] = list(counter.values())
         tables.append(table)
     results = np.array(tables)
@@ -74,12 +73,12 @@ def plot_stacked_bar_chart(data):
     plt.bar(timesteps, data[:, 2], bottom=data[:, 0] + data[:, 1], label='Oppose')
 
     # Adding labels and title
-    plt.xlabel('Timesteps')
-    plt.ylabel('Opinion')
+    plt.xlabel('Timesteps', fontsize=FONT_SIZE)
+    plt.ylabel('Opinion', fontsize=FONT_SIZE)
     plt.xticks(timesteps)
 
     # Add a legend
-    plt.legend()
+    plt.legend(fontsize=FONT_SIZE)
 
     # Show the plot
     plt.show()
@@ -141,7 +140,7 @@ def plot_bar_chart(series):
 
 
 if __name__ == "__main__":
-    # column_means = calculate_coverage()
-    # plot_line_chart(column_means)
+    column_means = calculate_coverage()
+    plot_line_chart(column_means)
     data = opinion_counter()
     plot_stacked_bar_chart(data)
