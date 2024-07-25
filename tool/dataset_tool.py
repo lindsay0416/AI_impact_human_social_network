@@ -6,7 +6,7 @@ import json
 import matplotlib.pyplot as plt
 import collections
 import numpy as np
-from llama_local_api import LlamaApi
+# from llama_local_api import LlamaApi
 import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
