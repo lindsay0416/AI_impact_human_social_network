@@ -56,9 +56,9 @@ class Agent:
         self.repository = []
         self.repository.append(received_msg)
 
-        prompt = self.message_generate_prompt(step=0)
-        message = self.generate_response(0, prompt)
-        self.posts.append(message)
+        # prompt = self.message_generate_prompt(step=0)
+        # message = self.generate_response(0, prompt)
+        # self.posts.append(message)
 
     def generate_response(self, step, prompt):
         # create message content through LLM with prompt

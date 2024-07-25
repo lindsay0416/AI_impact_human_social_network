@@ -38,14 +38,14 @@ def opinion_counter():
         round = simulation.get("round")
         result = simulation.get("result")
         row = []
-        counter = {
-            "Support": 0,
-            "Neutral": 0,
-            "Oppose": 0
-        }
         # init a timestep * opinon(3) table for each round
         table = np.zeros((timestep, 3))
         for r in range(0, len(result)):
+            counter = {
+                "Support": 0,
+                "Neutral": 0,
+                "Oppose": 0
+            }
             user_data = result[r].get("user_data")
             for ud in user_data:
                 if len(ud.get("posts")) > 0:
@@ -59,6 +59,7 @@ def opinion_counter():
                     opinion = post.get("opinion")
                     count = counter.get(opinion)
                     counter[opinion] = count + 1
+            print(counter)
             table[r] = list(counter.values())
         tables.append(table)
     results = np.array(tables)
