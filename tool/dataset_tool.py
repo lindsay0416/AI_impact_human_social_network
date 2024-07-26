@@ -6,10 +6,11 @@ import json
 import matplotlib.pyplot as plt
 import collections
 import numpy as np
-# from llama_local_api import LlamaApi
+from llama_local_api import LlamaApi
 import openai
 from tool.config_manager import ConfigManager
 from llm_generate_text import GenerateText
+import re
 
 
 logger = logging.getLogger("ds_tool")
@@ -30,16 +31,26 @@ def generate_user_profile(prompt):
     api_key = config_manager.get_api_key()
     openai.api_key = api_key
     response, prompt = GenerateText.get_generated_text(openai, prompt)
-    try:
-        response = json.loads(response)
-    except Exception as e:
-        match = re.search(r'\{(?:[^{}]|)*\}', response)
-        if match:
-            json_part = match.group()
-            response = json_part
+    response = json.loads(response)
+
+    # response = LlamaApi.llama_generate_messages(prompt)
+
     with open("input/user_profile.json", "w") as json_file:
         json.dump(response, json_file, indent=4)
         logger.info("Generated user profiles saved to input/user_profile.json")
+
+
+# def generate_user_profile(prompt):
+#     print("Prompt used for generating profile:", prompt)
+    
+#     # Fetch the response from Llama API
+#     response = LlamaApi.llama_generate_messages(prompt)
+
+#     # Write the response to a text file
+#     with open("input/user_profile.txt", "w") as text_file:
+#         text_file.write(response)  # Writing response directly to a text file
+#         logger.info("Generated user profiles saved to input/user_profile.txt")
+
 
 
 def convert_tool(dataset_file):

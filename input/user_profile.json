@@ -1,62 +1,32 @@
 {
     "N1": {
         "name": "Alex",
-        "age": 25,
+        "age": 28,
         "gender": "male",
-        "description": "an adventurous traveler who explores the world through his lens. He captures breathtaking landscapes and cultural moments, sharing them on his travel blog with insightful narratives."
+        "description": "a tech-savvy individual who enjoys exploring the latest gadgets and coding projects. Alex is always up for a challenge and loves participating in hackathons to showcase his programming skills."
     },
     "N2": {
-        "name": "Sofia",
-        "age": 28,
+        "name": "Sophia",
+        "age": 25,
         "gender": "female",
-        "description": "a dedicated yoga instructor who promotes mindfulness and self-care. She guides her students through peaceful practices, emphasizing the connection between mind, body, and soul."
+        "description": "a fitness enthusiast who is passionate about living a healthy lifestyle. Sophia loves trying out new workout routines and cooking nutritious meals. She often shares her fitness journey on social media to inspire others."
     },
     "N3": {
-        "name": "Daniel",
+        "name": "Ethan",
         "age": 30,
         "gender": "male",
-        "description": "a tech enthusiast with a passion for coding and innovation. He enjoys building futuristic projects and participating in hackathons to push the boundaries of technology."
+        "description": "an outdoor adventurer who thrives in nature. Ethan enjoys hiking, camping, and exploring new destinations. He is a photography hobbyist and captures breathtaking moments during his travels to share with friends and family."
     },
     "N4": {
-        "name": "Avery",
+        "name": "Ava",
         "age": 35,
         "gender": "female",
-        "description": "a culinary artist who experiments with flavors and textures. She runs a popular food blog where she shares her gourmet recipes and culinary experiences from around the globe."
+        "description": "a fashion enthusiast with a keen eye for style. Ava keeps up with the latest trends and loves putting together chic outfits. She often shares fashion tips and outfit inspirations on her blog."
     },
     "N5": {
-        "name": "Ethan",
+        "name": "Noah",
         "age": 27,
         "gender": "male",
-        "description": "a nature lover and environmental advocate. He spends his time hiking in the wilderness, raising awareness about conservation, and inspiring others to protect our planet."
-    },
-    "N6": {
-        "name": "Nora",
-        "age": 31,
-        "gender": "female",
-        "description": "a passionate writer who weaves captivating stories with depth and emotion. She draws inspiration from real-life experiences and human connections, creating narratives that resonate with readers."
-    },
-    "N7": {
-        "name": "Owen",
-        "age": 29,
-        "gender": "male",
-        "description": "a fitness enthusiast and personal trainer who empowers others to achieve their health goals. He designs personalized workout plans and motivates his clients with his positive mindset."
-    },
-    "N8": {
-        "name": "Maya",
-        "age": 33,
-        "gender": "female",
-        "description": "an advocate for social justice and equality. She actively participates in community movements, raises awareness about important issues, and works towards creating a more inclusive society."
-    },
-    "N9": {
-        "name": "Liam",
-        "age": 26,
-        "gender": "male",
-        "description": "an aspiring musician with a love for all genres of music. He spends his days composing melodies, practicing instruments, and dreaming of performing on stage to entertain and inspire others."
-    },
-    "N10": {
-        "name": "Clara",
-        "age": 34,
-        "gender": "female",
-        "description": "a fashion designer with a flair for creativity and style. She envisions unique fashion pieces, sketches intricate designs, and showcases her collections at prestigious fashion events."
+        "description": "a music lover who enjoys playing various instruments and composing songs. Noah finds solace in music and often performs at local events. He dreams of pursuing a career in the music industry and sharing his passion with the world."
     }
 }

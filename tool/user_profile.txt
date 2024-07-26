@@ -1,0 +1,37 @@
+Here is the generated user profile in JSON format:
+
+```
+{
+"N1": {
+  "name": "Ava",
+  "age": 29,
+  "gender": "female",
+  "description": "a free-spirited yogi who loves exploring new hiking trails and practicing mindfulness. She's a creative problem solver with a passion for sustainable living."
+},
+"N2": {
+  "name": "Ethan",
+  "age": 41,
+  "gender": "male",
+  "description": "a tech-savvy entrepreneur who enjoys developing innovative solutions to real-world problems. He's an avid reader and loves exploring the intersection of technology and philosophy."
+},
+"N3": {
+  "name": "Luna",
+  "age": 25,
+  "gender": "female",
+  "description": "a curious linguist who is passionate about learning new languages and cultures. She enjoys trying out exotic cuisines and practicing yoga in her free time."
+},
+"N4": {
+  "name": "Julian",
+  "age": 38,
+  "gender": "male",
+  "description": "a data-driven scientist who loves analyzing complex systems and finding innovative ways to improve them. He's an outdoor enthusiast with a passion for rock climbing and hiking."
+},
+"N5": {
+  "name": "Sophia",
+  "age": 44,
+  "gender": "female",
+  "description": "a warm-hearted teacher who is dedicated to helping her students grow and thrive. She enjoys practicing meditation and playing the piano in her free time."
+}
+```
+
+Note: The ages are randomly generated according to a Gaussian distribution with a mean of 37.5 and standard deviation of 6.25, as requested.
