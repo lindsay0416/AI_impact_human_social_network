@@ -4,50 +4,50 @@
             "id": 0,
             "uid": "N1",
             "profile": {
-                "name": "Alex",
-                "age": 28,
-                "gender": "male",
-                "description": "a tech-savvy individual who enjoys exploring the latest gadgets and coding projects. Alex is always up for a challenge and loves participating in hackathons to showcase his programming skills."
+                "name": "Maya",
+                "age": 27,
+                "gender": "female",
+                "description": "an adventurous foodie who loves trying new cuisines and experimenting with recipes. She's a firm believer that food brings people together."
             }
         },
         {
             "id": 1,
             "uid": "N2",
             "profile": {
-                "name": "Sophia",
-                "age": 25,
-                "gender": "female",
-                "description": "a fitness enthusiast who is passionate about living a healthy lifestyle. Sophia loves trying out new workout routines and cooking nutritious meals. She often shares her fitness journey on social media to inspire others."
+                "name": "Ethan",
+                "age": 38,
+                "gender": "male",
+                "description": "a tech-savvy entrepreneur who's always looking for innovative ways to solve real-world problems. He's a true pioneer at heart."
             }
         },
         {
             "id": 2,
             "uid": "N3",
             "profile": {
-                "name": "Ethan",
-                "age": 30,
-                "gender": "male",
-                "description": "an outdoor adventurer who thrives in nature. Ethan enjoys hiking, camping, and exploring new destinations. He is a photography hobbyist and captures breathtaking moments during his travels to share with friends and family."
+                "name": "Lila",
+                "age": 22,
+                "gender": "female",
+                "description": "a free-spirited musician who finds inspiration in the rhythms of life. She loves jamming with friends and performing at local festivals."
             }
         },
         {
             "id": 3,
             "uid": "N4",
             "profile": {
-                "name": "Ava",
-                "age": 35,
-                "gender": "female",
-                "description": "a fashion enthusiast with a keen eye for style. Ava keeps up with the latest trends and loves putting together chic outfits. She often shares fashion tips and outfit inspirations on her blog."
+                "name": "Cameron",
+                "age": 45,
+                "gender": "male",
+                "description": "a wise and witty writer who's always working on his next bestseller. He's a firm believer in the power of words to shape our world."
             }
         },
         {
             "id": 4,
             "uid": "N5",
             "profile": {
-                "name": "Noah",
-                "age": 27,
-                "gender": "male",
-                "description": "a music lover who enjoys playing various instruments and composing songs. Noah finds solace in music and often performs at local events. He dreams of pursuing a career in the music industry and sharing his passion with the world."
+                "name": "Ava",
+                "age": 35,
+                "gender": "female",
+                "description": "a creative and curious designer who loves pushing boundaries and experimenting with new materials. She's always on the lookout for her next big project."
             }
         }
     ],
@@ -69,11 +69,11 @@
             2
         ],
         [
-            1,
+            2,
             3
         ],
         [
-            2,
+            3,
             4
         ]
     ]

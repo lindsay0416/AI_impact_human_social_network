@@ -25,32 +25,62 @@ def init_parser():
     return args
 
 
-def generate_user_profile(prompt):
-    print(prompt)
-    config_manager = ConfigManager('config.ini')
-    api_key = config_manager.get_api_key()
-    openai.api_key = api_key
-    response, prompt = GenerateText.get_generated_text(openai, prompt)
-    response = json.loads(response)
-
-    # response = LlamaApi.llama_generate_messages(prompt)
-
-    with open("input/user_profile.json", "w") as json_file:
-        json.dump(response, json_file, indent=4)
-        logger.info("Generated user profiles saved to input/user_profile.json")
-
-
 # def generate_user_profile(prompt):
-#     print("Prompt used for generating profile:", prompt)
+#     print(prompt)
+#     config_manager = ConfigManager('config.ini')
+#     api_key = config_manager.get_api_key()
+#     openai.api_key = api_key
+#     response, prompt = GenerateText.get_generated_text(openai, prompt)
+#     response = json.loads(response)
+
+#     # response = LlamaApi.llama_generate_messages(prompt)
+
+#     with open("input/user_profile.json", "w") as json_file:
+#         json.dump(response, json_file, indent=4)
+#         logger.info("Generated user profiles saved to input/user_profile.json")
+
+
+def generate_user_profile(prompt):
+    print("Prompt used for generating profile:", prompt)
     
-#     # Fetch the response from Llama API
-#     response = LlamaApi.llama_generate_messages(prompt)
+    json_file_path = "./input/user_profile.json"
+    # Fetch the response from Llama API
+    response = LlamaApi.llama_generate_messages(prompt)
 
-#     # Write the response to a text file
-#     with open("input/user_profile.txt", "w") as text_file:
-#         text_file.write(response)  # Writing response directly to a text file
-#         logger.info("Generated user profiles saved to input/user_profile.txt")
+    # Write the response to a text file
+    with open("./input/user_profile.txt", "w") as text_file:
+        text_file.write(response)  # Writing response directly to a text file
+        logger.info("Generated user profiles saved to user_profile.txt")
+    
+    save_to_json("user_profile.txt", json_file_path)
+    return response
 
+def save_to_json(file_path, json_file_path):
+    # Read the content of the file
+    with open(file_path, 'r') as file:
+        content = file.read()
+
+    # Extract JSON formatted data from content
+    # Assuming the JSON data starts from the first '{' and ends at the last '}'
+    json_data_start = content.find('{')
+    json_data_end = content.rfind('}') + 1
+    json_content = content[json_data_start:json_data_end]
+
+    print("Extracted JSON content:")
+    print(json_content)
+
+    try:
+        # Load the JSON data
+        data = json.loads(json_content)
+    except json.JSONDecodeError as e:
+        print(f"JSON decode error: {e}")
+        return
+
+    # Save the JSON data to json_file_path
+    with open(json_file_path, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+
+    print(f"Data has been successfully extracted and saved to {json_file_path}.")
 
 
 def convert_tool(dataset_file):
