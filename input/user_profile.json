@@ -1,0 +1,32 @@
+{
+    "N1": {
+        "name": "Maya",
+        "age": 27,
+        "gender": "female",
+        "description": "an adventurous foodie who loves trying new cuisines and experimenting with recipes. She's a firm believer that food brings people together."
+    },
+    "N2": {
+        "name": "Ethan",
+        "age": 38,
+        "gender": "male",
+        "description": "a tech-savvy entrepreneur who's always looking for innovative ways to solve real-world problems. He's a true pioneer at heart."
+    },
+    "N3": {
+        "name": "Lila",
+        "age": 22,
+        "gender": "female",
+        "description": "a free-spirited musician who finds inspiration in the rhythms of life. She loves jamming with friends and performing at local festivals."
+    },
+    "N4": {
+        "name": "Cameron",
+        "age": 45,
+        "gender": "male",
+        "description": "a wise and witty writer who's always working on his next bestseller. He's a firm believer in the power of words to shape our world."
+    },
+    "N5": {
+        "name": "Ava",
+        "age": 35,
+        "gender": "female",
+        "description": "a creative and curious designer who loves pushing boundaries and experimenting with new materials. She's always on the lookout for her next big project."
+    }
+}

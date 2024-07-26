@@ -4,7 +4,7 @@
     "influence_prob": 0.3,
     "is_directed": false,
     "is_external_dataset": false,
-    "node_size": 5,
+    "node_size": 10,
     "random_edges": 2,
     "connect_prob": 0.35,
     "evolution_prob": 0.3,
