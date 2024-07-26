@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 import re
+from wordcloud import WordCloud
 
 FONT_SIZE = 14
 
@@ -25,7 +26,72 @@ def json_formatter(text):
     else:
         print("No JSON found")
         return None
+
+def profile_statistics():
+    pass
+
+def phrases_counter():
+    results = load_result_from_file()
+    params = load_schema()
+
+    round = params.get("round")
+    timestep = params.get("timestep")
+
+    dicts = []
+    for simulation in results:
+        round = simulation.get("round")
+        result = simulation.get("result")
+        row = []
+        # init a timestep * opinon(3) table for each round
+        table = np.zeros((timestep, 3))
+        # for r in range(0, len(result)):
+        counter = {}
+        user_data = result[-1].get("user_data")
+        for ud in user_data:
+            if len(ud.get("posts")) > 0:
+                post = ud.get("posts")[-1]
+                try:
+                    post = json.loads(post)
+                except Exception as e:
+                    post = json_formatter(post)
+                if type(post) is str:
+                    post = json.loads(post)
+                phrases = post.get("phrases").split(",")
+                for p in phrases:
+                    p = p.strip()
+                    if counter.get(p) is None:
+                        counter[p] = 1
+                    else:
+                        counter[p] = counter.get(p) + 1
+        counter = dict(sorted(counter.items(), key=lambda item: item[1], reverse=True))
+        dicts.append(counter)
+    cumulative_counts = {}
+    appearance_counts = {}
+
+    # Iterate through each dictionary
+    for d in dicts:
+        for key, value in d.items():
+            if key in cumulative_counts:
+                cumulative_counts[key] += value
+                appearance_counts[key] += 1
+            else:
+                cumulative_counts[key] = value
+                appearance_counts[key] = 1
+
+    average_appearance = {key: cumulative_counts[key] / appearance_counts[key] for key in cumulative_counts}
+    average_appearance = dict(sorted(average_appearance.items(), key=lambda item: item[1], reverse=True))
     
+    return average_appearance
+
+def plot_word_cloud(phrases_dict):
+    wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(phrases_dict)
+
+    # Display the generated word cloud
+    plt.figure(figsize=(10, 5))
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis('off')
+    plt.show()
+
 def opinion_counter():
     results = load_result_from_file()
     params = load_schema()
@@ -140,7 +206,9 @@ def plot_bar_chart(series):
 
 
 if __name__ == "__main__":
-    column_means = calculate_coverage()
-    plot_line_chart(column_means)
-    data = opinion_counter()
-    plot_stacked_bar_chart(data)
+    # column_means = calculate_coverage()
+    # plot_line_chart(column_means)
+    # data = opinion_counter()
+    # plot_stacked_bar_chart(data)
+    phrases = phrases_counter()
+    plot_word_cloud(phrases)
