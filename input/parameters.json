@@ -5,7 +5,7 @@
     "is_directed": false,
     "is_external_dataset": false,
     "node_size": 20,
-    "random_edges": 3,
+    "random_edges": 2,
     "connect_prob": 0.6,
     "evolution_prob": 0.3,
     "generate_user_profile": false,

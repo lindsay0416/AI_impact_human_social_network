@@ -4,60 +4,60 @@
             "id": 0,
             "uid": "N1",
             "profile": {
-                "name": "Ethan",
+                "name": "Alex",
                 "age": 25,
                 "gender": "male",
-                "description": "an adventurous soul who enjoys hiking and exploring new trails. He is also passionate about photography, capturing stunning landscapes during his outdoor adventures."
+                "description": "an adventurous traveler who has visited over 15 countries. He enjoys immersing himself in different cultures and documenting his experiences through photography."
             }
         },
         {
             "id": 1,
             "uid": "N2",
             "profile": {
-                "name": "Olivia",
-                "age": 33,
+                "name": "Sofia",
+                "age": 28,
                 "gender": "female",
-                "description": "a dedicated educator who loves inspiring young minds. She enjoys creating engaging lesson plans and fostering a supportive learning environment for her students."
+                "description": "a dedicated yoga instructor who believes in the power of mindfulness and self-care. She conducts classes that focus on holistic well-being for her students."
             }
         },
         {
             "id": 2,
             "uid": "N3",
             "profile": {
-                "name": "Liam",
-                "age": 28,
+                "name": "Ethan",
+                "age": 24,
                 "gender": "male",
-                "description": "a tech enthusiast who is always up-to-date with the latest gadgets and innovations. He enjoys coding and developing software applications in his spare time."
+                "description": "a tech-savvy software developer with a passion for innovation. He enjoys coding and creating new applications that simplify daily tasks for users."
             }
         },
         {
             "id": 3,
             "uid": "N4",
             "profile": {
-                "name": "Ava",
-                "age": 31,
+                "name": "Olivia",
+                "age": 30,
                 "gender": "female",
-                "description": "a fitness enthusiast who is passionate about leading a healthy lifestyle. She loves trying out new workout routines and inspiring others to stay active."
+                "description": "a nature enthusiast who loves hiking and camping. She enjoys exploring scenic trails and capturing breathtaking views with her camera."
             }
         },
         {
             "id": 4,
             "uid": "N5",
             "profile": {
-                "name": "Noah",
-                "age": 30,
+                "name": "Liam",
+                "age": 27,
                 "gender": "male",
-                "description": "a nature lover who enjoys camping and stargazing. He is also a skilled woodworker, crafting beautiful furniture pieces inspired by the outdoors."
+                "description": "a fitness coach who motivates others to lead a healthy lifestyle. He designs personalized workout plans and nutritional guidance for his clients."
             }
         },
         {
             "id": 5,
             "uid": "N6",
             "profile": {
-                "name": "Sophia",
-                "age": 27,
+                "name": "Amelia",
+                "age": 29,
                 "gender": "female",
-                "description": "an aspiring writer who finds inspiration in everyday experiences. She enjoys crafting imaginative stories and hopes to publish a novel one day."
+                "description": "an aspiring author working on her first novel. She draws inspiration from personal experiences and dreams of becoming a bestselling writer."
             }
         },
         {
@@ -67,17 +67,17 @@
                 "name": "Mason",
                 "age": 26,
                 "gender": "male",
-                "description": "a sports enthusiast who excels in basketball and enjoys playing competitively. He also volunteers at local youth sports programs to mentor young athletes."
+                "description": "an animal lover who volunteers at local shelters. He enjoys spending time with rescue pets and helping them find loving homes."
             }
         },
         {
             "id": 7,
             "uid": "N8",
             "profile": {
-                "name": "Isabella",
-                "age": 29,
+                "name": "Ava",
+                "age": 32,
                 "gender": "female",
-                "description": "a creative designer who has a keen eye for aesthetics. She enjoys experimenting with colors and patterns to create visually appealing graphic designs."
+                "description": "a passionate advocate for environmental conservation. She actively participates in clean-up initiatives and educates others on sustainable living."
             }
         },
         {
@@ -85,19 +85,19 @@
             "uid": "N9",
             "profile": {
                 "name": "William",
-                "age": 32,
+                "age": 23,
                 "gender": "male",
-                "description": "an avid reader who finds solace in the world of literature. He enjoys exploring different genres and discussing books with fellow book club members."
+                "description": "a young entrepreneur who founded a successful e-commerce business. He is always seeking new opportunities for growth and expansion."
             }
         },
         {
             "id": 9,
             "uid": "N10",
             "profile": {
-                "name": "Mia",
-                "age": 34,
+                "name": "Emma",
+                "age": 31,
                 "gender": "female",
-                "description": "a talented chef with a passion for culinary arts. She loves experimenting with flavors and creating innovative dishes that delight the taste buds."
+                "description": "a talented musician who plays the violin professionally. She performs in orchestras and enjoys sharing her love for classical music with audiences."
             }
         },
         {
@@ -105,19 +105,19 @@
             "uid": "N11",
             "profile": {
                 "name": "James",
-                "age": 24,
+                "age": 33,
                 "gender": "male",
-                "description": "an aspiring musician who loves playing the guitar. He enjoys composing original songs and performing at local open mic nights."
+                "description": "a dedicated teacher who inspires his students to excel academically. He believes in the transformative power of education and mentors aspiring educators."
             }
         },
         {
             "id": 11,
             "uid": "N12",
             "profile": {
-                "name": "Amelia",
-                "age": 35,
+                "name": "Sophia",
+                "age": 22,
                 "gender": "female",
-                "description": "an environmentalist dedicated to preserving nature. She actively participates in tree planting initiatives and advocates for sustainable living practices."
+                "description": "a fashion designer with a unique sense of style. She creates iconic pieces that blend contemporary trends with classic elegance."
             }
         },
         {
@@ -125,85 +125,89 @@
             "uid": "N13",
             "profile": {
                 "name": "Benjamin",
-                "age": 31,
+                "age": 29,
                 "gender": "male",
-                "description": "a passionate film buff who enjoys analyzing movies. He often hosts movie nights with friends to discuss cinematic techniques and storytelling."
+                "description": "a chef with a passion for culinary arts. He experiments with flavors and techniques to create innovative dishes that leave diners craving for more."
             }
         },
         {
             "id": 13,
             "uid": "N14",
             "profile": {
-                "name": "Charlotte",
+                "name": "Grace",
                 "age": 26,
                 "gender": "female",
-                "description": "an animal lover who volunteers at the local shelter. She enjoys caring for animals in need and finding loving homes for them."
+                "description": "an environmental scientist dedicated to studying climate change. She conducts research and advocates for sustainable practices to protect the planet."
             }
         },
         {
             "id": 14,
             "uid": "N15",
             "profile": {
-                "name": "Elijah",
-                "age": 27,
+                "name": "Jack",
+                "age": 28,
                 "gender": "male",
-                "description": "a dedicated community activist who works towards social causes. He organizes peaceful protests and advocates for positive change in society."
+                "description": "an avid sports enthusiast who enjoys playing basketball and tennis. He also coaches a youth team, instilling teamwork and sportsmanship values."
             }
         },
         {
             "id": 15,
             "uid": "N16",
             "profile": {
-                "name": "Grace",
-                "age": 30,
+                "name": "Luna",
+                "age": 27,
                 "gender": "female",
-                "description": "a passionate dancer who finds joy in movement. She practices various dance styles and participates in performances to express herself artistically."
+                "description": "a wildlife photographer who captures the beauty of exotic animals in their natural habitats. She raises awareness about endangered species through her work."
             }
         },
         {
             "id": 16,
             "uid": "N17",
             "profile": {
-                "name": "Alexander",
-                "age": 28,
+                "name": "Henry",
+                "age": 30,
                 "gender": "male",
-                "description": "a travel enthusiast who loves exploring new cultures. He immerses himself in local traditions and captures memorable moments through photography."
+                "description": "an architect who designs sustainable buildings. He combines creativity with eco-friendly elements to create structures that harmonize with nature."
             }
         },
         {
             "id": 17,
             "uid": "N18",
             "profile": {
-                "name": "Sofia",
-                "age": 33,
+                "name": "Chloe",
+                "age": 24,
                 "gender": "female",
-                "description": "an entrepreneur with a knack for innovation. She tirelessly works on developing new business ideas and strives to make a positive impact in the industry."
+                "description": "a graphic designer with a flair for minimalist aesthetics. She creates visually stunning designs that convey messages with simplicity and elegance."
             }
         },
         {
             "id": 18,
             "uid": "N19",
             "profile": {
-                "name": "Luke",
-                "age": 29,
+                "name": "Owen",
+                "age": 25,
                 "gender": "male",
-                "description": "a technology geek who enjoys building and customizing computers. He stays updated on the latest tech trends and often assists friends with tech-related issues."
+                "description": "an aspiring actor honing his craft in theater productions. He immerses himself in diverse roles and storytelling, aiming to leave a lasting impact on the audience."
             }
         },
         {
             "id": 19,
             "uid": "N20",
             "profile": {
-                "name": "Evelyn",
-                "age": 28,
+                "name": "Harper",
+                "age": 31,
                 "gender": "female",
-                "description": "a nature photographer who captures the beauty of the great outdoors. She travels to scenic locations and documents breathtaking landscapes through her lens."
+                "description": "an entrepreneur who founded a successful eco-friendly beauty brand. She advocates for clean beauty products and promotes sustainability in the cosmetics industry."
             }
         }
     ],
     "edges": [
         [
             0,
+            2
+        ],
+        [
+            0,
             3
         ],
         [
@@ -220,7 +224,7 @@
         ],
         [
             0,
-            8
+            9
         ],
         [
             0,
@@ -228,47 +232,67 @@
         ],
         [
             0,
-            13
+            11
+        ],
+        [
+            0,
+            14
         ],
         [
             0,
             15
         ],
         [
+            0,
+            16
+        ],
+        [
+            0,
+            17
+        ],
+        [
             1,
+            2
+        ],
+        [
+            1,
+            7
+        ],
+        [
+            1,
+            12
+        ],
+        [
+            1,
+            13
+        ],
+        [
+            1,
+            18
+        ],
+        [
+            2,
             3
         ],
         [
-            1,
+            2,
             4
         ],
         [
-            1,
+            2,
+            8
+        ],
+        [
+            2,
             9
         ],
         [
             2,
-            3
+            13
         ],
         [
             2,
-            7
-        ],
-        [
-            2,
-            11
-        ],
-        [
-            2,
-            14
-        ],
-        [
-            3,
-            4
-        ],
-        [
-            3,
-            5
+            19
         ],
         [
             3,
@@ -277,10 +301,6 @@
         [
             3,
             7
-        ],
-        [
-            3,
-            9
         ],
         [
             3,
@@ -288,11 +308,11 @@
         ],
         [
             3,
-            14
+            17
         ],
         [
             3,
-            16
+            18
         ],
         [
             4,
@@ -300,111 +320,31 @@
         ],
         [
             4,
-            7
-        ],
-        [
-            4,
             8
-        ],
-        [
-            4,
-            9
-        ],
-        [
-            4,
-            11
-        ],
-        [
-            4,
-            17
-        ],
-        [
-            4,
-            18
-        ],
-        [
-            5,
-            6
         ],
         [
             5,
             10
         ],
         [
-            5,
-            15
-        ],
-        [
-            5,
-            16
-        ],
-        [
-            5,
-            17
-        ],
-        [
             6,
-            8
-        ],
-        [
-            6,
-            13
-        ],
-        [
-            6,
-            16
-        ],
-        [
-            6,
-            19
-        ],
-        [
-            8,
             11
         ],
         [
-            8,
-            18
+            6,
+            16
         ],
         [
             8,
             19
-        ],
-        [
-            9,
-            10
-        ],
-        [
-            9,
-            12
         ],
         [
             10,
-            15
-        ],
-        [
-            11,
-            12
-        ],
-        [
-            11,
             14
         ],
         [
-            11,
-            18
-        ],
-        [
-            11,
-            19
-        ],
-        [
-            12,
-            13
-        ],
-        [
-            16,
-            17
+            14,
+            15
         ]
     ]
 }

@@ -4,3 +4,4 @@ config.ini
 __pycache__
 llm_generate_text.cpython-38.pyc
 analysis/dataset 
+saved/saved

@@ -12,6 +12,11 @@ def load_schema():
         params = json.load(file)
     return params
 
+def load_user_profile():
+    with open("input/user_profile.json") as file:
+        profiles = json.load(file)
+    return profiles
+
 def load_result_from_file():
     with open("saved/results.json", "r") as file:
         results = json.load(file)
@@ -27,21 +32,62 @@ def json_formatter(text):
         print("No JSON found")
         return None
 
-def profile_statistics():
-    pass
+def profile_statistics(opinion):
+    results = load_result_from_file()
+    params = load_schema()
+    profiles = load_user_profile()
+
+    timestep = params.get("timestep")
+    round = params.get("round")
+
+    rounds = []
+    for simulation in results:
+        result = simulation.get("result")
+        user_data = result[-1].get("user_data")
+        users = []
+        for ud in user_data:
+            if len(ud.get("posts")) > 0:
+                post = ud.get("posts")[-1]
+                try:
+                    post = json.loads(post)
+                except Exception as e:
+                    post = json_formatter(post)
+                if type(post) is str:
+                    post = json.loads(post)
+                if post.get("opinion") == opinion:
+                    users.append(ud.get("uid"))
+        rounds.append(users)
+    
+    gender_distribution = np.zeros((round, 2))
+    for r in range(0, len(rounds)):
+        age_counter = {}
+        # gender_counter = {
+        #                     "male": 0,
+        #                     "female": 0
+        #                 }
+        for uid in rounds[r]:
+            age = profiles.get(uid).get("age")
+            if age_counter.get(age) is None:
+                age_counter[age] = 1
+            else:
+                age_counter[age] = age_counter.get(age) + 1
+        print(age_counter)
+        #     gender = profiles.get(uid).get("gender")
+        #     # print(gender)
+        #     gender_counter[gender] = gender_counter.get(gender) + 1
+        # print(gender_counter)
+    
+
+
 
 def phrases_counter():
     results = load_result_from_file()
     params = load_schema()
-
-    round = params.get("round")
     timestep = params.get("timestep")
 
     dicts = []
     for simulation in results:
-        round = simulation.get("round")
         result = simulation.get("result")
-        row = []
         # init a timestep * opinon(3) table for each round
         table = np.zeros((timestep, 3))
         # for r in range(0, len(result)):
@@ -80,7 +126,7 @@ def phrases_counter():
 
     average_appearance = {key: cumulative_counts[key] / appearance_counts[key] for key in cumulative_counts}
     average_appearance = dict(sorted(average_appearance.items(), key=lambda item: item[1], reverse=True))
-    
+    print(average_appearance)
     return average_appearance
 
 def plot_word_cloud(phrases_dict):
@@ -90,7 +136,8 @@ def plot_word_cloud(phrases_dict):
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis('off')
-    plt.show()
+    # plt.show()
+    plt.savefig("saved/phrases.pdf")
 
 def opinion_counter():
     results = load_result_from_file()
@@ -142,12 +189,16 @@ def plot_stacked_bar_chart(data):
     plt.xlabel('Timesteps', fontsize=FONT_SIZE)
     plt.ylabel('Opinion', fontsize=FONT_SIZE)
     plt.xticks(timesteps)
+    
+    # plt.set_yticks(np.arange(0, 21, 1))
 
     # Add a legend
     plt.legend(fontsize=FONT_SIZE)
 
     # Show the plot
-    plt.show()
+    # plt.show()
+    
+    plt.savefig("saved/opinion.pdf")
 
 def calculate_coverage():
     params = load_schema()
@@ -182,10 +233,11 @@ def plot_line_chart(series):
     # Set x-ticks to the generated label values and ensure they are displayed as initial integer labels
     ax.set_xticks(labels)
     ax.set_xticklabels(labels)
+    ax.set_yticks(np.arange(0, 16, 2))
 
     ax.tick_params(axis='both', labelsize=FONT_SIZE)
-    plt.show()
-    # plt.savefig("saved/coverage.pdf")
+    # plt.show()
+    plt.savefig("saved/coverage.pdf")
 
 
 
@@ -204,11 +256,11 @@ def plot_bar_chart(series):
     ax.tick_params(axis='both', labelsize=FONT_SIZE)
     plt.show()
 
-
 if __name__ == "__main__":
     # column_means = calculate_coverage()
     # plot_line_chart(column_means)
     # data = opinion_counter()
     # plot_stacked_bar_chart(data)
-    phrases = phrases_counter()
-    plot_word_cloud(phrases)
+    # phrases = phrases_counter()
+    # plot_word_cloud(phrases)
+    profile_statistics("Support")
