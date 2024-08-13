@@ -3,6 +3,7 @@ import re
 import openai
 import json
 import configparser
+import matplotlib.pyplot as plt  # Importing matplotlib for plotting
 
 # Mock GenerateText class (Replace with your actual implementation if available)
 class GenerateText:
@@ -147,6 +148,33 @@ class Analysis:
 
         return summary
 
+    @staticmethod
+    def save_summary_to_json(summary, json_file_path):
+        # Save the summary to a JSON file
+        try:
+            with open(json_file_path, 'w') as json_file:
+                json.dump(summary, json_file, indent=4)
+            print(f"Summary has been successfully saved to {json_file_path}")
+        except Exception as e:
+            print(f"An error occurred while saving the summary to JSON: {e}")
+
+    @staticmethod
+    def plot_summary(summary, plot_file_path):
+        # Extract the counts from the summary
+        sentiments = ["Support", "Oppose", "Neutral"]
+        counts = [summary[sentiment]["count"] for sentiment in sentiments]
+
+        # Create the plot
+        plt.figure(figsize=(8, 6))
+        plt.bar(sentiments, counts, color=['blue', 'red', 'green'])
+        plt.xlabel('Sentiment')
+        plt.ylabel('Number of Comments')
+        plt.title('Real world comments analysis Summary')
+
+        # Save the plot to a file
+        plt.savefig(plot_file_path)
+
+        print(f"Plot saved to {plot_file_path}")
 
 if __name__ == "__main__":
     analysis = Analysis()
@@ -155,11 +183,20 @@ if __name__ == "__main__":
     intermediate_csv_path = './dataset/read_wine_dataset_comments.csv'
     output_csv_path = 'cleaned_wine_dataset_comments.csv'
     output_txt_path = 'cleaned_comments.txt'
+    summary_json_path = 'comments_summary.json'  # Path to save the summary JSON file
+    plot_file_path = 'images/real_world_comments_analysis_summary.png'  # Path to save the plot image
 
     # Perform data cleaning on the intermediate CSV file
     # analysis.data_cleaning(intermediate_csv_path, output_csv_path, output_txt_path)
 
     comments = analysis.read_comments(output_txt_path)
-    generated_text = analysis.analyze_comments_with_llm(comments)
+    print("Start")
+    summary = analysis.analyze_comments_with_llm(comments)
 
-    print(generated_text)
+    print(summary)
+
+    # Save the summary to a JSON file
+    analysis.save_summary_to_json(summary, summary_json_path)
+
+    # Plot the summary and save to a file
+    analysis.plot_summary(summary, plot_file_path)

@@ -153,7 +153,7 @@ PUT received_text_test01
 * By running this function to replace the `initial_message` parameter in `parameters.json`.
 
 ### ./analysis/comments_analysis.py
-* Analyse the real world comments.
+* analyse the real world comments, plot the png and save the image to the `images` folder.
 
 ### ./analysis/analysis_simulated_data.py
 * Analyse the simulated user-agents response.

@@ -3,66 +3,65 @@ Here are the user profiles in JSON format:
 ```
 {
 "N1": {
-    "name": "Maya",
-    "age": 29,
-    "gender": "female",
-    "description": "a free-spirited traveler who loves exploring new cultures and trying different cuisines. She's always on the lookout for the next big adventure."
-  },
+  "name": "Maya",
+  "age": 29,
+  "gender": "female",
+  "description": "a free-spirited entrepreneur who loves exploring new business ideas. She's always on the lookout for innovative solutions and networking opportunities."
+},
 "N2": {
-    "name": "Ethan",
-    "age": 38,
-    "gender": "male",
-    "description": "a tech enthusiast who's passionate about AI and robotics. He spends most of his free time coding and working on innovative projects."
-  },
+  "name": "Ethan",
+  "age": 41,
+  "gender": "male",
+  "description": "a tech-savvy individual who loves coding and developing apps. He's passionate about creating user-friendly experiences and solving complex problems."
+},
 "N3": {
-    "name": "Lily",
-    "age": 25,
-    "gender": "female",
-    "description": "a bookworm who loves getting lost in fantasy novels. She's a hopeless romantic and often finds herself swept up in her own stories."
-  },
+  "name": "Lila",
+  "age": 25,
+  "gender": "female",
+  "description": "a creative writer who loves crafting engaging stories. She finds inspiration in people and places, often drawing from her own life experiences to create compelling narratives."
+},
 "N4": {
-    "name": "Julian",
-    "age": 42,
-    "gender": "male",
-    "description": "a rugged outdoorsman who lives for hiking and camping. He's always looking for new trails to conquer and breathtaking views to take in."
-  },
+  "name": "Julian",
+  "age": 38,
+  "gender": "male",
+  "description": "a passionate environmentalist who loves advocating for sustainability. He's always looking for ways to reduce waste and promote eco-friendly practices in his community."
+},
 "N5": {
-    "name": "Ava",
-    "age": 31,
-    "gender": "female",
-    "description": "a creative writer who's working on her first novel. She finds inspiration in the human condition and is always looking for new experiences to draw from."
-  },
+  "name": "Ava",
+  "age": 22,
+  "gender": "female",
+  "description": "a music enthusiast who loves discovering new artists. She's passionate about attending concerts and festivals, often singing along to her favorite songs with friends."
+},
 "N6": {
-    "name": "Max",
-    "age": 35,
-    "gender": "male",
-    "description": "a thrill-seeking adventurer who loves extreme sports. He's always up for a challenge and never backs down from a dare."
-  },
+  "name": "Oliver",
+  "age": 45,
+  "gender": "male",
+  "description": "a history buff who loves exploring the past. He's fascinated by ancient civilizations and often spends hours reading about archaeological discoveries."
+},
 "N7": {
-    "name": "Sophia",
-    "age": 27,
-    "gender": "female",
-    "description": "a foodie who loves trying new recipes and experimenting with different flavors. She's always on the lookout for the next big culinary trend."
-  },
+  "name": "Sophia",
+  "age": 31,
+  "gender": "female",
+  "description": "a yoga instructor who loves sharing mindfulness practices with others. She's passionate about promoting self-care and well-being, often leading meditation sessions in local parks."
+},
 "N8": {
-    "name": "Logan",
-    "age": 40,
-    "gender": "male",
-    "description": "a history buff who loves learning about ancient civilizations. He's a bit of a nostalgic and often finds himself reminiscing about the good old days."
-  },
+  "name": "Gabriel",
+  "age": 27,
+  "gender": "male",
+  "description": "a foodie who loves trying new recipes. He's always experimenting with different flavors and ingredients, often hosting dinner parties for friends and family."
+},
 "N9": {
-    "name": "Ruby",
-    "age": 26,
-    "gender": "female",
-    "description": "a social justice warrior who's passionate about making a difference in her community. She's always looking for ways to get involved and make a positive impact."
-  },
+  "name": "Charlotte",
+  "age": 40,
+  "gender": "female",
+  "description": "a photographer who loves capturing life's moments. She's passionate about storytelling through images, often taking her camera on adventures to capture breathtaking scenery."
+},
 "N10": {
-    "name": "Gabriel",
-    "age": 36,
-    "gender": "male",
-    "description": "a musician who loves playing the guitar and writing his own songs. He's a bit of a hopeless romantic and often finds himself lost in his own thoughts and emotions."
-  }
+  "name": "Lucas",
+  "age": 34,
+  "gender": "male",
+  "description": "a math enthusiast who loves solving complex equations. He's passionate about sharing his knowledge with others, often leading math clubs in local schools."
 }
 ```
 
-Note: The ages were generated based on a Gaussian distribution with mean 35 and standard deviation 5, which is roughly consistent with real-world demographics. The gender was randomly assigned as half female and half male.
+Note: The ages were generated based on a Gaussian distribution with a mean of 35 and a standard deviation of 5. The genders are evenly split between male and female.
