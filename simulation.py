@@ -54,11 +54,14 @@ def simulation(params):
     initial_message = params.get("initial_message")
     generate_user_profile = params.get("generate_user_profile")
     broadcasting_prob = params.get("broadcasting_prob")
+    profile_generation_rule = params.get("location")
     
     if generate_user_profile:
         user_profile_prompt = params.get("user_profile_prompt")
-        prompt = f"There are {node_size} users in a social network. " + user_profile_prompt
-        dt.generate_user_profile(prompt)
+        if profile_generation_rule is None:
+            user_profile_prompt = "Location of these users are random. Ages of these users follow Gaussian distribution, gender is half and half." +\
+                                   user_profile_prompt 
+        dt.generate_user_profile(user_profile_prompt, node_size)
     
     if not is_external_dataset:
         environment = Environment(

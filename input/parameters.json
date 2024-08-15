@@ -1,15 +1,15 @@
 {
-    "round": 5,
-    "timestep": 10,
+    "round": 1,
+    "timestep": 1,
     "influence_prob": 0.3,
     "is_directed": false,
     "is_external_dataset": false,
-    "node_size": 20,
+    "node_size": 300,
     "random_edges": 3,
     "connect_prob": 0.6,
     "evolution_prob": 0.3,
-    "generate_user_profile": false,
-    "user_profile_prompt": "Generate user profile as a 50-word unique description.\nAges of these users follow Gaussian distribution, gender is half and half.\nListed your response by user id strats with 'N' in JSON format.\nBased on this example:\n\"N1\": {\n     \"name\": \"Emily\",\n     \"age\": 32,\n     \"gender\": \"female\",\n     \"description\": \"a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.\"\n   }",
+    "generate_user_profile": true,
+    "user_profile_prompt": "Listed your response by user id strats with 'N' based on this example:\n\"N1\": {\n     \"name\": \"Emily\",\n  \"location\": \"Auckland, New Zealand\",\n     \"age\": 32,\n     \"gender\": \"female\",\n     \"description\": \"a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.\"\n   }",
     "broadcasting_prob": 0.3,
     "initial_message": "'Blocking UTAS move is ‘all about NIMBYism and votes’: Winter': A government bill to give parliament the final say on the University of Tasmania’s move from Sandy Bay to Hobart CBD is 'about NIMBYism and about votes', Winter says."
 }
