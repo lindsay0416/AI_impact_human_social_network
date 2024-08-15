@@ -1,0 +1,44 @@
+{
+    "Hobart, Australia": {
+        "Working age population (aged 15-64 years):": "68.5%",
+        "Males": "48.94%",
+        "Females": "50.98%",
+        "Personla weekly income": {
+            "$1-$499 per week (%)": 20.9,
+            "$500-$999 per week (%)": 23,
+            "$1000-$1999 per week (%)": 27.8,
+            "$2000-$2999 per week (%)": 8.9,
+            "$3000 or more per week (%)": 6.1,
+            "Nil income (%)": 7.6,
+            "Negative income (%)": 0.4,
+            "Income inadequately described or not stated (%)": 5.4
+          },
+        "Education": {
+            "Total persons with non-school qualification(s) (%)": 74.4,
+            "Postgraduate degree (%)": 16.7,
+            "Graduate diploma/graduate certificate (%)": 4.5,
+            "Bachelor degree (%)": 27.8,
+            "Advanced diploma/diploma (%)": 8.1,
+            "Certificate (%)": 10.6,
+            "Non-school qualification inadequately described (%)": 0.7,
+            "Non-school qualification not stated (%)": 6
+          },
+        "Occupation": {
+            "Managers (%)": 14.3,
+            "Professionals (%)": 36.7,
+            "Technicians and trades workers (%)": 8.8,
+            "Community and personal service workers (%)": 12.8,
+            "Clerical and administrative workers (%)": 10.7,
+            "Sales workers (%)": 7.1,
+            "Machinery operators and drivers (%)": 2,
+            "Labourers (%)": 6.1,
+            "Occupation inadequately described or not stated (%)": 1.4
+          }
+    },
+    "Auckland, New Zealand": {
+
+    },
+    "Sydney, Australia": {
+        "Working age population (aged 15-64 years):": 64.2
+    }
+}

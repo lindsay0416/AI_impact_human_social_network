@@ -1,10 +1,1 @@
-Ages of these users follow Gaussian distribution, gender is half and half.
-Listed your response by user id in JSON format.
-Based on this example:
-"N1": {
-     "name": "Emily",
-     "location: "Auckland, New Zealand",
-     "age": 32,
-     "gender": "female",
-     "description": "a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries."
-   }
+List user profiles line by line. Each profile follows a text format like this example: "ID: N1; Name: Emily; Location: Auckland, New Zealand; Age: 32; Gender: Female; Education: Bachelor; Occupation: Artist; Description: Emily loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries."

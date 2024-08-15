@@ -54,14 +54,24 @@ def simulation(params):
     initial_message = params.get("initial_message")
     generate_user_profile = params.get("generate_user_profile")
     broadcasting_prob = params.get("broadcasting_prob")
-    profile_generation_rule = params.get("location")
+    location = params.get("location")
     
     if generate_user_profile:
         user_profile_prompt = params.get("user_profile_prompt")
-        if profile_generation_rule is None:
+        if location is None:
             user_profile_prompt = "Location of these users are random. Ages of these users follow Gaussian distribution, gender is half and half." +\
                                    user_profile_prompt 
+        else:
+            with open("input/context.json", 'r') as file:
+                context = json.load(file)
+            if context.get(location) is not None:
+                population = "Population follows these distribution rules: " + json.dumps(context.get(location)) + "\n"
+            else:
+                population = ""
+            user_profile_prompt = f"Location of these users are in {location}. \n" +\
+                                    population + user_profile_prompt                                
         dt.generate_user_profile(user_profile_prompt, node_size)
+
     
     if not is_external_dataset:
         environment = Environment(
