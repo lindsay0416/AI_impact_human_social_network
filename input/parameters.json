@@ -10,7 +10,7 @@
     "evolution_prob": 0.3,
     "generate_user_profile": true,
     "user_profile_prompt": "List per user profiles each line. Each profile follows a text format like this example: \"1: {Name: Emily; Location: Auckland, New Zealand; Age: 32; Gender: Female; Education: Bachelor; Occupation: Artist; Description: Emily loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.}\"",
-    "location": "Hobart, Australia",
+    "location": "Auckland, New Zealand",
     "broadcasting_prob": 0.3,
     "initial_message": "'Blocking UTAS move is \u2018all about NIMBYism and votes\u2019: Winter': A government bill to give parliament the final say on the University of Tasmania\u2019s move from Sandy Bay to Hobart CBD is 'about NIMBYism and about votes', Winter says."
 }

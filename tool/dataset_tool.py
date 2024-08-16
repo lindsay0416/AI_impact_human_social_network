@@ -57,14 +57,14 @@ def validate_generated_profile(prompt, node_size, batch_size):
         profile = {}
         if entry.strip():
             entry_data = entry.split("; ")
-            for item in entry_data[1:]:
+            for item in entry_data:
                 key, value = item.split(": ", 1)
                 profile[key] = value
         profiles[profileID] = profile
 
     profiles = {key: value for index, (key, value) in enumerate(profiles.items()) if index < node_size}
     json_data = json.dumps(profiles, indent=4)
-    
+
     with open("input/user_profile.json", "w") as json_file:
         json_file.write(json_data)
 
