@@ -18,7 +18,7 @@ def load_result_from_file():
     return results
 
 def json_formatter(text):
-    match = re.search(r'\{(?:[^{}]|)*\}', text)
+    match = re.search(r'\{.*?\}', text)
     if match:
         json_part = match.group()
         return json_part
@@ -30,14 +30,11 @@ def opinion_counter():
     results = load_result_from_file()
     params = load_schema()
 
-    round = params.get("round")
     timestep = params.get("timestep")
 
     tables = []
     for simulation in results:
-        round = simulation.get("round")
         result = simulation.get("result")
-        row = []
         # init a timestep * opinon(3) table for each round
         table = np.zeros((timestep, 3))
         for r in range(0, len(result)):
