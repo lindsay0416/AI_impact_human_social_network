@@ -1,15 +1,15 @@
 {
     "round": 3,
-    "timestep": 5,
+    "timestep": 10,
     "influence_prob": 0.3,
     "is_directed": false,
     "is_external_dataset": false,
-    "node_size": 10,
+    "node_size": 50,
     "random_edges": 2,
     "connect_prob": 0.35,
     "evolution_prob": 0.3,
-    "generate_user_profile": true,
-    "user_profile_prompt": "Generate user profile as a 50-word unique description.\nAges of these users follow Gaussian distribution, gender is half and half.\nListed your response by user id strats with 'N' in JSON format.\nBased on this example:\n\"N1\": {\n     \"name\": \"Emily\",\n     \"age\": 32,\n     \"gender\": \"female\",\n     \"description\": \"a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.\"\n   }",
-    "broadcasting_prob": 0.5,
+    "generate_user_profile": false,
+    "user_profile_prompt": "Generate 50 user profiles as a 50-word unique description.\nAges of these users follow Gaussian distribution, gender is half and half.\nListed your response by user id strats with 'N' in JSON format.\nBased on this example:\n\"N1\": {\n     \"name\": \"Emily\",\n     \"age\": 32,\n     \"gender\": \"female\",\n     \"description\": \"a passionate artist who loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.\"\n   }",
+    "broadcasting_prob": 0.2,
     "initial_message":"The article discusses the rise of 'clean wine', popularized by celebrities like Cameron Diaz, as part of the wellness trend. While marketed as healthier, the author argues that wine should be appreciated for its taste and quality, cautioning against the overemphasis on health benefits and advocating for buying from good wine shops."
 }

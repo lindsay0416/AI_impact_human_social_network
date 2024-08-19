@@ -161,6 +161,9 @@ PUT received_text_test01
 ### ./analysis/extract_article_comments.py
 * Extract the real world comments from the dataset.
 
+### ./analysis/comments_compare.py
+* extract the simulation response
+
 # How to run llama locally
 * Download App: https://ollama.com/
 * pip install ollama
