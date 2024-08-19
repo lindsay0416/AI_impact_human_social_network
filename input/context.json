@@ -1,0 +1,122 @@
+{
+    "Hobart, Australia": {
+        "Working age population (aged 15-64 years):": "68.5%",
+        "Males": "48.94%",
+        "Females": "50.98%",
+        "Personal weekly income": {
+            "$1-$499 per week (%)": 20.9,
+            "$500-$999 per week (%)": 23,
+            "$1000-$1999 per week (%)": 27.8,
+            "$2000-$2999 per week (%)": 8.9,
+            "$3000 or more per week (%)": 6.1,
+            "Nil income (%)": 7.6,
+            "Negative income (%)": 0.4,
+            "Income inadequately described or not stated (%)": 5.4
+          },
+        "Education": {
+            "Secondary school or lower (%)": 18.9,
+            "Postgraduate degree (%)": 16.7,
+            "Graduate diploma/graduate certificate (%)": 4.5,
+            "Bachelor degree (%)": 27.8,
+            "Advanced diploma/diploma (%)": 8.1,
+            "Certificate (%)": 10.6,
+            "Non-school qualification inadequately described (%)": 0.7,
+            "Non-school qualification not stated (%)": 6
+          },
+        "Occupation": {
+            "Managers (%)": 14.3,
+            "Professionals (%)": 36.7,
+            "Technicians and trades workers (%)": 8.8,
+            "Community and personal service workers (%)": 12.8,
+            "Clerical and administrative workers (%)": 10.7,
+            "Sales workers (%)": 7.1,
+            "Machinery operators and drivers (%)": 2,
+            "Labourers (%)": 6.1,
+            "Occupation inadequately described or not stated (%)": 1.4
+          }
+    },
+    "Auckland, New Zealand": {
+        "Median age": 34.7,
+        "Males": "49.43%",
+        "Females": "50.57%",
+        "Occupation": {
+            "Managers": 18.1,
+            "Professionals": 25.9,
+            "Technicians and trade workers": 11.4,
+            "Community and personal service workers": 9.1,
+            "Clerical and administrative workers": 11.7,
+            "Sales workers": 10.0,
+            "Machinery operators and drivers": 5.9,
+            "Labourers": 7.9
+        },
+        "Education": {
+            "No qualification": 14.5,
+            "Level 1 certificate": 8.7,
+            "Level 2 certificate": 8.4,
+            "Level 3 certificate": 11.5,
+            "Level 4 certificate": 7.2,
+            "Level 5 diploma": 4.7,
+            "Level 6 diploma": 4.8,
+            "Bachelor's degree and level 7 qualification": 18.6,
+            "Post-graduate and honours degrees": 6.6,
+            "Master's degree": 5.0,
+            "Doctorate degree": 0.9,
+            "Overseas secondary school qualification": 9.1
+        },
+        "Personal yearly income": {
+          "Loss": 0.6,
+          "Zero income": 8.7,
+          "$1-$5,000": 6.2,
+          "$5,001-$10,000": 4.9,
+          "$10,001-$15,000": 6.4,
+          "$15,001-$20,000": 8.1,
+          "$20,001-$25,000": 6.5,
+          "$25,001-$30,000": 4.7,
+          "$30,001-$35,000": 4.4,
+          "$35,001-$40,000": 5.3,
+          "$40,001-$50,000": 9.6,
+          "$50,001-$60,000": 8.4,
+          "$60,001-$70,000": 6.4,
+          "$70,001-$100,000": 10.3,
+          "$100,001-$150,000": 5.6,
+          "$150,001 or more": 3.9
+        }  
+    },
+    "Sydney, Australia": {
+        "Working age population (aged 15-64 years):": "64.6%",
+        "Males": "49.71%",
+        "Females": "50.28%",
+        "Personal weekly income": {
+          "$1-$499 per week (%)": 20.4,
+          "$500-$999 per week (%)": 20.3,
+          "$1000-$1999 per week (%)": 26.4,
+          "$2000-$2999 per week (%)": 8.9,
+          "$3000 or more per week (%)": 7.1,
+          "Nil income (%)": 9.7,
+          "Negative income (%)": 0.7,
+          "Income inadequately described or not stated (%)": 6.5
+      },
+      "Education": {
+        "Secondary school or lower (%)": 26.2,
+        "Postgraduate degree (%)": 9.4,
+        "Graduate diploma/graduate certificate (%)": 2.1,
+        "Bachelor degree (%)": 21.8,
+        "Advanced diploma/diploma (%)": 9.7,
+        "Certificate (%)": 14.8,
+        "Non-school qualification inadequately described (%)": 0.8,
+        "Non-school qualification not stated (%)": 7.2
+    },
+    "Occupation": {
+      "Managers (%)": 15.2,
+      "Professionals (%)": 29.3,
+      "Technicians and trades workers (%)": 10.5,
+      "Community and personal service workers (%)": 9.3,
+      "Clerical and administrative workers (%)": 13.8,
+      "Sales workers (%)": 7.8,
+      "Machinery operators and drivers (%)": 5.6,
+      "Labourers (%)": 6.8,
+      "Occupation inadequately described or not stated (%)": 1.9
+  }
+      
+    }
+}

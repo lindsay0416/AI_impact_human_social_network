@@ -7,14 +7,19 @@ import matplotlib.pyplot as plt
 import collections
 import numpy as np
 from llama_local_api import LlamaApi
+import re
+import time
+
 import openai
 from tool.config_manager import ConfigManager
+from analysis.result_analysis import json_formatter
 from llm_generate_text import GenerateText
 import re
 
 
 logger = logging.getLogger("ds_tool")
 logging.basicConfig(level="INFO")
+BATCH_SIZE = 30
 
 def init_parser():
     parser = argparse.ArgumentParser(description="Hyper Parameters")
@@ -24,64 +29,52 @@ def init_parser():
     parser.print_help()
     return args
 
+def generate_user_profile(prompt, node_size):
+    profiles = ""
+    batch_size = BATCH_SIZE
+    batch_num = (node_size + batch_size - 1) // batch_size # 30 users as a batch
+    for i in range(batch_num):
+        generate_prompt = f"Generate user profiles for {batch_size} users as a 30-word unique description," +\
+                          prompt
+        print(generate_prompt)
+        # config_manager = ConfigManager('config.ini')
+        # api_key = config_manager.get_api_key()
+        # openai.api_key = api_key
+        # response, generate_prompt = GenerateText.get_generated_text(openai, generate_prompt)
+        
+        response = LlamaApi.llama_generate_messages(generate_prompt)
+       
+        profiles += response
 
-# def generate_user_profile(prompt):
-#     print(prompt)
-#     config_manager = ConfigManager('config.ini')
-#     api_key = config_manager.get_api_key()
-#     openai.api_key = api_key
-#     response, prompt = GenerateText.get_generated_text(openai, prompt)
-#     response = json.loads(response)
-
-#     # response = LlamaApi.llama_generate_messages(prompt)
-
-#     with open("input/user_profile.json", "w") as json_file:
-#         json.dump(response, json_file, indent=4)
-#         logger.info("Generated user profiles saved to input/user_profile.json")
-
-
-def generate_user_profile(prompt):
-    print("Prompt used for generating profile:", prompt)
+    with open("input/user_profile.txt", "w") as file:
+        file.write(profiles)
     
-    json_file_path = "./input/user_profile.json"
-    # Fetch the response from Llama API
-    response = LlamaApi.llama_generate_messages(prompt)
+    validate_generated_profile(prompt, node_size, batch_size)
 
-    # Write the response to a text file
-    with open("./input/user_profile.txt", "w") as text_file:
-        text_file.write(response)  # Writing response directly to a text file
-        logger.info("Generated user profiles saved to user_profile.txt")
+def validate_generated_profile(prompt, node_size, batch_size):
+    profiles = {}
+    with open("input/user_profile.txt", "r") as file:
+        data = file.read()
+
+    profiles = {}
+    matches = re.findall(r'\{(.*?)\}', data)
+    for idx, entry in enumerate(matches, start=1):
+        profileID = f"N{idx}"
+        profile = {}
+        if entry.strip():
+            entry_data = entry.split("; ")
+            for item in entry_data:
+                key, value = item.split(": ", 1)
+                profile[key] = value
+        profiles[profileID] = profile
+
+    profiles = {key: value for index, (key, value) in enumerate(profiles.items()) if index < node_size}
+    json_data = json.dumps(profiles, indent=4)
+
+    with open("input/user_profile.json", "w") as json_file:
+        json_file.write(json_data)
+
     
-    save_to_json("user_profile.txt", json_file_path)
-    return response
-
-def save_to_json(file_path, json_file_path):
-    # Read the content of the file
-    with open(file_path, 'r') as file:
-        content = file.read()
-
-    # Extract JSON formatted data from content
-    # Assuming the JSON data starts from the first '{' and ends at the last '}'
-    json_data_start = content.find('{')
-    json_data_end = content.rfind('}') + 1
-    json_content = content[json_data_start:json_data_end]
-
-    print("Extracted JSON content:")
-    print(json_content)
-
-    try:
-        # Load the JSON data
-        data = json.loads(json_content)
-    except json.JSONDecodeError as e:
-        print(f"JSON decode error: {e}")
-        return
-
-    # Save the JSON data to json_file_path
-    with open(json_file_path, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
-
-    print(f"Data has been successfully extracted and saved to {json_file_path}.")
-
 
 def convert_tool(dataset_file):
     G = nx.Graph()
@@ -169,6 +162,6 @@ if __name__ == '__main__':
     
     convert_tool(args.dataset)
     G = load_graph("graph.G")
-    graph_show_info(G)
+    # graph_show_info(G)
     # graph_degree_to_figure(G)
     # graph_to_figure(G)
