@@ -77,10 +77,10 @@
                 <input type="text" id="influence_prob" name="influence_prob" value="{{ data.get('influence_prob', '0.3') }}"><br>
 
                 <label for="is_directed">Is Directed:</label>
-                <input type="checkbox" id="is_directed" name="is_directed" value="{{ data.get('is_directed', 'true') }}"><br>
+                <input type="checkbox" id="is_directed" name="is_directed" value="true" {% if data.get("is_directed") %}checked{% endif %}><br>
 
                 <label for="is_external_dataset">Is External Dataset:</label>
-                <input type="checkbox" id="is_external_dataset" name="is_external_dataset" value="{{ data.get('is_external_dataset', 'true') }}"><br>
+                <input type="checkbox" id="is_external_dataset" name="is_external_dataset" value="true" {% if data.get("is_external_dataset") %}checked{% endif %}><br>
 
                 <label for="node_size">Node Size:</label>
                 <input type="number" id="node_size" name="node_size" value="{{ data.get('node_size', '100') }}"><br>
@@ -95,24 +95,23 @@
                 <input type="text" id="evolution_prob" name="evolution_prob" value="{{ data.get('evolution_prob', '0.3') }}"><br>
 
                 <label for="generate_user_profile">Generate User Profile:</label>
-                <input type="checkbox" id="generate_user_profile" name="generate_user_profile" value="{{ data.get('generate_user_profile', 'true') }}" checked><br>
-
+                <input type="checkbox" id="generate_user_profile" name="generate_user_profile" value="true" {% if data.get("generate_user_profile") %}checked{% endif %}><br>
                 <label for="user_profile_prompt">User Profile Prompt:</label>
                 <textarea id="user_profile_prompt" name="user_profile_prompt" rows="10" cols="48">List per user profiles each line.List per user profiles each line. Each profile follows a text format like this example: "1: {Name: Emily; Location: Auckland, New Zealand; Age: 32; Gender: Female; Education: Bachelor; Occupation: Artist; Description: Emily loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.}"</textarea><br>
 
                 <label for="location">Location:</label>
                 <select id="location" name="location">
-                    <option value="Hobart, Australia">Hobart, Australia</option>
-                    <option value="Auckland, New Zealand">Auckland, New Zealand</option>
-                    <option value="Sydney, Australia">Sydney, Australia</option>
-                    <option value="">Worldwide</option>
+                    <option value="Hobart, Australia" {% if data.get('location') == "Hobart, Australia" %}selected{% endif %}>Hobart, Australia</option>
+                    <option value="Auckland, New Zealand" {% if data.get('location') == "Auckland, New Zealand" %}selected{% endif %}>Auckland, New Zealand</option>
+                    <option value="Sydney, Australia" {% if data.get('location') == "Sydney, Australia" %}selected{% endif %}>Sydney, Australia</option>
+                    <option value="" {% if data.get('location') == "" %}selected{% endif %}>Worldwide</option>
                 </select><br>
 
                 <label for="broadcasting_prob">Broadcasting Probability:</label>
                 <input type="text" id="broadcasting_prob" name="broadcasting_prob" value="{{ data.get('random_edges', '0.3') }}"><br>
 
                 <label for="initial_message">Initial Message:</label>
-                <textarea id="initial_message" name="initial_message">Hello from LLM-AIDSim!</textarea><br>
+                <textarea id="initial_message" name="initial_message" rows="10" cols="48">Hello from LLM-AIDSim!</textarea><br>
 
                 <button type="submit">Submit Parameter Settings</button>
             </form>
@@ -126,12 +125,23 @@
                 <button type="button" onclick="toggleAnimation()">Animation</button>
             </div>
         </div>
+        <div id="content">
+            <h2>Simulation Output</h2>
+            <pre id="output"></pre>
+        </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
 <script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
     function startSimulation() {
-        console.log("Simulation started");
+        socket.emit('start-simulation', {});
     }
+
+    socket.on('simulation_update', function(data) {
+        document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+    });
     
     function nextStep() {
         console.log("Next step in simulation");

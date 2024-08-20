@@ -1,20 +1,26 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import json
+from flask_socketio import SocketIO, emit
 import os
+import subprocess
+import time
 
 app = Flask(__name__)
+app.secret_key = 'secretkey'
+socketio = SocketIO(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        session['form_data'] = request.form
-        return redirect(url_for('index'))
-    form_data = session.get('form_data', {})
+    form_data = session.get('parameters', {})
+    if not form_data and os.path.exists('input/parameters.json'):
+        with open('input/parameters.json', 'r') as json_file:
+            form_data = json.load(json_file)
+            session['parameters'] = form_data 
+
     return render_template('simulation.html', data=form_data)
 
 @app.route('/submit', methods=['POST'])
 def submit_parameters():
-    # Read the form data
     parameters = {
         "round": request.form.get('round', type=int),
         "timestep": request.form.get('timestep', type=int),
@@ -32,12 +38,31 @@ def submit_parameters():
         "initial_message": request.form.get('initial_message', type=str)
     }
 
-    # Write to JSON file
     os.makedirs('input', exist_ok=True)
     with open('input/parameters.json', 'w') as json_file:
         json.dump(parameters, json_file, indent=4)
-
+    
+    session['parameters'] = parameters
     return redirect(url_for('index'))
 
+@app.route('/start-simulation', methods=['POST'])
+def start_simulation():
+    try:
+        script_path = os.path.join(os.path.dirname(__file__),'simulation.py')
+        subprocess.run(['python', script_path], check=True)
+
+        return jsonify({"status": "Simulation started and completed successfully."})
+    except subprocess.CalledProcessError as e:
+        return jsonify({"status": "Simulation failed.", "error": str(e)}), 500
+    
+@app.route('/simulation-result', methods=['GET'])
+def get_simulation_result():
+    try:
+        with open('saved/results.json', 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except FileNotFoundError:
+        return jsonify({"status": "No simulation result found."}), 404
+    
 if __name__ == '__main__':
     app.run(debug=True)

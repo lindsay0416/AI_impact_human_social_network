@@ -10,10 +10,12 @@ import tool.dataset_tool as dt
 
 from datetime import datetime
 import time
+import sys
 
 # init logger
 logger = logging.getLogger("simulation")
-logging.basicConfig(level="INFO")
+logging.basicConfig(level=logging.INFO)
+
 
 NODE_SIZE = 20
 CONNECT_PROB = 0.1
@@ -90,7 +92,6 @@ def simulation(params):
             initial_message=initial_message)
         
     logger.info("Simulation initialization finished, start broadcasting...")
-        
     initial_message_content = params.get("initial_message")
     environment.start_infection(broadcasting_prob, initial_message_content)
 
@@ -172,6 +173,9 @@ def start_diffusion(params, round, environment):
 
             newly_activated = new_influenced
             all_activated += newly_activated
+        with open("saved/simulation_result.json", 'w') as file:
+            json.dump(step_result, file)
+    
     return steps
 
 def global_analysis(environment, timestep):
