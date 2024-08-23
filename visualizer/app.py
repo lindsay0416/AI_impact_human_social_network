@@ -63,6 +63,15 @@ def get_simulation_result():
         return jsonify(data)
     except FileNotFoundError:
         return jsonify({"status": "No simulation result found."}), 404
-    
+
+@app.route('/simulation-graph', methods=['GET'])
+def load_graph():
+    try:
+        with open('saved/graph.json', 'r') as f:
+            data = json.load(f)
+        return jsonify(data)
+    except FileNotFoundError:
+        return jsonify({"status": "No simulation result found."}), 404
+
 if __name__ == '__main__':
     app.run(debug=True)

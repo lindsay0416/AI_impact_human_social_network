@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLM-AIDSim</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.19.1/cytoscape.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -36,6 +37,11 @@
             background-color: #f8f9fa;
             height: 100%; /* Adjust height if necessary */
         }
+        #output-container {
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%; /* Adjust height if necessary */
+        }
         form, #content {
             display: block;
             height: auto;
@@ -56,6 +62,22 @@
 
         #buttons button:hover {
             background-color: #45a049;
+        }
+
+        /* Tooltip styles */
+        .cy-tooltip {
+            position: absolute;
+            max-width: 200px; /* Set a maximum width for the tooltip */
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 5px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 10;
+            display: none; /* Initially hidden */
+            white-space: normal; /* Allow text wrapping */
+            word-wrap: break-word; /* Break long words if necessary */
         }
     </style>
 </head>
@@ -108,7 +130,7 @@
                 </select><br>
 
                 <label for="broadcasting_prob">Broadcasting Probability:</label>
-                <input type="text" id="broadcasting_prob" name="broadcasting_prob" value="{{ data.get('random_edges', '0.3') }}"><br>
+                <input type="text" id="broadcasting_prob" name="broadcasting_prob" value="{{ data.get('broadcasting_prob', '0.3') }}"><br>
 
                 <label for="initial_message">Initial Message:</label>
                 <textarea id="initial_message" name="initial_message" rows="10" cols="48">Hello from LLM-AIDSim!</textarea><br>
@@ -119,19 +141,24 @@
         <div id="content">
             <h2>Canvas</h2>
             <div id="buttons">
-                <button type="button" onclick="startSimulation()">Start</button>
+                <!-- <button type="button" onclick="startSimulation()">Start</button>
                 <button type="button" onclick="nextStep()">Next</button>
-                <button type="button" onclick="stopSimulation()">Stop</button>
-                <button type="button" onclick="toggleAnimation()">Animation</button>
+                <button type="button" onclick="stopSimulation()">Stop</button> -->
+                <button type="button" onclick="loadGraph()">Animation</button>
             </div>
+            <div id="cy" style="width: 800px; height: 600px;"></div>
+            
         </div>
-        <div id="content">
-            <h2>Simulation Output</h2>
-            <pre id="output"></pre>
-        </div>
+    </div>
+    
+    <div id="output-container">
+        <h2>Simulation Output</h2>
+        <pre id="output"></pre>
+        <button type="button" onclick="fetchSimulationResult()">Fetch Simulation Result</button>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
     var socket = io.connect('http://' + document.domain + ':' + location.port);
 
@@ -154,6 +181,107 @@
     function toggleAnimation() {
         console.log("Animation toggled");
     }
+
+    function fetchSimulationResult() {
+        fetch('/simulation-result')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error fetching simulation result:', error));
+    }
+
+    function loadGraph() {
+        fetch('/simulation-graph')
+            .then(response => response.json())
+            .then(data => {
+                var nodes = [];
+                var edges = [];
+                var elements = [];
+                data.nodes.forEach(node => {
+                    elements.push({
+                        data: {
+                            id: node.id,
+                            profile: node.profile ? node.profile : `Node ${node.id}`
+                        }
+                    });
+                });
+                data.edges.forEach(edge => {
+                    elements.push({
+                        data: {
+                            source: edge[0],
+                            target: edge[1]
+                        }
+                    });
+                });
+                
+                var cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    elements: elements,
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'label': 'data(label)',
+                                'width': 20,
+                                'height': 20,
+                                'background-color': '#69b3a2',
+                                'text-valign': 'center',
+                                'text-halign': 'center'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 2,
+                                'line-color': '#999'
+                            }
+                        }
+                    ],
+                    layout: {
+                        name: 'cose',  // or 'grid', 'circle', etc.
+                        fit: true,
+                        padding: 10
+                    }
+                });
+
+                var tooltip = document.createElement('div');
+                tooltip.className = 'cy-tooltip';
+                document.getElementById('cy').appendChild(tooltip);
+
+                // Event listener for node hover
+                cy.on('mouseover', 'node', function(evt) {
+                    var node = evt.target;
+                    var nodeData = elements.find(el => el.data.id === node.id());
+                    
+                    console.log(nodeData)
+                    var tooltipText = nodeData.data.profile ? `
+                        <strong>${nodeData.data.profile.Name}</strong><br>
+                        Location: ${nodeData.data.profile.Location}<br>
+                        Age: ${nodeData.data.profile.Age}<br>
+                        Gender: ${nodeData.data.profile.Gender}<br>
+                        Occupation: ${nodeData.data.profile.Occupation}<br>
+                        ${nodeData.data.profile.Description}
+                    ` : `Node ${node.id()}`;
+                    tooltip.innerHTML = tooltipText;
+                    tooltip.style.display = 'block';
+
+                    // Get the position of the node
+                    var position = node.renderedPosition();
+
+                    // Adjust the tooltip's position based on the node's position
+                    tooltip.style.left = (position.x + 15) + 'px';  // Adjust the offset as needed
+                    tooltip.style.top = (position.y - tooltip.offsetHeight - 15) + 'px';
+                });
+
+                // Event listener for node mouseout (to hide the tooltip)
+                cy.on('mouseout', 'node', function(evt) {
+                    tooltip.style.display = 'none';
+                });
+            })
+            .catch(error => console.error('Error loading graph:', error));
+        }
+
     </script>
     
 </html>
