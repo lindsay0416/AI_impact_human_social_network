@@ -1,3 +1,6 @@
+# Get the data from the results.json
+# Collect all posts from the last step of the last round
+
 import json
 import re
 
