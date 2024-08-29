@@ -40,7 +40,7 @@ class TextTopicAnalyzer:
             for sentence in self.sentences:
                 outfile.write(sentence + '\n')
 
-    def find_optimal_k(self, min_k=2, max_k=10):
+    def find_optimal_k(self, min_k, max_k):
         """Find the optimal number of clusters using Silhouette Score."""
         if not self.sentences:
             print("No sentences to process. Make sure to load and preprocess sentences first.")
@@ -124,8 +124,8 @@ class TextTopicAnalyzer:
 
 # Example usage:
 # Initialize the TextTopicAnalyzer class
-analyzer = TextTopicAnalyzer(input_file_path='simulation_response.txt',
-                             output_file_path='processed_sentences.txt')
+analyzer = TextTopicAnalyzer(input_file_path='extracted_text/simulation_response_only.txt',
+                             output_file_path='extracted_text/processed_sentences.txt')
 
 # Load and preprocess sentences
 analyzer.load_and_preprocess_sentences()
@@ -134,10 +134,10 @@ analyzer.load_and_preprocess_sentences()
 analyzer.save_preprocessed_sentences()
 
 # Find the optimal number of clusters
-optimal_k = analyzer.find_optimal_k(min_k=2, max_k=10)
+optimal_k = analyzer.find_optimal_k(8, 30)
 
 # Cluster the sentences using the optimal number of clusters
-analyzer.cluster_sentences(optimal_k)
+analyzer.cluster_sentences(8)
 
 # Summarize each cluster using LLM
 analyzer.summarize_clusters()
