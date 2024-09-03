@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import nltk
 import json
 from llama_local_api import LlamaApi
+import os
 
 # Ensure NLTK punkt tokenizer is downloaded
 nltk.download('punkt')
@@ -68,7 +69,15 @@ class TextTopicAnalyzer:
         plt.xlabel('Number of clusters (k)')
         plt.ylabel('Silhouette Score')
         plt.title('Silhouette Score for different k values')
+
+        # Save the figure
+        images_dir = "images"
+        os.makedirs(images_dir, exist_ok=True)
+        plot_path = os.path.join(images_dir, 'silhouette_score_plot.png')
+        plt.savefig(plot_path)
         plt.show()
+
+        print(f"Silhouette score plot saved to {plot_path}")
 
         return best_k
 
@@ -137,7 +146,7 @@ analyzer.save_preprocessed_sentences()
 optimal_k = analyzer.find_optimal_k(8, 30)
 
 # Cluster the sentences using the optimal number of clusters
-analyzer.cluster_sentences(8)
+analyzer.cluster_sentences(optimal_k)
 
 # Summarize each cluster using LLM
 analyzer.summarize_clusters()

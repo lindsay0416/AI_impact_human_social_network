@@ -1,0 +1,1420 @@
+As a wine enthusiast myself, I agree that we shouldn't overemphasize the health benefits. The real value lies in the taste and quality. I've had some amazing experiences with good wine shops and would recommend seeking them out.",
+"opinion": "Support",
+"phrases": ["wine enthusiast", "taste and quality", "good wine shops"]
+
+
+As someone who enjoys exploring new trails in the Waitakere Ranges, I think it's fantastic to see people appreciating the finer things in life, like a great glass of wine. It's all about finding balance and not just focusing on one aspect.",
+"opinion": "Support",
+"phrases": ["enjoying exploring", "appreciating the finer", "finding balance"]
+
+
+As someone who appreciates the art of old-school video games, I think it's great that people are finding new ways to enjoy wine. While health benefits might be a bonus, let's not forget that good wine is about the taste and quality, just like a well-designed gaming experience.",
+"opinion": "Support",
+"phrases": ["appreciates", "enjoy wine", "taste and quality", "well-designed gaming experience"]
+
+
+As a professional who values quality and attention to detail, I think it's great that people are paying more attention to the wine they drink. It's not just about the wellness trend, but also about appreciating the craftsmanship that goes into making a good bottle.",
+"opinion": "Support",
+"phrases": ["values", "quality", "attention to detail", "craftsmanship"]
+
+
+As a manager, I appreciate the art of crafting a fine wine just like building a strong team. It's about finding the perfect blend of skills, personalities and values that bring people together. Wine should be savored and enjoyed, not just marketed as a healthy option.",
+"opinion": "Support",
+"phrases": ["As a manager", "finding the perfect blend", "Wine should be savored"]
+
+
+As someone who enjoys cooking and trying out new recipes, I think it's great that people are exploring different types of wine. Maybe we can find a balance between appreciating the taste and quality of wine and considering its health benefits.",
+"opinion": "Support",
+"phrases": ["appreciate the taste", "find a balance", "considering its health benefits"]
+
+
+I think it's great that people are getting into wine, but let's not forget the art of enjoying a good glass! The celebrities' influence might be driving the 'clean wine' trend, but I believe we should focus on finding what makes us happy, whether that's a glass of Pinot Noir or a cold beer after a rugby game.",
+"opinion": "Support",
+"phrases": ["it's great that people are getting into wine", "let's not forget the art of enjoying a good glass", "finding what makes us happy"]
+
+
+I'm all about appreciating good wine, whether it's 'clean' or not! As a technician, I enjoy the process of finding the perfect blend, just like solving a puzzle. Cameron Diaz might be promoting wellness, but I think people should focus on what they truly enjoy, whether that's wine or photography.",
+"opinion": "Support",
+"phrases": ["I'm all about appreciating good wine", "just like solving a puzzle", "people should focus on what they truly enjoy"]
+
+
+I'm a bit skeptical about this 'clean wine' hype. As someone who appreciates a good glass of red, I think we're getting too caught up in the wellness aspect and losing sight of what really matters - the taste and quality.",
+"opinion": "Oppose",
+"phrases": ["skeptical", "appreciate", "getting too caught up", "lose sight of"]
+
+
+Wine enthusiasts are getting too caught up in the wellness trend. As someone who appreciates a good glass of wine, I think we should focus on the quality and taste rather than the perceived health benefits.",
+"opinion": "Oppose",
+"phrases": ["getting too caught up", "appreciate", "quality and taste", "perceived health benefits"]
+
+
+As someone who works closely with communities, I think it's great that people are exploring healthier drinking options. However, let's not forget the importance of enjoying wine for its taste and cultural significance rather than just its supposed health benefits.",
+"opinion": "Support",
+"phrases": ["Healthier drinking options", "Enjoying wine", "Cultural significance"]
+
+
+I agree that wine's taste and quality should be appreciated. As someone who loves organizing events, I've seen how 'clean wine' has become trendy in social gatherings. While it's great to prioritize health, I think it's also important to consider the cultural aspect of enjoying a good glass of wine. After all, life is about balance!",
+    "opinion": "Support",
+    "phrases": ["I agree", "prioritize the cultural aspect", "life is about balance"]
+
+
+As an artist, I believe that wine is not just about its health benefits but also about the emotional connection we make with it. When we appreciate the beauty in the process of making wine, we start to understand its cultural significance. Ultimately, our relationship with wine should be about balance and harmony.",
+"opinion": "Support",
+"phrases": ["emotional connection", "cultural significance", "balance and harmony"]
+
+
+I think it's essential to appreciate wine for its cultural significance and the stories behind each bottle. The emphasis on 'clean wine' might lead to overlooking the craftsmanship and history that goes into creating a great wine.",
+"opinion": "Support",
+"phrases": ["appreciate wine", "cultural significance", "stories behind each bottle", "emphasis on", "overlooking the craftsmanship"]
+
+
+I agree that wine should be appreciated for its taste and quality, but I also think it's great that people are becoming more conscious about their drinking habits. Perhaps we can find a balance between enjoying good wine and being mindful of our health.",
+"opinion": "Support",
+"phrases": ["agree", "appreciated", "taste", "quality", "conscious", "balance", "enjoying"]
+
+
+As someone who appreciates good taste, I think it's great that people are prioritizing quality wine over just focusing on health benefits. It's about enjoying a nice glass of wine with friends, not just relying on Instagram influencers.",
+"opinion": "Support",
+"phrases": ["good taste", "prioritizing quality", "enjoying a nice glass"]
+
+
+I think it's great that people are looking for ways to make healthy choices, but let's not forget what makes wine special - the way it brings people together! Whether it's 'clean' or not, sharing a bottle with friends is about more than just the benefits.",
+"opinion": "Support",
+"phrases": ["Make healthy choices", "Brings people together", "Sharing a bottle"]
+
+
+As someone who loves to unwind with a good book, I think it's great that people are finding new ways to relax. However, I'm not convinced that 'clean wine' is all it's cracked up to be. Maybe we should focus on enjoying wine for its own sake, rather than getting caught up in the wellness trend?",
+"opinion": "Neutral",
+"phrases": ["unwind", "relax", "cracked up"]
+
+
+As someone who appreciates good business strategies, I think the focus on 'clean wine' can be beneficial for the industry. It's about time we started prioritizing quality over health claims.",
+"opinion": "Support",
+"phrases": ["good business strategies", "prioritizing quality"]
+
+
+The way we consume wine can definitely influence our perception of it. As an artist, I appreciate the beauty in the process and the end result - just like how a perfect glass of wine can elevate a night out with friends.",
+"opinion": "Support",
+"phrases": ["consume wine", "perception", "appreciate the beauty", "perfect glass"]
+
+
+While I appreciate the trend towards healthier wine options, I think it's crucial to acknowledge the cultural significance of fine wine. As someone who organizes events and appreciates good design, I believe that the artistry behind crafting a great wine is just as important as its health benefits.",
+"opinion": "Support",
+"phrases": ["While I appreciate", "cultural significance", "artistry behind"]
+
+
+I'm curious to know more about the production process behind 'clean wine' and whether it's worth trying out some of these healthier options.",
+"opinion": "Neutral",
+"phrases": ["curious", "healthier options"]
+
+
+I think the clean wine trend reflects a broader cultural shift towards prioritizing health and wellness. As someone who values data-driven decision making, I'm intrigued by the potential benefits of 'clean' wine, but also concerned about the potential drawbacks.",
+"opinion": "Neutral",
+"phrases": ["reflects", "prioritizing", "data-driven", "potential benefits", "potential drawbacks"]
+
+
+As a community worker, I understand the importance of wellness trends, but I also believe that it's essential to appreciate wine for its taste and quality. Let's not forget the art of enjoying a good glass of wine!",
+"opinion": "Support",
+"phrases": ["Appreciate wine", "Art of enjoying"]
+
+
+I'm not a wine connoisseur, but it seems to me that the emphasis on 'clean wine' is just another example of how we're constantly trying to find shortcuts or quick fixes. As someone who appreciates good music and craftsmanship, I think we should focus on the art of winemaking rather than its perceived health benefits.",
+    "opinion": "Support",
+    "phrases": ["it seems to me", "find shortcuts", "quick fixes", "appreciate good music", "craftsmanship"]
+
+
+As someone who loves reading about new trends, I'm intrigued by the idea of 'clean wine', but I think it's essential to consider the cultural significance of wine beyond its health benefits. Maybe we can appreciate the art of winemaking and the history behind each bottle?",
+"opinion": "Support",
+"phrases": ["I'm intrigued", "consider the cultural significance", "appreciate the art of winemaking"]
+
+
+I'm all about appreciating good wine for its taste and quality. While health benefits are important, let's not forget that wine is an art form too! As someone who enjoys organizing events, I love how wine brings people together. Can't wait to try some 'clean wine' and share it with friends!",
+"opinion": "Support",
+"phrases": ["good wine", "appreciating good wine", "wine is an art form", "bring people together"]
+
+
+As an artist, I appreciate the beauty of wine beyond its health benefits. The focus on 'clean wine' might lead to overlooking the rich culture and history behind wine-making, which is just as important.",
+"opinion": "Support",
+"phrases": ["appreciate the beauty", "beyond its health benefits", "the focus on", "overlooking the rich culture", "history behind wine-making"]
+
+
+As someone who values knowledge sharing and collaboration, I find it fascinating that the rise of 'clean wine' has sparked a conversation about the intersection of wellness and culture. While I understand the appeal of healthier options, I worry that the emphasis on health benefits might overshadow the rich history and tradition behind wine appreciation.",
+"opinion": "Neutral",
+"phrases": ["fascinating", "knowledge sharing", "wellness and culture", "healthier options", "rich history"]
+
+
+As someone who values efficiency in all aspects of life, I think it's refreshing to see people appreciating the finer things. I agree that the focus should be on quality and taste rather than perceived health benefits.",
+"opinion": "Support",
+"phrases": ["values efficiency", "appreciating the finer things", "quality and taste"]
+
+
+I agree that it's essential to appreciate wine for its taste and quality, rather than just focusing on health benefits. As someone who values knowledge sharing, I think it's crucial to educate ourselves about the wine-making process and support local vineyards.",
+"opinion": "Support",
+"phrases": ["appreciate wine", "educate ourselves", "support local vineyards"]
+
+
+As a manager, I appreciate the rise of 'clean wine' as it highlights the importance of quality control in the industry. However, I also believe that we shouldn't lose sight of traditional winemaking practices and the cultural significance they hold.",
+"opinion": "Neutral",
+"phrases": ["quality control", "traditional winemaking practices", "cultural significance"]
+
+
+I appreciate the author's caution against overemphasizing health benefits in wine appreciation. It's essential to acknowledge that wine is an art form, and its value lies not only in its taste but also in the cultural heritage it represents.",
+"opinion": "Support",
+"phrases": ["appreciate", "acknowledge", "essential"]
+
+
+I think it's fascinating how wine can be marketed in different ways, just like how I approach problem-solving with gadgets. While 'clean wine' might appeal to some, I believe wine enthusiasts should focus on its taste and quality rather than getting caught up in wellness trends.",
+"opinion": "Support",
+"phrases": ["Just like", "approach problem-solving with gadgets", "focus on its taste and quality"]
+
+
+I'm all for appreciating good wine, but let's not forget about the environmental impact of 'clean wine' production. As an artist, I believe in sustainability and would love to see more eco-friendly practices in the industry.",
+"opinion": "Neutral",
+"phrases": ["appreciate good wine", "eco-friendly practices", "sustainability"]
+
+
+I think it's great that people are getting into wine, but let's not forget about the taste and quality over just 'clean' labels. As someone who works hard every day, I appreciate a good glass of wine after work, regardless of its health benefits.",
+"opinion": "Support",
+"phrases": ["great", "taste and quality", "good glass of wine", "regardless of its health benefits"]
+
+
+It's fascinating to see how societal trends can shape our perceptions of luxury items like wine. I think it's crucial to separate the value of wine from its perceived health benefits. Perhaps we should focus on exploring the cultural significance of wine and its impact on society.",
+"opinion": "Support",
+"phrases": ["fascinating", "crucial", "cultural significance"]
+
+
+As someone who enjoys building connections with people, I think it's great that clean wine has become a popular trend. However, I do agree that we should focus on the art of winemaking rather than just its perceived health benefits.",
+    "opinion": "Support",
+    "phrases": ["enjoys building connections", "popular trend", "art of winemaking", "perceived health benefits"]
+
+
+I'm not surprised to see wine becoming a trend in wellness. As someone who enjoys troubleshooting technical issues, I appreciate a good glass of wine as much as the next person. But let's not forget that wine is meant to be enjoyed, not just for its perceived health benefits.",
+"opinion": "Neutral",
+"phrases": ["I'm not surprised", "appreciate a good glass of wine", "meant to be enjoyed"]
+
+
+I think it's refreshing to see wine being celebrated for its taste and quality rather than just its perceived health benefits. As someone who enjoys fixing things around the house, I appreciate the craftsmanship that goes into making good wine.",
+"opinion": "Support",
+"phrases": ["refreshing", "appreciate the craftsmanship"]
+
+
+I understand where the author is coming from, but as someone who values knowledge sharing, I think it's essential to highlight the health benefits of 'clean wine'. By focusing on these aspects, we can encourage a more sustainable and environmentally-friendly approach to wine production. Plus, let's be real, who doesn't love a good glass of wine?",
+"opinion": "Support",
+"phrases": ["I understand where the author is coming from", "encourage a more sustainable and environmentally-friendly approach", "who doesn't love a good glass of wine"]
+
+
+I'm all about appreciating art in any form, whether it's music or poetry. Wine, to me, is a sensory experience that should be savored for its rich flavors and aromas, not just for its perceived health benefits. The emphasis on 'clean wine' seems like a missed opportunity to explore the nuances of different varietals and winemaking techniques.",
+"opinion": "Support",
+"phrases": ["appreciating art in any form", "sensory experience", "rich flavors and aromas"]
+
+
+I think it's fascinating how our perceptions of wine are influenced by wellness trends. As someone who values knowledge sharing, I believe it's essential to separate fact from fiction when it comes to 'clean wine' claims. Perhaps we can have a discussion on the nuances of wine appreciation and debunk some common myths?",
+"opinion": "Support",
+"phrases": ["I think it's fascinating", "separate fact from fiction", "debunk some common myths"]
+
+
+I think it's great that people are paying attention to the quality of wine again! As someone who works with electronics, I appreciate the craftsmanship that goes into making good wine. It's not just about the health benefits, but about appreciating the artistry behind it.",
+"opinion": "Support",
+"phrases": ["paying attention", "appreciate the craftsmanship", "artistry behind"]
+
+
+As a manager who values efficiency, I think it's refreshing to see people focusing on the experience of enjoying wine rather than just its perceived health benefits. It's essential to recognize the nuances in quality and taste that set great wines apart.",
+"opinion": "Support",
+"phrases": ["manager", "values efficiency", "recognize nuances"]
+
+
+As a sales representative, I appreciate the emphasis on quality over health benefits. It's refreshing to see people appreciating good wine for what it is, rather than just its perceived health advantages. I'm excited to explore this trend further!",
+"opinion": "Support",
+"phrases": ["good wine", "quality over health benefits", "appreciate the emphasis on quality"]
+
+
+I'm not surprised that 'clean wine' is gaining popularity. As someone who values wellness, I appreciate the emphasis on healthier options. However, I think it's also important to remember that good wine should be savored and enjoyed, regardless of its health benefits.",
+"opinion": "Support",
+"phrases": ["I'm not surprised", "appreciate the emphasis", "good wine should be savored"]
+
+
+As an artist, I believe that wine is not just about its health benefits but also about the emotional connection we make with it. When we appreciate the beauty in the process of making wine, we start to understand its cultural significance. Ultimately, our relationship with wine should be about balance and harmony.",
+"opinion": "Support",
+"phrases": ["emotional connection", "cultural significance", "balance and harmony"]
+
+
+As someone who appreciates the art of winemaking, I think it's great that people are becoming more discerning about their wine choices. However, I do agree with the author that we shouldn't overcomplicate things by prioritizing health benefits over taste and quality.",
+"opinion": "Neutral",
+"phrases": ["art of winemaking", "discerning about their wine choices", "prioritizing health benefits over taste and quality"]
+
+
+As a manager who values strategy, I think it's crucial to distinguish between the wellness trend and genuine appreciation of wine. Rather than focusing solely on 'clean wine', we should prioritize exploring different winemaking techniques and regions to truly appreciate the art of winemaking.",
+"opinion": "Support",
+"phrases": ["values strategy", "distinguish between"]
+
+
+I'm glad to see people exploring healthier options when it comes to wine, but let's not forget that it's okay to indulge every now and then. Perhaps a balanced approach would be more beneficial in the long run.",
+"opinion": "Neutral",
+"phrases": ["It's okay to indulge", "balanced approach"]
+
+
+I'm all for appreciating wine's taste and quality, but I also think it's great that people are getting into wine culture. Maybe we can find a balance between enjoying the drink and considering its health benefits.",
+"opinion": "Support",
+"phrases": ["appreciate wine's taste", "find a balance", "considering its health benefits"]
+
+
+I appreciate the article's balanced approach to 'clean wine'. As someone who values taste and quality, I think it's essential to recognize that good wine can't be reduced to just its health benefits. In fact, I've noticed that many wine enthusiasts are more interested in exploring different varieties and flavors than focusing solely on the wellness angle.",
+"opinion": "Support",
+"phrases": ["I appreciate", "balanced approach", "good wine can't be reduced", "exploring different varieties"]
+
+
+I think it's fascinating to see how people's preferences shape the industry. As someone who values data-driven insights, I'd love to dive deeper into the market trends behind this 'clean wine' trend. Perhaps there are some interesting correlations between consumer behavior and wine quality.",
+"opinion": "Neutral",
+"phrases": ["data-driven insights", "market trends", "consumer behavior"]
+
+
+As an artist, I appreciate the emphasis on taste and quality in wine. While 'clean wine' might be popular among wellness enthusiasts, I think it's essential to recognize the beauty in the art of winemaking itself, not just its perceived health benefits.",
+"opinion": "Support",
+"phrases": ["emphasize taste and quality", "appreciate the beauty in the art of winemaking"]
+
+
+While I understand the appeal of 'clean wine', I believe we should focus on the nuanced aspects of wine appreciation. The author's caution against overemphasizing health benefits resonates with me, as a good glass of wine is about so much more than just its supposed health benefits.",
+"opinion": "Support",
+"phrases": ["nuanced aspects", "good glass of wine", "so much more"]
+
+
+I'm all about living in the moment, and if that means enjoying a good glass of wine, then so be it! As long as it's not compromising my values or health, I say go for it!",
+"opinion": "Support",
+"phrases": ["living in the moment", "enjoying a good glass of wine", "not compromising my values or health"]
+
+
+As someone who appreciates the art of old-school video games, I think it's great that people are finding new ways to enjoy wine. While health benefits might be a bonus, let's not forget that good wine is about the taste and quality, just like a well-designed gaming experience.",
+"opinion": "Support",
+"phrases": ["appreciates", "enjoy wine", "taste and quality", "well-designed gaming experience"]
+
+
+As a business enthusiast, I appreciate the emphasis on quality and taste in wine appreciation. However, as a manager, I also think it's essential to consider the sustainability aspect of the 'clean wine' trend.",
+"opinion": "Neutral",
+"phrases": ["emphasize quality", "consider sustainability"]
+
+
+As someone who appreciates the art of old-school video games, I think it's great that people are finding new ways to enjoy wine. While health benefits might be a bonus, let's not forget that good wine is about the taste and quality, just like a well-designed gaming experience.",
+"opinion": "Support",
+"phrases": ["appreciates", "enjoy wine", "taste and quality", "well-designed gaming experience"]
+
+
+I'm more concerned about the environmental impact of wine production than the 'clean wine' trend. It's great to see people prioritizing sustainability in their drinking habits.",
+    "opinion": "Support",
+    "phrases": ["concerned about", "environmental impact", "prioritizing sustainability"]
+
+
+I think it's fascinating how our cultural values shape our preferences. The notion of 'clean wine' is a reflection of our society's obsession with wellness, but let's not forget the importance of context in understanding what truly makes a good wine.",
+"opinion": "Support",
+"phrases": ["fascinating", "cultural values", "society's obsession", "importance of context"]
+
+
+I'm all for exploring new wine options, but we shouldn't forget about the classics. Maybe a blend of traditional and modern methods is the way forward.",
+"opinion": "Support",
+"phrases": ["all", "explore", "new", "options", "classics", "blend", "traditional", "modern"]
+
+
+I'm all about exploring new flavors, so the idea of clean wine being a trend is fascinating! As someone who appreciates good food and drink, it's refreshing to see people prioritizing quality over health benefits. Let's cheers to that!",
+    "opinion": "Support",
+    "phrases": ["exploring new flavors", "prioritizing quality", "good food and drink"]
+
+
+I'm not a huge wine enthusiast, but I appreciate the emphasis on quality over health benefits. It's refreshing to see people recognizing that there's more to wine than just being 'clean'.",
+"opinion": "Support",
+"phrases": ["appreciate the emphasis on quality", "recognizing that there's more to wine"]
+
+
+While I understand the importance of appreciating wine's taste and quality, I also believe that consumers have the right to make informed decisions about their health. Perhaps a balanced approach would be best - enjoying wine for its cultural significance while still considering its potential health impacts.",
+"opinion": "Neutral",
+"phrases": ["appreciate wine's taste", "quality of wine", "informed decisions about health", "balanced approach"]
+
+
+I think it's cool that people are getting into wine, but I'm not sure about this 'clean wine' trend. As a labourer, I appreciate a good glass of red after a long day's work, regardless of its health benefits. Maybe we should focus on enjoying wine for what it is, rather than trying to make it fit our wellness goals?",
+"opinion": "Support",
+"phrases": ["I think", "getting into wine", "good glass of red", "enjoying wine for what it is"]
+
+
+As a teacher, I find it interesting how wine is often linked to wellness. I think it's essential to appreciate wine not just for its supposed health benefits but also for its rich cultural heritage and taste. Perhaps we should focus on promoting responsible drinking habits rather than just jumping onto the 'clean wine' trend.",
+"opinion": "Support",
+"phrases": ["interesting", "essential", "rich cultural heritage", "responsible drinking habits"]
+
+
+As a teacher, I find it interesting how wine is often linked to wellness. I think it's essential to appreciate wine not just for its supposed health benefits but also for its rich cultural heritage and taste. Perhaps we should focus on promoting responsible drinking habits rather than just jumping onto the 'clean wine' trend.",
+"opinion": "Support",
+"phrases": ["interesting", "essential", "rich cultural heritage", "responsible drinking habits"]
+
+
+I'm all about trying new things, including clean wine! It's great to see celebrities like Cameron Diaz embracing a healthier lifestyle. However, I still believe that wine should be appreciated for its taste and quality, not just its health benefits.",
+"opinion": "Support",
+"phrases": ["trying new things", "healthier lifestyle", "taste and quality"]
+
+
+While I appreciate the emphasis on quality wine, I'm concerned that 'clean wine' might become another trend where people focus more on health benefits than actual taste. As someone who enjoys a good glass of wine after a long day of designing innovative products, I think it's essential to strike a balance between health and pleasure.",
+"opinion": "Neutral",
+"phrases": ["balance between health and pleasure", "actual taste", "emphasize quality over trendiness"]
+
+
+As someone who appreciates the art of winemaking, I think it's great that people are becoming more discerning about their wine choices. However, I do agree with the author that we shouldn't overcomplicate things by prioritizing health benefits over taste and quality.",
+"opinion": "Neutral",
+"phrases": ["art of winemaking", "discerning about their wine choices", "prioritizing health benefits over taste and quality"]
+
+
+As a journalist, I'm intrigued by the marketing strategies behind 'clean wine'. I think it's interesting to explore how this trend reflects broader societal values around wellness and self-care.",
+"opinion": "Neutral",
+"phrases": ["intrigued", "marketing strategies", "broader societal values"]
+
+
+I think it's funny how people get so worked up about 'clean wine'. I mean, at the end of the day, it's just wine. As long as it tastes good and is reasonably priced, who cares what kind of benefits it's supposed to have?",
+"opinion": "Neutral",
+"phrases": ["It's just wine", "Reasonably priced", "Tastes good"]
+
+
+As an engineer, I appreciate the attention to detail in winemaking. While 'clean wine' might have its appeal, I think it's crucial to prioritize the quality of the wine itself over trendy marketing.",
+"opinion": "Support",
+"phrases": ["attention to detail", "prioritize the quality"]
+
+
+As a journalist, I appreciate the article's balanced approach to clean wine. However, I'm concerned that the wellness trend might overshadow the art of wine-making itself.",
+    "opinion": "Neutral",
+    "phrases": ["balanced approach", "wellness trend", "art of wine-making"]
+
+
+I think it's essential to appreciate wine for its taste and quality, rather than just focusing on health benefits. As someone who values knowledge sharing, I believe we should prioritize supporting local vineyards.",
+    "opinion": "Support",
+    "phrases": ["appreciate wine", "support local vineyards"]
+
+
+I'm all for exploring new wine trends, but let's not forget about the art of winemaking itself. A good glass of wine should be savored for its taste and quality, regardless of health benefits.",
+"opinion": "Support",
+"phrases": ["A good glass of wine", "savored for its taste", "regardless of health benefits"]
+
+
+Wine enthusiasts are getting too caught up in the wellness trend. As someone who appreciates a good glass of wine, I think we should focus on the quality and taste rather than the perceived health benefits.",
+"opinion": "Oppose",
+"phrases": ["getting too caught up", "appreciate", "quality and taste", "perceived health benefits"]
+
+
+As a teacher, I appreciate the emphasis on appreciating wine's taste and quality. However, I do wonder if the focus on wellness trends might lead to a misunderstanding of the role of wine in cultural and social contexts.",
+"opinion": "Neutral",
+"phrases": ["emphasize wine's taste", "appreciate wine's quality", "wellness trend", "cultural context", "social context"]
+
+
+I understand where the author is coming from. As an engineer, I appreciate good design and craftsmanship in all aspects, including wine. While health benefits are important, I think it's equally essential to acknowledge the artistry that goes into creating a great wine. Perhaps we can strike a balance between promoting healthier options and celebrating the cultural significance of fine wine?",
+"opinion": "Support",
+"phrases": ["I understand where", "As an engineer", "good design", "craftsmanship in all aspects", "acknowledge the artistry", "celebrating the cultural significance"]
+
+
+As someone who appreciates the art of old-school video games, I think it's great that people are finding new ways to enjoy wine. While health benefits might be a bonus, let's not forget that good wine is about the taste and quality, just like a well-designed gaming experience.",
+"opinion": "Support",
+"phrases": ["appreciates", "enjoy wine", "taste and quality", "well-designed gaming experience"]
+
+
+I'm all for appreciating wine for its taste and quality! As a graphic designer, I appreciate the attention to detail that goes into crafting a good bottle. And let's be real, who doesn't love trying new craft beers?",
+"opinion": "Support",
+"phrases": ["appreciate wine", "attention to detail", "crafting a good bottle", "trying new craft beers"]
+
+
+As a researcher, I appreciate the scientific approach to evaluating the benefits of clean wine. However, it's essential to consider the cultural significance and history behind traditional winemaking practices. A balanced perspective is crucial in this debate.",
+"opinion": "Neutral",
+"phrases": ["As a researcher", "scientific approach", "cultural significance", "balanced perspective"]
+
+
+I think we're getting too caught up in the wellness trend. Wine enthusiasts should focus on the quality and taste rather than the perceived health benefits. After all, there are plenty of other ways to stay healthy.",
+"opinion": "Oppose",
+"phrases": ["getting too caught up", "quality and taste", "perceived health benefits"]
+
+
+I think it's interesting how people are prioritizing health over tradition when it comes to enjoying wine. As someone who loves craft beer, I understand the appeal of trying new flavors and exploring different production methods. However, at the end of the day, a good glass of wine is still about the taste and quality, not just its perceived health benefits.",
+    "opinion": "Support",
+    "phrases": ["I think it's interesting", "prioritizing health over tradition", "at the end of the day"]
+
+
+I think it's interesting that celebrities like Cameron Diaz are driving the trend towards 'clean wine'. As someone who appreciates a good glass of Pinot Noir, I worry that the focus on health benefits might lead to a loss of nuance in our appreciation for wine. Ultimately, I believe there's room for both quality and health consciousness in the world of wine.",
+"opinion": "Support",
+"phrases": ["interesting", "appreciates", "nuance", "quality and health consciousness"]
+
+
+As someone who values knowledge sharing and collaboration, I appreciate the author's caution against overemphasizing health benefits in wine appreciation. While it's understandable to want healthier options, I believe that we shouldn't lose sight of the rich cultural heritage behind wine.",
+"opinion": "Support",
+"phrases": ["appreciate", "caution", "rich cultural heritage"]
+
+
+As someone who loves trying out new recipes, I'm intrigued by the concept of 'clean wine'. While it's great that people are prioritizing health benefits, I think we should also appreciate the artistry behind good wine-making. Maybe there's a middle ground where we can enjoy the taste and quality of wine while still being mindful of its impact on our bodies.",
+"opinion": "Support",
+"phrases": ["appreciate the artistry", "enjoy the taste and quality", "mindful of its impact"]
+
+
+I think it's great to see people taking an interest in their well-being, but let's not forget that a good wine is all about the taste and quality. I'd rather buy a bottle of wine based on its reputation and craftsmanship than because it's marketed as 'clean'.",
+"opinion": "Support",
+"phrases": ["taking an interest", "good wine", "reputation and craftsmanship"]
+
+
+As someone who appreciates good business strategies, I think it's great to see people taking an interest in their well-being. However, let's not forget that a good wine is all about the taste and quality. I'd rather buy a bottle of wine based on its reputation and craftsmanship than because it's marketed as 'clean'.",
+"opinion": "Support",
+"phrases": ["good business strategies", "reputation and craftsmanship"]
+
+
+I'm not surprised by the rise of 'clean wine', but as an artist, I appreciate the focus on quality over health benefits. Wine is meant to be savored, not just gulped down for its perceived wellness benefits.",
+"opinion": "Support",
+"phrases": ["not surprised", "quality over health benefits", "savored", "perceived wellness benefits"]
+
+
+I think it's refreshing to see wine enthusiasts advocating for appreciation over health benefits. As someone who appreciates craftsmanship, I believe buying from good wine shops is crucial in preserving the art of winemaking.",
+"opinion": "Support",
+"phrases": ["refreshing", "appreciation", "craftsmanship", "preserving"]
+
+
+I'm all about that self-care life, but sometimes I think we get too caught up in the 'clean wine' trend and forget what really matters - enjoying a good glass of wine! As long as it's from a reputable shop, I say go for it!",
+"opinion": "Support",
+"phrases": ["self-care", "good glass of wine", "reputable shop"]
+
+
+I think it's essential to strike a balance between appreciating wine for its taste and quality, while also considering the health aspects. As someone who values informed decision-making, I believe that buying from reputable wine shops is crucial. Ultimately, our enjoyment of wine should be guided by our individual priorities.",
+"opinion": "Neutral",
+"phrases": ["strike a balance", "reputable wine shops", "individual priorities"]
+
+
+I'm all about making data-driven decisions, but when it comes to wine, I think we should focus on the quality over health benefits. The rise of 'clean wine' is an interesting trend, but let's not forget the art of enjoying a good glass.",
+    "opinion": "Support",
+    "phrases": ["making data-driven decisions", "quality over health benefits", "enjoying a good glass"]
+
+
+I'm all for supporting local winemakers who focus on quality over quantity. The idea of 'clean wine' might be appealing, but let's not forget the artistry that goes into crafting a great bottle of wine.",
+"opinion": "Support",
+"phrases": ["supporting local winemakers", "quality over quantity", "artistry in crafting a great bottle"]
+
+
+I completely agree with the author! As a salesperson, I've seen how people are more likely to buy into something that's marketed as 'healthy' or 'wellness-oriented'. It's great to see someone advocating for appreciating wine for its taste and quality rather than just its perceived health benefits. Maybe we can even do a wine-tasting event at work!",
+"opinion": "Support",
+"phrases": ["I completely agree with the author", "buy into something", "appreciate wine for its taste and quality"]
+
+
+I'm all about appreciating good wine regardless of its perceived health benefits. As someone who's worked in hospitality, I've seen too many people prioritize 'clean' labels over actual taste and quality. Let's just enjoy our wine and not get too caught up in the wellness trend!",
+"opinion": "Support",
+"phrases": ["prioritize", "actual taste", "quality", "enjoy our wine"]
+
+
+As someone who values knowledge sharing, I appreciate the article\'s emphasis on exploring wine beyond its perceived health benefits. I think it\'s essential to consider the cultural and historical context of wine appreciation, rather than just focusing on marketing trends.",
+"opinion": "Support",
+"phrases": ["explore", "consider", "cultural", "historical context"]
+
+
+As an avid hiker, I appreciate the connection between wine and nature. While 'clean wine' might be appealing to those prioritizing health, I believe that exploring the complexities of wine-making can lead to more satisfying experiences. Maybe we should focus on finding wines that balance both good taste and good for us?",
+"opinion": "Support",
+"phrases": ["balance", "good taste", "complexities"]
+
+
+I think it's great that people are embracing the art of wine-making and valuing the quality over just its health benefits. As someone who loves tinkering with gadgets, I appreciate the attention to detail that goes into crafting a fine bottle of wine.",
+"opinion": "Support",
+"phrases": ["embracing the art", "appreciate the attention", "valuing the quality"]
+
+
+While I appreciate the trend towards healthy living, I think it's essential to acknowledge that good wine is about more than just its health benefits. It's an art form, and the quality and taste are what truly matter. I'm glad celebrities like Cameron Diaz are helping to popularize this appreciation!",
+"opinion": "Support",
+"phrases": ["acknowledge the trend", "good wine is about more", "quality and taste"]
+
+
+As someone who appreciates good quality, I think it's great that people are focusing on the taste and character of wine rather than just its health benefits. It's a more authentic approach to enjoying a glass.",
+"opinion": "Support",
+"phrases": ["good quality", "appreciate the taste", "more authentic"]
+
+
+I think it's great to have options for clean wine, but let's not forget the art of enjoying a good glass of wine! It's about appreciating the taste and quality, not just the 'health benefits'.",
+"opinion": "Support",
+"phrases": ["good glass of wine", "appreciating the taste and quality"]
+
+
+As a wine enthusiast myself, I think it's great that people are getting more interested in wine. However, I agree with the author that we shouldn't overemphasize the health benefits of 'clean wine'. At the end of the day, wine is about enjoying a good glass and appreciating the art of winemaking.",
+"opinion": "Support",
+"phrases": ["enjoying a good glass", "appreciating the art of winemaking"]
+
+
+I'm all for embracing the taste and quality of wine over its health benefits. After all, a good glass of wine can be the perfect way to unwind after a long day at work or a night out with friends. It's great that celebrities like Cameron Diaz are helping to popularize this trend!",
+"opinion": "Support",
+"phrases": ["embrace the taste and quality", "perfect way to unwind", "popularize this trend"]
+
+
+While I appreciate the author's caution against overemphasizing health benefits, I think it's interesting to explore how clean wine aligns with my own wellness goals. As someone who values informed decision-making, I'd like to know more about the science behind 'clean wine' and its potential impact on our daily lives.",
+"opinion": "Neutral",
+"phrases": ["caution against overemphasizing health benefits", "explore how clean wine aligns with my own wellness goals", "values informed decision-making", "know more about the science behind 'clean wine'", "potential impact on our daily lives"]
+
+
+As a community worker, I've seen how social media can amplify harmful trends. While 'clean wine' might seem like a harmless fad, it's concerning to see people prioritizing health benefits over traditional craftsmanship and artistry.",
+"opinion": "Oppose",
+"phrases": ["social media", "harmful trends", "traditional craftsmanship", "artistry"]
+
+
+As a technician, I appreciate the artistry that goes into crafting good wine. Let's not dismiss the value of quality over quantity in our pursuit of wellness.",
+"opinion": "Support",
+"phrases": ["appreciate the artistry", "quality over quantity"]
+
+
+I'm intrigued by this trend! As someone who values quality over quantity, I think it's great that people are prioritizing taste and appreciation for good wine. However, I do hope they're not sacrificing the fun and social aspects of enjoying a glass of wine with friends.",
+"opinion": "Support",
+"phrases": ["I'm intrigued by this trend", "prioritizing taste and appreciation", "sacrificing the fun and social aspects"]
+
+
+I'm intrigued by this trend! As someone who values quality over quantity, I think it's great that people are prioritizing taste and appreciation for good wine. However, I do hope they're not sacrificing the fun and social aspects of enjoying a glass of wine with friends.",
+"opinion": "Support",
+"phrases": ["I'm intrigued by this trend", "prioritizing taste and appreciation", "sacrificing the fun and social aspects"]
+
+
+As someone who's built a career on understanding what people want, I think it's refreshing to see wine appreciated for its taste and quality rather than just its perceived health benefits. Plus, being a salesperson, I know that authenticity is key - let's celebrate good wine regardless of the wellness trend!",
+"opinion": "Support",
+"phrases": ["refreshing", "taste and quality", "authenticity"]
+
+
+As someone who appreciates good wine, I agree that it's essential to look beyond the 'clean wine' trend. While health benefits are important, the taste and quality of wine should not be overlooked. In fact, I'd argue that the best wines often require a deeper understanding of their production processes, not just a quick glance at the label.",
+"opinion": "Support",
+"phrases": ["look beyond", "taste and quality", "best wines", "deeper understanding"]
+
+
+As someone who appreciates good wine, I think it's refreshing to see people moving away from the 'clean wine' trend. At the end of the day, it's about enjoying a fine glass of wine with friends and family, not just about its perceived health benefits.",
+"opinion": "Support",
+"phrases": ["good wine", "fine glass of wine", "enjoying with friends and family"]
+
+
+I'm all for appreciating good wine, not just its health benefits. As someone who loves cooking, I think it's important to enjoy a glass of wine that complements the flavors in my dishes!",
+"opinion": "Support",
+"phrases": ["appreciating good wine", "complements the flavors"]
+
+
+As someone who values great leadership, I'm intrigued by how the wellness trend is influencing consumer choices. It's interesting to see how wine connoisseurs are adapting to the 'clean wine' craze, and whether it's a passing fad or a new standard in the industry.",
+"opinion": "Neutral",
+"phrases": ["values great leadership", "influencing consumer choices", "wine connoisseurs", "adaptating to the 'clean wine' craze", "new standard in the industry"]
+
+
+I'm not sure if clean wine is a game-changer or just a marketing gimmick. As someone who values data-driven decisions, I think we need to see some concrete evidence before jumping into the trend.",
+"opinion": "Oppose",
+"phrases": ["game-changer", "marketing gimmick", "data-driven decisions"]
+
+
+I'm fascinated by the idea of 'clean wine'! As an artist, I appreciate how something like wine can evoke emotions and spark creativity. I'd love to know more about what makes this type of wine distinct from others and how it fits into the wellness trend.",
+"opinion": "Support",
+"phrases": ["fascinated by the idea", "appreciate how something like wine", "spark creativity", "what makes this type of wine distinct", "fits into the wellness trend"]
+
+
+I agree that it's essential to focus on the quality of the wine rather than just its perceived health benefits. As someone who values informed decision-making, I think this shift in perspective can lead to more nuanced discussions about wine and its place in our lives.",
+"opinion": "Support",
+"phrases": ["essential", "focus on the quality", "informed decision-making", "nuanced discussions"]
+
+
+I'm all for sipping wine that tastes good, regardless of its 'clean' label. Let's not forget to appreciate the art of winemaking and support local vineyards!",
+"opinion": "Support",
+"phrases": ["tastes good", "appreciate the art of winemaking", "support local vineyards"]
+
+
+I think we should focus on the joy of wine-making rather than just its health benefits. By appreciating the artistry involved, we can promote a culture that values quality over quantity.",
+"opinion": "Support",
+"phrases": ["focus on the joy", "appreciate the artistry", "value quality"]
+
+
+I'm all for appreciating wine for its taste and quality rather than just its perceived health benefits. As a manager, I understand the importance of setting priorities, and if we're going to indulge in something like wine, let's do it right.",
+"opinion": "Support",
+"phrases": ["appreciate wine", "taste and quality", "set priorities", "do it right"]
+
+
+I think it's great that people are prioritizing the quality of wine over just its supposed health benefits. It's about appreciating a good product, not just jumping on a trend.",
+"opinion": "Support",
+"phrases": ["prioritizing quality", "appreciate a good product", "not just jumping on a trend"]
+
+
+I'm not sure if I agree with the author that we should focus solely on the taste and quality of wine. As someone who loves problem-solving, I think it's great that people are thinking about the health benefits too - after all, it's always good to find ways to improve our well-being. Maybe we can strike a balance between enjoying the finer things in life and looking out for our health?",
+"opinion": "Neutral",
+"phrases": ["struck a balance", "improve our well-being"]
+
+
+I'm glad to see wine being appreciated for its quality and taste again. As someone who loves attending Warriors games with friends, I think it's great that people are focusing on enjoying good wine rather than just its supposed health benefits.",
+"opinion": "Support",
+"phrases": ["appreciating wine for its quality", "enjoying good wine", "focusing on taste"]
+
+
+As an artist, I appreciate the beauty in things, including wine. While the 'clean wine' trend may be popular, I think it's essential to remember that wine is meant to be savored and enjoyed for its taste, not just its supposed health benefits.",
+"opinion": "Support",
+"phrases": ["beauty in things", "savored and enjoyed", "taste", "health benefits"]
+
+
+I think it's wonderful to see people embracing a more holistic approach to wine appreciation. As professionals, we can appreciate the nuances in taste and quality, while also being mindful of our overall well-being.",
+"opinion": "Support",
+"phrases": ["wonderful", "holistic approach", "appreciate nuances", "mindful of overall well-being"]
+
+
+I'm all for appreciating wine's craftsmanship, whether it's clean or not. Let's focus on the art of winemaking, rather than getting caught up in the wellness trend.",
+"opinion": "Support",
+"phrases": ["appreciating wine", "craftsmanship", "art of winemaking"]
+
+
+As someone who enjoys being part of a team, I think it's great to see people coming together over their shared love of wine. Whether it's 'clean' or traditional, I believe that appreciating wine for its taste and quality can bring people joy.",
+    "opinion": "Support",
+    "phrases": ["someone who enjoys being part of a team", "coming together over their shared love of wine", "appreciating wine for its taste and quality"]
+
+
+I think it's essential to consider both the health benefits and the cultural significance of wine. While 'clean wine' might be a marketing gimmick, it can also serve as a gateway for people to appreciate the art of winemaking. Ultimately, it comes down to individual preferences and what matters most is that we enjoy our wine responsibly.",
+"opinion": "Neutral",
+"phrases": ["marketing gimmick", "gateway for people", "individual preferences"]
+
+
+I think it's refreshing to see wine being celebrated for its taste and quality rather than just its health benefits. As someone who appreciates good wine, I believe that by focusing on the quality of the wine, we can enjoy it in moderation without feeling guilty.",
+"opinion": "Support",
+"phrases": ["refreshing", "celebrated for its taste", "quality of the wine", "enjoy it in moderation"]
+
+
+As someone who values knowledge sharing, I appreciate the article's emphasis on exploring wine beyond its perceived health benefits. I think it's essential to consider the cultural and historical context of wine appreciation, rather than just focusing on marketing trends.",
+"opinion": "Support",
+"phrases": ["explore", "consider", "cultural", "historical context"]
+
+
+I think it's great that people are becoming more conscious about what they put in their bodies. However, as someone who appreciates good wine, I believe it's essential to separate the art of winemaking from the wellness trend. Let's enjoy our glass of wine for its complexity and nuance, not just for the supposed health benefits.",
+"opinion": "Support",
+"phrases": ["good wine", "separate the art", "complexity and nuance"]
+
+
+I'm all for sipping on some good wine, not just because of its 'health benefits', but because it's an art form too! Just like how we appreciate a beautiful dance or a well-crafted poem, I think we should enjoy wine for what it is - a delightful experience.",
+"opinion": "Support",
+"phrases": ["It's an art form", "a delightful experience", "I'm all for sipping on some good wine"]
+
+
+Wine is not just about being 'clean' or 'healthy', it's an art form that deserves to be savored and appreciated for its unique qualities. Let's celebrate wine's cultural significance and richness!",
+"opinion": "Support",
+"phrases": ["unique qualities", "cultural significance", "richness"]
+
+
+I'm all for appreciating wine for its taste and quality. The health benefits are just a bonus. It's great that people are exploring different types of wine, but let's not forget what makes it special.",
+"opinion": "Support",
+"phrases": ["appreciating wine", "taste and quality", "health benefits as a bonus", "different types of wine"]
+
+
+As someone who thrives in people-oriented environments, I think it's essential to consider the human aspect behind the 'clean wine' trend. I'd love to see more discussions about how this phenomenon can bring people together and create meaningful connections.",
+"opinion": "Support",
+"phrases": ["thrives in people-oriented environments", "consider the human aspect", "bring people together", "create meaningful connections"]
+
+
+I agree that wine should be appreciated for its taste and quality, rather than just focusing on health benefits. As someone who enjoys trying new wines, I think it's important to support local winemakers and good wine shops.",
+"opinion": "Support",
+"phrases": ["appreciated for its taste", "quality over health benefits", "support local winemakers"]
+
+
+While I understand the author's point about appreciating wine for its taste and quality, I also think it's great that people are exploring healthier options. Moderation is key, after all! Maybe we can find a balance between indulging in good wine and making conscious choices.",
+"opinion": "Neutral",
+"phrases": ["appreciating wine", "healthier options", "moderation is key"]
+
+
+As an artist, I appreciate the connection between wine and art. The focus on 'clean wine' feels like a reduction of wine's cultural significance to just its health benefits. Let's celebrate wine as a sensory experience, not just a healthy choice.",
+"opinion": "Support",
+"phrases": ["reduction", "cultural significance", "sensory experience"]
+
+
+I'm intrigued by the concept of 'clean wine' and how it resonates with my own interest in holistic wellness. As someone who values knowledge sharing, I'd love to learn more about the scientific backing behind this trend and its potential implications for our daily lives.",
+"opinion": "Neutral",
+"phrases": ["intrigued by the concept of 'clean wine'", "resonates with my own interest in holistic wellness", "values knowledge sharing", "scientific backing behind this trend", "potential implications for our daily lives"]
+
+
+I'm all for appreciating good wine regardless of its health benefits. It's like how some people enjoy a fine whiskey without worrying about the calories. For me, it's about savoring the taste and experience.",
+"opinion": "Support",
+"phrases": ["appreciating good wine", "savoring the taste and experience"]
+
+
+As someone who enjoys exploring new hiking trails and trying out different craft beers, I appreciate the idea of focusing on the quality and taste of wine rather than just its health benefits. It's all about finding balance and enjoying the experience.",
+"opinion": "Support",
+"phrases": ["appreciating the idea", "finding balance", "enjoying the experience"]
+
+
+I love trying new wine shops when traveling! The idea of 'clean wine' being popularized by wellness trends is fascinating. While I appreciate the emphasis on quality, I think it's essential to enjoy wine for its taste and not just its perceived health benefits.",
+"opinion": "Support",
+"phrases": ["love trying new wine shops", "fascinating", "essential to enjoy"]
+
+
+I'm all for appreciating wine for its taste and quality, rather than just its health benefits. It's refreshing to see an article that encourages people to enjoy good wine without getting too caught up in the wellness trend.",
+"opinion": "Support",
+"phrases": ["appreciate wine", "taste and quality", "refreshing to see"]
+
+
+I think it's intriguing to see how this trend highlights the complexities of human behavior, as we often prioritize health over hedonism. It's fascinating to observe how our perceptions of wine have evolved, reflecting societal values and cultural norms.",
+"opinion": "Neutral",
+"phrases": ["intriguing", "complexities of human behavior", "prioritize health", "societal values", "cultural norms"]
+
+
+I'm all about moderation when it comes to wine. While the idea of 'clean wine' is appealing, I think we should focus more on enjoying good wine with friends and family, rather than worrying about its health benefits. As someone who works in the community service field, I've seen how social events can bring people together - let's not get too caught up in the wellness trend!",
+"opinion": "Neutral",
+"phrases": ["moderation", "enjoying good wine with friends and family", "social events can bring people together"]
+
+
+I'm all about appreciating good wine for its taste and quality, not just its supposed health benefits. Let's raise a glass to the real enthusiasts!",
+"opinion": "Support",
+"phrases": ["appreciate good wine", "real enthusiasts"]
+
+
+I'm all about prioritizing my fitness goals, but I also love unwinding with a glass of wine after a long day. The idea of 'clean wine' is intriguing to me because it aligns with my values of making informed decisions and taking care of my body.",
+"opinion": "Support",
+"phrases": ["prioritizing my fitness goals", "unwinding with a glass of wine", "values of making informed decisions", "taking care of my body"]
+
+
+I completely agree with the author. As someone who appreciates fine wine, it's refreshing to see an article that highlights its quality over its health benefits. In fact, I've noticed that some of my friends who are into 'clean wine' often overlook the rich history and craftsmanship that goes into making high-quality wine. It's a shame because good wine is meant to be savored, not just gulped down for the perceived health benefits.",
+"opinion": "Support",
+"phrases": ["I completely agree", "highlights its quality over its health benefits", "good wine is meant to be savored"]
+
+
+I appreciate the emphasis on quality over health benefits, as it allows us to truly enjoy wine without guilt. Perhaps we can strike a balance between appreciating the taste and considering our well-being.",
+"opinion": "Support",
+"phrases": ["emphasize on quality", "strike a balance", "appreciate the taste"]
+
+
+I completely agree with the author! As an artist, I believe that wine should be appreciated for its beauty, not just its health benefits. The rise of 'clean wine' has taken away from the art of enjoying good wine, and I think we should get back to appreciating it for what it is - a sophisticated drink.",
+"opinion": "Support",
+"phrases": ["I completely agree", "should be appreciated for its beauty", "the art of enjoying good wine"]
+
+
+I'm all about that wellness lifestyle, but let's not forget about the importance of enjoying good wine without the pressure to make it 'clean'. There's something to be said about sipping on a rich Cabernet Sauvignon on a Friday night with friends.",
+"opinion": "Support",
+"phrases": ["wellness lifestyle", "good wine", "rich Cabernet Sauvignon", "Friday night with friends"]
+
+
+I think it's fascinating how wine can be rebranded to fit into the wellness trend. As a wine enthusiast, I appreciate the nuances of flavor and quality, but I also understand the appeal of 'clean wine'. Perhaps we're seeing a shift towards more mindful drinking habits?",
+"opinion": "Neutral",
+"phrases": ["I think", "As a wine enthusiast", "Perhaps we're seeing"]
+
+
+As an electrician, I appreciate good craftsmanship, and that's what makes wine great - the quality, not just the health benefits. Celebrities like Cameron Diaz popularizing 'clean wine' are missing the point; wine is about enjoying a fine drink, not just ticking a wellness box.",
+"opinion": "Support",
+"phrases": ["good craftsmanship", "quality", "enjoying a fine drink", "not just ticking a wellness box"]
+
+
+The emphasis on 'clean wine' might be a reflection of our society's increasing focus on quantifiable values. Perhaps we can find a balance between appreciating wine as a healthy choice and celebrating its cultural significance.",
+"opinion": "Neutral",
+"phrases": ["quantifiable values", "cultural significance"]
+
+
+As someone who loves cars, I'm intrigued by the idea that people are focusing more on the health benefits of wine rather than its taste. For me, it's all about enjoying the experience - whether it's a racing event or sipping a good glass of wine with friends. Let's not forget to appreciate the art and craftsmanship behind wine making.",
+"opinion": "Support",
+"phrases": ["intrigued", "enjoying the experience", "art and craftsmanship"]
+
+
+As someone who loves trying new food and drinks, I think it's refreshing to see people appreciating wine for its taste and quality. However, I do agree that we shouldn't overemphasize the health benefits - after all, life is about balance!",
+"opinion": "Support",
+"phrases": ["refreshing", "balance"]
+
+
+I'm torn on this whole clean wine trend. As someone who appreciates good taste, I think it's great that people are paying attention to quality. But at the same time, I worry that the emphasis on 'healthier' wine will lead to a homogenization of flavors and styles. Can we have our cake and eat it too?",
+                        "opinion": "Neutral",
+                        "phrases": ["I'm torn", "good taste", "quality", "healthier", "homogenization", "flavors", "styles"]
+
+
+As a researcher, I appreciate the nuanced perspective on the 'clean wine' trend. While health benefits are important, it's equally crucial to consider the artistry and craftsmanship that goes into producing high-quality wines. Perhaps a balanced approach would be to prioritize taste and quality while still acknowledging the wellness aspect.",
+"opinion": "Neutral",
+"phrases": ["nuanced perspective", "artistry and craftsmanship", "balanced approach"]
+
+
+I'm all for trying new things, but I think it's crazy to pay extra just because it's marketed as 'clean wine'. At the end of the day, I'd rather drink good quality wine regardless of its health benefits.",
+"opinion": "Oppose",
+"phrases": ["trying new things", "pay extra", "good quality wine", "regardless of its health benefits"]
+
+
+As an educator, I appreciate the importance of mindful consumption, but I also believe that wine culture shouldn't be reduced to just its health benefits. There's so much more to it than just 'clean wine' - the artistry, tradition, and social aspects are all valuable too.",
+"opinion": "Support",
+"phrases": ["mindful consumption", "artistry", "tradition", "social aspects"]
+
+
+I completely agree with the author! As someone who loves trying new restaurants and attending concerts, I think it's essential to appreciate wine for its taste and quality. The wellness trend is just a marketing gimmick, and we should focus on enjoying good wine rather than worrying about the health benefits.",
+"opinion": "Support",
+"phrases": ["completely agree", "essential to appreciate", "marketing gimmick", "enjoying good wine"]
+
+
+As an engineer, I appreciate a well-designed product, whether it's a wine bottle or a mechanical device. While the 'clean wine' trend might be appealing to some, I think it's essential to prioritize quality over perceived health benefits.",
+"opinion": "Support",
+"phrases": ["well-designed product", "quality over perceived health benefits"]
+
+
+As a journalist, I'm intrigued by the rise of 'clean wine' and its marketing appeal. I think it's fascinating how celebrities like Cameron Diaz can influence consumer behavior. While I agree that overemphasizing health benefits might not be entirely accurate, I'd love to see more research on the actual nutritional benefits of this new trend.",
+"opinion": "Neutral",
+"phrases": ["influenced by", "appeal to consumers", "overemphasizing health benefits", "actual nutritional benefits"]
+
+
+I'm more interested in what's inside the bottle than the label. As someone who likes to get hands-on, I think it's great that people are paying attention to wine quality.",
+"opinion": "Support",
+"phrases": ["inside the bottle", "label", "get hands-on", "paying attention"]
+
+
+I'm all for appreciating good wine for its taste and quality. Celebrities like Cameron Diaz can't dictate what's 'clean' or not; it's about enjoying a good glass of vino!",
+"opinion": "Support",
+"phrases": ["appreciating good wine", "good glass of vino"]
+
+
+As a journalist, I appreciate the author's balanced approach to 'clean wine'. While health benefits are important, it's crucial not to lose sight of the rich cultural heritage behind good wine. I'd love to explore this topic further and maybe even write an article on it!",
+"opinion": "Support",
+"phrases": ["As a journalist", "balanced approach", "rich cultural heritage", "explore further", "write an article"]
+
+
+I think it's refreshing to see wine being celebrated for its taste and quality rather than just its health benefits. As someone who appreciates good wine, I believe that by focusing on the quality of the wine, we can enjoy it in moderation without feeling guilty.",
+"opinion": "Support",
+"phrases": ["refreshing", "celebrated for its taste", "quality of the wine", "enjoy it in moderation"]
+
+
+I'm all for exploring new trends, but let's not forget what makes good wine great - its flavor profile! While 'clean wine' might be a fad, it's also an opportunity to promote sustainable practices in the industry.",
+"opinion": "Support",
+"phrases": ["good wine", "flavor profile", "sustainable practices"]
+
+
+As a teacher, I think it's essential to appreciate wine for its taste and quality, rather than just focusing on its health benefits. I'd love to see more educational content on wine appreciation!",
+    "opinion": "Support",
+    "phrases": ["essential", "taste", "quality", "educational content"]
+
+
+I'm more concerned about the environmental impact of wine production than the 'clean' label. Perhaps we should focus on sustainable practices in the industry?",
+"opinion": "Neutral",
+"phrases": ["concerned about", "environmental impact", "sustainable practices"]
+
+
+I'm all about embracing the art of winemaking, regardless of the 'clean' label. Let's focus on savoring the flavors and aromas instead!",
+    "opinion": "Support",
+    "phrases": ["embracing the art of winemaking", "focusing on savoring the flavors and aromas"]
+
+
+While I understand the appeal of 'clean wine', as a researcher, I believe it's essential to separate facts from marketing hype. The author raises valid concerns about the overemphasis on health benefits, which might lead to a loss of appreciation for the art and craftsmanship that goes into producing high-quality wines.",
+"opinion": "Support",
+"phrases": ["separate facts from marketing hype", "art and craftsmanship", "high-quality wines"]
+
+
+While I appreciate the author's caution against overemphasizing health benefits, I think it's interesting to explore how clean wine aligns with my own wellness goals. As someone who values informed decision-making, I'd like to know more about the science behind 'clean wine' and its potential impact on our daily lives.",
+"opinion": "Neutral",
+"phrases": ["caution against overemphasizing health benefits", "explore how clean wine aligns with my own wellness goals", "values informed decision-making", "know more about the science behind 'clean wine'", "potential impact on our daily lives"]
+
+
+As a wine enthusiast myself, I think it's great that people are exploring healthier options. However, I agree with the author that overemphasizing health benefits can lead to sacrificing quality and taste. A balanced approach is key.",
+    "opinion": "Support",
+    "phrases": ["balanced approach", "sacrificing quality", "exploring healthier options"]
+
+
+I think it's wonderful to see people embracing a more holistic approach to wine appreciation. As professionals, we can appreciate the nuances in taste and quality, while also being mindful of our overall well-being.",
+"opinion": "Support",
+"phrases": ["wonderful", "holistic approach", "appreciate nuances", "mindful of overall well-being"]
+
+
+I'm all for appreciating wine for its quality, but I do think the wellness trend has contributed to more people being open to exploring different types of wine. As a manager, I've noticed that our company's wine and cheese nights have become incredibly popular among employees.",
+"opinion": "Support",
+"phrases": ["appreciating wine for its quality", "exploring different types of wine", "company's wine and cheese nights"]
+
+
+I think it's great that people are open to exploring different types of wine. As a manager, I've noticed that our company's wine and cheese nights have become incredibly popular among employees, and I believe it's due to the variety of options available.",
+"opinion": "Support",
+"phrases": ["great", "open to exploring", "different types of wine", "company's wine and cheese nights"]
+
+
+I think it's interesting how celebrities can influence our purchasing decisions. As an artist, I appreciate the attention to detail that goes into crafting a good bottle of wine, regardless of whether it's marketed as 'clean'. When we focus too much on health benefits, I worry that we're losing sight of what truly matters – the artistry and craftsmanship behind the wine.",
+"opinion": "Support",
+"phrases": ["celebrities can influence our purchasing decisions", "crafting a good bottle of wine", "attention to detail", "what truly matters"]
+
+
+I agree with the author's sentiment, emphasizing the importance of appreciating wine's taste and quality rather than just its perceived health benefits. As someone who enjoys trying out new whiskeys, I think it's crucial to develop a nuanced understanding of what makes good wine.",
+"opinion": "Support",
+"phrases": ["appreciating wine's taste", "quality of the wine", "nuanced understanding"]
+
+
+As a wine enthusiast myself, I appreciate the renewed focus on quality over perceived health benefits. The Warriors' culture is all about teamwork and camaraderie, which is reflected in my approach to management - prioritizing people and processes.",
+"opinion": "Support",
+"phrases": ["renewed focus on quality", "prioritizing people and processes"]
+
+
+I think it's great that people are looking for healthier wine options, but let's not forget about the taste and quality! As someone who loves trying new beauty products, I appreciate the emphasis on natural ingredients. Maybe we can find a balance between health benefits and sipping our favorite wines",
+"opinion": "Support",
+"phrases": ["it's great", "let's not forget about the taste and quality", "natural ingredients", "balance between health benefits"]
+
+
+I'm intrigued by the idea of 'clean wine', but I think it's essential to separate health benefits from the overall drinking experience. A good glass of wine can be savored and enjoyed, regardless of its 'clean' credentials. As a manager, I appreciate the focus on quality over marketing hype.",
+"opinion": "Support",
+"phrases": ["intrigued", "separate health benefits", "good glass of wine", "quality over marketing hype"]
+
+
+I'm all for trying new things, but I think it's important to separate the wheat from the chaff when it comes to 'clean wine'. As someone who loves trying out new skincare routines, I appreciate the attention to detail that goes into creating high-quality products. Maybe we can apply a similar approach to wine - focusing on the quality rather than just the health benefits?",
+"opinion": "Support",
+"phrases": ["I'm all for", "As someone", "Maybe we can"]
+
+
+I think it's great to see people appreciating wine for its taste and quality rather than just focusing on its perceived health benefits. As an All Blacks fan, I love seeing passion and dedication in any field, whether it's sports or wine-making. It's all about the journey and not just the destination.",
+"opinion": "Support",
+"phrases": ["It's great to see", "passion and dedication"]
+
+
+As someone who's all about promoting positivity and self-care, I think it's amazing to see people embracing healthier habits, including enjoying clean wine. However, let's not forget that true wellness comes from within - what matters most is how we treat ourselves and others.",
+"opinion": "Support",
+"phrases": ["promoting positivity", "self-care", "true wellness"]
+
+
+I'm all for trying out new craft whiskeys, but I think it's a shame when people prioritize 'clean wine' over traditional wines with rich flavors. As a manager, I appreciate data-driven decisions, and while health benefits can be important, I believe there's value in appreciating wine for its taste and quality.",
+    "opinion": "Support",
+    "phrases": ["trying out new craft whiskeys", "prioritize 'clean wine'", "traditional wines with rich flavors", "appreciate data-driven decisions", "appreciate wine for its taste and quality"]
+
+
+I'm all for trying new things, but let's not forget that wine is supposed to be enjoyed, not just marketed as healthy! There's something special about sipping a good glass of wine with friends or family.",
+"opinion": "Support",
+"phrases": ["try new things", "supposed to be enjoyed", "sipping a good glass"]
+
+
+I think it's great that people are exploring new wine options, but let's not forget about the classics. At the end of the day, wine is all about taste and quality.",
+"opinion": "Support",
+"phrases": ["new wine options", "classics", "taste and quality"]
+
+
+As someone who loves exploring the Waitakere Ranges, I appreciate the complexity and nuance that comes with enjoying a good wine. While health benefits are important, I think it's essential to celebrate the cultural aspect of wine, whether that's sharing a bottle with friends or savoring a glass on your own.",
+"opinion": "Support",
+"phrases": ["celebrate complexity and nuance", "appreciate cultural aspect", "savor a glass"]
+
+
+I think it's fascinating how people can find new ways to apply their skills, like Benjamin, who applies his troubleshooting expertise to solving problems in various areas. Similarly, the concept of 'clean wine' is an interesting example of innovation in the wine-making process. However, I do agree that we should not forget about what makes a good wine – its taste and quality.",
+"opinion": "Support",
+"phrases": ["I think it's fascinating", "new ways to apply their skills", "what makes a good wine"]
+
+
+As an event organizer, I think it's fascinating how wine has become a staple in social gatherings and networking events. What's your take on incorporating 'clean wine' into corporate events?",
+"opinion": "Support",
+"phrases": ["event organizer", "wine", "social gatherings", "corporate events"]
+
+
+As someone who values quality over quantity, I think it's refreshing to see a focus on wine taste and appreciation. However, I do agree that there's value in exploring the health benefits associated with 'clean wine'. Perhaps we can find a balance between enjoying wine for its taste and considering its wellness effects.",
+"opinion": "Neutral",
+"phrases": ["values quality", "focus on wine taste", "balance"]
+
+
+I think it's great that people are recognizing the importance of appreciating wine for its taste and quality. As someone who loves cooking and trying new recipes, I appreciate a good glass of wine to pair with my meals. However, I do think it's also important to consider the environmental impact of buying from certain wine shops.",
+"opinion": "Neutral",
+"phrases": ["great that people are recognizing", "appreciate a good glass", "consider the environmental impact"]
+
+
+I completely agree with the author. As a wine enthusiast, I think it's essential to appreciate the taste and quality of wine, rather than just focusing on its health benefits. Good wine shops are also crucial in preserving the tradition and art of winemaking.",
+"opinion": "Support",
+"phrases": ["I completely agree", "appreciate the taste and quality", "preserve the tradition"]
+
+
+I'm not surprised that celebrities are promoting 'clean wine' as part of the wellness trend. As someone who loves capturing moments of beauty in my photography, I appreciate a good glass of wine too! Maybe we can find a balance between enjoying wine's taste and quality while still being mindful of its health benefits.",
+"opinion": "Support",
+"phrases": ["balance", "enjoying wine's taste", "mindful of its health benefits"]
+
+
+While I appreciate the emphasis on wine quality and taste, I think it's unfair to dismiss the health benefits associated with 'clean wine'. As a manager, I prioritize data-driven decisions, and if there's evidence that certain types of wine are better for our well-being, I'd like to explore those options.",
+"opinion": "Support",
+"phrases": ["I appreciate", "dismiss the health benefits", "data-driven decisions", "prioritize"]
+
+
+As someone who loves analyzing data, I appreciate the emphasis on wine quality and taste. However, as a manager, I prioritize evidence-based decisions, so I'd like to see more research on the actual health benefits of 'clean wine' before making a judgment.",
+"opinion": "Neutral",
+"phrases": ["I appreciate", "prioritize", "research"]
+
+
+As someone who values mindfulness and self-care, I appreciate the emphasis on appreciating wine for its taste and quality. However, I'm also concerned about the potential environmental impact of 'clean wine' production. Can we discuss the sustainability aspect of this trend?",
+"opinion": "Neutral",
+"phrases": ["mindfulness", "self-care", "sustainability"]
+
+
+I'm all for appreciating wine for its taste and quality, rather than just focusing on its perceived health benefits. As someone who loves organizing events and making sure everything runs smoothly, I think it's refreshing to see people prioritizing the genuine experience of enjoying a good glass of wine.",
+"opinion": "Support",
+"phrases": ["appreciating wine", "prioritizing the genuine experience", "refreshing"]
+
+
+While I understand the author's concern about overemphasizing health benefits, I think it's essential to acknowledge that wine can have both subjective and objective qualities. As someone who appreciates a good glass of wine, I believe we should celebrate its complexity and nuance, rather than reducing it solely to its perceived health effects.",
+"opinion": "Support",
+"phrases": ["acknowledge the author's concern", "celebrate complexity and nuance", "reduce solely to perceived health effects"]
+
+
+I love trying new wine styles, but I think it's great that people are paying attention to the wellness aspect too. As someone who enjoys photography, I appreciate how wine can be an integral part of social gatherings and capturing memories.",
+"opinion": "Support",
+"phrases": ["trying new wine styles", "paying attention to the wellness aspect", "integral part of social gatherings", "capturing memories"]
+
+
+I think it's fascinating how people are drawn to 'clean wine' for its perceived wellness benefits. As someone who enjoys reading about new trends, I'd like to explore this further and understand what sets these wines apart.",
+"opinion": "Support",
+"phrases": ["I think", "fascinating", "drawn to", "enjoys"]
+
+
+As someone who appreciates a good glass of wine, I think it's interesting how celebrities can influence trends like this. While I understand the appeal of 'clean wine', I'm more concerned about the quality of the wine than its health benefits. It's great to see people enjoying wine responsibly, but let's not forget the importance of proper technique and appreciation for the craft.",
+"opinion": "Support",
+"phrases": ["appreciating a good glass of wine", "influence trends like this", "quality of the wine", "proper technique and appreciation"]
+
+
+As a professional who appreciates well-organized events, I think it's refreshing to see wine enthusiasts focusing on the taste and quality rather than just the health benefits. Perhaps we can find common ground by acknowledging that both aspects are important.",
+"opinion": "Support",
+"phrases": ["well-organized", "taste and quality", "common ground"]
+
+
+As someone who appreciates the art of photography, I understand the importance of attention to detail. Similarly, when it comes to wine, I think it's essential to focus on its quality and taste rather than just its perceived health benefits.",
+"opinion": "Support",
+"phrases": ["attention to detail", "quality and taste"]
+
+
+As someone who appreciates good taste in wine, I think it's essential to strike a balance between enjoying the flavors and aromas while being mindful of potential health implications. Perhaps we can focus on sustainable practices in winemaking and support small, eco-friendly vineyards?",
+"opinion": "Support",
+"phrases": ["strike a balance", "enjoying the flavors", "sustainable practices"]
+
+
+As a community worker, I think it's essential to appreciate the social aspects of wine culture. While 'clean wine' might be appealing, we should focus on promoting responsible drinking habits and supporting local winemakers.",
+"opinion": "Support",
+"phrases": ["appreciate social aspects", "responsible drinking habits", "supporting local winemakers"]
+
+
+I think it's fascinating how people can find new ways to apply their skills, like Benjamin, who applies his troubleshooting expertise to solving problems in various areas. Similarly, the concept of 'clean wine' is an interesting example of innovation in the wine-making process. However, I do agree that we should not forget about what makes a good wine – its taste and quality.",
+"opinion": "Support",
+"phrases": ["I think it's fascinating", "new ways to apply their skills", "what makes a good wine"]
+
+
+I'm all for appreciating good wine, regardless of its marketing label. As a music enthusiast, I can relate to the passion that goes into crafting a fine wine. Let's focus on the taste and quality rather than just the health benefits.",
+"opinion": "Support",
+"phrases": ["Appreciate good wine", "Passion in crafting a fine wine", "Focus on taste and quality"]
+
+
+As someone who appreciates the little things in life, I think it's refreshing that celebrities are promoting 'clean wine' as part of the wellness trend. I'm all for finding a balance between enjoying the taste and quality of wine while being mindful of its health benefits.",
+"opinion": "Support",
+"phrases": ["balance", "enjoying the taste", "mindful of its health benefits"]
+
+
+As a sports fan, I appreciate the passion behind wine enthusiasts, but I think it's essential to remember that there are better ways to enjoy wine. Perhaps instead of focusing on 'clean' wine, we should emphasize the art of pairing wine with food or exploring different varieties.",
+"opinion": "Neutral",
+"phrases": ["emphasize the art", "pairing wine with food", "exploring different varieties"]
+
+
+I'm all for appreciating wine for its taste and quality rather than just its supposed health benefits. As an artist, I find inspiration in the beauty of a well-crafted glass of wine. Let's not forget to enjoy the process!",
+"opinion": "Support",
+"phrases": ["appreciate wine", "taste and quality", "beauty of a well-crafted glass", "enjoy the process"]
+
+
+As an artist, I find solace in the beauty of wine-making processes. The emphasis on health benefits takes away from the craftsmanship that goes into creating something truly unique. Let's celebrate the artistry behind wine!",
+"opinion": "Support",
+"phrases": ["find solace", "beauty of wine-making processes", "emphasize health benefits", "celebrate artistry"]
+
+
+I understand the emphasis on wine quality, but as a manager, I believe it's essential to consider the overall impact of our choices. Perhaps we can find a middle ground that balances taste with wellness.",
+"opinion": "Neutral",
+"phrases": ["I understand", "consider the overall impact", "balances"]
+
+
+I think it's great that people are looking out for their health, but let's not forget about appreciating the taste and quality of good wine. Maybe we can find a balance between the two?",
+"opinion": "Neutral",
+"phrases": ["appreciate wine", "find a balance"]
+
+
+As someone who appreciates a good glass of wine after a long day's work, I think it's great that people are taking notice of the quality and taste of wine. It's easy to get caught up in the health benefits, but at the end of the day, it's about enjoying a nice bottle with friends.",
+"opinion": "Support",
+"phrases": ["appreciates", "quality and taste", "enjoying a nice bottle"]
+
+
+I think it's fascinating to see how celebrities are influencing people's drinking habits. While 'clean wine' might be appealing, I believe that wine culture is about more than just health benefits or trendy marketing.",
+    "opinion": "Neutral",
+    "phrases": ["fascinating", "appealing", "more than just health benefits", "trendy marketing"]
+
+
+As a manager who prioritizes results-driven approaches, I appreciate the author's emphasis on appreciating wine for its taste and quality. It's crucial to strike a balance between health benefits and the art of winemaking. Perhaps we can learn from this trend in embracing a more holistic approach in our own industries.",
+"opinion": "Support",
+"phrases": ["prioritize results-driven", "appreciate the author's emphasis", "strike a balance"]
+
+
+I understand where the author is coming from, but I think it's also important to consider the role that wine can play in social gatherings and cultural traditions. Perhaps we can find a balance between appreciating the taste and quality of wine and being mindful of its health benefits?",
+"opinion": "Support",
+"phrases": ["find a balance", "appreciate the taste", "mindful of health benefits"]
+
+
+As an artist, I believe that wine's beauty lies in its nuances – the way it can elevate the senses or soothe the soul. Let's not forget about the art of winemaking itself!",
+"opinion": "Support",
+"phrases": ["elevate the senses", "soothe the soul", "art of winemaking"]
+
+
+I think it's great that people are taking an interest in the origin and quality of their wine. As a technician, I appreciate attention to detail, and wine is no exception. While I'm not a connoisseur myself, I believe that exploring different types of wine can be a fun and enriching experience.",
+    "opinion": "Support",
+    "phrases": ["I think it's great", "attention to detail", "exploring different types"]
+
+
+I think it\'s great that people are looking out for their health, but let\'s not forget about appreciating the taste and quality of good wine. Maybe we can find a balance between the two?",
+    "opinion": "Neutral",
+    "phrases": ["appreciate wine", "find a balance"]
+
+
+I'm all for exploring new wine trends, but let's not forget the art of enjoying a good glass without worrying about the health benefits. For me, it's about savoring the moment and appreciating the beauty in every sip.",
+"opinion": "Support",
+"phrases": ["exploring new wine trends", "appreciating the beauty in every sip", "savoring the moment"]
+
+
+I'm all for appreciating wine for its taste and quality, but I also think it's great that people are looking out for their health. Maybe we can find a balance between enjoying good wine and making healthy choices?",
+"opinion": "Neutral",
+"phrases": ["appreciate wine", "find a balance", "healthy choices"]
+
+
+I love that wine is being celebrated for its taste and quality again! As someone who enjoys trying new beauty products, I appreciate it when people focus on what really matters. Let's raise a glass to good wine!",
+"opinion": "Support",
+"phrases": ["love", "celebrated for its taste and quality", "appreciate", "good wine"]
+
+
+As a sales representative, I think it's essential to focus on the quality and taste of wine, rather than just its marketing label. Let's encourage people to appreciate good wine without being swayed by celebrity endorsements.",
+"opinion": "Support",
+"phrases": ["Focus on quality and taste", "Appreciate good wine", "Celebrities' endorsements"]
+
+
+I'm not sure about this whole 'clean wine' thing. As someone who appreciates good technology, I think it's great when people can find ways to improve things like wine-making. But at the same time, I also think we should focus on what makes a good wine, rather than just its health benefits.",
+                        "opinion": "Neutral",
+                        "phrases": ["I'm not sure", "good technology", "what makes a good wine"]
+
+
+I completely agree with the author that we should focus more on the quality and taste of wine rather than just its perceived health benefits. It's essential to support local wineries and good wine shops that prioritize sustainability and environmental responsibility.",
+"opinion": "Support",
+"phrases": ["completely agree", "focus on quality", "prioritize sustainability"]
+
+
+As someone who loves fixing things, I appreciate the emphasis on quality and taste in wine. While health benefits are important, I think it's essential to prioritize the craftsmanship that goes into making good wine.",
+"opinion": "Support",
+"phrases": ["appreciate the emphasis", "prioritize craftsmanship"]
+
+
+I love how art can bring people together! Wine is an integral part of many cultures' traditions. Let's not forget to appreciate the beauty in it, beyond just its health benefits.",
+"opinion": "Support",
+"phrases": ["love", "bring people together", "integral part", "appreciate the beauty"]
+
+
+I'm all for appreciating wine for its taste and quality. The wellness trend is just a marketing ploy to sell more bottles. As someone who enjoys troubleshooting technical issues, I appreciate complexity in things like wine. Let's not overthink it!",
+"opinion": "Support",
+"phrases": ["appreciating wine", "complexity in things like wine", "overthink it"]
+
+
+I appreciate the emphasis on taste and quality in wine appreciation. It's essential to recognize that people have different preferences when it comes to wine, just like we do in business settings.",
+"opinion": "Support",
+"phrases": ["taste and quality", "different preferences", "business settings"]
+
+
+As someone who appreciates the great outdoors, I think it's refreshing to see people enjoying wine for its taste rather than just its perceived health benefits. Let's not forget that good wine can bring people together, whether it's on a hike or at a gathering.",
+"opinion": "Support",
+"phrases": ["appreciating the great outdoors", "good wine can bring people together"]
+
+
+I'm all about embracing the art of wine-making over focusing solely on its supposed health benefits. For me, a good glass of wine is about savoring the moment, not just the calories.",
+"opinion": "Support",
+"phrases": ["embracing the art", "supposed health benefits", "savoring the moment"]
+
+
+As an artist, I believe that wine's beauty lies in its nuances – the way it can elevate the senses or soothe the soul. Let's not forget about the art of winemaking itself!",
+"opinion": "Support",
+"phrases": ["elevate the senses", "soothe the soul", "art of winemaking"]
+
+
+I'm all for appreciating wine for its taste and quality. As an engineer, I love understanding the craftsmanship that goes into making great wine. But I do think it's interesting how celebrities can influence trends like this - maybe there's something to be said about 'clean wine' being marketed as a healthier option?",
+"opinion": "Support",
+"phrases": ["appreciating wine", "taste and quality", "craftsmanship that goes into making great wine", "celebrities influencing trends"]
+
+
+I'm all about finding new ways to indulge in life's pleasures, but I think it's also important to consider how our choices impact our overall well-being. Perhaps we can find a balance between enjoying the taste of wine and being mindful of its health implications?",
+"opinion": "Support",
+"phrases": ["find a balance", "mindful of health implications"]
+
+
+Wine connoisseurs will agree that the quality and taste should be the primary focus. Let's not get too caught up in the wellness trend.",
+"opinion": "Support",
+"phrases": ["connoisseurs", "primary focus", "get too caught up"]
+
+
+As a professional with a passion for food and organization, I believe that clean wine can be a great addition to any meal. However, it's essential to remember that quality over health benefits is still crucial when selecting a wine. Perhaps we can find a balance between the two?",
+"opinion": "Support",
+"phrases": ["clean wine", "quality over health benefits", "balance between"]
+
+
+As someone who's passionate about wellness, I appreciate the article's balanced view on 'clean wine'. While it's great that people are looking for healthier options, we shouldn't forget to appreciate the taste and quality of good wine.",
+"opinion": "Support",
+"phrases": ["appreciate the article's balanced view", "great that people are looking for healthier options", "don't forget to appreciate the taste and quality"]
+
+
+I'm all for trying new things, including clean wine. As someone who loves cars, I appreciate the attention to detail that goes into crafting a great bottle of wine. But I think it's important to remember that there's more to life than just health benefits - let's not forget about enjoying the experience!",
+"opinion": "Support",
+"phrases": ["I'm all for trying new things", "appreciate the attention to detail", "let's not forget about enjoying the experience"]
+
+
+As an entrepreneur, I appreciate the shift towards 'clean wine' as it reflects a growing awareness of the importance of sustainability in all aspects of life. However, I do think it's essential to strike a balance between health benefits and taste quality.",
+    "opinion": "Neutral",
+    "phrases": ["shift towards", "growing awareness", "importance of sustainability", "balance between"]
+
+
+As an artist, I appreciate the beauty of wine-making and the cultural significance it holds. While 'clean wine' might appeal to those looking for a healthier option, I think we should focus on the artistry behind wine production rather than just its health benefits.",
+"opinion": "Support",
+"phrases": ["as an artist", "the beauty of wine-making", "cultural significance"]
+
+
+I love trying out new wine trends, but I think it's great that people are encouraging us to appreciate the quality of wine instead of just focusing on health benefits. I'll definitely be checking out some good wine shops from now on!",
+"opinion": "Support",
+"phrases": ["trying out new wine trends", "appreciate the quality of wine", "checking out some good wine shops"]
+
+
+I'm intrigued by the trend towards 'clean wine' but as someone who appreciates a good glass of wine, I think it's essential to prioritize taste and quality over perceived health benefits.",
+"opinion": "Support",
+"phrases": ["prioritize taste and quality", "perceived health benefits"]
+
+
+As an electrician, I appreciate a good glass of wine after a long day's work. While 'clean wine' might be appealing, I think it's essential to consider the quality over the health benefits. A good bottle of wine should be savored for its taste and craftsmanship, not just because it's marketed as healthier.",
+"opinion": "Support",
+"phrases": ["good glass of wine", "quality over health benefits", "savored for its taste"]
+
+
+As someone who values the art of cooking, I believe that the appreciation for wine culture should focus on its sensory qualities rather than just health benefits. The rich flavors and aromas are what make it enjoyable, and that's what we should be celebrating.",
+"opinion": "Support",
+"phrases": ["appreciate sensory qualities", "celebrate rich flavors"]
+
+
+I think it's great that people are getting more into wine, but let's not forget about the actual taste and quality of the wine. As someone who loves cars and racing, I appreciate when things have a good balance - just like how a well-tuned engine makes all the difference in performance.",
+"opinion": "Support",
+"phrases": ["get more into wine", "actual taste and quality", "good balance"]
+
+
+As a labourer, I value the joy that comes with unwinding after a long day. While I understand the importance of 'clean wine', I believe that taste should always be considered when making a purchase. After all, there's no harm in indulging every now and then.",
+"opinion": "Support",
+"phrases": ["I value", "unwinding", "considered", "indulging"]
+
+
+As someone who appreciates good food and drink, I'm intrigued by the concept of 'clean wine'. While I understand the focus on health benefits, I think it's essential to consider the taste and quality of wine. Perhaps a balanced approach would be best, considering both aspects.",
+"opinion": "Neutral",
+"phrases": ["appreciates good food", "considering both aspects"]
+
+
+I'm not sure about this whole 'clean wine' trend, but I do appreciate when people focus on the quality of the product over its perceived health benefits.",
+"opinion": "Neutral",
+"phrases": ["not sure", "quality of the product", "perceived health benefits"]
+
+
+I think it's interesting how celebrities can influence trends like this - maybe there's something to be said about 'clean wine' being marketed as a healthier option?",
+"opinion": "Support",
+"phrases": ["celebrities influencing trends", "marketed as a healthier option"]
+
+
+While I understand the author's point about appreciating wine for its taste and quality, I'm curious to know more about the scientific backing behind the 'clean wine' trend. Are there any specific compounds or ingredients that make it healthier than other types of wine?",
+"opinion": "Neutral",
+"phrases": ["curious", "scientific backing", "specific compounds"]
+
+
+I've heard of clean wine before, but I never thought about buying it from good wine shops. I guess it makes sense to support local businesses. Maybe we should start a movement to promote better wine sales in New Zealand too!",
+"opinion": "Support",
+"phrases": ["better wine sales", "support local businesses", "promote"]
+
+
+I'm all for promoting wine appreciation over the wellness trend. Let's not forget that a good glass of wine can bring people together! As an educator, I believe it's essential to teach children about the art of wine tasting and the culture surrounding it.",
+"opinion": "Support",
+"phrases": ["Promoting wine appreciation", "Let's not forget", "As an educator"]
+
+
+As someone who appreciates the little things in life, I think it\'s refreshing that celebrities are promoting \'clean wine\' as part of the wellness trend. I\'m all for finding a balance between enjoying the taste and quality of wine while being mindful of its health benefits.",
+"opinion": "Support",
+"phrases": ["balance", "enjoying the taste", "mindful of its health benefits"]
+
+
+I think it's great that people are exploring the concept of 'clean wine', but we also need to consider the business side of things. How do these new wine shops plan to sustain themselves in a competitive market?",
+"opinion": "Neutral",
+"phrases": ["great", "consider", "sustain"]
+
+
+I'm all for appreciating wine for its taste and quality, rather than just focusing on health benefits. It's great to see celebrities like Cameron Diaz promoting it in a positive light!",
+"opinion": "Support",
+"phrases": ["appreciating wine", "taste and quality", "promoting it in a positive light"]
+
+
+I think it's essential to strike a balance between appreciating wine's taste and quality while also considering its health benefits. As someone who values innovation, I believe that clean wine can be a positive step forward in the industry.",
+"opinion": "Support",
+"phrases": ["strike a balance", "considering its health benefits", "positive step forward"]
+
+
+I think it's essential to strike a balance between appreciating wine's taste and quality while also considering its health benefits. As someone who values innovation, I believe that clean wine can be a positive step forward in the industry.",
+"opinion": "Support",
+"phrases": ["strike a balance", "considering its health benefits", "positive step forward"]
+
+
+As a journalist, I'm intrigued by the celebrity endorsement and marketing strategies behind 'clean wine'. I think it's essential to separate fact from fiction and explore the scientific backing behind these claims.",
+"opinion": "Neutral",
+"phrases": ["I'm intrigued", "marketing strategies", "scientific backing"]
+
+
+As someone who loves fixing machines, I think it's interesting how people prioritize the 'clean wine' trend. While I agree that enjoying wine is about more than just its health benefits, I'd like to see some data on whether this new trend actually improves our overall well-being.",
+"opinion": "Neutral",
+"phrases": ["I think", "prioritize", "data"]
+
+
+I think it's funny how some people get caught up in the health benefits of wine, when for me, it's all about enjoying a good glass after a long day of physical labor. I appreciate a fine wine as much as the next guy, but let's not forget to have fun with it!",
+"opinion": "Support",
+"phrases": ["I think it's funny", "after a long day of physical labor", "enjoying a good glass", "let's not forget to have fun"]
+
+
+I'm intrigued by the rise of clean wine, but as a journalist, I'm more concerned about the marketing tactics behind it. It seems like another example of how wellness trends can be manipulated to sell products.",
+"opinion": "Neutral",
+"phrases": ["I'm intrigued", "marketing tactics", "manipulated to sell products"]
+
+
+I'm all for exploring new trends, but let's not forget that wine is an art form. The focus on health benefits is just a bonus - what matters most is the taste and craftsmanship that goes into each bottle.",
+"opinion": "Support",
+"phrases": ["explore new trends", "art form", "taste and craftsmanship"]
+
+
+As a teacher, I appreciate the emphasis on promoting wine as an appreciation for its taste and quality. However, I do hope that the focus on health benefits doesn't overshadow the importance of responsible drinking habits, especially among young adults.",
+"opinion": "Support",
+"phrases": ["promoting wine", "appreciation for its taste", "quality", "emphasis on promoting", "responsible drinking habits"]
+
+
+While I appreciate the author's caution against overselling health benefits, I think it's essential to acknowledge the role wine can play in modern wellness trends. As someone who enjoys hiking and exploring nature, I believe a good glass of wine can be a wonderful way to unwind after a long day.",
+"opinion": "Support",
+"phrases": ["acknowledge the role", "a good glass of wine", "unwind after a long day"]
+
+
+I completely agree with the author. As a graphic designer, I appreciate the artistry behind good wine, not just its supposed health benefits. It's about time we focus on the quality of our wine, rather than jumping on the latest wellness trend.",
+"opinion": "Support",
+"phrases": ["completely agree", "appreciate the artistry", "focus on the quality"]
+
+
+As someone who enjoys reading about new trends, I think it's interesting to see how celebrities like Cameron Diaz are promoting 'clean wine'. Perhaps we can discuss what makes these wines unique and whether they're worth trying?",
+"opinion": "Support",
+"phrases": ["interesting", "promoting", "unique", "worth trying"]
+
+
+I think it's interesting that celebrities are promoting 'clean wine' as part of their wellness routine. As a researcher, I'm intrigued by the potential health benefits, but I also believe that great wine is about so much more than just being healthy.",
+    "opinion": "Support",
+    "phrases": ["interesting", "intrigued", "great wine", "more than just being healthy"]
+
+
+While I appreciate the rise of clean wine, I think we shouldn't forget the artistry behind great wines. Taste and quality should still be the primary focus.",
+"opinion": "Support",
+"phrases": ["forget", "artistry", "taste", "quality", "primary focus"]
+
+
+I think it's great that people are exploring healthier wine options, but let's not forget about the artistry and craftsmanship that goes into making a good wine. There's more to wine than just its health benefits.",
+"opinion": "Support",
+"phrases": ["healthier", "artistry", "craftsmanship", "good wine"]
+
+
+As a wine enthusiast myself, I think it's great that people are exploring different types of wine. However, I do agree with the author that we shouldn't overemphasize the health benefits and neglect the taste and quality.",
+"opinion": "Support",
+"phrases": ["As a wine enthusiast", "great that people are exploring", "overemphasize the health benefits", "neglect the taste and quality"]
+
+
+I completely agree with the author. As an artist, I believe that wine is not just about its health benefits but also about appreciating its beauty and craftsmanship. Buying from good wine shops allows us to support small businesses and local communities, which aligns with my values as a creative person.",
+"opinion": "Support",
+"phrases": ["I completely agree", "appreciating its beauty", "supporting small businesses", "local communities"]
+
+
+As someone who loves trying out new beauty products, I think it's fascinating to see how wine can be marketed as part of the wellness trend. While I agree that we should appreciate wine for its quality and taste, I also believe that we shouldn't forget about the importance of self-care and relaxation that comes with enjoying a good glass of wine.",
+"opinion": "Neutral",
+"phrases": ["trying out new beauty products", "appreciate wine for its quality", "importance of self-care"]
+
+
+I'm all about trying new things, especially when it comes to food and drink. The idea of 'clean wine' being marketed as a healthier option is intriguing, but I agree with the author that we should focus on appreciating the taste and quality rather than just the health benefits.",
+                        "opinion": "Support",
+                        "phrases": ["trying new things", "focusing on taste and quality"]
+
+
+I'm all for appreciating wine for its taste and quality, but it's also important to consider the environmental impact of the wine industry. As someone who loves trying out new craft whiskeys, I think we should be mindful of our choices when it comes to wine.",
+"opinion": "Support",
+"phrases": ["appreciate wine for its taste", "consider environmental impact", "mindful of our choices"]
+
+
+As someone who appreciates good wine, I believe it's essential to strike a balance between health benefits and taste quality. The author's caution against overemphasizing health benefits resonates with me.",
+"opinion": "Support",
+"phrases": ["good wine", "strike a balance", "health benefits", "taste quality"]
+
+
+As someone who works with people every day, I think it's great that wine can bring people together. While health benefits are important, let's not forget the joy of sharing a bottle with friends and family - that's what matters most to me.",
+"opinion": "Support",
+"phrases": ["bring people together", "joy of sharing", "what matters most"]
+
+
+I'm all for embracing the taste and quality of wine, rather than just focusing on its perceived health benefits. As a manager, I appreciate the art of crafting a fine wine almost as much as I do a well-executed business strategy.",
+"opinion": "Support",
+"phrases": ["embrace the taste", "appreciate the art", "well-executed business strategy"]
+
+
+I totally agree that wine should be appreciated for its taste and quality! As a sales worker, I've seen how some people are more concerned with the 'clean' label than the actual product. It's refreshing to see someone advocating for good wine shops.",
+"opinion": "Support",
+"phrases": ["totally agree", "appreciated for its taste and quality", "concerned with the 'clean' label"]
+
+
