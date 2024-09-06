@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM-AIDSim</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.19.1/cytoscape.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>LLM-AIDSim: An LLM-enhanced Agent-based Influence Diffusion Simulation Tool</h1>
+    </div>
+    <div id="container">
+        <div id="form-container">
+            <h2>Simulation Parameters</h2>
+            <form action="/submit" method="post">
+                <label for="round">Round:</label>
+                <input type="number" id="round" name="round" value="{{ data.get('round', '1') }}"><br>
+
+                <label for="timestep">Time Step:</label>
+                <input type="number" id="timestep" name="timestep" value="{{ data.get('timestep', '1') }}"><br>
+
+                <label for="influence_prob">Influence Probability:</label>
+                <input type="text" id="influence_prob" name="influence_prob" value="{{ data.get('influence_prob', '0.3') }}"><br>
+
+                <label for="is_directed">Is Directed:</label>
+                <input type="checkbox" id="is_directed" name="is_directed" value="true" {% if data.get("is_directed") %}checked{% endif %}><br>
+
+                <label for="is_external_dataset">Is External Dataset:</label>
+                <input type="checkbox" id="is_external_dataset" name="is_external_dataset" value="true" {% if data.get("is_external_dataset") %}checked{% endif %}><br>
+
+                <label for="node_size">Node Size:</label>
+                <input type="number" id="node_size" name="node_size" value="{{ data.get('node_size', '100') }}"><br>
+
+                <label for="random_edges">Random Edges:</label>
+                <input type="number" id="random_edges" name="random_edges" value="{{ data.get('random_edges', '3') }}"><br>
+
+                <label for="connect_prob">Connection Probability:</label>
+                <input type="text" id="connect_prob" name="connect_prob" value="{{ data.get('connect_prob', '0.6') }}"><br>
+
+                <label for="evolution_prob">Evolution Probability:</label>
+                <input type="text" id="evolution_prob" name="evolution_prob" value="{{ data.get('evolution_prob', '0.3') }}"><br>
+
+                <label for="generate_user_profile">Generate User Profile:</label>
+                <input type="checkbox" id="generate_user_profile" name="generate_user_profile" value="true" {% if data.get("generate_user_profile") %}checked{% endif %}><br>
+                <label for="user_profile_prompt" style="display: none;">User Profile Prompt:</label>
+                <textarea id="user_profile_prompt" name="user_profile_prompt" rows="10" cols="48"  style="display: none;">List per user profiles each line.List per user profiles each line. Each profile follows a text format like this example: "1: {Name: Emily; Location: Auckland, New Zealand; Age: 32; Gender: Female; Education: Bachelor; Occupation: Artist; Description: Emily loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.}"</textarea><br>
+
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="Hobart, Australia" {% if data.get('location') == "Hobart, Australia" %}selected{% endif %}>Hobart, Australia</option>
+                    <option value="Auckland, New Zealand" {% if data.get('location') == "Auckland, New Zealand" %}selected{% endif %}>Auckland, New Zealand</option>
+                    <option value="Sydney, Australia" {% if data.get('location') == "Sydney, Australia" %}selected{% endif %}>Sydney, Australia</option>
+                    <option value="" {% if data.get('location') == "" %}selected{% endif %}>Worldwide</option>
+                </select><br>
+
+                <label for="broadcasting_prob">Broadcasting Probability:</label>
+                <input type="text" id="broadcasting_prob" name="broadcasting_prob" value="{{ data.get('broadcasting_prob', '0.3') }}"><br>
+
+                <label for="initial_message">Initial Message:</label>
+                <textarea id="initial_message" name="initial_message" rows="10" cols="48">Hello from LLM-AIDSim!</textarea><br>
+
+                <button type="submit">Submit Parameter Settings</button>
+            </form>
+        </div>
+        <div id="content">
+            <h2>Canvas</h2>
+            <div id="buttons">
+                <button type="button" id="start-btn">Start</button>
+                <button type="button" id="pause-btn">Pause</button>
+                <button type="button" id="reset-btn">Reset</button>
+                <!-- <button type="button" onclick="loadGraph()">Graph Information</button> -->
+            </div>
+            <div id="cy" style="width: 800px; height: 600px;"></div>
+        </div>
+    </div>
+    
+    <div id="output-container">
+        <h2>Simulation Report</h2>
+        <pre id="output"></pre>
+        <button type="button" onclick="fetchSimulationResult()">Fetch Simulation Report</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
