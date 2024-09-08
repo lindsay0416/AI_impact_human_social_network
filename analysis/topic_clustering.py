@@ -8,14 +8,17 @@ import nltk
 import json
 from llama_local_api import LlamaApi
 import os
+import re
+import glob
 
 # Ensure NLTK punkt tokenizer is downloaded
 nltk.download('punkt')
 
 class TextTopicAnalyzer:
-    def __init__(self, input_file_path, output_file_path, model_name='all-MiniLM-L6-v2'):
+    def __init__(self, input_file_path, output_file_path, step_name, model_name='all-MiniLM-L6-v2'):
         self.input_file_path = input_file_path
         self.output_file_path = output_file_path
+        self.step_name = step_name
         self.model = SentenceTransformer(model_name)
         self.sentences = []
         self.clustered_sentences = []  # List to store each cluster in a separate array
@@ -68,14 +71,14 @@ class TextTopicAnalyzer:
         plt.plot(k_range, silhouette_scores, 'b-')
         plt.xlabel('Number of clusters (k)')
         plt.ylabel('Silhouette Score')
-        plt.title('Silhouette Score for different k values')
+        plt.title(f'Silhouette Score for different k values ({self.step_name})')
 
         # Save the figure
         images_dir = "images"
         os.makedirs(images_dir, exist_ok=True)
-        plot_path = os.path.join(images_dir, 'silhouette_score_plot.png')
+        plot_path = os.path.join(images_dir, f'silhouette_score_plot_{self.step_name}.png')
         plt.savefig(plot_path)
-        plt.show()
+        plt.close()  # Close the plot to avoid displaying it
 
         print(f"Silhouette score plot saved to {plot_path}")
 
@@ -104,7 +107,7 @@ class TextTopicAnalyzer:
 
         self.summaries = []
         for i, cluster in enumerate(self.clustered_sentences):
-            generate_prompt = f"Generate one topic of the following text within 20 words:\n\n" + "\n".join(cluster)
+            generate_prompt = f"Generate one topic of the following text within 15 words:\n\n" + "\n".join(cluster)
             response = LlamaApi.llama_generate_messages(generate_prompt)
             self.summaries.append(response)
 
@@ -131,25 +134,36 @@ class TextTopicAnalyzer:
 
         print(f"JSON report saved to {json_output_path}")
 
-# Example usage:
-# Initialize the TextTopicAnalyzer class
-analyzer = TextTopicAnalyzer(input_file_path='extracted_text/simulation_response_only.txt',
-                             output_file_path='extracted_text/processed_sentences.txt')
 
-# Load and preprocess sentences
-analyzer.load_and_preprocess_sentences()
 
-# Save the preprocessed sentences to a file
-analyzer.save_preprocessed_sentences()
+if __name__ == "__main__":
+    # Loop through all step files
+    input_files = glob.glob('extracted_text/simulation_response_only_step*.txt')
+    
+    for input_file in input_files:
+        step_name = os.path.basename(input_file).replace('simulation_response_only_', '').replace('.txt', '')
+        output_file_path = f'extracted_text/processed_sentences_{step_name}.txt'
+        
+        # Initialize the TextTopicAnalyzer class
+        analyzer = TextTopicAnalyzer(input_file_path=input_file,
+                                     output_file_path=output_file_path,
+                                     step_name=step_name)
 
-# Find the optimal number of clusters
-optimal_k = analyzer.find_optimal_k(8, 30)
+        # Load and preprocess sentences
+        analyzer.load_and_preprocess_sentences()
 
-# Cluster the sentences using the optimal number of clusters
-analyzer.cluster_sentences(optimal_k)
+        # Save the preprocessed sentences to a file
+        analyzer.save_preprocessed_sentences()
 
-# Summarize each cluster using LLM
-analyzer.summarize_clusters()
+        # Find the optimal number of clusters
+        optimal_k = analyzer.find_optimal_k(5, 20)
 
-# Generate and save the JSON report
-analyzer.generate_json_report()
+        # Cluster the sentences using the optimal number of clusters
+        analyzer.cluster_sentences(optimal_k)
+
+        # Summarize each cluster using LLM
+        analyzer.summarize_clusters()
+
+        # Generate and save the JSON report
+        analyzer.generate_json_report()
+
