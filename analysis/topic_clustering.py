@@ -8,8 +8,6 @@ import nltk
 import json
 from llama_local_api import LlamaApi
 import os
-import re
-import glob
 
 # Ensure NLTK punkt tokenizer is downloaded
 nltk.download('punkt')
@@ -32,11 +30,10 @@ class TextTopicAnalyzer:
         return text
 
     def load_and_preprocess_sentences(self):
-        """Load the text, split into sentences, and preprocess each sentence."""
+        """Load the text, split into sentences (each line is treated as a sentence), and preprocess each sentence."""
         with open(self.input_file_path, 'r') as infile:
-            text = infile.read()
-            sentences = sent_tokenize(text)
-            self.sentences = [self.preprocess_text(sentence) for sentence in sentences]
+            lines = infile.readlines()
+            self.sentences = [self.preprocess_text(line.strip()) for line in lines if line.strip()]  # Preprocess and remove empty lines
 
     def save_preprocessed_sentences(self):
         """Save the preprocessed sentences to the output file."""
@@ -58,6 +55,8 @@ class TextTopicAnalyzer:
         silhouette_scores = []
 
         for k in k_range:
+            if k > len(self.sentences):
+                break  # Stop if k is greater than the number of sentences
             kmeans = KMeans(n_clusters=k, random_state=42)
             kmeans.fit(embeddings)
             score = silhouette_score(embeddings, kmeans.labels_)
@@ -82,12 +81,19 @@ class TextTopicAnalyzer:
 
         print(f"Silhouette score plot saved to {plot_path}")
 
+        if best_k is None:
+            print("Could not determine the optimal number of clusters. Please check the input data.")
+        
         return best_k
 
     def cluster_sentences(self, k):
         """Cluster the sentences using K-means with the specified number of clusters."""
         if not self.sentences:
             print("No sentences to process. Make sure to load and preprocess sentences first.")
+            return
+
+        if k is None:
+            print("Invalid number of clusters (k). Please ensure k is determined before clustering.")
             return
 
         embeddings = self.model.encode(self.sentences)
@@ -137,33 +143,60 @@ class TextTopicAnalyzer:
 
 
 if __name__ == "__main__":
-    # Loop through all step files
-    input_files = glob.glob('extracted_text/simulation_response_only_step*.txt')
+    # # Loop through all step files
+    # input_files = glob.glob('extracted_text/simulation_response_only_step*.txt')
     
-    for input_file in input_files:
-        step_name = os.path.basename(input_file).replace('simulation_response_only_', '').replace('.txt', '')
-        output_file_path = f'extracted_text/processed_sentences_{step_name}.txt'
+    # for input_file in input_files:
+    #     step_name = os.path.basename(input_file).replace('simulation_response_only_', '').replace('.txt', '')
+    #     output_file_path = f'extracted_text/processed_sentences_{step_name}.txt'
         
-        # Initialize the TextTopicAnalyzer class
-        analyzer = TextTopicAnalyzer(input_file_path=input_file,
-                                     output_file_path=output_file_path,
-                                     step_name=step_name)
+    #     # Initialize the TextTopicAnalyzer class
+    #     analyzer = TextTopicAnalyzer(input_file_path=input_file,
+    #                                  output_file_path=output_file_path,
+    #                                  step_name=step_name)
 
-        # Load and preprocess sentences
-        analyzer.load_and_preprocess_sentences()
+    #     # Load and preprocess sentences
+    #     analyzer.load_and_preprocess_sentences()
 
-        # Save the preprocessed sentences to a file
-        analyzer.save_preprocessed_sentences()
+    #     # Save the preprocessed sentences to a file
+    #     analyzer.save_preprocessed_sentences()
 
-        # Find the optimal number of clusters
-        optimal_k = analyzer.find_optimal_k(5, 20)
+    #     # Find the optimal number of clusters
+    #     optimal_k = analyzer.find_optimal_k(5, 20)
 
-        # Cluster the sentences using the optimal number of clusters
-        analyzer.cluster_sentences(optimal_k)
+    #     # Cluster the sentences using the optimal number of clusters
+    #     analyzer.cluster_sentences(optimal_k)
 
-        # Summarize each cluster using LLM
-        analyzer.summarize_clusters()
+    #     # Summarize each cluster using LLM
+    #     analyzer.summarize_clusters()
 
-        # Generate and save the JSON report
-        analyzer.generate_json_report()
+    #     # Generate and save the JSON report
+    #     analyzer.generate_json_report()
+
+    # Processing for 'cleaned_comments.txt'
+    cleaned_comments_file = 'cleaned_comments.txt'  # Update with the correct path if needed
+    cleaned_comments_output = 'extracted_text/processed_cleaned_comments.txt'
+    
+    # Initialize the TextTopicAnalyzer class for cleaned comments
+    cleaned_analyzer = TextTopicAnalyzer(input_file_path=cleaned_comments_file,
+                                         output_file_path=cleaned_comments_output,
+                                         step_name='cleaned_comments')
+
+    # Load and preprocess sentences
+    cleaned_analyzer.load_and_preprocess_sentences()
+
+    # Save the preprocessed sentences to a file
+    cleaned_analyzer.save_preprocessed_sentences()
+
+    # Find the optimal number of clusters
+    optimal_k_cleaned = cleaned_analyzer.find_optimal_k(5, 20)
+
+    # Cluster the sentences using the optimal number of clusters
+    cleaned_analyzer.cluster_sentences(optimal_k_cleaned)
+
+    # Summarize each cluster using LLM
+    cleaned_analyzer.summarize_clusters()
+
+    # Generate and save the JSON report
+    cleaned_analyzer.generate_json_report() 
 
