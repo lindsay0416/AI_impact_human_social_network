@@ -175,7 +175,7 @@ if __name__ == "__main__":
 
     # Processing for 'cleaned_comments.txt'
     cleaned_comments_file = 'cleaned_comments.txt'  # Update with the correct path if needed
-    cleaned_comments_output = 'extracted_text/processed_cleaned_comments.txt'
+    cleaned_comments_output = 'extracted_text/real_world_comments_summary_report.txt'
     
     # Initialize the TextTopicAnalyzer class for cleaned comments
     cleaned_analyzer = TextTopicAnalyzer(input_file_path=cleaned_comments_file,

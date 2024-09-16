@@ -50,7 +50,7 @@ def save_to_csv(dataframe, output_file_path):
 
 if __name__ == "__main__":
     # Paths to JSON files
-    cleaned_comments_file = 'extracted_text/processed_cleaned_comments_summary_report.json'
+    cleaned_comments_file = 'extracted_text/real_world_comments_summary_report.json'
     simulated_comments_file = 'extracted_text/processed_sentences_step5_summary_report.json'
     
     # Load topics from JSON files

@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 
 # Function to read JSON file and generate pie chart
-def generate_pie_chart(file_path, city_name="Auckland, NZ"):
+def generate_pie_chart(file_path, city_name="Hobart, Australia"):
     with open(file_path, 'r') as f:
         data = json.load(f)
 
@@ -75,7 +75,7 @@ def extract_topic_counts(folder_path):
     return step_topic_counts
 
 # Function to plot line chart of topic counts
-def plot_topic_counts(step_topic_counts, city_name="Auckland, NZ"):
+def plot_topic_counts(step_topic_counts, city_name="Hobart, Australia"):
     # Sort steps by their number
     steps = sorted(step_topic_counts.keys(), key=lambda x: int(x.split(" ")[1]) if x.split(" ")[1].isdigit() else float('inf'))
     topic_counts = [step_topic_counts[step] for step in steps]
