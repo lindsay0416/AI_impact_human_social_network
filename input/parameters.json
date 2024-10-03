@@ -12,4 +12,5 @@
     "user_profile_prompt": "List per user profiles each line. Each profile follows a text format like this example: \"1: {Name: Emily; Location: Auckland, New Zealand; Age: 32; Gender: Female; Education: Bachelor; Occupation: Artist; Description: Emily loves expressing herself through paintings. She finds inspiration in nature and often exhibits her artwork in local galleries.}\"",
     "location": "Auckland, New Zealand",
     "broadcasting_prob": 0.3,
-    "initial_message":"The article discusses the rise of 'clean wine', popularized by celebrities like Cameron Diaz, as part of the wellness trend. While marketed as healthier, the author argues that wine should be appreciated for its taste and quality, cautioning against the overemphasis on health benefits and advocating for buying from good wine shops."}
+    "initial_message":"The article discusses the rise of 'clean wine', popularized by celebrities like Cameron Diaz, as part of the wellness trend. While marketed as healthier, the author argues that wine should be appreciated for its taste and quality, cautioning against the overemphasis on health benefits and advocating for buying from good wine shops."
+}
