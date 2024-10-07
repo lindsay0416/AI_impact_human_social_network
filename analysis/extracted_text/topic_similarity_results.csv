@@ -1,46 +1,36 @@
-real_word_comments,simulated_comments,Similarity
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Appreciating taste and quality over health benefits in wine and other drinks.""",0.6702338457107544
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Balancing Taste, Quality, and Health Benefits in Wine Appreciation and Wellness Trends.""",0.5791506767272949
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""",Appreciating the Artistry and Cultural Significance of Wine-Making.,0.326167494058609
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Celebrities' influence on clean wine trend: should we prioritize enjoyment over wellness?""",0.5482591390609741
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Clean Wine Trend: Balancing Health Benefits, Taste, and Quality in Winemaking""",0.47630423307418823
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Fascination with how wine has become a staple in social gatherings and networking events.""",0.6084980964660645
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Appreciating good wine: valuing quality, taste, and nuance in a fast-paced world.""",0.5341551303863525
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""",Finding balance between different aspects of life for a more harmonious and fulfilling existence.,0.28796276450157166
-"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Prioritizing quality over health benefits in wine appreciation: A balanced approach.""",0.49735620617866516
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Appreciating taste and quality over health benefits in wine and other drinks.""",0.7463400959968567
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Balancing Taste, Quality, and Health Benefits in Wine Appreciation and Wellness Trends.""",0.7383776307106018
-"""Preference for organic wine and concerns about additives in commercial wines.""",Appreciating the Artistry and Cultural Significance of Wine-Making.,0.5376958847045898
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Celebrities' influence on clean wine trend: should we prioritize enjoyment over wellness?""",0.5484151244163513
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Clean Wine Trend: Balancing Health Benefits, Taste, and Quality in Winemaking""",0.7016595005989075
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Fascination with how wine has become a staple in social gatherings and networking events.""",0.560869574546814
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Appreciating good wine: valuing quality, taste, and nuance in a fast-paced world.""",0.6957491636276245
-"""Preference for organic wine and concerns about additives in commercial wines.""",Finding balance between different aspects of life for a more harmonious and fulfilling existence.,0.19668123126029968
-"""Preference for organic wine and concerns about additives in commercial wines.""","""Prioritizing quality over health benefits in wine appreciation: A balanced approach.""",0.6649788022041321
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Appreciating taste and quality over health benefits in wine and other drinks.""",0.7012563347816467
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Balancing Taste, Quality, and Health Benefits in Wine Appreciation and Wellness Trends.""",0.6769465208053589
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""",Appreciating the Artistry and Cultural Significance of Wine-Making.,0.6608052253723145
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Celebrities' influence on clean wine trend: should we prioritize enjoyment over wellness?""",0.6072176694869995
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Clean Wine Trend: Balancing Health Benefits, Taste, and Quality in Winemaking""",0.6200641989707947
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Fascination with how wine has become a staple in social gatherings and networking events.""",0.6168314218521118
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Appreciating good wine: valuing quality, taste, and nuance in a fast-paced world.""",0.7491525411605835
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""",Finding balance between different aspects of life for a more harmonious and fulfilling existence.,0.29133594036102295
-"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Prioritizing quality over health benefits in wine appreciation: A balanced approach.""",0.6592421531677246
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Appreciating taste and quality over health benefits in wine and other drinks.""",0.41937366127967834
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Balancing Taste, Quality, and Health Benefits in Wine Appreciation and Wellness Trends.""",0.3482811450958252
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""",Appreciating the Artistry and Cultural Significance of Wine-Making.,0.12688547372817993
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Celebrities' influence on clean wine trend: should we prioritize enjoyment over wellness?""",0.44296398758888245
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Clean Wine Trend: Balancing Health Benefits, Taste, and Quality in Winemaking""",0.2984545826911926
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Fascination with how wine has become a staple in social gatherings and networking events.""",0.2840747833251953
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Appreciating good wine: valuing quality, taste, and nuance in a fast-paced world.""",0.34154170751571655
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""",Finding balance between different aspects of life for a more harmonious and fulfilling existence.,0.2450714409351349
-"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Prioritizing quality over health benefits in wine appreciation: A balanced approach.""",0.34627360105514526
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Appreciating taste and quality over health benefits in wine and other drinks.""",0.7183099985122681
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Balancing Taste, Quality, and Health Benefits in Wine Appreciation and Wellness Trends.""",0.7097173929214478
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""",Appreciating the Artistry and Cultural Significance of Wine-Making.,0.4984130263328552
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Celebrities' influence on clean wine trend: should we prioritize enjoyment over wellness?""",0.615757405757904
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Clean Wine Trend: Balancing Health Benefits, Taste, and Quality in Winemaking""",0.6749632954597473
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Fascination with how wine has become a staple in social gatherings and networking events.""",0.6056299209594727
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Appreciating good wine: valuing quality, taste, and nuance in a fast-paced world.""",0.6163909435272217
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""",Finding balance between different aspects of life for a more harmonious and fulfilling existence.,0.19760841131210327
-"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Prioritizing quality over health benefits in wine appreciation: A balanced approach.""",0.6539700031280518
+real_word_topics,simulated_topics,Similarity
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Prioritizing quality over health benefits in a nuanced approach to wellness trends.""",0.4906163215637207
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","The rise of ""clean"" wine: trends, marketing, and quality control.",0.3547202944755554
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""The Joy and Significance of Wine Appreciation: Embracing Quality and Tradition""",0.4032747447490692
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""The Artistry Behind Wine: Appreciating Craftsmanship, Quality, and Tradition""",0.3091760575771332
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""",Finding Balance and Pleasure in Life through Simple Enjoyments.,0.2972114682197571
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","""Wine appreciation should focus on quality, craftsmanship, and cultural significance over health benefits.""",0.5699712038040161
+"""Alcohol consumption and its effects on health, social habits, and personal choices.""","Appreciation and indulgence in quality craft products, including beer and wine.",0.31706714630126953
+"""Preference for organic wine and concerns about additives in commercial wines.""","""Prioritizing quality over health benefits in a nuanced approach to wellness trends.""",0.4224330186843872
+"""Preference for organic wine and concerns about additives in commercial wines.""","The rise of ""clean"" wine: trends, marketing, and quality control.",0.6315012574195862
+"""Preference for organic wine and concerns about additives in commercial wines.""","""The Joy and Significance of Wine Appreciation: Embracing Quality and Tradition""",0.5909950733184814
+"""Preference for organic wine and concerns about additives in commercial wines.""","""The Artistry Behind Wine: Appreciating Craftsmanship, Quality, and Tradition""",0.5510851740837097
+"""Preference for organic wine and concerns about additives in commercial wines.""",Finding Balance and Pleasure in Life through Simple Enjoyments.,0.2016928493976593
+"""Preference for organic wine and concerns about additives in commercial wines.""","""Wine appreciation should focus on quality, craftsmanship, and cultural significance over health benefits.""",0.7066653966903687
+"""Preference for organic wine and concerns about additives in commercial wines.""","Appreciation and indulgence in quality craft products, including beer and wine.",0.5058245062828064
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Prioritizing quality over health benefits in a nuanced approach to wellness trends.""",0.30921244621276855
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","The rise of ""clean"" wine: trends, marketing, and quality control.",0.5707478523254395
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""The Joy and Significance of Wine Appreciation: Embracing Quality and Tradition""",0.7557584643363953
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""The Artistry Behind Wine: Appreciating Craftsmanship, Quality, and Tradition""",0.6645944118499756
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""",Finding Balance and Pleasure in Life through Simple Enjoyments.,0.34629932045936584
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","""Wine appreciation should focus on quality, craftsmanship, and cultural significance over health benefits.""",0.7135367393493652
+"""The Importance of Enjoying Wine Without Judgment or Snobbery""","Appreciation and indulgence in quality craft products, including beer and wine.",0.5191739797592163
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Prioritizing quality over health benefits in a nuanced approach to wellness trends.""",0.4996070861816406
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","The rise of ""clean"" wine: trends, marketing, and quality control.",0.2543223202228546
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""The Joy and Significance of Wine Appreciation: Embracing Quality and Tradition""",0.19061978161334991
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""The Artistry Behind Wine: Appreciating Craftsmanship, Quality, and Tradition""",0.1501745581626892
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""",Finding Balance and Pleasure in Life through Simple Enjoyments.,0.26027435064315796
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","""Wine appreciation should focus on quality, craftsmanship, and cultural significance over health benefits.""",0.33485716581344604
+"""Is over-reliance on organic products causing unnecessary self-imposed suffering?""","Appreciation and indulgence in quality craft products, including beer and wine.",0.24718162417411804
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Prioritizing quality over health benefits in a nuanced approach to wellness trends.""",0.3754284381866455
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","The rise of ""clean"" wine: trends, marketing, and quality control.",0.579026460647583
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""The Joy and Significance of Wine Appreciation: Embracing Quality and Tradition""",0.5891845226287842
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""The Artistry Behind Wine: Appreciating Craftsmanship, Quality, and Tradition""",0.4998131990432739
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""",Finding Balance and Pleasure in Life through Simple Enjoyments.,0.24563190340995789
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","""Wine appreciation should focus on quality, craftsmanship, and cultural significance over health benefits.""",0.674780547618866
+"""Health risks of excessive drinking and addiction, with focus on wine consumption""","Appreciation and indulgence in quality craft products, including beer and wine.",0.3958342671394348

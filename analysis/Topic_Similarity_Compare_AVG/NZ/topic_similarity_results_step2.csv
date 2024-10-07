@@ -1,0 +1,91 @@
+real_word_topics,simulated_topics,Similarity
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Is the rise of 'clean wine' a wellness trend or just a marketing fad?""",0.4166181683540344
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Finding balance between enjoying good wine and prioritizing overall wellbeing.""",0.451721042394638
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Considering Environmental Impact of Wine Production When Advocating for Good Wine Shops""",0.3996500372886657
+"Alcohol consumption and its effects on health, social habits, and personal choices",Trying new wines and exploring local winemakers' stories and craftsmanship.,0.2614949643611908
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Celebrity influence on drinking habits: Cameron Diaz's clean wine promotion""",0.4768794775009155
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Author's Stance and Sentiment: Agreement or Partial Disagreement""",0.0292212720960378
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Appreciating Wine: Taste, Quality, or Health Benefits?""",0.4877249598503113
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Appreciating good wine: Prioritizing taste and quality over health benefits and marketing gimmicks.""",0.4602134525775909
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Finding balance in life and decision-making to achieve harmony"".",0.2085185497999191
+"Alcohol consumption and its effects on health, social habits, and personal choices",Prioritizing Taste and Quality Over Health Benefits in Food Consumption,0.3768492937088012
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Importance of Supporting Local Wine Shops and Small Businesses""",0.2921924591064453
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Appreciation for fine wine and social bonding over a shared glass.""",0.3781047761440277
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Appreciating Wine for Its Taste and Quality Over Marketing Hype""",0.3216215670108795
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Prioritizing Quality Over Health Benefits: A Middle Ground Solution for Sustainable Practices""",0.2782655656337738
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Celebrities' influence on consumer behavior: prioritizing expertise over fads""",0.2754665315151214
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating the Artistry Behind Good Wine, Beyond Health Benefits.",0.4673616290092468
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Finding Balance Between Wellness and Pleasure in a World of Trends""",0.3432884812355041
+"Alcohol consumption and its effects on health, social habits, and personal choices","""Wine appreciation: Balancing taste, quality, and cultural heritage in a nuanced understanding.""",0.3388582170009613
+Preference for organic wine and concerns about additives in commercial wines.,"""Is the rise of 'clean wine' a wellness trend or just a marketing fad?""",0.5121245980262756
+Preference for organic wine and concerns about additives in commercial wines.,"""Finding balance between enjoying good wine and prioritizing overall wellbeing.""",0.4253839552402496
+Preference for organic wine and concerns about additives in commercial wines.,"""Considering Environmental Impact of Wine Production When Advocating for Good Wine Shops""",0.5905877947807312
+Preference for organic wine and concerns about additives in commercial wines.,Trying new wines and exploring local winemakers' stories and craftsmanship.,0.4840896427631378
+Preference for organic wine and concerns about additives in commercial wines.,"""Celebrity influence on drinking habits: Cameron Diaz's clean wine promotion""",0.3264263570308685
+Preference for organic wine and concerns about additives in commercial wines.,"""Author's Stance and Sentiment: Agreement or Partial Disagreement""",0.0572629049420356
+Preference for organic wine and concerns about additives in commercial wines.,"""Appreciating Wine: Taste, Quality, or Health Benefits?""",0.6088642477989197
+Preference for organic wine and concerns about additives in commercial wines.,"""Appreciating good wine: Prioritizing taste and quality over health benefits and marketing gimmicks.""",0.5952553153038025
+Preference for organic wine and concerns about additives in commercial wines.,"""Finding balance in life and decision-making to achieve harmony"".",0.0736422762274742
+Preference for organic wine and concerns about additives in commercial wines.,Prioritizing Taste and Quality Over Health Benefits in Food Consumption,0.328862577676773
+Preference for organic wine and concerns about additives in commercial wines.,"""Importance of Supporting Local Wine Shops and Small Businesses""",0.4247460067272186
+Preference for organic wine and concerns about additives in commercial wines.,"""Appreciation for fine wine and social bonding over a shared glass.""",0.3864610195159912
+Preference for organic wine and concerns about additives in commercial wines.,"""Appreciating Wine for Its Taste and Quality Over Marketing Hype""",0.5689961910247803
+Preference for organic wine and concerns about additives in commercial wines.,"""Prioritizing Quality Over Health Benefits: A Middle Ground Solution for Sustainable Practices""",0.2319792211055755
+Preference for organic wine and concerns about additives in commercial wines.,"""Celebrities' influence on consumer behavior: prioritizing expertise over fads""",0.1424221694469452
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating the Artistry Behind Good Wine, Beyond Health Benefits.",0.5784431099891663
+Preference for organic wine and concerns about additives in commercial wines.,"""Finding Balance Between Wellness and Pleasure in a World of Trends""",0.1787863373756408
+Preference for organic wine and concerns about additives in commercial wines.,"""Wine appreciation: Balancing taste, quality, and cultural heritage in a nuanced understanding.""",0.5034565925598145
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Is the rise of 'clean wine' a wellness trend or just a marketing fad?""",0.5277417898178101
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Finding balance between enjoying good wine and prioritizing overall wellbeing.""",0.6085014343261719
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Considering Environmental Impact of Wine Production When Advocating for Good Wine Shops""",0.5955615043640137
+The Importance of Enjoying Wine Without Judgment or Snobbery,Trying new wines and exploring local winemakers' stories and craftsmanship.,0.5517632365226746
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Celebrity influence on drinking habits: Cameron Diaz's clean wine promotion""",0.4577009677886963
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Author's Stance and Sentiment: Agreement or Partial Disagreement""",0.1276609152555465
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Appreciating Wine: Taste, Quality, or Health Benefits?""",0.6910024285316467
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Appreciating good wine: Prioritizing taste and quality over health benefits and marketing gimmicks.""",0.6587686538696289
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Finding balance in life and decision-making to achieve harmony"".",0.2933095097541809
+The Importance of Enjoying Wine Without Judgment or Snobbery,Prioritizing Taste and Quality Over Health Benefits in Food Consumption,0.3529775440692901
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Importance of Supporting Local Wine Shops and Small Businesses""",0.5315318703651428
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Appreciation for fine wine and social bonding over a shared glass.""",0.5901041030883789
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Appreciating Wine for Its Taste and Quality Over Marketing Hype""",0.6625093817710876
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Prioritizing Quality Over Health Benefits: A Middle Ground Solution for Sustainable Practices""",0.259774386882782
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Celebrities' influence on consumer behavior: prioritizing expertise over fads""",0.2591226398944855
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating the Artistry Behind Good Wine, Beyond Health Benefits.",0.6955866813659668
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Finding Balance Between Wellness and Pleasure in a World of Trends""",0.3535500168800354
+The Importance of Enjoying Wine Without Judgment or Snobbery,"""Wine appreciation: Balancing taste, quality, and cultural heritage in a nuanced understanding.""",0.7155810594558716
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Is the rise of 'clean wine' a wellness trend or just a marketing fad?""",0.3343498706817627
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Finding balance between enjoying good wine and prioritizing overall wellbeing.""",0.2452221363782882
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Considering Environmental Impact of Wine Production When Advocating for Good Wine Shops""",0.3495147824287414
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Trying new wines and exploring local winemakers' stories and craftsmanship.,0.0545961894094944
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Celebrity influence on drinking habits: Cameron Diaz's clean wine promotion""",0.1650792062282562
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Author's Stance and Sentiment: Agreement or Partial Disagreement""",0.0606725849211216
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Appreciating Wine: Taste, Quality, or Health Benefits?""",0.2805827856063843
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Appreciating good wine: Prioritizing taste and quality over health benefits and marketing gimmicks.""",0.3225413262844085
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Finding balance in life and decision-making to achieve harmony"".",0.1981382668018341
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Prioritizing Taste and Quality Over Health Benefits in Food Consumption,0.3534262478351593
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Importance of Supporting Local Wine Shops and Small Businesses""",0.176899641752243
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Appreciation for fine wine and social bonding over a shared glass.""",0.1021349728107452
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Appreciating Wine for Its Taste and Quality Over Marketing Hype""",0.2268401384353637
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Prioritizing Quality Over Health Benefits: A Middle Ground Solution for Sustainable Practices""",0.4022641479969024
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Celebrities' influence on consumer behavior: prioritizing expertise over fads""",0.2748388946056366
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating the Artistry Behind Good Wine, Beyond Health Benefits.",0.2405199557542801
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Finding Balance Between Wellness and Pleasure in a World of Trends""",0.3599113225936889
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"""Wine appreciation: Balancing taste, quality, and cultural heritage in a nuanced understanding.""",0.1317190676927566
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Is the rise of 'clean wine' a wellness trend or just a marketing fad?""",0.548191249370575
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Finding balance between enjoying good wine and prioritizing overall wellbeing.""",0.5257131457328796
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Considering Environmental Impact of Wine Production When Advocating for Good Wine Shops""",0.55687016248703
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Trying new wines and exploring local winemakers' stories and craftsmanship.,0.4405116140842438
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Celebrity influence on drinking habits: Cameron Diaz's clean wine promotion""",0.5007623434066772
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Author's Stance and Sentiment: Agreement or Partial Disagreement""",-0.0177749637514352
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Appreciating Wine: Taste, Quality, or Health Benefits?""",0.6119803786277771
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Appreciating good wine: Prioritizing taste and quality over health benefits and marketing gimmicks.""",0.5592271685600281
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Finding balance in life and decision-making to achieve harmony"".",0.1303535401821136
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Prioritizing Taste and Quality Over Health Benefits in Food Consumption,0.3034341335296631
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Importance of Supporting Local Wine Shops and Small Businesses""",0.3816261291503906
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Appreciation for fine wine and social bonding over a shared glass.""",0.4373027384281158
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Appreciating Wine for Its Taste and Quality Over Marketing Hype""",0.5083811283111572
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Prioritizing Quality Over Health Benefits: A Middle Ground Solution for Sustainable Practices""",0.2053227573633194
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Celebrities' influence on consumer behavior: prioritizing expertise over fads""",0.1554039418697357
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating the Artistry Behind Good Wine, Beyond Health Benefits.",0.5749746561050415
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Finding Balance Between Wellness and Pleasure in a World of Trends""",0.2811940014362335
+"Health risks of excessive drinking and addiction, with focus on wine consumption","""Wine appreciation: Balancing taste, quality, and cultural heritage in a nuanced understanding.""",0.4894630312919616
