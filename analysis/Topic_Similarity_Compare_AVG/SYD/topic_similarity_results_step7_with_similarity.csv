@@ -1,0 +1,246 @@
+real_word_topics,simulated_topics,Similarity,new_similarity
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciation for craftsmanship, attention to detail, and artistry in winemaking.",0.242406607,0.41258425
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding balance between wellness and pleasure in modern trends and habits.,0.424305946,0.52664316
+"Alcohol consumption and its effects on health, social habits, and personal choices",Balancing Wellness Trends with Appreciation for Wine Culture and Artistry,0.399533093,0.5132213
+"Alcohol consumption and its effects on health, social habits, and personal choices","Finding a balance between wellness, indulgence, and appreciation for life's simple pleasures.",0.379536778,0.3561536
+"Alcohol consumption and its effects on health, social habits, and personal choices",Author's viewpoint on a particular topic receives unanimous agreement.,0.018247264,0.21478434
+"Alcohol consumption and its effects on health, social habits, and personal choices","The rise of clean wine: trend, marketing tactics, and sustainability in the industry.",0.3674981,0.5183004
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating wine for its taste, quality, and craftsmanship is essential.",0.294959337,0.44691032
+"Alcohol consumption and its effects on health, social habits, and personal choices",Supporting Local Wine Shops: A Passionate Plea for Authenticity and Community,0.270052761,0.38093817
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.451720953,0.5238911
+"Alcohol consumption and its effects on health, social habits, and personal choices",Influence of celebrity endorsements on consumer behavior and purchasing decisions.,0.251627684,0.6748505
+"Alcohol consumption and its effects on health, social habits, and personal choices","Balancing Quality, Taste, and Tradition: Navigating the World of Wine Appreciation",0.374368489,0.4774393
+"Alcohol consumption and its effects on health, social habits, and personal choices","Celebrities like Cameron Diaz Promote Clean Wine, but Does it Matter?",0.256195813,0.43774647
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine appreciation: Prioritizing taste, quality, and cultural significance over perceived health benefits.",0.551408231,0.604679
+"Alcohol consumption and its effects on health, social habits, and personal choices","Balancing Taste, Quality, and Health Benefits in Beverage Consumption Habits",0.56183356,0.69718546
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciation for craftsmanship, attention to detail, and artistry in winemaking.",0.518029094,0.51645905
+Preference for organic wine and concerns about additives in commercial wines.,Finding balance between wellness and pleasure in modern trends and habits.,0.220332071,0.50657916
+Preference for organic wine and concerns about additives in commercial wines.,Balancing Wellness Trends with Appreciation for Wine Culture and Artistry,0.501952469,0.65004784
+Preference for organic wine and concerns about additives in commercial wines.,"Finding a balance between wellness, indulgence, and appreciation for life's simple pleasures.",0.214901716,0.39539504
+Preference for organic wine and concerns about additives in commercial wines.,Author's viewpoint on a particular topic receives unanimous agreement.,0.056519825,0.22183658
+Preference for organic wine and concerns about additives in commercial wines.,"The rise of clean wine: trend, marketing tactics, and sustainability in the industry.",0.543566644,0.6770701
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating wine for its taste, quality, and craftsmanship is essential.",0.571229339,0.57053244
+Preference for organic wine and concerns about additives in commercial wines.,Supporting Local Wine Shops: A Passionate Plea for Authenticity and Community,0.460188359,0.58215266
+Preference for organic wine and concerns about additives in commercial wines.,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.425383955,0.63167167
+Preference for organic wine and concerns about additives in commercial wines.,Influence of celebrity endorsements on consumer behavior and purchasing decisions.,0.121813469,0.47240382
+Preference for organic wine and concerns about additives in commercial wines.,"Balancing Quality, Taste, and Tradition: Navigating the World of Wine Appreciation",0.558453441,0.59850514
+Preference for organic wine and concerns about additives in commercial wines.,"Celebrities like Cameron Diaz Promote Clean Wine, but Does it Matter?",0.357851714,0.657477
+Preference for organic wine and concerns about additives in commercial wines.,"Wine appreciation: Prioritizing taste, quality, and cultural significance over perceived health benefits.",0.59192729,0.69017816
+Preference for organic wine and concerns about additives in commercial wines.,"Balancing Taste, Quality, and Health Benefits in Beverage Consumption Habits",0.411716759,0.5871806
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciation for craftsmanship, attention to detail, and artistry in winemaking.",0.633152664,0.66103846
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding balance between wellness and pleasure in modern trends and habits.,0.369224608,0.532501
+The Importance of Enjoying Wine Without Judgment or Snobbery,Balancing Wellness Trends with Appreciation for Wine Culture and Artistry,0.607412636,0.75748485
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Finding a balance between wellness, indulgence, and appreciation for life's simple pleasures.",0.428056985,0.5803386
+The Importance of Enjoying Wine Without Judgment or Snobbery,Author's viewpoint on a particular topic receives unanimous agreement.,0.133644968,0.406038
+The Importance of Enjoying Wine Without Judgment or Snobbery,"The rise of clean wine: trend, marketing tactics, and sustainability in the industry.",0.525084972,0.5854353
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating wine for its taste, quality, and craftsmanship is essential.",0.649569511,0.7141707
+The Importance of Enjoying Wine Without Judgment or Snobbery,Supporting Local Wine Shops: A Passionate Plea for Authenticity and Community,0.596496642,0.6144193
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.608501196,0.79026043
+The Importance of Enjoying Wine Without Judgment or Snobbery,Influence of celebrity endorsements on consumer behavior and purchasing decisions.,0.22039479,0.44737893
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Balancing Quality, Taste, and Tradition: Navigating the World of Wine Appreciation",0.749946594,0.6704777
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Celebrities like Cameron Diaz Promote Clean Wine, but Does it Matter?",0.427442491,0.6939977
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine appreciation: Prioritizing taste, quality, and cultural significance over perceived health benefits.",0.706323504,0.7086878
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Balancing Taste, Quality, and Health Benefits in Beverage Consumption Habits",0.493450254,0.56760156
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciation for craftsmanship, attention to detail, and artistry in winemaking.",0.048806615,0.23620465
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding balance between wellness and pleasure in modern trends and habits.,0.361590385,0.4132828
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Balancing Wellness Trends with Appreciation for Wine Culture and Artistry,0.250910193,0.33992213
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Finding a balance between wellness, indulgence, and appreciation for life's simple pleasures.",0.331469566,0.33363777
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Author's viewpoint on a particular topic receives unanimous agreement.,0.030355902,0.13920389
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"The rise of clean wine: trend, marketing tactics, and sustainability in the industry.",0.304818183,0.44318467
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating wine for its taste, quality, and craftsmanship is essential.",0.09222278,0.4021458
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Supporting Local Wine Shops: A Passionate Plea for Authenticity and Community,0.113036081,0.3798342
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.245222136,0.37994707
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Influence of celebrity endorsements on consumer behavior and purchasing decisions.,0.214304402,0.44409892
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Balancing Quality, Taste, and Tradition: Navigating the World of Wine Appreciation",0.167797074,0.32627493
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Celebrities like Cameron Diaz Promote Clean Wine, but Does it Matter?",0.155889928,0.55446595
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine appreciation: Prioritizing taste, quality, and cultural significance over perceived health benefits.",0.276894182,0.44508767
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Balancing Taste, Quality, and Health Benefits in Beverage Consumption Habits",0.34919861,0.43437457
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciation for craftsmanship, attention to detail, and artistry in winemaking.",0.421883821,0.54957247
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding balance between wellness and pleasure in modern trends and habits.,0.332114786,0.42222762
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Balancing Wellness Trends with Appreciation for Wine Culture and Artistry,0.527547657,0.65650034
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Finding a balance between wellness, indulgence, and appreciation for life's simple pleasures.",0.327191472,0.28753752
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Author's viewpoint on a particular topic receives unanimous agreement.,-0.023020824,0.18762773
+"Health risks of excessive drinking and addiction, with focus on wine consumption","The rise of clean wine: trend, marketing tactics, and sustainability in the industry.",0.521796346,0.61372995
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating wine for its taste, quality, and craftsmanship is essential.",0.439476907,0.5968623
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Supporting Local Wine Shops: A Passionate Plea for Authenticity and Community,0.425082833,0.564565
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.525713027,0.6752945
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Influence of celebrity endorsements on consumer behavior and purchasing decisions.,0.121603131,0.53323925
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Balancing Quality, Taste, and Tradition: Navigating the World of Wine Appreciation",0.5559389,0.6481154
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Celebrities like Cameron Diaz Promote Clean Wine, but Does it Matter?",0.370754451,0.5826931
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine appreciation: Prioritizing taste, quality, and cultural significance over perceived health benefits.",0.630047083,0.69986844
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Balancing Taste, Quality, and Health Benefits in Beverage Consumption Habits",0.519660532,0.54633224
+"Alcohol consumption and its effects on health, social habits, and personal choices",Clean Wine Trend: Balancing Health Benefits with Quality and Tradition in Winemaking,0.467144877,0.4856665
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.510297596,0.5238911
+"Alcohol consumption and its effects on health, social habits, and personal choices",Celebrities promoting clean wine: trend analysis and cultural significance,0.408750921,0.47643146
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating the Art of Winemaking: Craftsmanship, Culture, and Complexity.",0.299526066,0.48599428
+"Alcohol consumption and its effects on health, social habits, and personal choices",Sustainable and authentic consumption: Balancing innovation and tradition in food and drink industry,0.334764212,0.46803272
+"Alcohol consumption and its effects on health, social habits, and personal choices","Finding balance between taste, quality, and health benefits in the wellness trend.",0.37851429,0.5894282
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine appreciation should prioritize quality over quantity, while promoting ecofriendly practices.",0.366472781,0.53900063
+Preference for organic wine and concerns about additives in commercial wines.,Clean Wine Trend: Balancing Health Benefits with Quality and Tradition in Winemaking,0.621418297,0.69306195
+Preference for organic wine and concerns about additives in commercial wines.,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.46666038,0.63167167
+Preference for organic wine and concerns about additives in commercial wines.,Celebrities promoting clean wine: trend analysis and cultural significance,0.446371496,0.63645375
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating the Art of Winemaking: Craftsmanship, Culture, and Complexity.",0.511731982,0.6217638
+Preference for organic wine and concerns about additives in commercial wines.,Sustainable and authentic consumption: Balancing innovation and tradition in food and drink industry,0.283655822,0.6079062
+Preference for organic wine and concerns about additives in commercial wines.,"Finding balance between taste, quality, and health benefits in the wellness trend.",0.316260934,0.5271351
+Preference for organic wine and concerns about additives in commercial wines.,"Wine appreciation should prioritize quality over quantity, while promoting ecofriendly practices.",0.609909654,0.75919026
+The Importance of Enjoying Wine Without Judgment or Snobbery,Clean Wine Trend: Balancing Health Benefits with Quality and Tradition in Winemaking,0.65313834,0.7239504
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.631029725,0.79026043
+The Importance of Enjoying Wine Without Judgment or Snobbery,Celebrities promoting clean wine: trend analysis and cultural significance,0.539014876,0.70752907
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating the Art of Winemaking: Craftsmanship, Culture, and Complexity.",0.673844874,0.6944945
+The Importance of Enjoying Wine Without Judgment or Snobbery,Sustainable and authentic consumption: Balancing innovation and tradition in food and drink industry,0.355526388,0.49639267
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Finding balance between taste, quality, and health benefits in the wellness trend.",0.365398616,0.4838256
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine appreciation should prioritize quality over quantity, while promoting ecofriendly practices.",0.640003979,0.68353343
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Clean Wine Trend: Balancing Health Benefits with Quality and Tradition in Winemaking,0.272696257,0.43336403
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.212259293,0.37994707
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Celebrities promoting clean wine: trend analysis and cultural significance,0.220737621,0.38493443
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating the Art of Winemaking: Craftsmanship, Culture, and Complexity.",0.138086677,0.38200718
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Sustainable and authentic consumption: Balancing innovation and tradition in food and drink industry,0.331886888,0.4818335
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Finding balance between taste, quality, and health benefits in the wellness trend.",0.38397643,0.42779922
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine appreciation should prioritize quality over quantity, while promoting ecofriendly practices.",0.31164971,0.5573511
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Clean Wine Trend: Balancing Health Benefits with Quality and Tradition in Winemaking,0.637033582,0.6257547
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding balance between enjoying good wine and prioritizing overall wellbeing.,0.578118384,0.6752945
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Celebrities promoting clean wine: trend analysis and cultural significance,0.500451922,0.6335057
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating the Art of Winemaking: Craftsmanship, Culture, and Complexity.",0.481469393,0.6749821
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Sustainable and authentic consumption: Balancing innovation and tradition in food and drink industry,0.30880928,0.4108109
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Finding balance between taste, quality, and health benefits in the wellness trend.",0.340661734,0.45888573
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine appreciation should prioritize quality over quantity, while promoting ecofriendly practices.",0.496669799,0.64132214
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding balance between enjoying good wine and prioritizing overall well-being.,0.417946398,0.5150416
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating Wine Quality: Balancing Artistry, Taste, and Craftsmanship in the Industry",0.314850211,0.46077484
+"Alcohol consumption and its effects on health, social habits, and personal choices",Clean Wine Trend: Quality vs. Marketing Hype,0.299266398,0.44813496
+"Alcohol consumption and its effects on health, social habits, and personal choices",Emphasis on quality and taste in consumer preferences: shifting from quantity to craftsmanship.,0.22104083,0.6019253
+"Alcohol consumption and its effects on health, social habits, and personal choices",Celebrities' influence on consumer behavior: promoting responsible drinking and clean wine trends.,0.521857738,0.5884435
+"Alcohol consumption and its effects on health, social habits, and personal choices",Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.32402876,0.59224004
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding balance between indulgence and mindfulness in appreciating life's simple pleasures.,0.26286599,0.32754096
+"Alcohol consumption and its effects on health, social habits, and personal choices",Appreciating Wine for Taste and Quality Over Health Benefits: A Refreshing Trend,0.49861306,0.48876536
+Preference for organic wine and concerns about additives in commercial wines.,Finding balance between enjoying good wine and prioritizing overall well-being.,0.42683363,0.6185757
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating Wine Quality: Balancing Artistry, Taste, and Craftsmanship in the Industry",0.565932274,0.5981551
+Preference for organic wine and concerns about additives in commercial wines.,Clean Wine Trend: Quality vs. Marketing Hype,0.536480486,0.7096807
+Preference for organic wine and concerns about additives in commercial wines.,Emphasis on quality and taste in consumer preferences: shifting from quantity to craftsmanship.,0.2959705,0.5450376
+Preference for organic wine and concerns about additives in commercial wines.,Celebrities' influence on consumer behavior: promoting responsible drinking and clean wine trends.,0.397058725,0.66839564
+Preference for organic wine and concerns about additives in commercial wines.,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.237218112,0.5238928
+Preference for organic wine and concerns about additives in commercial wines.,Finding balance between indulgence and mindfulness in appreciating life's simple pleasures.,0.181739599,0.3720554
+Preference for organic wine and concerns about additives in commercial wines.,Appreciating Wine for Taste and Quality Over Health Benefits: A Refreshing Trend,0.661889374,0.6438283
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding balance between enjoying good wine and prioritizing overall well-being.,0.615104914,0.79396856
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating Wine Quality: Balancing Artistry, Taste, and Craftsmanship in the Industry",0.68865329,0.67784154
+The Importance of Enjoying Wine Without Judgment or Snobbery,Clean Wine Trend: Quality vs. Marketing Hype,0.542730927,0.75037897
+The Importance of Enjoying Wine Without Judgment or Snobbery,Emphasis on quality and taste in consumer preferences: shifting from quantity to craftsmanship.,0.391059577,0.45632297
+The Importance of Enjoying Wine Without Judgment or Snobbery,Celebrities' influence on consumer behavior: promoting responsible drinking and clean wine trends.,0.520535648,0.7360762
+The Importance of Enjoying Wine Without Judgment or Snobbery,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.292149931,0.47999462
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding balance between indulgence and mindfulness in appreciating life's simple pleasures.,0.422339439,0.6022371
+The Importance of Enjoying Wine Without Judgment or Snobbery,Appreciating Wine for Taste and Quality Over Health Benefits: A Refreshing Trend,0.702075541,0.75512344
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding balance between enjoying good wine and prioritizing overall well-being.,0.23460874,0.37348628
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating Wine Quality: Balancing Artistry, Taste, and Craftsmanship in the Industry",0.186128661,0.33375412
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Clean Wine Trend: Quality vs. Marketing Hype,0.201743037,0.5222353
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Emphasis on quality and taste in consumer preferences: shifting from quantity to craftsmanship.,0.328956425,0.51536906
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Celebrities' influence on consumer behavior: promoting responsible drinking and clean wine trends.,0.297787488,0.4302765
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.385713696,0.500225
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding balance between indulgence and mindfulness in appreciating life's simple pleasures.,0.28939122,0.33629394
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Appreciating Wine for Taste and Quality Over Health Benefits: A Refreshing Trend,0.285859048,0.42750847
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding balance between enjoying good wine and prioritizing overall well-being.,0.49751687,0.66302717
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating Wine Quality: Balancing Artistry, Taste, and Craftsmanship in the Industry",0.492973745,0.6216661
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Clean Wine Trend: Quality vs. Marketing Hype,0.467951357,0.6724582
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Emphasis on quality and taste in consumer preferences: shifting from quantity to craftsmanship.,0.175832689,0.49759525
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Celebrities' influence on consumer behavior: promoting responsible drinking and clean wine trends.,0.506049991,0.7111788
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.245027736,0.46063766
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding balance between indulgence and mindfulness in appreciating life's simple pleasures.,0.268057108,0.2886203
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Appreciating Wine for Taste and Quality Over Health Benefits: A Refreshing Trend,0.648058772,0.67833495
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine Appreciation: Prioritizing Quality, Taste, and Craftsmanship Over Trends and Gimmicks",0.348002195,0.54492354
+"Alcohol consumption and its effects on health, social habits, and personal choices",Appreciating Wine's Taste and Quality Beyond Health Benefits: A Balancing Act,0.496775001,0.5108795
+"Alcohol consumption and its effects on health, social habits, and personal choices",The significance of craftsmanship in winemaking vs. focus on health benefits,0.433582783,0.61462796
+"Alcohol consumption and its effects on health, social habits, and personal choices",Balancing Tradition and Innovation in Food and Drink Industry,0.237180427,0.5040248
+"Alcohol consumption and its effects on health, social habits, and personal choices","Balancing Taste, Quality, and Health Benefits in the Wellness Trend",0.368069261,0.5764663
+"Alcohol consumption and its effects on health, social habits, and personal choices","Celebrities like Cameron Diaz promoting clean wine trend, influencing consumer behavior and preferences.",0.418897569,0.58107466
+Preference for organic wine and concerns about additives in commercial wines.,"Wine Appreciation: Prioritizing Quality, Taste, and Craftsmanship Over Trends and Gimmicks",0.593783021,0.67824423
+Preference for organic wine and concerns about additives in commercial wines.,Appreciating Wine's Taste and Quality Beyond Health Benefits: A Balancing Act,0.626903534,0.6801558
+Preference for organic wine and concerns about additives in commercial wines.,The significance of craftsmanship in winemaking vs. focus on health benefits,0.583006859,0.7444441
+Preference for organic wine and concerns about additives in commercial wines.,Balancing Tradition and Innovation in Food and Drink Industry,0.279381454,0.5179594
+Preference for organic wine and concerns about additives in commercial wines.,"Balancing Taste, Quality, and Health Benefits in the Wellness Trend",0.313032329,0.5019686
+Preference for organic wine and concerns about additives in commercial wines.,"Celebrities like Cameron Diaz promoting clean wine trend, influencing consumer behavior and preferences.",0.466760993,0.639851
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine Appreciation: Prioritizing Quality, Taste, and Craftsmanship Over Trends and Gimmicks",0.699260712,0.70451283
+The Importance of Enjoying Wine Without Judgment or Snobbery,Appreciating Wine's Taste and Quality Beyond Health Benefits: A Balancing Act,0.740913868,0.77284205
+The Importance of Enjoying Wine Without Judgment or Snobbery,The significance of craftsmanship in winemaking vs. focus on health benefits,0.650311232,0.710985
+The Importance of Enjoying Wine Without Judgment or Snobbery,Balancing Tradition and Innovation in Food and Drink Industry,0.330540001,0.40119374
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Balancing Taste, Quality, and Health Benefits in the Wellness Trend",0.362140328,0.47737572
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Celebrities like Cameron Diaz promoting clean wine trend, influencing consumer behavior and preferences.",0.481560588,0.62892807
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine Appreciation: Prioritizing Quality, Taste, and Craftsmanship Over Trends and Gimmicks",0.205855206,0.38679063
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Appreciating Wine's Taste and Quality Beyond Health Benefits: A Balancing Act,0.297511935,0.4291702
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,The significance of craftsmanship in winemaking vs. focus on health benefits,0.306935906,0.5914093
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Balancing Tradition and Innovation in Food and Drink Industry,0.252725244,0.41361946
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Balancing Taste, Quality, and Health Benefits in the Wellness Trend",0.399966389,0.40818256
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Celebrities like Cameron Diaz promoting clean wine trend, influencing consumer behavior and preferences.",0.263383985,0.4501796
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine Appreciation: Prioritizing Quality, Taste, and Craftsmanship Over Trends and Gimmicks",0.506602347,0.6789457
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Appreciating Wine's Taste and Quality Beyond Health Benefits: A Balancing Act,0.646835208,0.6974313
+"Health risks of excessive drinking and addiction, with focus on wine consumption",The significance of craftsmanship in winemaking vs. focus on health benefits,0.58857429,0.7337125
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Balancing Tradition and Innovation in Food and Drink Industry,0.261665523,0.42932308
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Balancing Taste, Quality, and Health Benefits in the Wellness Trend",0.333173871,0.43838596
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Celebrities like Cameron Diaz promoting clean wine trend, influencing consumer behavior and preferences.",0.473712057,0.6595293
+"Alcohol consumption and its effects on health, social habits, and personal choices",Finding Balance Between Enjoying Wine and Prioritizing Overall Wellbeing,0.491186291,0.54274815
+"Alcohol consumption and its effects on health, social habits, and personal choices",Celebrities' Influence on Wine Culture: Clean Wine Trend and Quality Appreciation,0.405159444,0.45384043
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine quality should be prioritized over quantity, focusing on taste and craftsmanship.",0.290253133,0.52414256
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating Quality and Craftsmanship in Food, Drink, and Design: A Trend Shift.",0.275850832,0.5634537
+"Alcohol consumption and its effects on health, social habits, and personal choices",The cultural significance and appeal of 'clean wine' trend and its impact on the industry.,0.418372065,0.57789034
+"Alcohol consumption and its effects on health, social habits, and personal choices",Balancing Health Benefits with Taste and Quality in Wine Appreciation,0.482197106,0.5602778
+"Alcohol consumption and its effects on health, social habits, and personal choices","Balancing Quality, Taste, and Wellness: Prioritizing Enjoyment Over Health Benefits",0.423388928,0.6154258
+Preference for organic wine and concerns about additives in commercial wines.,Finding Balance Between Enjoying Wine and Prioritizing Overall Wellbeing,0.452675849,0.6200099
+Preference for organic wine and concerns about additives in commercial wines.,Celebrities' Influence on Wine Culture: Clean Wine Trend and Quality Appreciation,0.503231347,0.630017
+Preference for organic wine and concerns about additives in commercial wines.,"Wine quality should be prioritized over quantity, focusing on taste and craftsmanship.",0.578319013,0.6513504
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating Quality and Craftsmanship in Food, Drink, and Design: A Trend Shift.",0.280829668,0.5344356
+Preference for organic wine and concerns about additives in commercial wines.,The cultural significance and appeal of 'clean wine' trend and its impact on the industry.,0.559632421,0.6439221
+Preference for organic wine and concerns about additives in commercial wines.,Balancing Health Benefits with Taste and Quality in Wine Appreciation,0.632568479,0.6626692
+Preference for organic wine and concerns about additives in commercial wines.,"Balancing Quality, Taste, and Wellness: Prioritizing Enjoyment Over Health Benefits",0.30076313,0.56701785
+The Importance of Enjoying Wine Without Judgment or Snobbery,Finding Balance Between Enjoying Wine and Prioritizing Overall Wellbeing,0.64596796,0.79110044
+The Importance of Enjoying Wine Without Judgment or Snobbery,Celebrities' Influence on Wine Culture: Clean Wine Trend and Quality Appreciation,0.636032224,0.7597451
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine quality should be prioritized over quantity, focusing on taste and craftsmanship.",0.597600937,0.63131195
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating Quality and Craftsmanship in Food, Drink, and Design: A Trend Shift.",0.391126424,0.47162127
+The Importance of Enjoying Wine Without Judgment or Snobbery,The cultural significance and appeal of 'clean wine' trend and its impact on the industry.,0.615339339,0.66853786
+The Importance of Enjoying Wine Without Judgment or Snobbery,Balancing Health Benefits with Taste and Quality in Wine Appreciation,0.690017045,0.7412907
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Balancing Quality, Taste, and Wellness: Prioritizing Enjoyment Over Health Benefits",0.474152684,0.57719684
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Finding Balance Between Enjoying Wine and Prioritizing Overall Wellbeing,0.267097086,0.35324967
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Celebrities' Influence on Wine Culture: Clean Wine Trend and Quality Appreciation,0.196826547,0.36635906
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine quality should be prioritized over quantity, focusing on taste and craftsmanship.",0.18617402,0.43229333
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating Quality and Craftsmanship in Food, Drink, and Design: A Trend Shift.",0.28749314,0.45579416
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,The cultural significance and appeal of 'clean wine' trend and its impact on the industry.,0.207602814,0.49129382
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Balancing Health Benefits with Taste and Quality in Wine Appreciation,0.289372325,0.3991937
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Balancing Quality, Taste, and Wellness: Prioritizing Enjoyment Over Health Benefits",0.402285039,0.5159561
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Finding Balance Between Enjoying Wine and Prioritizing Overall Wellbeing,0.554826438,0.6609378
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Celebrities' Influence on Wine Culture: Clean Wine Trend and Quality Appreciation,0.518309653,0.65624523
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine quality should be prioritized over quantity, focusing on taste and craftsmanship.",0.474232316,0.6404649
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating Quality and Craftsmanship in Food, Drink, and Design: A Trend Shift.",0.25879243,0.51822805
+"Health risks of excessive drinking and addiction, with focus on wine consumption",The cultural significance and appeal of 'clean wine' trend and its impact on the industry.,0.55708164,0.64353323
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Balancing Health Benefits with Taste and Quality in Wine Appreciation,0.621388078,0.66641
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Balancing Quality, Taste, and Wellness: Prioritizing Enjoyment Over Health Benefits",0.346075803,0.5421305
+"Alcohol consumption and its effects on health, social habits, and personal choices",Celebrity Influence on Wine Trends: Cameron Diaz and the Rise of 'Clean Wine',0.357775092,0.4698515
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine appreciation: Balancing quality, taste, and health benefits in the wellness trend.",0.491812289,0.55514175
+"Alcohol consumption and its effects on health, social habits, and personal choices","Clean Wine Trend: Balance Between Sustainability, Quality, and Marketing Hype",0.345036536,0.4515581
+"Alcohol consumption and its effects on health, social habits, and personal choices","Wine appreciation: prioritizing quality, authenticity, and craftsmanship over trendy gimmicks.",0.308851957,0.50286365
+"Alcohol consumption and its effects on health, social habits, and personal choices","Appreciating Quality and Craftsmanship in Food, Drink, and Design",0.238815337,0.43501472
+"Alcohol consumption and its effects on health, social habits, and personal choices",Appreciating the Artistry Behind Wine Production: A Celebration of Craftsmanship,0.235028908,0.39496577
+"Alcohol consumption and its effects on health, social habits, and personal choices",Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.32402879,0.59224
+Preference for organic wine and concerns about additives in commercial wines.,Celebrity Influence on Wine Trends: Cameron Diaz and the Rise of 'Clean Wine',0.420908779,0.60867834
+Preference for organic wine and concerns about additives in commercial wines.,"Wine appreciation: Balancing quality, taste, and health benefits in the wellness trend.",0.634222269,0.64899635
+Preference for organic wine and concerns about additives in commercial wines.,"Clean Wine Trend: Balance Between Sustainability, Quality, and Marketing Hype",0.582182467,0.6688765
+Preference for organic wine and concerns about additives in commercial wines.,"Wine appreciation: prioritizing quality, authenticity, and craftsmanship over trendy gimmicks.",0.556072712,0.7023268
+Preference for organic wine and concerns about additives in commercial wines.,"Appreciating Quality and Craftsmanship in Food, Drink, and Design",0.268842876,0.45180893
+Preference for organic wine and concerns about additives in commercial wines.,Appreciating the Artistry Behind Wine Production: A Celebration of Craftsmanship,0.459167778,0.55156106
+Preference for organic wine and concerns about additives in commercial wines.,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.237218127,0.52389276
+The Importance of Enjoying Wine Without Judgment or Snobbery,Celebrity Influence on Wine Trends: Cameron Diaz and the Rise of 'Clean Wine',0.507913291,0.5980133
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine appreciation: Balancing quality, taste, and health benefits in the wellness trend.",0.679050624,0.65317035
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Clean Wine Trend: Balance Between Sustainability, Quality, and Marketing Hype",0.575643897,0.695253
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Wine appreciation: prioritizing quality, authenticity, and craftsmanship over trendy gimmicks.",0.676548839,0.7366352
+The Importance of Enjoying Wine Without Judgment or Snobbery,"Appreciating Quality and Craftsmanship in Food, Drink, and Design",0.399554014,0.5108631
+The Importance of Enjoying Wine Without Judgment or Snobbery,Appreciating the Artistry Behind Wine Production: A Celebration of Craftsmanship,0.62584585,0.6847604
+The Importance of Enjoying Wine Without Judgment or Snobbery,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.292149961,0.47999462
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Celebrity Influence on Wine Trends: Cameron Diaz and the Rise of 'Clean Wine',0.164312124,0.39583597
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine appreciation: Balancing quality, taste, and health benefits in the wellness trend.",0.281322658,0.40621585
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Clean Wine Trend: Balance Between Sustainability, Quality, and Marketing Hype",0.278982282,0.441835
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Wine appreciation: prioritizing quality, authenticity, and craftsmanship over trendy gimmicks.",0.15011017,0.41783345
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,"Appreciating Quality and Craftsmanship in Food, Drink, and Design",0.243874624,0.33440518
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Appreciating the Artistry Behind Wine Production: A Celebration of Craftsmanship,0.093988068,0.3431098
+Is over-reliance on organic products causing unnecessary self-imposed suffering?,Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.385713726,0.500225
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Celebrity Influence on Wine Trends: Cameron Diaz and the Rise of 'Clean Wine',0.460904866,0.6476674
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine appreciation: Balancing quality, taste, and health benefits in the wellness trend.",0.632522464,0.62825334
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Clean Wine Trend: Balance Between Sustainability, Quality, and Marketing Hype",0.528504491,0.6040008
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Wine appreciation: prioritizing quality, authenticity, and craftsmanship over trendy gimmicks.",0.460537612,0.6758182
+"Health risks of excessive drinking and addiction, with focus on wine consumption","Appreciating Quality and Craftsmanship in Food, Drink, and Design",0.236672565,0.40451455
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Appreciating the Artistry Behind Wine Production: A Celebration of Craftsmanship,0.438746184,0.5789865
+"Health risks of excessive drinking and addiction, with focus on wine consumption",Prioritizing Quality Over Health Benefits: A Nuanced Approach to Wellness,0.245027721,0.46063766
